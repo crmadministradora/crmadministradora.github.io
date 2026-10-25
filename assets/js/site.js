@@ -127,7 +127,7 @@
     { titulo: "Bot CRM 2.0", linha: "Menos trabalho repetitivo. Mais tempo pra tua comunidade.", img: "assets/img/bot-crm.webp", contido: true, fundo: "ouro", alvo: "#loja", etiqueta: precoDe("bot") },
     { titulo: "Sistema de Copa", img: "assets/img/sistema-de-copa.webp", alvo: "#loja", semLegenda: true },
     { titulo: "Configuração de Discord", img: "assets/img/configuracao-discord.webp", alvo: "#loja", semLegenda: true },
-    { titulo: "Rádio CRM", linha: "A mesma música, no mesmo segundo, em toda a rede.", img: "assets/img/radio-crm.webp", contido: true, fundo: "ouro", alvo: "#radio", etiqueta: "Ao vivo" },
+    { titulo: "Rádio CRM", linha: "Música pra jogar, trocar ideia e curtir com a galera.", img: "assets/img/radio-crm.webp", contido: true, fundo: "ouro", alvo: "#radio", etiqueta: "Na call" },
     { titulo: "Kinguin", linha: "Keys, gift cards, recargas e software. Link de parceiro: a CRM ganha uma comissão, sem custo a mais pra você.", kinguin: true, alvo: "#kinguin", etiqueta: "Parceiro" },
     { titulo: "Sua marca aqui", linha: "Sua marca pode fazer parte dessa comunidade. Fale com a CRM sobre patrocínio.", img: "assets/img/divulgacao-direita.webp", alvo: "#contato", etiqueta: "Patrocínio" },
     { titulo: "Copa do Infinito", linha: "Tua equipe, o próximo desafio. A Copa do Infinito é um projeto CRM.", img: "assets/img/copa-do-infinito.webp", alvo: "#copa", etiqueta: "16 times" }
