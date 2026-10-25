@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRM Administradora — E-sports &amp; Game Project</title>
+<meta name="description" content="A CRM monta, administra e faz crescer o Discord de times e comunidades de Honor of Kings e Mobile Legends. Dream Cards, Copa do Infinito, Rádio CRM e o Bot CRM 2.0.">
+<meta name="theme-color" content="#0E0B14">
+<meta property="og:title" content="CRM Administradora — E-sports & Game Project">
+<meta property="og:description" content="Sua comunidade. Nosso próximo projeto. Dream Cards, Copa do Infinito, Rádio CRM e o Bot CRM 2.0.">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ====== MENU À ESQUERDA (no celular vira gaveta) ====== -->
+<aside class="lateral" id="lateral" aria-label="Menu">
+  <a class="lateral-logo" href="#topo" aria-label="Início">
+    <img src="assets/img/crm-escudo.webp" alt="Escudo oficial da CRM" width="150" height="150">
+  </a>
+  <nav class="menu">
+    <button class="menu-item menu-login" id="btn-login" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.6 19.6 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.8 19.8 0 0 0 6 3l1.3-2a12.7 12.7 0 0 1-2-1l.5-.4a14.1 14.1 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.7 19.7 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
+      <span id="login-rotulo">Entrar com Discord</span>
+    </button>
+    <a class="menu-item" href="#dream-cards"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm15 1.2 2 .6a2 2 0 0 1 1.3 2.4l-3 10.6V6.2ZM6 9h7v2H6V9Zm0 4h5v2H6v-2Z"/></svg><span>Dream Cards</span></a>
+    <a class="menu-item" href="#loja"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h2.3l.6 2H21l-2.2 8.2a2 2 0 0 1-1.9 1.5H8.4l.5 2H19v2H7.4L4 5H3V3Zm5 17a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm8 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"/></svg><span>Loja</span></a>
+    <a class="menu-item" href="#copa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v2h3v3a4 4 0 0 1-4 4h-.5A5 5 0 0 1 13 14.9V17h3v4H8v-4h3v-2.1A5 5 0 0 1 8.5 12H8a4 4 0 0 1-4-4V5h3V3Zm0 4H6v1a2 2 0 0 0 1 1.7V7Zm10 2.7A2 2 0 0 0 18 8V7h-1v2.7Z"/></svg><span>Copa do Infinito</span></a>
+    <a class="menu-item" href="#kinguin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 7 4.5 3.5L12 4l4.5 6.5L21 7l-2 11H5L3 7Zm2 13h14v2H5v-2Z"/></svg><span>Kinguin</span></a>
+    <a class="menu-item" href="#radio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-9 9v5a3 3 0 0 0 3 3h2v-8H5a7 7 0 0 1 14 0h-3v8h2a3 3 0 0 0 3-3v-5a9 9 0 0 0-9-9Z"/></svg><span>Rádio CRM</span></a>
+    <a class="menu-item" href="#sobre"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/></svg><span>Sobre a CRM</span></a>
+    <a class="menu-item" href="#contato"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.2L4.3 7H4v.6l8 5.4 8-5.4V7h-.3L12 12.2Z"/></svg><span>Contate-nos</span></a>
+  </nav>
+  <a class="divulgacao divulgacao-lateral" href="#contato" aria-label="Sua divulgação aqui: fale com a CRM sobre patrocínio">
+    <img src="assets/img/divulgacao-esquerda.webp" alt="" width="350" height="700" loading="lazy">
+  </a>
+</aside>
+<div class="veu" id="veu" hidden></div>
+
+<!-- ====== O TOPO ====== -->
+<header class="topo" id="topo">
+  <button class="btn-gaveta" id="btn-gaveta" type="button" aria-label="Abrir o menu" aria-controls="lateral" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="topo-marca" href="#topo">
+    <img class="topo-escudo" src="assets/img/crm-escudo.webp" alt="" width="44" height="44">
+    <span class="topo-nome"><b>CRM</b> Administradora<small>E-sports &amp; Game Project</small></span>
+  </a>
+  <div class="radio-player" id="radio-crm">
+    <button class="radio-botao" id="radio-botao" type="button" aria-describedby="radio-dica">
+      <span class="radio-icone" aria-hidden="true">▶</span>
+      <span class="radio-texto"><b>Ouvir a Rádio CRM</b><small id="radio-faixa">a mesma música, em toda a rede</small></span>
+      <span class="radio-ondas" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+    </button>
+    <div class="radio-pop" id="radio-dica" role="status" hidden>
+      <img src="assets/img/radio-crm.webp" alt="" width="64" height="64">
+      <p><b>A Rádio CRM toca ao vivo nas calls do Discord da CRM.</b> No site ela chega em breve.</p>
+      <a class="botao botao-pequeno" data-link="site_crm" target="_blank" rel="noopener">Ouvir no Discord</a>
+    </div>
+    <audio id="radio-audio" preload="none"></audio>
+  </div>
+</header>
+
+<main id="conteudo">
+  <!-- ====== O CARROSSEL ====== -->
+  <section class="vitrine" aria-labelledby="titulo-vitrine">
+    <div class="vitrine-fundo" aria-hidden="true"></div>
+    <h1 id="titulo-vitrine">Sua comunidade. <em>Nosso próximo projeto.</em></h1>
+    <p class="vitrine-sub">Administração de e-sports e game project para times e comunidades, com foco em Honor of Kings e Mobile Legends.</p>
+    <div class="carrossel" id="carrossel" aria-roledescription="carrossel" aria-label="Produtos e projetos da CRM">
+      <button class="seta seta-esq" id="seta-esq" type="button" aria-label="Anterior">‹</button>
+      <div class="carrossel-trilho" id="carrossel-trilho"></div>
+      <button class="seta seta-dir" id="seta-dir" type="button" aria-label="Próximo">›</button>
+    </div>
+    <div class="pontos" id="pontos" role="tablist" aria-label="Escolher card"></div>
+    <ul class="numeros" id="numeros" aria-label="A CRM em números"></ul>
+  </section>
+
+  <a class="divulgacao divulgacao-faixa" href="#contato">
+    <span class="divulgacao-icone" aria-hidden="true">📣</span>
+    <span><b>Sua divulgação <em>aqui</em></b><small>Conecte sua marca com uma comunidade engajada.</small></span>
+  </a>
+
+  <!-- ====== A LOJA ====== -->
+  <section class="secao" id="loja" aria-labelledby="titulo-loja">
+    <h2 id="titulo-loja">Estrutura pra tua <em>comunidade crescer.</em></h2>
+    <p class="secao-sub">Escolha o serviço pra tua próxima etapa. Pagamento por PIX, direto no Discord da CRM.</p>
+    <div class="planos" id="planos"></div>
+  </section>
+
+  <!-- ====== DREAM CARDS ====== -->
+  <section class="secao destaque destaque-roxo" id="dream-cards" aria-labelledby="titulo-dc">
+    <img class="destaque-arte" src="assets/img/dream-cards.webp" alt="Logo do Dream Cards" width="900" height="900" loading="lazy">
+    <div class="destaque-texto">
+      <h2 id="titulo-dc">Tua partida <em>vira carta.</em></h2>
+      <p>Manda o print do fim da tua partida de Honor of Kings ou Mobile Legends. O bot lê os dados e atualiza tua carta com atributos, nível, pódio e álbum. Uma carta por jogador, a mesma em todo servidor.</p>
+      <p class="destaque-novo">🆕 O <b>/meucard</b> mostra quanto falta pra cada atributo subir.</p>
+      <a class="botao botao-roxo" data-link="site_dreamcards" target="_blank" rel="noopener">Entrar no Dream Cards</a>
+    </div>
+  </section>
+
+  <!-- ====== COPA DO INFINITO ====== -->
+  <section class="secao destaque" id="copa" aria-labelledby="titulo-copa">
+    <img class="destaque-arte" src="assets/img/copa-do-infinito.webp" alt="Arte oficial da Copa do Infinito" width="900" height="900" loading="lazy">
+    <div class="destaque-texto">
+      <h2 id="titulo-copa">Tua equipe, <em>o próximo desafio.</em></h2>
+      <p>O campeonato da CRM de Honor of Kings e Mobile Legends, com 16 times por edição. A Copa do Infinito é um projeto CRM.</p>
+      <a class="botao" data-link="copa_discord" target="_blank" rel="noopener">Conhecer a Copa</a>
+    </div>
+  </section>
+
+  <!-- ====== RÁDIO ====== -->
+  <section class="secao destaque" id="radio" aria-labelledby="titulo-radio">
+    <img class="destaque-arte destaque-redonda" src="assets/img/radio-crm.webp" alt="Logo da Rádio CRM" width="500" height="500" loading="lazy">
+    <div class="destaque-texto">
+      <h2 id="titulo-radio">Uma rede. <em>A mesma sintonia.</em></h2>
+      <p>Todo servidor que liga a Rádio CRM numa call ouve a mesma música no mesmo segundo, com a playlist da CRM. Ninguém pula música.</p>
+      <button class="botao" type="button" data-acao="radio">▶ Ouvir a Rádio CRM</button>
+    </div>
+  </section>
+
+  <a class="divulgacao divulgacao-faixa" href="#contato">
+    <span class="divulgacao-icone" aria-hidden="true">📣</span>
+    <span><b>Sua divulgação <em>aqui</em></b><small>Vamos conversar sobre patrocínio.</small></span>
+  </a>
+
+  <!-- ====== KINGUIN ====== -->
+  <section class="secao" id="kinguin" aria-labelledby="titulo-kinguin">
+    <div class="kinguin">
+      <div class="kinguin-placa"><img src="assets/img/kinguin-logo.webp" alt="Kinguin" width="900" height="301" loading="lazy"></div>
+      <div class="kinguin-texto">
+        <span class="selo">Parceiro oficial da CRM</span>
+        <h2 id="titulo-kinguin">Sua próxima compra <em>também apoia a CRM.</em></h2>
+        <p>Keys de jogo, gift cards, recargas e software na Kinguin.</p>
+        <ul class="kinguin-produtos" id="kinguin-produtos"></ul>
+        <a class="botao" id="kinguin-loja" target="_blank" rel="sponsored noopener">Visitar a Kinguin</a>
+        <p class="aviso" id="kinguin-aviso"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SOBRE E CONTATO ====== -->
+  <section class="secao duas" aria-label="Sobre e contato">
+    <div class="caixa" id="sobre">
+      <h2>Sobre a <em>CRM</em></h2>
+      <p>A CRM é uma administradora de e-sports e game project com foco em comunidades amadoras de Honor of Kings e Mobile Legends, no Brasil e na América Latina. A gente monta, administra e ajuda a crescer o Discord de times e organizações. Nosso bot próprio cuida das tarefas repetitivas, enquanto projetos como Dream Cards, Copa do Infinito e Rádio CRM conectam a comunidade.</p>
+    </div>
+    <div class="caixa" id="contato">
+      <h2>Bora conversar sobre <em>tua comunidade?</em></h2>
+      <ul class="contatos" id="contatos"></ul>
+    </div>
+  </section>
+</main>
+
+<aside class="lateral-dir" aria-label="Espaço de divulgação">
+  <a class="divulgacao" href="#contato" aria-label="Sua divulgação aqui: fale com a CRM sobre patrocínio">
+    <img src="assets/img/divulgacao-direita.webp" alt="" width="350" height="700" loading="lazy">
+  </a>
+</aside>
+
+<footer class="rodape">
+  <img src="assets/img/crm-escudo.webp" alt="" width="48" height="48" loading="lazy">
+  <p><b>CRM Administradora</b> · E-sports &amp; Game Project</p>
+  <p class="rodape-miudo">O login com Discord só lê teu nome e teu avatar. <span id="medido-em"></span></p>
+  <p class="rodape-miudo">© 2026 CRM Administradora. Honor of Kings e Mobile Legends são marcas dos seus donos; a CRM não é afiliada a eles.</p>
+</footer>
+
+<div class="aviso-flutuante" id="aviso-flutuante" role="status" hidden></div>
+
+<script src="dados/dados.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
