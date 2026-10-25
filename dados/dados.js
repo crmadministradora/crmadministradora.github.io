@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "25/10/2026 12:57",
+ "gerado_em": "25/10/2026 13:54",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -152,7 +152,7 @@ window.CRM_DADOS = {
   "loja": "https://www.kinguin.net/?r=7ze6i58sjwzdk",
   "produtos": [
    {
-    "nome": "Honor of Kings — 830 tokens",
+    "nome": "Honor of Kings: 830 tokens",
     "link": "https://www.kinguin.net/category/372383/honor-of-kings-830-tokens-gift-card?r=7ze6i58sjwzdk"
    },
    {
