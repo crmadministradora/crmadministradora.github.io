@@ -49,14 +49,18 @@
     ["servidores", "pessoas", "partidas", "prints", "cartas"].forEach(function (k) {
       if (f[k]) ul.appendChild(el("li", { texto: f[k] }));
     });
+    var dataServicos = (D.gerado_em || "").split(" ")[0];
+    document.querySelectorAll("[data-data-servicos]").forEach(function (p) {
+      if (dataServicos) p.textContent = "Informações dos serviços em " + dataServicos + ".";
+    });
     if (D.numeros && D.numeros.medido_em) $("#medido-em").textContent = "Números medidos em " + D.numeros.medido_em.split(" ")[0] + ".";
   })();
 
   /* ---------- a loja (cards de preço) ---------- */
   var TEXTOS_LOJA = {   // a copy do GPT (entregas\P1\textos.md)
-    "Copa Discord": { resumo: "Até 16 times: inscrição automática, sorteio, chaves e resultados.", cta: "Quero organizar minha Copa" },
-    "Copa + WhatsApp": { resumo: "Tudo da Copa Discord, mais a comunidade de WhatsApp do campeonato.", cta: "Quero Copa + WhatsApp" },
-    "Configuração de Discord": { resumo: "Cargos, canais, permissões e o Bot CRM 2.0 instalado.", cta: "Quero montar meu Discord" },
+    "Copa Discord": { resumo: "Até 16 times: inscrição automática, sorteio, chaves e resultados.", cta: "Comprar no Discord" },
+    "Copa + WhatsApp": { resumo: "Tudo da Copa Discord, mais a comunidade de WhatsApp do campeonato.", cta: "Comprar no Discord" },
+    "Configuração de Discord": { resumo: "Cargos, canais, permissões e o Bot CRM 2.0 instalado.", cta: "Comprar no Discord" },
     "Bot CRM 2.0": { resumo: "O bot da CRM no teu servidor, feito e mantido pela CRM.", cta: "Adicionar o bot" }
   };
   (function () {

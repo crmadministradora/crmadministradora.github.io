@@ -283,3 +283,7 @@ section[id], .caixa[id] { scroll-margin-top: 96px; }
   .carrossel { height: 350px; }
   .cartao-legenda b { font-size: 17px; }
 }
+
+/* Datas junto das informações a que se referem. */
+.data-referencia { margin: 10px 0 16px; color: var(--cinza); font-size: 12px; text-align: center; }
+.destaque-texto .data-referencia { text-align: left; }
