@@ -145,6 +145,7 @@
     if (!c.semLegenda) filhos.push(el("div", { classe: "cartao-legenda" }, [el("b", { texto: c.titulo }), el("span", { texto: c.linha })]));
     var classe = "cartao" + (c.arteInteira ? " cartao-arte-inteira" : "") + (c.fundo === "roxo" ? " cartao-fundo-roxo" : "") + (c.contido ? " contido" : "") + (c.fundo === "ouro" ? " cartao-fundo-ouro" : "") + (c.kinguin ? " cartao-kinguin" : "");
     var a = el("a", { classe: classe, href: c.alvo, "aria-label": c.titulo + (c.linha ? ": " + c.linha : "") }, filhos);
+    if (c.arteInteira) a.style.setProperty("--arte-card", "url(\"" + c.img + "\")");
     a.addEventListener("click", function (e) {
       if (i !== atual) { e.preventDefault(); ir(i); }
     });
