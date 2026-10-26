@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "26/10/2026 10:24",
+ "gerado_em": "26/10/2026 11:44",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -152,15 +152,16 @@ window.CRM_DADOS = {
   "email": "crmhokclan@gmail.com",
   "site_crm": "https://discord.gg/WbKPBVc5V4",
   "site_dreamcards": "https://discord.gg/THK5KjSrgq",
-  "bot_convite": "https://discord.com/oauth2/authorize?client_id=1439403291036487712&permissions=8&integration_type=0&scope=bot+applications.commands"
+  "bot_convite": "https://discord.com/oauth2/authorize?client_id=1439403291036487712&permissions=8&integration_type=0&scope=bot+applications.commands",
+  "comprovante_passo": "No Discord da CRM, no canal 🎩・la-nostra-casa, escolhe **Abrir Ticket** no menu e manda o comprovante ali."
  },
  "numeros": {
-  "medido_em": "25/10/2026 09:28",
+  "medido_em": "26/10/2026 10:52",
   "frases": {
-   "servidores": "16 servidores",
+   "servidores": "15 servidores",
    "pessoas": "1.100+ pessoas",
-   "membros": "1.500+ membros na rede",
-   "cartas": "97 cartas",
+   "membros": "1.400+ membros na rede",
+   "cartas": "100 cartas",
    "partidas": "4.000+ partidas lidas",
    "prints": "5.000+ prints"
   },
@@ -186,7 +187,7 @@ window.CRM_DADOS = {
  },
  "copa": {
   "nome": "Copa do Infinito",
-  "jogo_da_proxima": "hok",
+  "jogo_da_proxima": "mlbb",
   "proxima_edicao": {
    "hok": 3,
    "mlbb": 5
@@ -226,8 +227,164 @@ window.CRM_DADOS = {
      "Genesis E-Sports"
     ],
     "chave": {
-     "fase_atual": null,
-     "fases": []
+     "fase_atual": "concluido",
+     "fases": [
+      {
+       "fase": "oitavas",
+       "jogos": [
+        {
+         "time1": "HIZEm",
+         "time2": "Void Invaders",
+         "placar1": 1,
+         "placar2": 2,
+         "vencedor": "Void Invaders",
+         "data_hora": "21/07/2026 20:30",
+         "transmissao": null
+        },
+        {
+         "time1": "BBT Destróië",
+         "time2": "Nine Tails",
+         "placar1": 2,
+         "placar2": 1,
+         "vencedor": "BBT Destróië",
+         "data_hora": "20/07/2026 22:00",
+         "transmissao": null
+        },
+        {
+         "time1": "First Zone",
+         "time2": "Cry Wolf Eragon",
+         "placar1": 0,
+         "placar2": 1,
+         "vencedor": "Cry Wolf Eragon",
+         "data_hora": "22/07/2026 20:00",
+         "transmissao": null
+        },
+        {
+         "time1": "Fire Keepers",
+         "time2": "Nebulosa EGT E-sports",
+         "placar1": 1,
+         "placar2": 0,
+         "vencedor": "Fire Keepers",
+         "data_hora": "22/07/2026 21:00",
+         "transmissao": null
+        },
+        {
+         "time1": "Thunder",
+         "time2": "GEO Esports",
+         "placar1": 0,
+         "placar2": 1,
+         "vencedor": "GEO Esports",
+         "data_hora": "23/07/2026 20:00",
+         "transmissao": null
+        },
+        {
+         "time1": "Genesis E-Sports",
+         "time2": "DEF-CON4",
+         "placar1": 2,
+         "placar2": 1,
+         "vencedor": "Genesis E-Sports",
+         "data_hora": "23/07/2026 20:00",
+         "transmissao": null
+        },
+        {
+         "time1": "Vanta Legion",
+         "time2": "Ascensão Fênix",
+         "placar1": 2,
+         "placar2": 0,
+         "vencedor": "Vanta Legion",
+         "data_hora": "20/07/2026 20:00",
+         "transmissao": "ao_vivo"
+        },
+        {
+         "time1": "União Sinistra",
+         "time2": "AYLO",
+         "placar1": 0,
+         "placar2": 2,
+         "vencedor": "AYLO",
+         "data_hora": "20/07/2026 21:00",
+         "transmissao": null
+        }
+       ]
+      },
+      {
+       "fase": "quartas",
+       "jogos": [
+        {
+         "time1": "Void Invaders",
+         "time2": "BBT Destróië",
+         "placar1": 2,
+         "placar2": 0,
+         "vencedor": "Void Invaders",
+         "data_hora": "29/07/2026 20:00",
+         "transmissao": "ao_vivo"
+        },
+        {
+         "time1": "Cry Wolf Eragon",
+         "time2": "Fire Keepers",
+         "placar1": 0,
+         "placar2": 2,
+         "vencedor": "Fire Keepers",
+         "data_hora": "27/07/2026 21:00",
+         "transmissao": "ao_vivo"
+        },
+        {
+         "time1": "GEO Esports",
+         "time2": "Genesis E-Sports",
+         "placar1": 2,
+         "placar2": 0,
+         "vencedor": "GEO Esports",
+         "data_hora": "29/07/2026 21:00",
+         "transmissao": "ao_vivo"
+        },
+        {
+         "time1": "Vanta Legion",
+         "time2": "AYLO",
+         "placar1": 1,
+         "placar2": 2,
+         "vencedor": "AYLO",
+         "data_hora": "27/07/2026 20:00",
+         "transmissao": "ao_vivo"
+        }
+       ]
+      },
+      {
+       "fase": "semi",
+       "jogos": [
+        {
+         "time1": "Void Invaders",
+         "time2": "Fire Keepers",
+         "placar1": 1,
+         "placar2": 2,
+         "vencedor": "Fire Keepers",
+         "data_hora": "03/08/2026 20:00",
+         "transmissao": "ao_vivo"
+        },
+        {
+         "time1": "GEO Esports",
+         "time2": "AYLO",
+         "placar1": 0,
+         "placar2": 1,
+         "vencedor": "AYLO",
+         "data_hora": "03/08/2026 21:00",
+         "transmissao": "ao_vivo"
+        }
+       ]
+      },
+      {
+       "fase": "final",
+       "jogos": [
+        {
+         "time1": "Fire Keepers",
+         "time2": "AYLO",
+         "placar1": 0,
+         "placar2": 3,
+         "vencedor": "AYLO",
+         "data_hora": null,
+         "transmissao": null
+        }
+       ]
+      }
+     ]
     }
    },
    {
@@ -421,41 +578,54 @@ window.CRM_DADOS = {
  },
  "dreamcards": {
   "temporada": 16,
-  "atualizado_epoch": 1793021128.9804301,
-  "premio": "o 1º do pódio (Geral da carta) ganha R$ 50 todo dia 07",
+  "atualizado_epoch": 1793025990.3531086,
+  "premio": "Honor of Kings: o 1º do pódio pelo Geral da carta ganha R$ 50,00 (foto do pódio em 07/11/2026). O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
   "cartas": [
    {
     "posicao": 1,
     "nick": "ASF•是瑶瑶呀/.",
-    "imagem_referencia": "site-dados/cartas/01.webp"
+    "imagem_referencia": "site-dados/cartas/01.webp",
+    "imagem": "assets/cartas/01.webp"
    },
    {
     "posicao": 2,
     "nick": "ToxicFernet",
-    "imagem_referencia": "site-dados/cartas/02.webp"
+    "imagem_referencia": "site-dados/cartas/02.webp",
+    "imagem": "assets/cartas/02.webp"
    },
    {
     "posicao": 3,
     "nick": "Alagusii",
-    "imagem_referencia": "site-dados/cartas/03.webp"
+    "imagem_referencia": "site-dados/cartas/03.webp",
+    "imagem": "assets/cartas/03.webp"
    },
    {
     "posicao": 4,
     "nick": "TTVGustavoXQDL",
-    "imagem_referencia": "site-dados/cartas/04.webp"
+    "imagem_referencia": "site-dados/cartas/04.webp",
+    "imagem": "assets/cartas/04.webp"
    },
    {
     "posicao": 5,
     "nick": "ASF.Akamura.",
-    "imagem_referencia": "site-dados/cartas/05.webp"
+    "imagem_referencia": "site-dados/cartas/05.webp",
+    "imagem": "assets/cartas/05.webp"
    },
    {
     "posicao": 6,
     "nick": "⋒RAIDEIRA⋒",
-    "imagem_referencia": "site-dados/cartas/06.webp"
+    "imagem_referencia": "site-dados/cartas/06.webp",
+    "imagem": "assets/cartas/06.webp"
    }
   ],
-  "imagens_no_site": false
+  "imagens_no_site": true,
+  "premio_por_jogo": {
+   "hok": {
+    "posicao": "1",
+    "valor": "R$ 50,00",
+    "ate": "07/11/2026 23:59"
+   }
+  }
  },
  "loja_pix": [
   {

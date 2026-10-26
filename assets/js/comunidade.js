@@ -18,10 +18,16 @@
   var dc = D.dreamcards || {}, cards = Array.isArray(dc.cartas) ? dc.cartas : [];
   document.getElementById('podio-data').textContent = 'Temporada ' + (dc.temporada || 'a confirmar') + (Number.isFinite(dc.atualizado_epoch) ? ' · Atualizado em ' + date(dc.atualizado_epoch) : '');
   var podium = document.getElementById('podio-lista');
-  if(dc.premio) podium.after(node('p',dc.premio+'. Confira as regras no Discord.','aviso'));
+  var premio=Object.prototype.hasOwnProperty.call(dc,'premio_por_jogo') ? dc.premio : 'O prêmio da próxima temporada é anunciado no Discord do Dream Cards.';
+  if(premio) podium.after(node('p',premio+' Confira as regras no Discord.','aviso'));
   cards.slice().sort(function(a,b){return a.posicao-b.posicao;}).slice(0,6).forEach(function(c){
-    var article = node('article',null,'jogador');
-    article.append(node('span',String(c.posicao).padStart(2,'0'),'posicao'),node('h3',c.nick),node('small','Destaque da temporada'));
+    var article = node('article',null,'jogador'+(Number(c.posicao)===1?' jogador-primeiro':''));
+    var meta=node('div',null,'jogador-info');
+    meta.append(node('span',String(c.posicao).padStart(2,'0'),'posicao'),node('h3',c.nick),node('small','Destaque da temporada'));
+    if(dc.imagens_no_site===true && /^assets\/cartas\/0[1-6]\.webp$/.test(c.imagem||'')) {
+      var img=node('img');img.src=c.imagem;img.alt='Carta de '+c.nick+', posição '+c.posicao;img.width=400;img.height=600;img.loading='lazy';img.decoding='async';article.append(img);
+    }
+    article.append(meta);
     podium.append(article);
   });
   if (!cards.length) podium.append(node('p','O próximo pódio está sendo preparado. Acompanhe no Discord.'));
@@ -94,6 +100,8 @@
   select.addEventListener('change',render);render();
   document.getElementById('copa-data').textContent=D.gerado_em?'Dados de '+D.gerado_em+'. Atualizações e inscrições são confirmadas no Discord.':'';
 
+  var comprovante=document.getElementById('comprovante-passos');
+  if(comprovante) comprovante.textContent=(L.comprovante_passo || 'No Discord da CRM, no canal 🎩・la-nostra-casa, escolha Abrir Ticket no menu e mande o comprovante ali.').replace(/\*\*/g,'')+' Você também pode enviar por e-mail. A equipe confirma e te chama.';
   var dialog=document.getElementById('pagamento'), code=document.getElementById('pix-codigo'), image=document.getElementById('pix-qr'), imageUrl=null;
   function openPayment(product,plan){
     var item=(D.loja_pix||[]).find(function(p){return p.produto===product.id && p.plano===plan.nome && p.preco===plan.preco;});

@@ -124,14 +124,14 @@
     return p && p.planos && p.planos[0] ? p.planos[0].preco : "";
   };
   var CARDS = [
-    { titulo: "Dream Cards", linha: "Manda o print da tua partida de HoK ou MLBB e vira carta, com os teus números de verdade.", img: "assets/img/dream-cards.webp", alvo: "#dream-cards", etiqueta: "HoK · MLBB" },
+    { titulo: "Dream Cards", linha: "Manda o print da tua partida de HoK ou MLBB e vira carta, com os teus números de verdade.", img: "assets/img/dream-cards.webp", arteInteira: true, fundo: "roxo", alvo: "#dream-cards", etiqueta: "HoK · MLBB" },
     { titulo: "Bot CRM 2.0", linha: "Menos trabalho repetitivo. Mais tempo pra tua comunidade.", img: "assets/img/bot-crm.webp", contido: true, fundo: "ouro", alvo: "#loja", etiqueta: precoDe("bot") },
     { titulo: "Sistema de Copa", img: "assets/img/sistema-de-copa.webp", alvo: "#loja", semLegenda: true },
     { titulo: "Configuração de Discord", img: "assets/img/configuracao-discord.webp", alvo: "#loja", semLegenda: true },
     { titulo: "Rádio CRM", linha: "Música pra jogar, trocar ideia e curtir com a galera.", img: "assets/img/radio-crm.webp", contido: true, fundo: "ouro", alvo: "#radio", etiqueta: "Na call" },
     { titulo: "Kinguin", linha: "Keys, gift cards, recargas e software. Link de parceiro: a CRM ganha uma comissão, sem custo a mais pra você.", kinguin: true, alvo: "#kinguin", etiqueta: "Parceiro" },
     { titulo: "Sua marca aqui", linha: "Sua marca pode fazer parte dessa comunidade. Fale com a CRM sobre patrocínio.", img: "assets/img/divulgacao-direita.webp", alvo: "#contato", etiqueta: "Patrocínio" },
-    { titulo: "Copa do Infinito", linha: "Tua equipe, o próximo desafio. A Copa do Infinito é um projeto CRM.", img: "assets/img/copa-do-infinito.webp", alvo: "#copa", etiqueta: "16 times" }
+    { titulo: "Copa do Infinito", linha: "Tua equipe, o próximo desafio. A Copa do Infinito é um projeto CRM.", img: "assets/img/copa-do-infinito.webp", arteInteira: true, fundo: "ouro", alvo: "#copa", etiqueta: "16 times" }
   ];
   var trilho = $("#carrossel-trilho"), pontos = $("#pontos"), atual = 0, timer = null;
   var cartoes = CARDS.map(function (c, i) {
@@ -143,7 +143,7 @@
     }
     if (c.etiqueta) filhos.push(el("span", { classe: "cartao-etiqueta", texto: c.etiqueta }));
     if (!c.semLegenda) filhos.push(el("div", { classe: "cartao-legenda" }, [el("b", { texto: c.titulo }), el("span", { texto: c.linha })]));
-    var classe = "cartao" + (c.contido ? " contido" : "") + (c.fundo === "ouro" ? " cartao-fundo-ouro" : "") + (c.kinguin ? " cartao-kinguin" : "");
+    var classe = "cartao" + (c.arteInteira ? " cartao-arte-inteira" : "") + (c.fundo === "roxo" ? " cartao-fundo-roxo" : "") + (c.contido ? " contido" : "") + (c.fundo === "ouro" ? " cartao-fundo-ouro" : "") + (c.kinguin ? " cartao-kinguin" : "");
     var a = el("a", { classe: classe, href: c.alvo, "aria-label": c.titulo + (c.linha ? ": " + c.linha : "") }, filhos);
     a.addEventListener("click", function (e) {
       if (i !== atual) { e.preventDefault(); ir(i); }

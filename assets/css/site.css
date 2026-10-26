@@ -287,3 +287,9 @@ section[id], .caixa[id] { scroll-margin-top: 96px; }
 /* Datas junto das informações a que se referem. */
 .data-referencia { margin: 10px 0 16px; color: var(--cinza); font-size: 12px; text-align: center; }
 .destaque-texto .data-referencia { text-align: left; }
+
+/* Artes com lettering precisam aparecer inteiras, sem preencher por recorte. */
+.cartao-arte-inteira { display: flex; flex-direction: column; }
+.cartao-arte-inteira img { flex: 1 1 0; min-height: 0; height: auto; width: 100%; padding: 44px 14px 0; object-fit: contain; }
+.cartao-arte-inteira .cartao-legenda { position: static; flex: 0 0 auto; padding: 14px 18px 18px; background: rgba(8,6,12,.7); }
+@media(max-width:560px){.cartao-arte-inteira img{padding:36px 10px 0}.cartao-arte-inteira .cartao-legenda{padding:10px 14px 14px}.cartao-arte-inteira .cartao-legenda span{font-size:12px;line-height:1.45}}
