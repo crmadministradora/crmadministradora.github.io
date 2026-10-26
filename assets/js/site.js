@@ -61,6 +61,7 @@
     "Copa Discord": { resumo: "Até 16 times: inscrição automática, sorteio, chaves e resultados.", cta: "Comprar no Discord" },
     "Copa + WhatsApp": { resumo: "Tudo da Copa Discord, mais a comunidade de WhatsApp do campeonato.", cta: "Comprar no Discord" },
     "Configuração de Discord": { resumo: "Cargos, canais, permissões e o Bot CRM 2.0 instalado.", cta: "Comprar no Discord" },
+    "Campanha de Divulgação": { resumo: "Arte da tua org, dois posts por dia no Instagram, às 12h e às 20h, e divulgação diária na comunidade de WhatsApp da CRM.", cta: "Comprar no Discord" },
     "Bot CRM 2.0": { resumo: "O bot da CRM no teu servidor, feito e mantido pela CRM.", cta: "Adicionar o bot" }
   };
   (function () {
@@ -71,7 +72,7 @@
         var t = TEXTOS_LOJA[titulo] || { resumo: p.resumo, cta: p.botao };
         var itens = p.id === "bot"
           ? (p.destaques || []).map(function (d) { return d.nome; })
-          : (pl.inclui || []).slice(0, 5);
+          : (pl.inclui || []).filter(function (texto) { return !/coins/i.test(texto); }).slice(0, 5);
         var gratis = /gr[aá]tis/i.test(pl.preco || "");
         var ul = el("ul", { classe: p.id === "bot" ? "pilares" : "" }, itens.map(function (i) { return el("li", { texto: i }); }));
         var preco = el("div", { classe: "plano-preco", texto: pl.preco || "" }, [pl.por ? el("small", { texto: pl.por }) : null]);
@@ -148,7 +149,7 @@
       if (i !== atual) { e.preventDefault(); ir(i); }
     });
     trilho.appendChild(a);
-    var p = el("button", { type: "button", role: "tab", "aria-label": c.titulo });
+    var p = el("button", { type: "button", "aria-label": c.titulo });
     p.addEventListener("click", function () { ir(i); });
     pontos.appendChild(p);
     return a;
@@ -162,16 +163,24 @@
       c.tabIndex = d === 0 ? 0 : -1;
       c.setAttribute("aria-hidden", d === 0 ? "false" : "true");
     });
-    Array.prototype.forEach.call(pontos.children, function (p, i) { p.setAttribute("aria-selected", i === atual ? "true" : "false"); });
+    Array.prototype.forEach.call(pontos.children, function (p, i) { p.setAttribute("aria-pressed", i === atual ? "true" : "false"); });
   }
   function ir(i) { atual = (i + cartoes.length) % cartoes.length; desenhar(); reiniciar(); }
   var reduzido = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function reiniciar() { clearInterval(timer); if (!reduzido) timer = setInterval(function () { ir(atual + 1); }, 5500); }
+  var pausado = reduzido, sobre = false, foco = false;
+  var pausa = $("#pausar-carrossel");
+  function atualizarPausa() { pausa.textContent = pausado ? "Retomar carrossel" : "Pausar carrossel"; pausa.setAttribute("aria-pressed", String(pausado)); }
+  pausa.addEventListener("click", function () { pausado = !pausado; atualizarPausa(); reiniciar(); });
+  atualizarPausa();
+  function reiniciar() { clearInterval(timer); if (!pausado && !sobre && !foco && !document.hidden) timer = setInterval(function () { ir(atual + 1); }, 5500); }
   $("#seta-esq").addEventListener("click", function () { ir(atual - 1); });
   $("#seta-dir").addEventListener("click", function () { ir(atual + 1); });
   var car = $("#carrossel");
-  car.addEventListener("mouseenter", function () { clearInterval(timer); });
-  car.addEventListener("mouseleave", reiniciar);
+  car.addEventListener("mouseenter", function () { sobre = true; reiniciar(); });
+  car.addEventListener("mouseleave", function () { sobre = false; reiniciar(); });
+  car.addEventListener("focusin", function () { foco = true; reiniciar(); });
+  car.addEventListener("focusout", function (e) { foco = car.contains(e.relatedTarget); reiniciar(); });
+  document.addEventListener("visibilitychange", reiniciar);
   car.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") ir(atual - 1);
     if (e.key === "ArrowRight") ir(atual + 1);
@@ -193,15 +202,82 @@
     lateral.classList.toggle("aberta", sim);
     veu.hidden = !sim;
     gaveta.setAttribute("aria-expanded", sim ? "true" : "false");
+    if (window.matchMedia("(max-width: 960px)").matches) lateral.inert = !sim;
+    if (sim) lateral.querySelector("a, button").focus();
   }
+  function ajustarGaveta() { lateral.inert = window.matchMedia("(max-width: 960px)").matches && !lateral.classList.contains("aberta"); }
+  ajustarGaveta();
+  window.addEventListener("resize", ajustarGaveta);
+  document.addEventListener("keydown", function (e) {
+    if (!lateral.classList.contains("aberta")) return;
+    if (e.key === "Escape") { abrirGaveta(false); gaveta.focus(); }
+    if (e.key === "Tab" && window.matchMedia("(max-width: 960px)").matches) {
+      var itens = lateral.querySelectorAll("a[href],button"), primeiro = itens[0], ultimo = itens[itens.length - 1];
+      if (e.shiftKey && document.activeElement === primeiro) { e.preventDefault(); ultimo.focus(); }
+      else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primeiro.focus(); }
+    }
+  });
   gaveta.addEventListener("click", function () { abrirGaveta(!lateral.classList.contains("aberta")); });
   veu.addEventListener("click", function () { abrirGaveta(false); });
   lateral.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { abrirGaveta(false); }); });
 
   /* ---------- a Rádio CRM ---------- */
   var player = $("#radio-crm"), audio = $("#radio-audio"), pop = $("#radio-dica"), faixa = $("#radio-faixa");
-  var tocando = false;
-  function marcar(sim) { tocando = sim; player.classList.toggle("tocando", sim); $(".radio-icone", player).textContent = sim ? "❚❚" : "▶"; }
+  var tocando = false, pedidoRadio = 0;
+  var grade = D.radio, mini = $("#mini-ouvir"), miniFaixa = $("#mini-faixa"), radioStatus = $("#radio-status");
+  var carregando = false;
+  audio.volume = Number($("#radio-volume").value);
+  $("#radio-volume").addEventListener("input", function (e) { audio.volume = Number(e.target.value); });
+  function marcar(sim) {
+    tocando = sim;
+    player.classList.toggle("tocando", sim);
+    $(".radio-icone", player).textContent = mini.textContent = sim ? "❚❚" : "▶";
+    mini.setAttribute("aria-label", sim ? "Pausar a Rádio CRM" : "Ouvir a Rádio CRM");
+    $("#radio-botao").setAttribute("aria-label", sim ? "Pausar a Rádio CRM" : "Ouvir a Rádio CRM");
+    mini.setAttribute("aria-pressed", String(sim));
+  }
+  function posicaoGrade() {
+    if (!grade || !Array.isArray(grade.faixas) || !grade.faixas.length || !(grade.total_s > 0)) return null;
+    var pos = ((Date.now() / 1000 - grade.epoch_inicio) % grade.total_s + grade.total_s) % grade.total_s;
+    for (var i = 0; i < grade.faixas.length; i++) {
+      var f = grade.faixas[i];
+      if (pos < f.duracao_s) return { faixa: f, segundo: pos };
+      pos -= f.duracao_s;
+    }
+    return { faixa: grade.faixas[0], segundo: 0 };
+  }
+  function tocarGrade() {
+    var p = posicaoGrade();
+    if (!p) { aviso("A programação da rádio está sendo preparada."); return; }
+    var pedido = ++pedidoRadio;
+    carregando = true; radioStatus.textContent = "Sintonizando…";
+    var arquivo = p.faixa.arquivo;
+    if (!/^assets\/radio\/\d+\.mp3$/.test(arquivo)) { carregando = false; radioStatus.textContent = "Faixa indisponível."; return; }
+    audio.src = arquivo;
+    faixa.textContent = miniFaixa.textContent = p.faixa.titulo + " · CRM";
+    audio.onloadedmetadata = function () {
+      if (pedido !== pedidoRadio) return;
+      var agora = posicaoGrade();
+      if (agora && agora.faixa.arquivo === arquivo) audio.currentTime = Math.min(agora.segundo, Math.max(0, audio.duration - .1));
+      else tocarGrade();
+    };
+    audio.onended = tocarGrade;
+    audio.play().then(function () {
+      if (pedido !== pedidoRadio) return;
+      carregando = false; marcar(true); radioStatus.textContent = "Tocando";
+    }).catch(function () {
+      if (pedido !== pedidoRadio) return;
+      carregando = false; marcar(false); radioStatus.textContent = "Não consegui tocar. Tenta de novo.";
+    });
+  }
+  // Return to the clock after buffering or the device waking from sleep.
+  setInterval(function () {
+    if (!tocando || carregando || !grade) return;
+    var p = posicaoGrade();
+    if (!p) return;
+    if (!audio.src.endsWith('/' + p.faixa.arquivo)) tocarGrade();
+    else if (audio.readyState >= 1 && Math.abs(audio.currentTime - p.segundo) > 1.5) audio.currentTime = Math.min(p.segundo, Math.max(0, audio.duration - .1));
+  }, 1000);
   function sintonizar() {
     // o contrato da F2: {titulo, url, inicio, agora} (segundos) -- toca a mesma música no mesmo segundo da rede
     var t0 = Date.now();
@@ -220,11 +296,17 @@
     });
   }
   function clicarRadio() {
+    if (grade && grade.faixas && grade.faixas.length) {
+      if (tocando || carregando) { pedidoRadio++; carregando = false; audio.pause(); marcar(false); radioStatus.textContent = "Pausada"; }
+      else tocarGrade();
+      return;
+    }
     if (!CONFIG.radio.agoraUrl) { pop.hidden = !pop.hidden; return; }
     if (tocando) { audio.pause(); marcar(false); return; }
     sintonizar();
   }
   $("#radio-botao").addEventListener("click", clicarRadio);
+  mini.addEventListener("click", clicarRadio);
   document.querySelectorAll('[data-acao="radio"]').forEach(function (b) {
     b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); clicarRadio(); });
   });
@@ -235,7 +317,7 @@
   function mostrarUsuario(u) {
     var velho = btnLogin.querySelector("img");
     if (velho) velho.remove();
-    if (!u) { rotulo.textContent = "Entrar com Discord"; btnLogin.querySelector("svg").style.display = ""; return; }
+    if (!u) { rotulo.textContent = CONFIG.login.ligado ? "Entrar com Discord" : "Discord · em breve"; btnLogin.querySelector("svg").style.display = ""; return; }
     btnLogin.querySelector("svg").style.display = "none";
     var av = u.avatar ? "https://cdn.discordapp.com/avatars/" + u.id + "/" + u.avatar + ".png?size=64" : "assets/img/favicon.png";
     btnLogin.insertBefore(el("img", { src: av, alt: "", width: "26", height: "26" }), rotulo);

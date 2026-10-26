@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "25/10/2026 13:54",
+ "gerado_em": "26/10/2026 10:24",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -65,7 +65,7 @@ window.CRM_DADOS = {
    "id": "bot",
    "nome": "Bot CRM 2.0",
    "emoji": "🤖",
-   "resumo": "Grátis — Porteiro com IA, segurança, anti-spam, suporte 24 h e aparência",
+   "resumo": "Grátis: Porteiro com IA, segurança, anti-spam, suporte 24 h e aparência",
    "planos": [
     {
      "nome": "Adicionar o bot",
@@ -117,6 +117,28 @@ window.CRM_DADOS = {
     }
    ],
    "botao": "Adicionar o bot"
+  },
+  {
+   "id": "campanha",
+   "nome": "Campanha de Divulgação",
+   "emoji": "📣",
+   "resumo": "Arte e divulgação pra tua org no Instagram e no WhatsApp",
+   "planos": [
+    {
+     "nome": "3 dias",
+     "emoji": "⚡",
+     "preco": "R$ 49,00",
+     "por": "3 dias de campanha",
+     "inclui": [
+      "As artes com a cara da sua org",
+      "2 posts por dia no Instagram (o da CRM e o seu)",
+      "1 post por dia na comunidade de WhatsApp da CRM",
+      "Dá pra trocar por CRM coins"
+     ]
+    }
+   ],
+   "destaques": [],
+   "botao": "Comprar no Discord"
   }
  ],
  "links": {
@@ -161,5 +183,484 @@ window.CRM_DADOS = {
    }
   ],
   "obs": "A lista completa (Nitro, MLBB, gift cards) vem da Grok WEB; até lá, só estes dois."
+ },
+ "copa": {
+  "nome": "Copa do Infinito",
+  "jogo_da_proxima": "hok",
+  "proxima_edicao": {
+   "hok": 3,
+   "mlbb": 5
+  },
+  "ao_vivo": null,
+  "inscricoes": {
+   "aberta": false,
+   "jogo": null,
+   "data_limite": null,
+   "valor": null
+  },
+  "edicoes": [
+   {
+    "edicao": 2,
+    "jogo": "hok",
+    "campeao": "AYLO",
+    "vice": "Fire Keepers",
+    "inicio": "2026-07-15",
+    "fim": "2026-08-05",
+    "duracao_dias": 21,
+    "times": [
+     "HIZEm",
+     "Fire Keepers",
+     "União Sinistra",
+     "Vanta Legion",
+     "Cry Wolf Eragon",
+     "Nebulosa EGT E-sports",
+     "AYLO",
+     "Void Invaders",
+     "Thunder",
+     "Nine Tails",
+     "First Zone",
+     "BBT Destróië",
+     "GEO Esports",
+     "DEF-CON4",
+     "Ascensão Fênix",
+     "Genesis E-Sports"
+    ],
+    "chave": {
+     "fase_atual": null,
+     "fases": []
+    }
+   },
+   {
+    "edicao": 4,
+    "jogo": "mlbb",
+    "campeao": "Z1NYX ESPORTS",
+    "vice": "Ômega E-Sports",
+    "inicio": "2026-09-08",
+    "fim": "2026-10-01",
+    "duracao_dias": null,
+    "times": [
+     "Chaos SuperNova",
+     "Dark Blood eSports",
+     "Zenith Solid",
+     "Phantom Esports",
+     "F4E RED",
+     "YagaMi",
+     "Z1NYX ESPORTS",
+     "UMBRELA",
+     "Proximity",
+     "REING",
+     "VENOM Line 1",
+     "Apex PANTEON",
+     "Ômega E-Sports",
+     "Zenith Tlow",
+     "Z1NYX NICE",
+     "Z1NYX SOLID"
+    ],
+    "chave": {
+     "fase_atual": "concluido",
+     "fases": [
+      {
+       "fase": "oitavas",
+       "jogos": [
+        {
+         "time1": "UMBRELA",
+         "time2": "Ômega E-Sports",
+         "placar1": 0,
+         "placar2": 2,
+         "vencedor": "Ômega E-Sports",
+         "data_hora": "14/09/2026 20:00",
+         "transmissao": "ao_vivo"
+        },
+        {
+         "time1": "Proximity",
+         "time2": "Apex PANTEON",
+         "placar1": 2,
+         "placar2": 0,
+         "vencedor": "Proximity",
+         "data_hora": "14/09/2026 21:00",
+         "transmissao": "ao_vivo"
+        },
+        {
+         "time1": "Phantom Esports",
+         "time2": "Zenith Tlow",
+         "placar1": 0,
+         "placar2": 2,
+         "vencedor": "Zenith Tlow",
+         "data_hora": null,
+         "transmissao": null
+        },
+        {
+         "time1": "F4E RED",
+         "time2": "Dark Blood eSports",
+         "placar1": 0,
+         "placar2": 2,
+         "vencedor": "Dark Blood eSports",
+         "data_hora": null,
+         "transmissao": null
+        },
+        {
+         "time1": "Chaos SuperNova",
+         "time2": "VENOM Line 1",
+         "placar1": 2,
+         "placar2": 0,
+         "vencedor": "Chaos SuperNova",
+         "data_hora": null,
+         "transmissao": null
+        },
+        {
+         "time1": "Zenith Solid",
+         "time2": "REING",
+         "placar1": 1,
+         "placar2": 0,
+         "vencedor": "Zenith Solid",
+         "data_hora": null,
+         "transmissao": null
+        },
+        {
+         "time1": "YagaMi",
+         "time2": "Z1NYX SOLID",
+         "placar1": 0,
+         "placar2": 2,
+         "vencedor": "Z1NYX SOLID",
+         "data_hora": "20/09/2026 21:00",
+         "transmissao": "off"
+        },
+        {
+         "time1": "Z1NYX ESPORTS",
+         "time2": "Z1NYX NICE",
+         "placar1": 2,
+         "placar2": 0,
+         "vencedor": "Z1NYX ESPORTS",
+         "data_hora": "18/09/2026 21:00",
+         "transmissao": "off"
+        }
+       ]
+      },
+      {
+       "fase": "quartas",
+       "jogos": [
+        {
+         "time1": "Ômega E-Sports",
+         "time2": "Proximity",
+         "placar1": 2,
+         "placar2": 0,
+         "vencedor": "Ômega E-Sports",
+         "data_hora": null,
+         "transmissao": null
+        },
+        {
+         "time1": "Zenith Tlow",
+         "time2": "Dark Blood eSports",
+         "placar1": 2,
+         "placar2": 0,
+         "vencedor": "Zenith Tlow",
+         "data_hora": null,
+         "transmissao": null
+        },
+        {
+         "time1": "Chaos SuperNova",
+         "time2": "Zenith Solid",
+         "placar1": 1,
+         "placar2": 2,
+         "vencedor": "Zenith Solid",
+         "data_hora": null,
+         "transmissao": null
+        },
+        {
+         "time1": "Z1NYX SOLID",
+         "time2": "Z1NYX ESPORTS",
+         "placar1": 0,
+         "placar2": 2,
+         "vencedor": "Z1NYX ESPORTS",
+         "data_hora": null,
+         "transmissao": null
+        }
+       ]
+      },
+      {
+       "fase": "semi",
+       "jogos": [
+        {
+         "time1": "Ômega E-Sports",
+         "time2": "Zenith Tlow",
+         "placar1": 1,
+         "placar2": 0,
+         "vencedor": "Ômega E-Sports",
+         "data_hora": null,
+         "transmissao": null
+        },
+        {
+         "time1": "Zenith Solid",
+         "time2": "Z1NYX ESPORTS",
+         "placar1": 0,
+         "placar2": 2,
+         "vencedor": "Z1NYX ESPORTS",
+         "data_hora": null,
+         "transmissao": null
+        }
+       ]
+      },
+      {
+       "fase": "final",
+       "jogos": [
+        {
+         "time1": "Ômega E-Sports",
+         "time2": "Z1NYX ESPORTS",
+         "placar1": 0,
+         "placar2": 3,
+         "vencedor": "Z1NYX ESPORTS",
+         "data_hora": null,
+         "transmissao": null
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "dreamcards": {
+  "temporada": 16,
+  "atualizado_epoch": 1793021128.9804301,
+  "premio": "o 1º do pódio (Geral da carta) ganha R$ 50 todo dia 07",
+  "cartas": [
+   {
+    "posicao": 1,
+    "nick": "ASF•是瑶瑶呀/.",
+    "imagem_referencia": "site-dados/cartas/01.webp"
+   },
+   {
+    "posicao": 2,
+    "nick": "ToxicFernet",
+    "imagem_referencia": "site-dados/cartas/02.webp"
+   },
+   {
+    "posicao": 3,
+    "nick": "Alagusii",
+    "imagem_referencia": "site-dados/cartas/03.webp"
+   },
+   {
+    "posicao": 4,
+    "nick": "TTVGustavoXQDL",
+    "imagem_referencia": "site-dados/cartas/04.webp"
+   },
+   {
+    "posicao": 5,
+    "nick": "ASF.Akamura.",
+    "imagem_referencia": "site-dados/cartas/05.webp"
+   },
+   {
+    "posicao": 6,
+    "nick": "⋒RAIDEIRA⋒",
+    "imagem_referencia": "site-dados/cartas/06.webp"
+   }
+  ],
+  "imagens_no_site": false
+ },
+ "loja_pix": [
+  {
+   "produto": "copa",
+   "produto_nome": "Sistema de Copa",
+   "plano": "Copa Discord",
+   "preco": "R$ 49,90",
+   "por": "por edição",
+   "txid": "SITECOPA1",
+   "copia_e_cola": "00020126580014br.gov.bcb.pix01365a0410b9-350f-4671-a0d8-6123c8b27f35520400005303986540549.905802BR5903CRM6009SAO PAULO62130509SITECOPA163048C68",
+   "qr_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"318\" height=\"318\" class=\"segno\"><path transform=\"scale(6)\" class=\"qrline\" stroke=\"#000\" d=\"M2 2.5h7m1 0h1m1 0h1m2 0h2m2 0h3m1 0h3m1 0h3m1 0h3m2 0h1m1 0h2m2 0h1m1 0h7m-49 1h1m5 0h1m1 0h2m1 0h2m4 0h1m1 0h6m2 0h1m1 0h1m2 0h1m2 0h6m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h4m1 0h1m2 0h1m1 0h6m1 0h1m1 0h1m2 0h3m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m3 0h1m3 0h1m1 0h2m1 0h2m3 0h1m1 0h3m2 0h2m3 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m3 0h1m2 0h2m1 0h7m1 0h1m1 0h1m2 0h1m2 0h2m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m3 0h2m2 0h2m1 0h1m1 0h1m2 0h1m3 0h1m1 0h2m5 0h1m1 0h2m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-40 1h1m2 0h2m5 0h4m3 0h1m1 0h1m1 0h1m2 0h1m4 0h1m1 0h1m-41 1h1m2 0h6m2 0h2m1 0h2m6 0h5m1 0h2m1 0h1m1 0h6m2 0h1m2 0h1m1 0h3m-47 1h1m2 0h1m3 0h1m2 0h1m1 0h2m2 0h3m1 0h3m1 0h2m1 0h2m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h3m-47 1h1m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m2 0h2m2 0h2m1 0h3m3 0h1m2 0h1m1 0h4m6 0h1m2 0h2m-49 1h2m2 0h2m1 0h4m1 0h3m1 0h3m3 0h1m2 0h1m1 0h1m1 0h2m1 0h1m1 0h1m4 0h6m1 0h2m-48 1h3m1 0h1m1 0h1m4 0h1m5 0h1m1 0h2m2 0h3m2 0h2m2 0h3m1 0h3m3 0h3m2 0h2m-46 1h3m6 0h1m1 0h1m2 0h2m2 0h2m1 0h4m2 0h2m5 0h2m3 0h1m1 0h2m1 0h1m-46 1h1m2 0h2m1 0h1m3 0h1m4 0h1m1 0h3m2 0h1m1 0h2m1 0h1m2 0h1m3 0h1m1 0h4m1 0h2m1 0h1m1 0h1m-49 1h1m1 0h2m5 0h4m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h2m2 0h1m1 0h1m1 0h3m1 0h2m1 0h2m1 0h1m-49 1h1m1 0h2m2 0h1m2 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m1 0h2m2 0h1m4 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h2m1 0h2m-48 1h1m1 0h3m2 0h3m4 0h2m4 0h2m1 0h2m1 0h1m1 0h3m1 0h4m3 0h1m1 0h2m2 0h1m1 0h1m-49 1h2m2 0h1m1 0h1m2 0h2m7 0h1m3 0h1m1 0h5m2 0h4m1 0h1m2 0h3m2 0h3m1 0h1m-49 1h1m2 0h1m3 0h5m5 0h2m2 0h1m1 0h1m1 0h1m4 0h6m1 0h3m7 0h2m-49 1h2m1 0h9m3 0h2m1 0h1m1 0h2m2 0h2m2 0h2m3 0h1m2 0h2m4 0h2m4 0h1m-48 1h2m6 0h1m1 0h1m2 0h1m1 0h1m3 0h1m1 0h2m2 0h2m1 0h2m2 0h2m3 0h1m1 0h1m1 0h1m1 0h1m2 0h1m-48 1h1m1 0h8m1 0h2m2 0h1m1 0h2m1 0h8m1 0h1m2 0h3m2 0h1m2 0h5m2 0h2m-47 1h1m1 0h1m3 0h1m1 0h1m1 0h2m1 0h3m4 0h1m3 0h2m1 0h4m4 0h1m2 0h1m3 0h1m1 0h3m-49 1h2m1 0h2m1 0h1m1 0h3m2 0h1m1 0h1m5 0h2m1 0h1m1 0h3m2 0h6m3 0h1m1 0h1m1 0h2m1 0h2m-48 1h2m1 0h1m3 0h2m2 0h1m3 0h2m1 0h2m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h4m1 0h1m3 0h1m-44 1h1m2 0h7m2 0h2m1 0h1m1 0h2m2 0h8m1 0h1m1 0h1m2 0h1m1 0h1m1 0h5m2 0h2m-49 1h1m2 0h1m4 0h1m3 0h1m3 0h6m2 0h1m1 0h1m2 0h2m2 0h2m2 0h5m2 0h1m1 0h1m1 0h1m-49 1h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h1m3 0h1m1 0h3m1 0h2m1 0h1m3 0h1m1 0h1m3 0h4m1 0h3m2 0h3m-41 1h1m2 0h1m1 0h2m3 0h1m9 0h3m1 0h1m1 0h3m3 0h1m1 0h1m2 0h1m-46 1h4m1 0h2m3 0h1m2 0h3m4 0h2m1 0h1m1 0h4m3 0h1m3 0h1m2 0h1m1 0h3m1 0h4m-48 1h2m1 0h1m2 0h2m2 0h1m1 0h1m1 0h2m1 0h3m1 0h2m6 0h1m2 0h5m1 0h1m1 0h1m2 0h2m1 0h1m-48 1h1m1 0h2m2 0h2m1 0h1m4 0h2m2 0h2m1 0h3m1 0h1m2 0h1m1 0h2m3 0h2m2 0h1m2 0h1m1 0h4m-40 1h1m3 0h4m2 0h3m3 0h2m2 0h1m1 0h9m5 0h1m1 0h1m1 0h1m-49 1h1m5 0h3m2 0h1m1 0h1m1 0h1m3 0h3m1 0h1m2 0h3m3 0h1m2 0h1m1 0h7m1 0h1m2 0h1m-48 1h4m2 0h3m3 0h1m1 0h1m8 0h4m1 0h7m3 0h2m5 0h3m-49 1h1m2 0h1m1 0h2m1 0h1m3 0h1m1 0h2m1 0h2m2 0h2m4 0h3m1 0h2m2 0h5m2 0h1m4 0h2m-48 1h1m2 0h1m2 0h1m2 0h1m1 0h3m2 0h4m1 0h1m1 0h1m1 0h1m3 0h4m1 0h4m1 0h1m2 0h5m-47 1h1m3 0h2m1 0h1m2 0h2m5 0h2m2 0h4m1 0h2m2 0h1m1 0h1m4 0h1m3 0h1m1 0h1m1 0h1m1 0h1m-48 1h3m3 0h5m1 0h2m1 0h2m2 0h1m2 0h3m1 0h1m3 0h1m1 0h1m4 0h3m3 0h1m1 0h1m1 0h1m-49 1h3m3 0h1m4 0h1m3 0h5m2 0h6m1 0h2m1 0h1m3 0h9m1 0h3m-41 1h1m1 0h3m1 0h2m6 0h1m3 0h1m3 0h1m1 0h1m1 0h1m1 0h1m3 0h1m3 0h1m1 0h1m-47 1h7m1 0h2m4 0h2m1 0h1m1 0h4m1 0h1m1 0h4m2 0h1m4 0h1m2 0h1m1 0h1m1 0h5m-49 1h1m5 0h1m1 0h1m1 0h3m2 0h3m1 0h2m1 0h1m3 0h3m5 0h2m2 0h3m3 0h1m2 0h2m-49 1h1m1 0h3m1 0h1m1 0h6m2 0h1m1 0h2m1 0h6m1 0h3m2 0h2m1 0h2m1 0h6m3 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h2m2 0h2m2 0h2m1 0h1m1 0h1m2 0h1m3 0h2m2 0h3m1 0h2m1 0h3m1 0h1m2 0h1m-49 1h1m1 0h3m1 0h1m2 0h2m3 0h1m2 0h2m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m2 0h4m1 0h1m1 0h1m2 0h1m1 0h2m-48 1h1m5 0h1m3 0h1m1 0h1m1 0h2m1 0h5m2 0h1m2 0h1m2 0h1m3 0h3m2 0h1m1 0h2m1 0h1m1 0h3m-49 1h7m1 0h1m2 0h3m2 0h1m2 0h2m1 0h9m1 0h3m1 0h1m2 0h2m2 0h2m3 0h1\"/></svg>\n"
+  },
+  {
+   "produto": "copa",
+   "produto_nome": "Sistema de Copa",
+   "plano": "Copa + WhatsApp",
+   "preco": "R$ 89,90",
+   "por": "por edição",
+   "txid": "SITECOPA2",
+   "copia_e_cola": "00020126580014br.gov.bcb.pix01365a0410b9-350f-4671-a0d8-6123c8b27f35520400005303986540589.905802BR5903CRM6009SAO PAULO62130509SITECOPA2630475F8",
+   "qr_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"318\" height=\"318\" class=\"segno\"><path transform=\"scale(6)\" class=\"qrline\" stroke=\"#000\" d=\"M2 2.5h7m4 0h1m4 0h1m1 0h1m1 0h2m5 0h2m1 0h1m1 0h1m2 0h2m3 0h1m1 0h7m-49 1h1m5 0h1m4 0h5m1 0h1m4 0h5m2 0h1m1 0h1m1 0h1m1 0h2m1 0h3m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h5m1 0h1m6 0h1m1 0h2m1 0h1m3 0h2m1 0h1m1 0h1m3 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m1 0h1m1 0h2m1 0h1m6 0h1m1 0h2m1 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h4m3 0h1m2 0h1m2 0h6m1 0h3m1 0h2m1 0h3m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m1 0h1m4 0h2m1 0h2m1 0h1m1 0h2m3 0h2m5 0h2m2 0h2m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-41 1h1m4 0h1m2 0h2m4 0h1m3 0h3m1 0h3m4 0h1m1 0h2m-41 1h1m1 0h5m2 0h1m2 0h3m4 0h1m2 0h5m2 0h1m3 0h1m1 0h2m1 0h1m1 0h1m1 0h5m-44 1h2m2 0h1m3 0h1m3 0h2m2 0h1m1 0h1m1 0h2m3 0h3m1 0h2m2 0h1m2 0h1m2 0h1m1 0h1m2 0h1m-47 1h3m1 0h2m3 0h6m1 0h2m2 0h1m2 0h3m7 0h1m1 0h3m2 0h1m6 0h1m-49 1h2m1 0h1m4 0h3m1 0h2m2 0h1m4 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m6 0h4m-46 1h1m2 0h1m1 0h2m1 0h1m4 0h1m2 0h1m5 0h1m1 0h1m1 0h1m4 0h1m1 0h1m1 0h2m3 0h3m3 0h1m1 0h1m-48 1h5m1 0h3m2 0h2m1 0h1m3 0h2m1 0h1m1 0h1m5 0h1m1 0h2m5 0h1m2 0h2m3 0h1m-46 1h1m1 0h3m3 0h1m1 0h2m2 0h2m2 0h3m1 0h6m1 0h2m1 0h1m1 0h4m1 0h1m2 0h1m3 0h1m-49 1h5m3 0h1m2 0h2m2 0h3m1 0h2m1 0h2m3 0h1m2 0h4m2 0h1m5 0h3m3 0h1m-46 1h1m1 0h2m1 0h2m6 0h3m1 0h2m2 0h1m1 0h1m2 0h1m4 0h3m3 0h1m1 0h1m2 0h1m2 0h1m-48 1h1m6 0h1m2 0h1m5 0h1m5 0h3m4 0h1m1 0h1m3 0h1m2 0h1m1 0h3m1 0h1m1 0h2m-49 1h2m3 0h5m1 0h1m1 0h2m1 0h5m2 0h2m4 0h1m3 0h1m1 0h5m3 0h1m1 0h1m1 0h2m-49 1h1m1 0h2m1 0h1m4 0h2m1 0h3m1 0h4m2 0h1m2 0h2m2 0h1m3 0h2m7 0h3m1 0h2m-49 1h2m1 0h2m1 0h1m1 0h2m2 0h2m2 0h1m1 0h5m1 0h1m4 0h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m3 0h1m1 0h1m-49 1h2m1 0h1m1 0h1m2 0h1m1 0h1m5 0h1m4 0h1m1 0h1m4 0h3m1 0h1m6 0h1m2 0h1m2 0h3m-48 1h1m2 0h8m2 0h3m2 0h1m2 0h7m5 0h3m1 0h2m1 0h5m3 0h1m-47 1h3m3 0h1m2 0h2m2 0h1m1 0h2m2 0h2m3 0h1m1 0h1m1 0h6m1 0h1m1 0h2m3 0h2m2 0h1m-49 1h1m1 0h3m1 0h1m1 0h7m1 0h1m1 0h5m1 0h1m1 0h2m1 0h1m3 0h1m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-46 1h2m3 0h1m1 0h2m2 0h1m1 0h1m4 0h2m3 0h3m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m-42 1h6m1 0h1m3 0h2m1 0h1m3 0h6m1 0h1m3 0h2m1 0h3m1 0h5m1 0h3m-49 1h1m1 0h1m6 0h2m1 0h3m3 0h2m2 0h1m1 0h1m2 0h4m1 0h1m4 0h1m3 0h1m3 0h1m2 0h1m-49 1h1m3 0h1m1 0h3m1 0h2m1 0h1m3 0h3m1 0h1m2 0h1m4 0h2m4 0h3m1 0h1m2 0h3m1 0h1m1 0h1m-45 1h1m5 0h1m2 0h6m2 0h3m3 0h1m2 0h1m1 0h2m2 0h1m2 0h1m1 0h2m3 0h2m-46 1h1m3 0h1m4 0h1m3 0h3m1 0h1m1 0h2m4 0h1m1 0h1m1 0h1m2 0h7m1 0h1m1 0h2m2 0h1m-47 1h1m2 0h1m2 0h2m1 0h1m2 0h1m1 0h1m1 0h1m2 0h3m1 0h2m1 0h1m1 0h3m1 0h3m1 0h1m2 0h1m1 0h1m3 0h1m-47 1h2m1 0h1m1 0h5m2 0h4m1 0h1m2 0h1m1 0h1m3 0h1m2 0h1m3 0h4m1 0h2m1 0h4m1 0h1m-48 1h1m1 0h3m3 0h3m1 0h2m2 0h1m1 0h2m1 0h2m1 0h3m1 0h1m1 0h2m3 0h3m1 0h2m4 0h1m2 0h1m-48 1h1m3 0h3m5 0h3m1 0h1m1 0h1m1 0h1m7 0h1m7 0h1m1 0h2m1 0h4m1 0h2m-48 1h1m3 0h1m2 0h1m1 0h2m1 0h1m2 0h2m3 0h6m1 0h1m1 0h3m8 0h1m3 0h1m2 0h1m-47 1h3m1 0h2m2 0h1m1 0h2m1 0h1m2 0h4m1 0h1m1 0h3m6 0h1m1 0h1m2 0h6m1 0h1m1 0h1m-49 1h1m1 0h3m3 0h5m2 0h4m2 0h2m1 0h2m1 0h1m2 0h1m4 0h2m2 0h2m5 0h2m-47 1h1m3 0h4m3 0h1m2 0h1m1 0h2m4 0h2m2 0h1m5 0h2m2 0h2m1 0h1m1 0h3m3 0h1m-48 1h3m3 0h1m1 0h2m2 0h3m1 0h2m2 0h6m1 0h1m2 0h2m1 0h1m10 0h1m2 0h1m-49 1h3m3 0h1m1 0h2m2 0h2m1 0h3m1 0h2m1 0h6m2 0h1m4 0h3m1 0h6m1 0h1m1 0h1m-41 1h1m1 0h1m1 0h2m7 0h2m3 0h5m1 0h2m1 0h2m2 0h2m3 0h2m1 0h1m-48 1h7m2 0h1m3 0h1m2 0h2m3 0h2m1 0h1m1 0h2m3 0h1m2 0h2m2 0h1m1 0h1m1 0h1m1 0h2m2 0h1m-49 1h1m5 0h1m1 0h1m2 0h1m5 0h2m2 0h2m3 0h1m1 0h1m2 0h5m2 0h1m1 0h1m3 0h2m1 0h2m-49 1h1m1 0h3m1 0h1m1 0h1m2 0h3m4 0h1m2 0h6m2 0h3m1 0h1m2 0h1m2 0h6m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h2m1 0h2m1 0h2m3 0h2m1 0h4m1 0h2m3 0h5m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h4m6 0h1m1 0h2m2 0h1m3 0h2m1 0h2m1 0h1m1 0h4m6 0h1m-47 1h1m5 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h3m1 0h3m3 0h3m2 0h1m2 0h1m3 0h1m1 0h1m1 0h2m2 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m6 0h1m2 0h1m2 0h2m1 0h1m1 0h5m1 0h1m4 0h3\"/></svg>\n"
+  },
+  {
+   "produto": "config_dc",
+   "produto_nome": "Configuração de Discord",
+   "plano": "Configuração completa",
+   "preco": "R$ 19,90",
+   "por": "pagamento único",
+   "txid": "SITECONFIGDC1",
+   "copia_e_cola": "00020126580014br.gov.bcb.pix01365a0410b9-350f-4671-a0d8-6123c8b27f35520400005303986540519.905802BR5903CRM6009SAO PAULO62170513SITECONFIGDC1630430C7",
+   "qr_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"318\" height=\"318\" class=\"segno\"><path transform=\"scale(6)\" class=\"qrline\" stroke=\"#000\" d=\"M2 2.5h7m3 0h2m1 0h2m1 0h1m2 0h1m1 0h1m5 0h1m1 0h4m2 0h2m3 0h1m1 0h7m-49 1h1m5 0h1m4 0h5m1 0h1m1 0h2m1 0h6m2 0h2m1 0h1m1 0h2m1 0h3m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m3 0h3m4 0h1m1 0h1m2 0h1m3 0h2m1 0h1m1 0h1m3 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m5 0h3m1 0h1m1 0h2m1 0h1m6 0h1m1 0h2m1 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h5m5 0h1m2 0h6m1 0h3m1 0h2m1 0h3m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m1 0h5m1 0h2m2 0h2m1 0h2m3 0h2m5 0h2m2 0h2m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-41 1h3m6 0h2m3 0h1m3 0h3m1 0h3m4 0h1m1 0h2m-41 1h1m1 0h5m4 0h2m1 0h1m1 0h1m2 0h1m2 0h5m2 0h1m3 0h1m1 0h2m1 0h1m1 0h1m1 0h5m-40 1h1m3 0h2m3 0h2m1 0h1m1 0h1m1 0h1m4 0h3m1 0h2m2 0h1m2 0h1m2 0h1m1 0h1m2 0h1m-47 1h2m3 0h2m1 0h1m1 0h2m3 0h1m1 0h1m2 0h1m2 0h3m7 0h1m1 0h3m2 0h1m6 0h1m-49 1h6m1 0h1m1 0h2m2 0h1m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m6 0h4m-46 1h1m1 0h1m1 0h1m1 0h2m1 0h1m6 0h1m1 0h1m3 0h1m1 0h1m1 0h1m4 0h1m1 0h1m1 0h2m3 0h3m3 0h1m1 0h1m-48 1h2m5 0h3m1 0h1m1 0h2m2 0h3m3 0h1m5 0h1m1 0h2m5 0h1m2 0h2m3 0h1m-48 1h2m1 0h1m2 0h2m4 0h2m2 0h2m2 0h1m1 0h1m1 0h6m1 0h2m1 0h1m1 0h4m1 0h1m2 0h1m3 0h1m-48 1h2m1 0h1m3 0h9m1 0h4m1 0h1m4 0h3m2 0h1m2 0h1m5 0h3m3 0h1m-49 1h2m1 0h1m1 0h2m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m2 0h1m1 0h2m2 0h2m2 0h4m2 0h1m1 0h1m2 0h1m2 0h1m-49 1h1m1 0h2m4 0h2m2 0h3m3 0h1m4 0h3m2 0h4m4 0h1m2 0h1m1 0h3m1 0h1m1 0h2m-47 1h2m1 0h5m1 0h1m1 0h2m2 0h4m2 0h2m2 0h1m2 0h1m1 0h2m1 0h5m3 0h1m1 0h1m1 0h2m-49 1h1m4 0h1m2 0h1m1 0h1m1 0h3m2 0h4m2 0h1m1 0h1m1 0h1m2 0h1m3 0h2m7 0h3m1 0h2m-49 1h2m1 0h2m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m1 0h5m1 0h1m4 0h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m3 0h1m1 0h1m-48 1h1m1 0h3m2 0h1m1 0h1m4 0h2m4 0h1m1 0h1m4 0h3m1 0h1m6 0h1m2 0h1m2 0h3m-45 1h6m1 0h4m1 0h1m1 0h1m3 0h7m5 0h3m1 0h2m1 0h5m3 0h1m-47 1h3m3 0h3m3 0h4m3 0h2m3 0h1m1 0h1m1 0h6m1 0h1m1 0h2m3 0h2m2 0h1m-48 1h1m1 0h2m1 0h1m1 0h1m2 0h5m1 0h6m1 0h1m1 0h2m1 0h1m3 0h1m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-46 1h2m3 0h2m1 0h3m3 0h1m3 0h2m3 0h3m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m-42 1h5m5 0h1m1 0h1m1 0h1m3 0h6m1 0h1m3 0h2m1 0h3m1 0h5m1 0h3m-49 1h1m2 0h2m2 0h4m2 0h2m1 0h4m2 0h1m1 0h7m1 0h1m4 0h1m3 0h1m3 0h1m2 0h1m-49 1h1m1 0h1m3 0h4m1 0h1m1 0h1m3 0h3m1 0h1m2 0h1m4 0h2m4 0h3m1 0h1m2 0h3m1 0h1m1 0h1m-46 1h1m1 0h1m1 0h1m1 0h1m3 0h6m2 0h4m2 0h1m2 0h1m1 0h2m2 0h1m2 0h1m1 0h2m3 0h2m-47 1h1m4 0h1m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h1m2 0h7m1 0h1m1 0h2m2 0h1m-49 1h2m3 0h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m2 0h2m1 0h3m1 0h1m1 0h1m3 0h3m4 0h1m1 0h1m3 0h1m-48 1h1m5 0h1m2 0h1m3 0h2m1 0h1m4 0h1m1 0h1m3 0h1m1 0h1m1 0h1m2 0h7m1 0h4m2 0h1m-48 1h3m1 0h1m3 0h2m1 0h2m3 0h1m1 0h1m1 0h1m2 0h5m1 0h1m1 0h1m2 0h3m1 0h2m4 0h1m2 0h1m-46 1h1m2 0h1m1 0h1m4 0h5m1 0h1m1 0h1m7 0h1m1 0h1m1 0h1m3 0h1m1 0h2m1 0h4m1 0h2m-48 1h5m2 0h1m1 0h1m2 0h1m3 0h1m3 0h1m1 0h4m1 0h1m1 0h3m8 0h1m3 0h1m2 0h1m-49 1h1m1 0h3m1 0h2m2 0h4m2 0h1m1 0h4m1 0h1m1 0h3m6 0h1m1 0h1m2 0h6m1 0h1m1 0h1m-49 1h5m3 0h4m3 0h4m2 0h2m1 0h2m1 0h1m2 0h1m4 0h2m2 0h2m5 0h2m-47 1h1m3 0h4m1 0h1m1 0h1m2 0h3m5 0h2m2 0h1m5 0h2m2 0h2m1 0h1m1 0h3m3 0h1m-48 1h3m3 0h1m1 0h2m1 0h3m1 0h3m2 0h6m1 0h1m2 0h2m1 0h1m10 0h1m2 0h1m-49 1h3m3 0h3m2 0h2m2 0h1m1 0h4m1 0h6m2 0h1m4 0h3m1 0h6m1 0h1m1 0h1m-41 1h1m3 0h2m3 0h1m3 0h2m3 0h5m1 0h2m1 0h2m2 0h2m3 0h2m1 0h1m-48 1h7m4 0h2m1 0h2m1 0h1m3 0h2m1 0h1m1 0h2m3 0h1m2 0h2m2 0h1m1 0h1m1 0h1m1 0h2m2 0h1m-49 1h1m5 0h1m1 0h1m4 0h1m1 0h4m2 0h2m3 0h1m1 0h1m2 0h5m4 0h1m3 0h2m1 0h2m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m6 0h6m2 0h3m1 0h1m2 0h2m1 0h6m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h2m1 0h2m1 0h2m1 0h2m3 0h2m1 0h4m1 0h2m3 0h5m1 0h3m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m2 0h2m1 0h2m2 0h3m1 0h2m1 0h2m1 0h1m1 0h4m6 0h1m-47 1h1m5 0h1m4 0h3m2 0h1m1 0h3m1 0h3m3 0h1m1 0h1m3 0h1m1 0h1m3 0h1m1 0h1m1 0h2m2 0h1m-49 1h7m1 0h1m2 0h2m2 0h1m1 0h2m5 0h4m1 0h3m1 0h6m2 0h1m4 0h3\"/></svg>\n"
+  },
+  {
+   "produto": "campanha",
+   "produto_nome": "Campanha de Divulgação",
+   "plano": "3 dias",
+   "preco": "R$ 49,00",
+   "por": "3 dias de campanha",
+   "txid": "SITECAMPANHA3",
+   "copia_e_cola": "00020126580014br.gov.bcb.pix01365a0410b9-350f-4671-a0d8-6123c8b27f35520400005303986540549.005802BR5903CRM6009SAO PAULO62170513SITECAMPANHA36304B4BE",
+   "qr_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"318\" height=\"318\" class=\"segno\"><path transform=\"scale(6)\" class=\"qrline\" stroke=\"#000\" d=\"M2 2.5h7m3 0h2m1 0h2m1 0h1m2 0h1m1 0h1m5 0h1m1 0h2m1 0h1m2 0h2m3 0h1m1 0h7m-49 1h1m5 0h1m4 0h5m1 0h1m1 0h2m1 0h6m2 0h4m1 0h2m1 0h3m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m3 0h3m4 0h1m2 0h1m1 0h1m3 0h2m1 0h1m1 0h1m3 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m5 0h3m1 0h1m1 0h4m6 0h1m1 0h2m1 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m7 0h1m2 0h6m1 0h3m1 0h2m2 0h2m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m1 0h1m2 0h6m2 0h1m1 0h2m3 0h2m5 0h2m1 0h3m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-41 1h2m1 0h2m1 0h3m1 0h1m3 0h1m3 0h3m1 0h3m4 0h1m1 0h2m-41 1h1m1 0h5m3 0h2m1 0h1m1 0h1m1 0h3m2 0h5m2 0h1m3 0h1m1 0h2m1 0h1m1 0h1m1 0h5m-37 1h2m1 0h7m1 0h1m6 0h3m1 0h2m2 0h1m2 0h1m2 0h1m1 0h1m2 0h1m-47 1h2m1 0h1m1 0h2m3 0h2m1 0h1m3 0h1m2 0h1m2 0h3m7 0h1m1 0h3m2 0h1m6 0h1m-49 1h6m1 0h1m1 0h2m2 0h4m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m6 0h4m-46 1h1m3 0h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h2m4 0h1m1 0h1m1 0h1m4 0h1m1 0h1m1 0h2m3 0h3m3 0h1m1 0h1m-48 1h2m4 0h1m1 0h1m2 0h1m1 0h2m1 0h4m3 0h1m5 0h1m1 0h2m5 0h1m2 0h2m3 0h1m-47 1h3m2 0h1m5 0h2m2 0h2m2 0h1m3 0h6m1 0h2m1 0h1m1 0h4m1 0h1m2 0h1m3 0h1m-49 1h3m1 0h1m3 0h9m1 0h4m1 0h1m4 0h1m4 0h1m2 0h1m5 0h3m3 0h1m-46 1h1m1 0h2m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m2 0h1m1 0h2m2 0h2m2 0h4m2 0h1m1 0h1m2 0h1m2 0h1m-49 1h1m1 0h1m5 0h2m2 0h3m3 0h1m4 0h3m2 0h4m4 0h1m2 0h1m1 0h3m1 0h1m1 0h2m-46 1h1m1 0h5m1 0h1m1 0h2m2 0h4m2 0h2m2 0h1m2 0h1m2 0h1m1 0h5m3 0h1m1 0h1m1 0h2m-49 1h1m1 0h1m5 0h1m1 0h1m1 0h3m2 0h4m2 0h1m1 0h1m1 0h1m2 0h1m3 0h2m7 0h3m1 0h2m-49 1h2m1 0h5m1 0h1m1 0h1m1 0h1m1 0h1m2 0h5m1 0h1m4 0h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m3 0h1m1 0h1m-48 1h1m1 0h2m3 0h1m1 0h1m1 0h1m2 0h1m5 0h1m1 0h1m1 0h1m2 0h3m1 0h1m6 0h1m2 0h1m2 0h3m-45 1h6m2 0h1m3 0h2m1 0h1m2 0h7m5 0h3m1 0h2m1 0h5m3 0h1m-47 1h3m3 0h1m2 0h1m1 0h1m3 0h2m2 0h2m3 0h1m1 0h1m1 0h6m1 0h1m1 0h2m3 0h2m2 0h1m-48 1h1m1 0h2m1 0h1m1 0h1m6 0h8m1 0h1m1 0h2m1 0h1m3 0h1m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-46 1h2m3 0h2m3 0h1m2 0h2m3 0h2m3 0h3m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m-42 1h10m1 0h2m1 0h1m3 0h6m1 0h1m3 0h2m1 0h3m1 0h5m1 0h3m-49 1h1m2 0h1m1 0h1m1 0h2m3 0h2m1 0h1m2 0h2m2 0h1m1 0h1m2 0h4m1 0h1m4 0h1m3 0h1m3 0h1m2 0h1m-49 1h1m1 0h5m1 0h1m2 0h1m2 0h1m2 0h3m1 0h1m2 0h1m4 0h2m4 0h3m1 0h1m2 0h3m1 0h1m1 0h1m-46 1h3m3 0h1m4 0h5m2 0h4m2 0h1m2 0h1m1 0h2m2 0h1m2 0h1m1 0h2m3 0h2m-47 1h1m1 0h1m2 0h3m1 0h2m1 0h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h1m2 0h7m1 0h1m1 0h2m2 0h1m-49 1h5m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h6m1 0h1m1 0h1m2 0h1m1 0h2m4 0h1m1 0h1m3 0h1m-47 1h1m1 0h1m2 0h1m2 0h1m3 0h2m1 0h1m4 0h1m1 0h1m3 0h1m1 0h3m3 0h6m1 0h4m2 0h1m-47 1h1m2 0h1m1 0h1m1 0h2m1 0h2m3 0h1m1 0h1m1 0h1m2 0h5m1 0h1m4 0h3m1 0h2m4 0h1m2 0h1m-48 1h2m3 0h1m1 0h1m4 0h5m1 0h1m1 0h1m7 0h1m3 0h1m3 0h1m1 0h2m1 0h4m1 0h2m-48 1h5m1 0h1m2 0h1m2 0h1m3 0h1m3 0h1m1 0h4m1 0h1m1 0h3m8 0h1m3 0h1m2 0h1m-49 1h5m1 0h2m2 0h1m2 0h1m2 0h1m1 0h4m1 0h1m1 0h3m6 0h1m1 0h1m2 0h6m1 0h1m1 0h1m-48 1h4m3 0h3m1 0h1m2 0h1m1 0h2m2 0h2m1 0h2m1 0h1m2 0h1m4 0h2m2 0h2m5 0h2m-47 1h1m3 0h6m2 0h2m1 0h1m1 0h1m4 0h2m2 0h1m5 0h2m2 0h2m1 0h1m1 0h3m3 0h1m-48 1h3m3 0h1m2 0h2m2 0h1m1 0h1m4 0h6m1 0h1m2 0h2m1 0h1m10 0h1m2 0h1m-49 1h3m3 0h6m1 0h2m1 0h1m2 0h2m1 0h6m2 0h1m4 0h3m1 0h6m1 0h1m1 0h1m-41 1h4m2 0h3m4 0h2m3 0h5m1 0h2m1 0h2m2 0h2m3 0h2m1 0h1m-48 1h7m2 0h4m2 0h2m1 0h1m2 0h2m1 0h1m1 0h2m3 0h1m2 0h2m2 0h1m1 0h1m1 0h1m1 0h2m2 0h1m-49 1h1m5 0h1m1 0h8m5 0h2m3 0h1m1 0h1m2 0h5m1 0h1m2 0h1m3 0h2m1 0h2m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h3m8 0h6m2 0h3m1 0h1m2 0h1m2 0h6m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h2m1 0h5m1 0h2m3 0h2m1 0h4m1 0h2m3 0h5m1 0h3m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m2 0h2m1 0h2m2 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h4m6 0h1m-47 1h1m5 0h1m4 0h3m2 0h1m1 0h3m1 0h3m3 0h1m1 0h2m2 0h1m1 0h1m3 0h1m1 0h1m1 0h2m2 0h1m-49 1h7m1 0h1m2 0h2m2 0h1m1 0h2m5 0h4m1 0h1m1 0h1m3 0h4m2 0h1m4 0h3\"/></svg>\n"
+  }
+ ],
+ "em_preparo": [],
+ "radio": {
+  "nome": "Rádio CRM",
+  "gerado_em": "26/10/2026 10:24",
+  "epoch_inicio": 1792983600,
+  "total_s": 3760.62,
+  "como_tocar": "posição = (agora_em_segundos - epoch_inicio) mod total_s; anda pela lista somando duracao_s até achar a faixa e o segundo dentro dela. O navegador só toca depois do 1º clique (regra dos navegadores): o botão 'Ouvir' liga e pula pro segundo certo.",
+  "copiar": "os arquivos de site-dados\\radio\\ vão pra assets/radio/ do site (o nome é o número da faixa)",
+  "discord": "a mesma playlist toca na Rádio CRM do Discord (/radiocrm numa call); as duas não andam juntas",
+  "faixas": [
+   {
+    "n": 1,
+    "titulo": "4 da manha",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/01.mp3",
+    "duracao_s": 104.04
+   },
+   {
+    "n": 2,
+    "titulo": "Coisa Nossa - Versao 1",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/02.mp3",
+    "duracao_s": 348.36
+   },
+   {
+    "n": 3,
+    "titulo": "Coisa Nossa - Versao 2",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/03.mp3",
+    "duracao_s": 187.63
+   },
+   {
+    "n": 4,
+    "titulo": "Coisa nossa mini",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/04.mp3",
+    "duracao_s": 127.61
+   },
+   {
+    "n": 5,
+    "titulo": "CRM é familia",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/05.mp3",
+    "duracao_s": 283.25
+   },
+   {
+    "n": 6,
+    "titulo": "Dona Maria",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/06.mp3",
+    "duracao_s": 208.39
+   },
+   {
+    "n": 7,
+    "titulo": "Habibi",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/07.mp3",
+    "duracao_s": 192.84
+   },
+   {
+    "n": 8,
+    "titulo": "Mestre da BR",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/08.mp3",
+    "duracao_s": 90.0
+   },
+   {
+    "n": 9,
+    "titulo": "Quem diria",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/09.mp3",
+    "duracao_s": 55.61
+   },
+   {
+    "n": 10,
+    "titulo": "Quem tava lá",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/10.mp3",
+    "duracao_s": 251.23
+   },
+   {
+    "n": 11,
+    "titulo": "Rap do compromisso",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/11.mp3",
+    "duracao_s": 342.84
+   },
+   {
+    "n": 12,
+    "titulo": "Respeita o Jogador",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/12.mp3",
+    "duracao_s": 192.31
+   },
+   {
+    "n": 13,
+    "titulo": "Skin da Moda",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/13.mp3",
+    "duracao_s": 104.83
+   },
+   {
+    "n": 14,
+    "titulo": "Tropa Fechada",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/14.mp3",
+    "duracao_s": 125.95
+   },
+   {
+    "n": 15,
+    "titulo": "É a máfia",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/15.mp3",
+    "duracao_s": 160.03
+   },
+   {
+    "n": 16,
+    "titulo": "É familia Remix",
+    "artista": "CRM",
+    "album": "Disco 1 - Skin da moda",
+    "arquivo": "assets/radio/16.mp3",
+    "duracao_s": 191.88
+   },
+   {
+    "n": 17,
+    "titulo": "Final de Semana Chegou",
+    "artista": "CRM",
+    "album": "Disco 2 - CRM tá em SP!",
+    "arquivo": "assets/radio/17.mp3",
+    "duracao_s": 179.59
+   },
+   {
+    "n": 18,
+    "titulo": "Nóis é da capital",
+    "artista": "CRM",
+    "album": "Disco 2 - CRM tá em SP!",
+    "arquivo": "assets/radio/18.mp3",
+    "duracao_s": 214.44
+   },
+   {
+    "n": 19,
+    "titulo": "Somos 3",
+    "artista": "CRM",
+    "album": "Disco 2 - CRM tá em SP!",
+    "arquivo": "assets/radio/19.mp3",
+    "duracao_s": 399.79
+   }
+  ]
  }
 };

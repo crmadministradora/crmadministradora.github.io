@@ -165,7 +165,7 @@ html { overflow-x: hidden; }
 .seta-dir { right: 2%; }
 .pontos { display: flex; justify-content: center; gap: 10px; margin-top: 4px; }
 .pontos button { width: 10px; height: 10px; border-radius: 50%; border: 0; padding: 0; background: rgba(255, 255, 255, .25); cursor: pointer; }
-.pontos button[aria-selected="true"] { background: var(--brilho); width: 26px; border-radius: 6px; }
+.pontos button[aria-pressed="true"] { background: var(--brilho); width: 26px; border-radius: 6px; }
 .numeros { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; padding: 0; margin: 26px 0 0; }
 .numeros li { font: 600 15px/1.2 Poppins, sans-serif; color: var(--dourado-claro); }
 .numeros li::before { content: "◆"; color: var(--laranja); margin-right: 8px; font-size: 10px; vertical-align: 2px; }

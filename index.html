@@ -17,7 +17,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261025-p5">
+<link rel="stylesheet" href="assets/css/site.css?v=20261026-p13">
+<link rel="stylesheet" href="assets/css/comunidade.css?v=20261026-p13">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -30,13 +31,15 @@
   <nav class="menu">
     <button class="menu-item menu-login" id="btn-login" type="button">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.6 19.6 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.8 19.8 0 0 0 6 3l1.3-2a12.7 12.7 0 0 1-2-1l.5-.4a14.1 14.1 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.7 19.7 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
-      <span id="login-rotulo">Entrar com Discord</span>
+      <span id="login-rotulo">Discord · em breve</span>
     </button>
     <a class="menu-item" href="#dream-cards"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm15 1.2 2 .6a2 2 0 0 1 1.3 2.4l-3 10.6V6.2ZM6 9h7v2H6V9Zm0 4h5v2H6v-2Z"/></svg><span>Dream Cards</span></a>
     <a class="menu-item" href="#loja"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h2.3l.6 2H21l-2.2 8.2a2 2 0 0 1-1.9 1.5H8.4l.5 2H19v2H7.4L4 5H3V3Zm5 17a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm8 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"/></svg><span>Loja</span></a>
     <a class="menu-item" href="#copa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v2h3v3a4 4 0 0 1-4 4h-.5A5 5 0 0 1 13 14.9V17h3v4H8v-4h3v-2.1A5 5 0 0 1 8.5 12H8a4 4 0 0 1-4-4V5h3V3Zm0 4H6v1a2 2 0 0 0 1 1.7V7Zm10 2.7A2 2 0 0 0 18 8V7h-1v2.7Z"/></svg><span>Copa do Infinito</span></a>
     <a class="menu-item" href="#kinguin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 7 4.5 3.5L12 4l4.5 6.5L21 7l-2 11H5L3 7Zm2 13h14v2H5v-2Z"/></svg><span>Kinguin</span></a>
     <a class="menu-item" href="#radio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-9 9v5a3 3 0 0 0 3 3h2v-8H5a7 7 0 0 1 14 0h-3v8h2a3 3 0 0 0 3-3v-5a9 9 0 0 0-9-9Z"/></svg><span>Rádio CRM</span></a>
+    <a class="menu-item" href="#comunidade"><span aria-hidden="true">🎮</span><span>Comunidade</span></a>
+    <a class="menu-item" href="#apoie"><span aria-hidden="true">🤝</span><span>Patrocine / Apoie</span></a>
     <a class="menu-item" href="#sobre"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/></svg><span>Sobre a CRM</span></a>
     <a class="menu-item" href="#contato"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.2L4.3 7H4v.6l8 5.4 8-5.4V7h-.3L12 12.2Z"/></svg><span>Contate-nos</span></a>
   </nav>
@@ -56,14 +59,14 @@
     <span class="topo-nome"><b>CRM</b> Administradora<small>E-sports &amp; Game Project</small></span>
   </a>
   <div class="radio-player" id="radio-crm">
-    <button class="radio-botao" id="radio-botao" type="button" aria-describedby="radio-dica">
+    <button class="radio-botao" id="radio-botao" type="button" aria-label="Ouvir ou pausar a Rádio CRM" aria-describedby="radio-dica">
       <span class="radio-icone" aria-hidden="true">▶</span>
-      <span class="radio-texto"><b>Ouvir a Rádio CRM</b><small id="radio-faixa">a trilha sonora da tua comunidade</small></span>
+      <span class="radio-texto"><b>Ouvir a Rádio CRM</b><small id="radio-faixa">A trilha sonora da tua comunidade</small></span>
       <span class="radio-ondas" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
     </button>
     <div class="radio-pop" id="radio-dica" role="status" hidden>
       <img src="assets/img/radio-crm.webp" alt="" width="64" height="64">
-      <p><b>A Rádio CRM toca ao vivo nas calls do Discord da CRM.</b> No site ela chega em breve.</p>
+      <p><b>Ouça a Rádio CRM aqui no site.</b> A música continua enquanto você navega.</p>
       <a class="botao botao-pequeno" data-link="site_crm" target="_blank" rel="noopener">Ouvir no Discord</a>
     </div>
     <audio id="radio-audio" preload="none"></audio>
@@ -81,7 +84,13 @@
       <div class="carrossel-trilho" id="carrossel-trilho"></div>
       <button class="seta seta-dir" id="seta-dir" type="button" aria-label="Próximo">›</button>
     </div>
-    <div class="pontos" id="pontos" role="tablist" aria-label="Escolher card"></div>
+    <div class="pontos" id="pontos" role="group" aria-label="Escolher card"></div>
+    <button class="controle-movimento" id="pausar-carrossel" type="button" aria-pressed="false">Pausar carrossel</button>
+    <div class="atalhos" aria-label="Escolha por onde começar">
+      <a href="#copa-painel"><span>01 / COMPETIR</span><b>Acompanhar a Copa ↗</b></a>
+      <a href="#podio"><span>02 / EVOLUIR</span><b>Ver o Dream Cards ↗</b></a>
+      <a href="#loja"><span>03 / CRIAR</span><b>Montar minha comunidade ↗</b></a>
+    </div>
     <ul class="numeros" id="numeros" aria-label="A CRM em números" aria-describedby="medido-em"></ul>
     <p class="data-referencia" id="medido-em"></p>
   </section>
@@ -94,9 +103,10 @@
   <!-- ====== A LOJA ====== -->
   <section class="secao" id="loja" aria-labelledby="titulo-loja">
     <h2 id="titulo-loja">Estrutura pra tua <em>comunidade crescer.</em></h2>
-    <p class="secao-sub">Escolha o serviço pra tua próxima etapa. Pagamento por PIX, direto no Discord da CRM.</p>
+    <p class="secao-sub">Escolha o serviço pra tua próxima etapa. Pague por PIX e combine a entrega com a equipe no Discord.</p>
     <p class="data-referencia" data-data-servicos></p>
     <div class="planos" id="planos"></div>
+    <div class="faixa-servico"><img src="assets/img/campanha-divulgacao.png" alt="Campanha de Divulgação CRM" width="1254" height="1254" loading="lazy"><div><span class="selo">CRM Marketing</span><h3>Tua org tem história. Bora fazer ela aparecer.</h3><p>Arte com a cara do teu time e uma campanha de três dias no Instagram e na comunidade de WhatsApp da CRM.</p><a class="botao" data-link="site_crm" target="_blank" rel="noopener">Conhecer a Campanha no Discord</a><p class="aviso">Campanha de três dias disponível na loja acima. Mensal e pacote de três meses ainda não estão à venda.</p></div></div>
   </section>
 
   <!-- ====== DREAM CARDS ====== -->
@@ -110,6 +120,15 @@
     </div>
   </section>
 
+  <section class="secao" id="podio" aria-labelledby="titulo-podio">
+    <span class="sobretitulo">DREAM CARDS / QUEM JOGA APARECE</span>
+    <h2 id="titulo-podio">Tem história por trás <em>de cada nick.</em></h2>
+    <p class="secao-sub">Cada partida conta um pedaço. Conhece os destaques da temporada.</p>
+    <p class="data-referencia" id="podio-data"></p>
+    <div class="podio" id="podio-lista"></div>
+    <p class="aviso">Consulte no Discord o pódio de Honor of Kings, o de Mobile Legends e as regras de cada temporada.</p>
+    <a class="botao botao-roxo" data-link="site_dreamcards" target="_blank" rel="noopener">Ver minha carta no Discord</a>
+  </section>
   <!-- ====== COPA DO INFINITO ====== -->
   <section class="secao destaque" id="copa" aria-labelledby="titulo-copa">
     <img class="destaque-arte" src="assets/img/copa-do-infinito.webp" alt="Arte oficial da Copa do Infinito" width="900" height="900" loading="lazy">
@@ -121,6 +140,18 @@
     </div>
   </section>
 
+  <section class="secao" id="copa-painel" aria-labelledby="titulo-chave">
+    <span class="sobretitulo">COPA DO INFINITO / DA ESTREIA À FINAL</span>
+    <h2 id="titulo-chave">O caminho <em>até o título.</em></h2>
+    <div class="estado-copa" id="estado-copa"></div>
+    <div class="edicao-controles"><label for="edicao">Escolha a edição</label><select id="edicao"></select></div>
+    <div id="edicao-resumo" aria-live="polite"></div>
+    <nav id="fases-nav" class="fases-nav" aria-label="Ir para a fase"></nav>
+    <div class="chave" id="chave" tabindex="0" role="region" aria-label="Fases e resultados da Copa"></div>
+    <p class="data-referencia" id="copa-data"></p>
+    <a class="botao" data-link="copa_discord" target="_blank" rel="noopener">Entrar no Discord da Copa</a>
+    <div class="novidade"><span class="selo">Chegando</span><h3>A partida termina. A história fica na carta.</h3><p>Dream Cards da Copa: uma nova forma de guardar o que teu time viveu na arena. Acompanhe o lançamento no Discord.</p></div>
+  </section>
   <!-- ====== RÁDIO ====== -->
   <section class="secao destaque" id="radio" aria-labelledby="titulo-radio">
     <img class="destaque-arte destaque-redonda" src="assets/img/radio-crm.webp" alt="Logo da Rádio CRM" width="500" height="500" loading="lazy">
@@ -141,7 +172,7 @@
     <div class="kinguin">
       <div class="kinguin-placa"><img src="assets/img/kinguin-logo.webp" alt="Kinguin" width="900" height="301" loading="lazy"></div>
       <div class="kinguin-texto">
-        <span class="selo">Parceiro oficial da CRM</span>
+        <span class="selo">Link de parceiro</span>
         <h2 id="titulo-kinguin">Sua próxima compra <em>também apoia a CRM.</em></h2>
         <p>Keys de jogo, gift cards, recargas e software na Kinguin.</p>
         <ul class="kinguin-produtos" id="kinguin-produtos"></ul>
@@ -151,6 +182,32 @@
     </div>
   </section>
 
+  <section class="secao" id="comunidade" aria-labelledby="titulo-comunidade">
+    <span class="sobretitulo">DENTRO E FORA DA PARTIDA</span>
+    <h2 id="titulo-comunidade">Tem lugar pra quem joga. <em>E pra quem torce.</em></h2>
+    <p class="secao-sub">Encontra tua galera, acompanha a Copa e entra na resenha. O próximo passo começa com um oi.</p>
+    <div class="portas">
+      <article><span aria-hidden="true">🎮</span><h3>Encontra a comunidade</h3><p>Um lugar pra conversar sobre o jogo, conhecer gente e acompanhar os projetos da CRM.</p><a data-link="site_crm" target="_blank" rel="noopener">Entrar no Discord ↗</a></article>
+      <article><span aria-hidden="true">🏆</span><h3>Torça pelo teu time</h3><p>Segue os resultados da Copa e vem acompanhar cada etapa com a comunidade.</p><a href="#copa-painel">Ver a chave da Copa ↗</a></article>
+      <article><span aria-hidden="true">📢</span><h3>Fica por perto</h3><p>As novidades da CRM também estão no nosso canal do WhatsApp.</p><a data-link="crm_whatsapp_canal" target="_blank" rel="noopener">Acompanhar o canal ↗</a></article>
+    </div>
+  </section>
+  <section class="secao apoio" id="apoie" aria-labelledby="titulo-apoio">
+    <span class="sobretitulo">FAÇA PARTE DO PRÓXIMO CAPÍTULO</span>
+    <h2 id="titulo-apoio">Comunidade cresce <em>com gente junto.</em></h2>
+    <div class="portas">
+      <article><h3>Sua marca com a CRM</h3><p>Quer apoiar a Copa, o Dream Cards ou a estrutura da comunidade? Vamos combinar uma parceria que faça sentido pros dois lados.</p><a href="#contato">Conversar sobre patrocínio ↗</a></article>
+      <article><h3>Apoie do teu jeito</h3><p>Participar, contratar um serviço ou comprar pelo nosso link da Kinguin ajuda a CRM a seguir construindo.</p><a href="#loja">Conhecer os serviços ↗</a><p class="aviso">Link de parceiro: a CRM ganha uma comissão se você comprar, sem custo a mais pra você.</p></article>
+      <article><span class="selo">Em breve</span><h3>O próximo site pode ser o teu</h3><p>Uma casa na internet pra apresentar tua org, os projetos e quem cresce contigo. A CRM está preparando esse serviço.</p><a href="#contato">Falar sobre meu projeto ↗</a></article>
+    </div>
+  </section>
+  <section class="secao perguntas" aria-labelledby="titulo-perguntas">
+    <h2 id="titulo-perguntas">Antes de <em>chegar junto.</em></h2>
+    <details><summary>Preciso entrar com Discord pra conhecer o site?</summary><p>Não. Dá pra ver serviços, resultados e destaques sem login. O atendimento e a entrega dos serviços acontecem no Discord.</p></details>
+    <details><summary>Como funciona a compra?</summary><p>Escolhe um plano, confere o valor e paga pelo PIX. Depois, envia o comprovante pelo Discord ou e-mail. A equipe confere e combina contigo a entrega. Copiar o código PIX não confirma pagamento.</p></details>
+    <details><summary>Dream Cards é um jogo de cartas?</summary><p>É a tua história como jogador em uma carta. Manda o print da partida de Honor of Kings ou Mobile Legends no Discord e acompanha a evolução dos teus atributos.</p></details>
+    <details><summary>Como ouvir a rádio enquanto navego?</summary><p>Sim. Clique em Ouvir a Rádio CRM. A música segue enquanto você navega nesta página. Use o mini player pra pausar ou ajustar o volume. A programação do Discord toca separadamente.</p></details>
+  </section>
   <!-- ====== SOBRE E CONTATO ====== -->
   <section class="secao duas" aria-label="Sobre e contato">
     <div class="caixa" id="sobre">
@@ -173,13 +230,17 @@
 <footer class="rodape">
   <img src="assets/img/crm-escudo.webp" alt="" width="48" height="48" loading="lazy">
   <p><b>CRM Administradora</b> · E-sports &amp; Game Project</p>
-  <p class="rodape-miudo">O login com Discord lê teu nome e teu avatar.</p>
+  <p class="rodape-miudo">Login com Discord chega em breve. Atendimento pelo Discord e e-mail.</p>
   <p class="rodape-miudo">© 2026 CRM Administradora. Honor of Kings e Mobile Legends são marcas dos seus donos; a CRM não é afiliada a eles.</p>
 </footer>
 
 <div class="aviso-flutuante" id="aviso-flutuante" role="status" hidden></div>
 
-<script src="dados/dados.js"></script>
-<script src="assets/js/site.js?v=20261025-p7"></script>
+<noscript><p class="sem-js">Ative o JavaScript para consultar planos, resultados e destaques. Nosso contato: <a href="mailto:crmhokclan@gmail.com">crmhokclan@gmail.com</a>.</p></noscript>
+<dialog id="pagamento" aria-labelledby="pagamento-titulo"><button class="fechar-dialogo" type="button" aria-label="Fechar pagamento">×</button><span class="sobretitulo">TEU PROJETO COMEÇA AQUI</span><h2 id="pagamento-titulo">Confere teu plano.</h2><p id="pagamento-plano"></p><strong id="pagamento-valor"></strong><p>Confere o destinatário e o valor no aplicativo do banco antes de pagar.</p><img id="pix-qr" alt="QR code PIX do plano escolhido" width="318" height="318"><label for="pix-codigo">PIX copia e cola</label><textarea id="pix-codigo" readonly rows="4"></textarea><button class="botao" id="copiar-pix" type="button">Copiar PIX</button><p id="pix-status" role="status"></p><h3>Depois de pagar</h3><p>Depois do PIX, entra no Discord da CRM e abre o canal 🏷️・tickets para mandar o comprovante, ou envia por e-mail. A equipe confirma e te chama. O serviço acontece no Discord do teu servidor.</p><div class="pagamento-acoes"><a class="botao" data-link="site_crm" target="_blank" rel="noopener">Enviar pelo Discord</a><a id="comprovante-email">Enviar por e-mail</a></div><p class="aviso">A confirmação é manual. Este site não confirma nem acompanha pagamentos.</p></dialog>
+<div class="mini-radio" aria-label="Rádio CRM"><button id="mini-ouvir" type="button" aria-label="Ouvir a Rádio CRM">▶</button><div><b>Rádio CRM</b><small id="mini-faixa">Música pra acompanhar tua navegação</small></div><label for="radio-volume">Volume</label><input id="radio-volume" type="range" min="0" max="1" step="0.05" value="0.6"><a data-link="site_crm" target="_blank" rel="noopener" aria-label="Ouvir a Rádio CRM no Discord">Discord ↗</a><span id="radio-status" role="status"></span></div>
+<script src="dados/dados.js?v=20261026-p13"></script>
+<script src="assets/js/site.js?v=20261026-p13"></script>
+<script src="assets/js/comunidade.js?v=20261026-p13"></script>
 </body>
 </html>
