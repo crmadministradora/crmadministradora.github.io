@@ -17,9 +17,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261026-cartazes2">
-<link rel="stylesheet" href="assets/css/comunidade.css?v=20261026-cartazes2">
-<link rel="stylesheet" href="assets/css/coins.css?v=20261027-p21">
+<link rel="stylesheet" href="assets/css/site.css?v=20261027-perfil2">
+<link rel="stylesheet" href="assets/css/comunidade.css?v=20261027-perfil2">
+<link rel="stylesheet" href="assets/css/coins.css?v=20261027-perfil2">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -30,13 +30,13 @@
     <img src="assets/img/crm-logo-27-10.png" alt="Escudo oficial da CRM" width="150" height="150">
   </a>
   <nav class="menu">
-    <a class="menu-item" href="#crm-coins"><span aria-hidden="true">💰</span><span>CRM coins</span></a>
     <button class="menu-item menu-login" id="btn-login" type="button">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.6 19.6 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.8 19.8 0 0 0 6 3l1.3-2a12.7 12.7 0 0 1-2-1l.5-.4a14.1 14.1 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.7 19.7 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
       <span id="login-rotulo">Discord · em breve</span>
     </button>
     <a class="menu-item" href="#dream-cards"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm15 1.2 2 .6a2 2 0 0 1 1.3 2.4l-3 10.6V6.2ZM6 9h7v2H6V9Zm0 4h5v2H6v-2Z"/></svg><span>Dream Cards</span></a>
     <a class="menu-item" href="#loja"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h2.3l.6 2H21l-2.2 8.2a2 2 0 0 1-1.9 1.5H8.4l.5 2H19v2H7.4L4 5H3V3Zm5 17a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm8 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"/></svg><span>Loja</span></a>
+    <a class="menu-item" href="#crm-coins"><span aria-hidden="true">💰</span><span>CRM coins</span></a>
     <a class="menu-item" href="#copa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v2h3v3a4 4 0 0 1-4 4h-.5A5 5 0 0 1 13 14.9V17h3v4H8v-4h3v-2.1A5 5 0 0 1 8.5 12H8a4 4 0 0 1-4-4V5h3V3Zm0 4H6v1a2 2 0 0 0 1 1.7V7Zm10 2.7A2 2 0 0 0 18 8V7h-1v2.7Z"/></svg><span>Copa do Infinito</span></a>
     <a class="menu-item" href="#kinguin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 7 4.5 3.5L12 4l4.5 6.5L21 7l-2 11H5L3 7Zm2 13h14v2H5v-2Z"/></svg><span>Kinguin</span></a>
     <a class="menu-item" href="#radio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-9 9v5a3 3 0 0 0 3 3h2v-8H5a7 7 0 0 1 14 0h-3v8h2a3 3 0 0 0 3-3v-5a9 9 0 0 0-9-9Z"/></svg><span>Rádio CRM</span></a>
@@ -73,6 +73,11 @@
     </div>
     <audio id="radio-audio" preload="none"></audio>
   </div>
+  <section id="perfil-crm" class="perfil-crm" aria-label="Teu Perfil CRM" hidden>
+    <div class="perfil-identidade" id="perfil-identidade"></div>
+    <div class="perfil-saldo"><small>CRM COINS</small><strong id="perfil-saldo">Consultando…</strong><span id="perfil-estado" role="status"></span></div>
+    <div class="perfil-acoes"><button type="button" class="botao botao-pequeno" id="perfil-abrir">Meu Perfil CRM ↗</button><button type="button" class="perfil-reconectar" id="perfil-reconectar" hidden>Tentar novamente</button></div>
+  </section>
 </header>
 
 <main id="conteudo">
@@ -110,6 +115,7 @@
     <div class="coins-acoes"><button type="button" class="botao" id="coins-entrar">Minha conta · Discord</button><a class="botao botao-roxo" data-link="site_crm" target="_blank" rel="noopener">Entrar no Discord da CRM ↗</a></div>
     <p class="coins-privacidade">O login guarda só o teu id e o teu nome do Discord, pra mostrar os teus CRM coins. Sair apaga a sessão.</p>
     <p id="coins-status" role="status">Consultando os CRM coins…</p>
+    <button type="button" class="coins-recarregar" id="coins-recarregar">Atualizar coins e conexão</button>
     <div class="coins-colunas"><section aria-labelledby="coins-ganhar-titulo"><h3 id="coins-ganhar-titulo">Como ganhar</h3><ul id="coins-ganhar" class="coins-lista"></ul></section><section aria-labelledby="coins-trocar-titulo"><h3 id="coins-trocar-titulo">Pelo que trocar</h3><ul id="coins-trocas" class="coins-lista"></ul></section></div>
     <details class="coins-regras"><summary>Regras e limites do dia</summary><p id="coins-tetos"></p><ul id="coins-regras"></ul></details>
     <section class="coins-ranking" aria-labelledby="coins-ranking-titulo"><h3 id="coins-ranking-titulo">Quem movimenta a CRM</h3><div class="coins-abas" role="tablist" aria-label="Rankings CRM coins"><button type="button" role="tab" id="aba-coins" aria-selected="true" aria-controls="coins-ranking-lista" data-ranking="coins">Coins</button><button type="button" role="tab" id="aba-convites" aria-selected="false" aria-controls="coins-ranking-lista" tabindex="-1" data-ranking="convites">Convites do mês</button><button type="button" role="tab" id="aba-participacao" aria-selected="false" aria-controls="coins-ranking-lista" tabindex="-1" data-ranking="participacao">Participação do mês</button></div><div id="coins-ranking-lista" role="tabpanel" aria-labelledby="aba-coins" tabindex="0"></div><p id="coins-atualizado" class="coins-privacidade"></p></section>
@@ -254,9 +260,9 @@
 <noscript><p class="sem-js">Ative o JavaScript para consultar planos, resultados e destaques. Nosso contato: <a href="mailto:crmhokclan@gmail.com">crmhokclan@gmail.com</a>.</p></noscript>
 <dialog id="pagamento" aria-labelledby="pagamento-titulo"><button class="fechar-dialogo" type="button" aria-label="Fechar pagamento">×</button><span class="sobretitulo">TEU PROJETO COMEÇA AQUI</span><h2 id="pagamento-titulo">Confere teu plano.</h2><p id="pagamento-plano"></p><strong id="pagamento-valor"></strong><p>Confere o destinatário e o valor no aplicativo do banco antes de pagar.</p><img id="pix-qr" alt="QR code PIX do plano escolhido" width="318" height="318"><label for="pix-codigo">PIX copia e cola</label><textarea id="pix-codigo" readonly rows="4"></textarea><button class="botao" id="copiar-pix" type="button">Copiar PIX</button><p id="pix-status" role="status"></p><h3>Depois de pagar</h3><p id="comprovante-passos">No Discord da CRM, no canal 🎩・la-nostra-casa, escolha Abrir Ticket no menu e mande o comprovante ali. Você também pode enviar por e-mail. A equipe confirma e te chama.</p><div class="pagamento-acoes"><a class="botao" data-link="site_crm" target="_blank" rel="noopener">Enviar pelo Discord</a><a id="comprovante-email">Enviar por e-mail</a></div><p class="aviso">A confirmação é manual. Este site não confirma nem acompanha pagamentos.</p></dialog>
 <div class="mini-radio" aria-label="Rádio CRM"><button id="mini-ouvir" type="button" aria-label="Ouvir a Rádio CRM">▶</button><div><b>Rádio CRM</b><small id="mini-faixa">Música pra acompanhar tua navegação</small></div><label for="radio-volume">Volume</label><input id="radio-volume" type="range" min="0" max="1" step="0.05" value="0.6"><a data-link="site_crm" target="_blank" rel="noopener" aria-label="Ouvir a Rádio CRM no Discord">Discord ↗</a><span id="radio-status" role="status"></span></div>
-<script src="dados/dados.js?v=20261026-cartazes2"></script>
-<script src="assets/js/site.js?v=20261027-p21"></script>
-<script src="assets/js/comunidade.js?v=20261026-cartazes2"></script>
-<script src="assets/js/coins.js?v=20261027-p21"></script>
+<script src="dados/dados.js?v=20261027-perfil2"></script>
+<script src="assets/js/site.js?v=20261027-perfil2"></script>
+<script src="assets/js/comunidade.js?v=20261027-perfil2"></script>
+<script src="assets/js/coins.js?v=20261027-perfil2"></script>
 </body>
 </html>

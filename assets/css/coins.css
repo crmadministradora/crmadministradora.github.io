@@ -1,4 +1,22 @@
 /* Identidade e espaçamento do site aprovado. */
+.topo { flex-wrap: wrap; }
+.com-perfil .topo { position: fixed; inset: 0 0 auto; }
+.com-perfil main { padding-top: calc(var(--altura-perfil-topo, 220px) + 16px); }
+.perfil-crm { flex: 0 0 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 16px 20px; background: var(--superficie); border: 1px solid var(--borda); border-radius: 12px; }
+.perfil-identidade { min-width: 0; display: flex; align-items: center; gap: 12px; }
+.perfil-identidade strong { display: block; overflow-wrap: anywhere; line-height: 1.3; }
+.perfil-identidade small, .perfil-kicker, .perfil-saldo small { color: var(--dourado-claro); font-size: 10px; letter-spacing: .12em; }
+.perfil-saldo { min-width: 0; display: flex; flex-direction: column; }
+.perfil-saldo strong { color: var(--dourado-claro); font-size: 22px; line-height: 1.3; }
+.perfil-saldo span { color: var(--cinza); font-size: 11px; max-width: 220px; }
+.perfil-acoes { display: flex; flex-direction: column; gap: 8px; }
+.perfil-reconectar { color: var(--dourado-claro); background: transparent; border: 0; cursor: pointer; padding: 8px; font: inherit; font-size: 12px; }
+.coins-recarregar { color: var(--dourado-claro); background: var(--superficie); border: 1px solid var(--borda); border-radius: 8px; padding: 10px 14px; cursor: pointer; font: inherit; font-size: 13px; }
+.coins-recarregar:disabled { opacity: .6; cursor: wait; }
+.com-perfil section[id], .com-perfil .caixa[id] { scroll-margin-top: calc(var(--altura-perfil-topo, 220px) + 20px); }
+@media (max-width: 640px) { .perfil-crm { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 12px; } .perfil-acoes { grid-column: 1 / -1; flex-direction: row; } }
+@media (max-width: 480px) { .topo { gap: 8px; padding: 10px 12px; } .topo-marca { flex: 1; min-width: 0; gap: 8px; } .topo-nome { font-size: 14px; } .topo-nome small { display: none; } .topo-escudo { width: 28px; } }
+@media (max-width: 640px) { .perfil-crm { gap: 8px; } .perfil-saldo strong { font-size: 18px; } .perfil-saldo span { max-width: 130px; } .perfil-identidade { gap: 8px; } .perfil-identidade .coins-avatar { width: 32px; height: 32px; } .perfil-nome strong { font-size: 14px; } }
 .coins h2 { max-width: 780px; }
 .coins-acoes { display: flex; flex-wrap: wrap; gap: 16px; margin: 24px 0 16px; }
 .coins-privacidade { font-size: 13px; color: var(--cinza); max-width: 680px; }

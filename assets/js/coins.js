@@ -6,7 +6,13 @@
   var dialog = document.getElementById('minha-conta'), content = document.getElementById('conta-conteudo');
   var status = document.getElementById('conta-status'), login = document.getElementById('btn-login');
   var label = document.getElementById('login-rotulo'), logout = document.getElementById('conta-sair');
-  var ready = false, ranks = null, activeRank = 'coins', revision = 0;
+  var ready = false, ranks = null, activeRank = 'coins', revision = 0, currentUser = null, accountLoading = false;
+  var profile = document.getElementById('perfil-crm'), profileIdentity = document.getElementById('perfil-identidade');
+  var profileBalance = document.getElementById('perfil-saldo'), profileState = document.getElementById('perfil-estado');
+  var reconnect = document.getElementById('perfil-reconectar');
+  new ResizeObserver(function () {
+    document.documentElement.style.setProperty('--altura-perfil-topo', document.getElementById('topo').getBoundingClientRect().height + 'px');
+  }).observe(document.getElementById('topo'));
   function node(tag, text, cls) {
     var n = document.createElement(tag);
     if (text != null) n.textContent = String(text);
@@ -15,21 +21,39 @@
   }
   function read(key, tab) { try { return (tab ? sessionStorage : localStorage).getItem(key); } catch (_) { return null; } }
   function save(key, value, tab) {
-    try { var s = tab ? sessionStorage : localStorage; if (value == null) s.removeItem(key); else s.setItem(key, value); } catch (_) { /* conta continua nesta aba */ }
+    try { var s = tab ? sessionStorage : localStorage; if (value == null) s.removeItem(key); else s.setItem(key, value); return true; } catch (_) { return false; }
   }
   var session = read('crm_sessao');
   // Descarta o perfil da implementação anterior, que não era uma sessão da API.
   save('crm_usuario', null, true);
   function reset() {
-    revision++; session = null; save('crm_sessao', null); save('crm_usuario', null);
+    revision++; session = null; currentUser = null; save('crm_sessao', null); save('crm_usuario', null);
+    profile.hidden = true; document.body.classList.remove('com-perfil'); profileIdentity.replaceChildren(); profileBalance.textContent = ''; profileState.textContent = '';
     content.replaceChildren(); logout.hidden = true; updateLogin();
   }
   function updateLogin(user) {
+    if (user) currentUser = user;
+    user = currentUser;
     label.textContent = session ? 'Minha conta' : (ready ? 'Entrar com Discord' : 'Discord · indisponível');
     var old = login.querySelector('img'); if (old) old.remove();
-    login.querySelector('svg').hidden = !!(session && user);
+    login.querySelector('svg').toggleAttribute('hidden', !!(session && user));
     if (session && user) login.insertBefore(avatar(user), label);
     logout.hidden = !session;
+  }
+  function showProfile(data) {
+    profile.hidden = !session; document.body.classList.toggle('com-perfil', !!session);
+    if (!session) return;
+    profileIdentity.replaceChildren();
+    if (!data) {
+      profileIdentity.append(node('div', 'PERFIL CRM', 'perfil-kicker'), node('strong', 'Tua sessão está salva'));
+      profileBalance.textContent = 'Consultando…'; profileState.textContent = 'Reconectando tua conta'; return;
+    }
+    var identity = node('div', null, 'perfil-nome');
+    identity.append(node('small', 'PERFIL CRM'), node('strong', data.usuario.nome));
+    profileIdentity.append(avatar(data.usuario), identity);
+    profileBalance.textContent = data.equipe ? 'Equipe CRM' : data.coins.saldo_txt + ' coins';
+    profileState.textContent = data.equipe ? 'ADM · fora do ranking' : (data.coins.posicao == null ? 'Teu progresso na comunidade' : 'Posição ' + data.coins.posicao + ' no ranking');
+    reconnect.hidden = true;
   }
   function https(value, allowed) {
     try { var u = new URL(value); return u.protocol === 'https:' && allowed.includes(u.hostname) ? u.href : null; } catch (_) { return null; }
@@ -43,7 +67,7 @@
   }
   async function api(path, options) {
     options = options || {};
-    var controller = new AbortController(), timer = setTimeout(function () { controller.abort(); }, 9000);
+    var controller = new AbortController(), timer = setTimeout(function () { controller.abort(); }, 20000);
     try {
       var headers = { Accept: 'application/json' };
       if (options.auth && session) headers.Authorization = 'Bearer ' + session;
@@ -69,6 +93,7 @@
     content.replaceChildren();
     var user = data.usuario || {}, coins = data.coins || {}, invite = coins.convite || {}, today = coins.hoje || {};
     updateLogin(user);
+    showProfile(data);
     var identity = node('div', null, 'conta-identidade'); identity.append(avatar(user), node('h3', user.nome));
     content.append(identity);
     if (data.equipe) {
@@ -112,11 +137,20 @@
     content.append(list);
   }
   async function loadAccount() {
+    if (accountLoading) return;
+    accountLoading = true;
     content.replaceChildren(); status.textContent = 'Consultando tua conta…';
-    if (!session) { status.textContent = ready ? 'Entra com o Discord pra ver os teus CRM coins.' : offline; return; }
+    if (!session) { status.textContent = ready ? 'Entra com o Discord pra ver os teus CRM coins.' : offline; accountLoading = false; return; }
     var current = revision;
     try { var data = await api('/api/eu', { auth: true }); if (current === revision && session) { renderAccount(data); status.textContent = ''; } }
-    catch (e) { if (!session || current === revision) status.textContent = e.message; }
+    catch (e) {
+      if (!session || current === revision) status.textContent = e.message;
+      if (session && current === revision) {
+        profileState.textContent = 'Sem conexão agora · sessão preservada';
+        if (!currentUser) profileBalance.textContent = 'Saldo indisponível';
+        reconnect.hidden = false;
+      }
+    } finally { accountLoading = false; }
   }
   async function openAccount() {
     if (!dialog.open) dialog.showModal();
@@ -134,10 +168,12 @@
   }
   login.addEventListener('click', startLogin);
   document.getElementById('coins-entrar').addEventListener('click', startLogin);
+  document.getElementById('perfil-abrir').addEventListener('click', openAccount);
+  reconnect.addEventListener('click', loadAccount);
   dialog.querySelector('.conta-fechar').addEventListener('click', function () { dialog.close(); });
   document.getElementById('conta-atualizar').addEventListener('click', async function () {
     if (session) { await loadAccount(); return; }
-    try { var health = await api('/api/saude'); ready = config.login.ligado && health.ok === true; updateLogin(); if (ready) startLogin(); else status.textContent = offline; }
+    try { await loadPublic(); if (ready) startLogin(); else status.textContent = offline; }
     catch (e) { status.textContent = e.message; }
   });
   logout.addEventListener('click', async function () {
@@ -148,8 +184,8 @@
   });
   window.addEventListener('storage', function (event) {
     if (event.key !== 'crm_sessao') return;
-    revision++; session = event.newValue; content.replaceChildren(); updateLogin();
-    if (dialog.open) loadAccount();
+    if (!event.newValue) { reset(); return; }
+    revision++; session = event.newValue; currentUser = null; content.replaceChildren(); updateLogin(); showProfile(); loadAccount();
   });
   async function callback() {
     var params = new URLSearchParams(location.hash.slice(1));
@@ -164,12 +200,14 @@
     try {
       var result = await api('/api/entrar', { method: 'POST', body: { token: token } });
       if (!result.sessao) throw new Error('Não consegui confirmar tua sessão. Tenta de novo.');
-      session = result.sessao; revision++; save('crm_sessao', session); updateLogin(result.usuario);
+      session = result.sessao; revision++;
+      var persisted = save('crm_sessao', session); updateLogin(result.usuario); showProfile();
       if (back && back.startsWith('/') && !back.startsWith('//')) {
         var target = new URL(back, location.origin);
         if (target.origin === location.origin) { history.replaceState(null, '', target.pathname + target.search + target.hash); if (target.hash) document.getElementById(target.hash.slice(1))?.scrollIntoView(); }
       }
       await openAccount();
+      if (!persisted) status.textContent = 'Você entrou nesta aba, mas o navegador não permitiu salvar a sessão. Ao fechar, será preciso entrar de novo.';
     } catch (e) { status.textContent = e.message; if (!dialog.open) dialog.showModal(); }
     finally { token = null; }
   }
@@ -213,12 +251,25 @@
     });
   });
   updateLogin();
-  callback();
-  api('/api/saude').then(function (data) { ready = config.login.ligado && data.ok === true; updateLogin(); }).catch(function () { ready = false; updateLogin(); });
-  api('/api/coins/tabela').then(function (data) { renderTable(data); document.getElementById('coins-status').textContent = ''; })
-    .catch(function (e) { document.getElementById('coins-status').textContent = e.message; });
-  api('/api/coins/ranking').then(function (data) {
-    ranks = data; renderRanking();
-    var date = new Date(data.atualizado); if (!isNaN(date)) document.getElementById('coins-atualizado').textContent = 'Atualizado em ' + date.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }) + ' · Brasília';
-  }).catch(function () { renderRanking(); });
+  showProfile();
+  var hasCallback = /(?:^#|&)(?:access_token|error)=/.test(location.hash);
+  callback().then(function () { if (!hasCallback && session) loadAccount(); });
+  var publicLoading = null;
+  function loadPublic() {
+    if (publicLoading) return publicLoading;
+    var refresh = document.getElementById('coins-recarregar'); refresh.disabled = true;
+    publicLoading = Promise.allSettled([
+      api('/api/saude').then(function (data) { ready = config.login.ligado && data.ok === true; updateLogin(); }).catch(function () { ready = false; updateLogin(); }),
+      api('/api/coins/tabela').then(function (data) { renderTable(data); document.getElementById('coins-status').textContent = ''; })
+        .catch(function (e) { document.getElementById('coins-status').textContent = e.message; }),
+      api('/api/coins/ranking').then(function (data) {
+        ranks = data; renderRanking();
+        var date = new Date(data.atualizado); if (!isNaN(date)) document.getElementById('coins-atualizado').textContent = 'Atualizado em ' + date.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }) + ' · Brasília';
+      }).catch(function () { ranks = null; renderRanking(); })
+    ]).finally(function () { publicLoading = null; refresh.disabled = false; });
+    return publicLoading;
+  }
+  document.getElementById('coins-recarregar').addEventListener('click', function () { loadPublic(); if (session) loadAccount(); });
+  window.addEventListener('online', function () { loadPublic(); if (session) loadAccount(); });
+  loadPublic();
 })();
