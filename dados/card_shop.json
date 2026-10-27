@@ -1,0 +1,302 @@
+{
+ "atualizado": "2026-10-27 19:18",
+ "fonte": "o catalogo VIVO do Dream Cards (VPS 2), lido pelo Claude em 2026-10-27 19:18. Muda preco ou carta = o Claude gera de novo; o site nao inventa preco.",
+ "regras": {
+  "pagamento": "DUAS FORMAS ALTERNATIVAS: PIX em reais OU CRM coins. Cada carta tem os dois precos cadastrados.",
+  "conversao": "NAO ha formula R$ <-> coins: sao dois precos, nao uma equivalencia. Nao converter.",
+  "promocao": "R$ 10,00 ou 10 CRM coins pra TODAS as cartas ate 31/10/2026 23:59. De 01/11 vale o preco ORIGINAL, que o Brunno ainda nao definiu: ate la', o site mostra a promocao e, depois de 31/10, 'preco no Discord'.",
+  "colecao": "colecao so' AGRUPA trajes (navegacao). Nao se vende colecao inteira.",
+  "compra_fase_1": "o site MOSTRA; a compra acontece no Discord, no Card Shop do jogo (links em onde_comprar). Quem nao esta' no servidor entra pelo convite do links.json.",
+  "ja_tem": "o Discord responde 'Tu ja' tem a <carta>' e nao cobra de novo (nem em coins, nem no PIX).",
+  "saldo_insuficiente": "o Discord diz o saldo, o preco e oferece o PIX.",
+  "equipar": "no Discord: 🎒 Inventory, no painel do canal do jogo.",
+  "pix": "PIX estatico da CRM com o numero do pedido; o comprovante vai pela DM do Dream Cards; a staff confirma e a carta entra sozinha (de 90 em 90 s). Comprar no PIX NAO da' os +50 coins da loja.",
+  "raridade": "hoje todas as 17 sao raridade 1 (Nivel 1) e sem limite de estoque (teto null = nao esgota)."
+ },
+ "onde_comprar": {
+  "hok": [
+   {
+    "servidor": "CRM",
+    "canal": "🧧・galeria-dream-cards",
+    "url": "https://discord.com/channels/1424066515564495095/1544527759647318066"
+   },
+   {
+    "servidor": "Dream Cards",
+    "canal": "🧧・galeria-dream-cards",
+    "url": "https://discord.com/channels/1559922847034642483/1560045601092276385"
+   }
+  ],
+  "mlbb": [
+   {
+    "servidor": "Dream Cards",
+    "canal": "Card Shop do MLBB",
+    "url": "https://discord.com/channels/1559922847034642483/1560732557979418787"
+   }
+  ]
+ },
+ "colecoes_fora_da_loja": {
+  "gear": "Gear Collection = as cartas de TIER do MLBB (Tier 1, 2, 3...), 1 tier a cada 100 leveis. Sao de CONQUISTA, NAO se vendem. Ainda nao integradas no bot: nao mostrar como disponivel.",
+  "fairy": "Fairy Collection = aprovada pela loja do MLBB, mas SEM preco e ainda nao integrada no bot: no site, no maximo 'em breve', sem preco."
+ },
+ "jogos": {
+  "hok": [
+   {
+    "id": "aurora_solar",
+    "jogo": "hok",
+    "nome": "Aurora Solar",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "nevoa_violeta",
+    "jogo": "hok",
+    "nome": "Névoa Violeta",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "jardim_mineral",
+    "jogo": "hok",
+    "nome": "Jardim Mineral",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "mare_de_cobre",
+    "jogo": "hok",
+    "nome": "Maré de Cobre",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "arquivo_astral",
+    "jogo": "hok",
+    "nome": "Arquivo Astral",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "obelisco_indigo",
+    "jogo": "hok",
+    "nome": "Obelisco Índigo",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "raiz_de_jade",
+    "jogo": "hok",
+    "nome": "Raiz de Jade",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "forja_ambar",
+    "jogo": "hok",
+    "nome": "Forja Âmbar",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "eclipse_ceruleo",
+    "jogo": "hok",
+    "nome": "Eclipse Cerúleo",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   }
+  ],
+  "mlbb": [
+   {
+    "id": "ferro_carmesim",
+    "jogo": "mlbb",
+    "nome": "Ferro Carmesim",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "basalto_rubro",
+    "jogo": "mlbb",
+    "nome": "Basalto Rubro",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "horizonte_prisma",
+    "jogo": "mlbb",
+    "nome": "Horizonte Prisma",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "noite_de_veludo",
+    "jogo": "mlbb",
+    "nome": "Noite de Veludo",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "jardim_neon",
+    "jogo": "mlbb",
+    "nome": "Jardim Neon",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "atelie_de_bronze",
+    "jogo": "mlbb",
+    "nome": "Ateliê de Bronze",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "coroa_boreal",
+    "jogo": "mlbb",
+    "nome": "Coroa Boreal",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   },
+   {
+    "id": "seda_noturna",
+    "jogo": "mlbb",
+    "nome": "Seda Noturna",
+    "raridade": 1,
+    "raridade_nome": "Nível 1",
+    "teto": null,
+    "restam": null,
+    "disponivel": true,
+    "preco_reais_centavos": 1000,
+    "preco_reais_texto": "R$ 10,00",
+    "preco_coins": 10,
+    "promocao": true,
+    "promocao_ate": "31/10"
+   }
+  ]
+ }
+}

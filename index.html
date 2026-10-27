@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="assets/css/site.css?v=20261027-perfil2">
 <link rel="stylesheet" href="assets/css/comunidade.css?v=20261027-perfil2">
 <link rel="stylesheet" href="assets/css/coins.css?v=20261027-perfil2">
+<link rel="stylesheet" href="assets/css/card-shop.css?v=p27">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -76,7 +77,7 @@
   <section id="perfil-crm" class="perfil-crm" aria-label="Teu Perfil CRM" hidden>
     <div class="perfil-identidade" id="perfil-identidade"></div>
     <div class="perfil-saldo"><small>CRM COINS</small><strong id="perfil-saldo">Consultando…</strong><span id="perfil-estado" role="status"></span></div>
-    <div class="perfil-acoes"><button type="button" class="botao botao-pequeno" id="perfil-abrir">Meu Perfil CRM ↗</button><button type="button" class="perfil-reconectar" id="perfil-reconectar" hidden>Tentar novamente</button></div>
+    <div class="perfil-acoes"><button type="button" class="botao botao-pequeno" id="perfil-abrir">Meu Perfil CRM ↗</button><a class="botao botao-pequeno" data-link="site_dreamcards" target="_blank" rel="noopener">Ver minha carta no Discord ↗</a><button type="button" class="perfil-reconectar" id="perfil-reconectar" hidden>Tentar novamente</button></div>
   </section>
 </header>
 
@@ -118,7 +119,7 @@
     <button type="button" class="coins-recarregar" id="coins-recarregar">Atualizar coins e conexão</button>
     <div class="coins-colunas"><section aria-labelledby="coins-ganhar-titulo"><h3 id="coins-ganhar-titulo">Como ganhar</h3><ul id="coins-ganhar" class="coins-lista"></ul></section><section aria-labelledby="coins-trocar-titulo"><h3 id="coins-trocar-titulo">Pelo que trocar</h3><ul id="coins-trocas" class="coins-lista"></ul></section></div>
     <details class="coins-regras"><summary>Regras e limites do dia</summary><p id="coins-tetos"></p><ul id="coins-regras"></ul></details>
-    <section class="coins-ranking" aria-labelledby="coins-ranking-titulo"><h3 id="coins-ranking-titulo">Quem movimenta a CRM</h3><div class="coins-abas" role="tablist" aria-label="Rankings CRM coins"><button type="button" role="tab" id="aba-coins" aria-selected="true" aria-controls="coins-ranking-lista" data-ranking="coins">Coins</button><button type="button" role="tab" id="aba-convites" aria-selected="false" aria-controls="coins-ranking-lista" tabindex="-1" data-ranking="convites">Convites do mês</button><button type="button" role="tab" id="aba-participacao" aria-selected="false" aria-controls="coins-ranking-lista" tabindex="-1" data-ranking="participacao">Participação do mês</button></div><div id="coins-ranking-lista" role="tabpanel" aria-labelledby="aba-coins" tabindex="0"></div><p id="coins-atualizado" class="coins-privacidade"></p></section>
+    <section class="coins-ranking" aria-labelledby="coins-ranking-titulo"><h3 id="coins-ranking-titulo">Ranking global de CRM coins</h3><div class="coins-abas" role="tablist" aria-label="Rankings CRM coins"><button type="button" role="tab" id="aba-coins" aria-selected="true" aria-controls="coins-ranking-lista" data-ranking="coins">Coins</button><button type="button" role="tab" id="aba-convites" aria-selected="false" aria-controls="coins-ranking-lista" tabindex="-1" data-ranking="convites">Convites do mês</button><button type="button" role="tab" id="aba-participacao" aria-selected="false" aria-controls="coins-ranking-lista" tabindex="-1" data-ranking="participacao">Participação do mês</button></div><div id="coins-ranking-lista" role="tabpanel" aria-labelledby="aba-coins" tabindex="0"></div><p id="coins-atualizado" class="coins-privacidade"></p></section>
   </section>
 
   <section class="secao" id="loja" aria-labelledby="titulo-loja">
@@ -136,7 +137,7 @@
       <h2 id="titulo-dc">Tua partida <em>vira carta.</em></h2>
       <p>Manda o print do fim da tua partida de Honor of Kings ou Mobile Legends. O bot lê os dados e atualiza tua carta com atributos, nível, pódio e álbum. Uma carta por jogador, a mesma em todo servidor.</p>
       <p class="destaque-novo">🆕 O <b>/meucard</b> mostra quanto falta pra cada atributo subir.</p>
-      <a class="botao botao-roxo" data-link="site_dreamcards" target="_blank" rel="noopener">Entrar no Dream Cards</a>
+      <a class="botao botao-roxo" href="#dc-loja">Explorar loja de trajes</a> <a class="botao" data-link="site_dreamcards" target="_blank" rel="noopener">Entrar no Dream Cards ↗</a>
     </div>
   </section>
 
@@ -149,6 +150,7 @@
     <p class="aviso">Consulte no Discord o pódio de Honor of Kings, o de Mobile Legends e as regras de cada temporada.</p>
     <a class="botao botao-roxo" data-link="site_dreamcards" target="_blank" rel="noopener">Ver minha carta no Discord</a>
   </section>
+<section class="secao dc-shop" id="dc-loja" aria-labelledby="shop-title"><a class="shop-back" href="#dream-cards">← Dream Cards</a><span class="sobretitulo">DREAM CARDS / LOJA DE TRAJES</span><div class="shop-heading"><div><h2 id="shop-title">Tua carta. <em>Teu estilo.</em></h2><p>Escolhe teu jogo e encontra teu próximo traje.</p></div><div class="shop-games" aria-label="Escolher jogo"><button type="button" data-shop-game="hok" aria-pressed="true">Honor of Kings</button><button type="button" data-shop-game="mlbb" aria-pressed="false">Mobile Legends</button></div></div><p id="shop-status" role="status">Carregando a vitrine…</p><div id="shop-feature" class="shop-feature" hidden><div><span class="sobretitulo">CARD SHOP</span><h3>Uma nova identidade<br>para tua carta.</h3><p>Artes originais, prontas para tua próxima partida.</p><button class="botao botao-roxo" type="button" id="shop-explore">Explorar os trajes</button></div><div id="shop-fan" class="shop-fan"></div></div><div id="shop-catalog" hidden><div class="shop-tools"><button class="shop-button" id="shop-home" type="button">← Destaques</button><p id="shop-count"></p></div><div class="shop-grid" id="shop-grid"></div><div class="shop-pages"><button type="button" id="shop-prev">← Anteriores</button><span id="shop-page" aria-live="polite"></span><button type="button" id="shop-next">Próximos →</button></div></div><p class="aviso">Prévias genéricas com dados de exemplo. A compra e o Inventory ficam no Discord do jogo. Trajes de conquista são grátis.</p><p id="shop-upcoming" class="aviso" hidden>Em breve no MLBB: Fairy Collection. Gear Collection será de conquista. Ainda sem disponibilidade.</p></section>
   <!-- ====== COPA DO INFINITO ====== -->
   <section class="secao destaque" id="copa" aria-labelledby="titulo-copa">
     <img class="destaque-arte" src="assets/img/copa-do-infinito.webp" alt="Arte oficial da Copa do Infinito" width="900" height="900" loading="lazy">
@@ -182,6 +184,7 @@
     </div>
   </section>
 
+<section class="secao radio-library" id="radio-biblioteca" aria-labelledby="library-title"><span class="sobretitulo">RÁDIO CRM / BIBLIOTECA</span><h2 id="library-title">Escolhe tua <em>próxima faixa.</em></h2><p>Ouve uma música desde o começo ou acompanha a programação ao vivo.</p><button class="botao" type="button" id="radio-live">Sintonizar ao vivo</button><p id="library-playing" role="status"></p><div id="radio-tracks"></div></section>
   <a class="divulgacao divulgacao-faixa" href="#contato">
     <span class="divulgacao-icone" aria-hidden="true">📣</span>
     <span><b>Sua divulgação <em>aqui</em></b><small>Vamos conversar sobre patrocínio.</small></span>
@@ -260,9 +263,11 @@
 <noscript><p class="sem-js">Ative o JavaScript para consultar planos, resultados e destaques. Nosso contato: <a href="mailto:crmhokclan@gmail.com">crmhokclan@gmail.com</a>.</p></noscript>
 <dialog id="pagamento" aria-labelledby="pagamento-titulo"><button class="fechar-dialogo" type="button" aria-label="Fechar pagamento">×</button><span class="sobretitulo">TEU PROJETO COMEÇA AQUI</span><h2 id="pagamento-titulo">Confere teu plano.</h2><p id="pagamento-plano"></p><strong id="pagamento-valor"></strong><p>Confere o destinatário e o valor no aplicativo do banco antes de pagar.</p><img id="pix-qr" alt="QR code PIX do plano escolhido" width="318" height="318"><label for="pix-codigo">PIX copia e cola</label><textarea id="pix-codigo" readonly rows="4"></textarea><button class="botao" id="copiar-pix" type="button">Copiar PIX</button><p id="pix-status" role="status"></p><h3>Depois de pagar</h3><p id="comprovante-passos">No Discord da CRM, no canal 🎩・la-nostra-casa, escolha Abrir Ticket no menu e mande o comprovante ali. Você também pode enviar por e-mail. A equipe confirma e te chama.</p><div class="pagamento-acoes"><a class="botao" data-link="site_crm" target="_blank" rel="noopener">Enviar pelo Discord</a><a id="comprovante-email">Enviar por e-mail</a></div><p class="aviso">A confirmação é manual. Este site não confirma nem acompanha pagamentos.</p></dialog>
 <div class="mini-radio" aria-label="Rádio CRM"><button id="mini-ouvir" type="button" aria-label="Ouvir a Rádio CRM">▶</button><div><b>Rádio CRM</b><small id="mini-faixa">Música pra acompanhar tua navegação</small></div><label for="radio-volume">Volume</label><input id="radio-volume" type="range" min="0" max="1" step="0.05" value="0.6"><a data-link="site_crm" target="_blank" rel="noopener" aria-label="Ouvir a Rádio CRM no Discord">Discord ↗</a><span id="radio-status" role="status"></span></div>
+<dialog id="shop-detail" aria-labelledby="shop-detail-title"><button type="button" class="shop-button shop-close" id="shop-close" aria-label="Fechar traje">Fechar ×</button><div class="shop-detail-layout"><img id="shop-detail-img" alt=""><div><span class="sobretitulo" id="shop-detail-game"></span><h2 id="shop-detail-title"></h2><p id="shop-detail-price" class="shop-price"></p><p id="shop-detail-promo"></p><p id="shop-detail-stock"></p><p>Escolhe o traje na ficha do Card Shop e compra com PIX ou CRM coins. No PIX, envia o comprovante pela DM; a CRM confirma e o traje entra no inventário.</p><div id="shop-buy"></div><p class="aviso">Já tem o traje? Veste pelo 🎒 Inventory no Discord. Prévia de exemplo; a tua carta mantém teu nome e teus dados.</p></div></div></dialog>
 <script src="dados/dados.js?v=20261027-perfil2"></script>
-<script src="assets/js/site.js?v=20261027-perfil2"></script>
+<script src="assets/js/site.js?v=20261027-p27"></script>
 <script src="assets/js/comunidade.js?v=20261027-perfil2"></script>
 <script src="assets/js/coins.js?v=20261027-perfil2"></script>
+<script src="assets/js/card-shop.js?v=p27"></script>
 </body>
 </html>

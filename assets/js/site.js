@@ -228,7 +228,7 @@
   var player = $("#radio-crm"), audio = $("#radio-audio"), pop = $("#radio-dica"), faixa = $("#radio-faixa");
   var tocando = false, pedidoRadio = 0;
   var grade = D.radio, mini = $("#mini-ouvir"), miniFaixa = $("#mini-faixa"), radioStatus = $("#radio-status");
-  var carregando = false;
+  var carregando = false, modoRadio = "ao-vivo", faixaBiblioteca = null;
   audio.volume = Number($("#radio-volume").value);
   $("#radio-volume").addEventListener("input", function (e) { audio.volume = Number(e.target.value); });
   function marcar(sim) {
@@ -250,6 +250,7 @@
     return { faixa: grade.faixas[0], segundo: 0 };
   }
   function tocarGrade() {
+    modoRadio = "ao-vivo";
     var p = posicaoGrade();
     if (!p) { aviso("A programação da rádio está sendo preparada."); return; }
     var pedido = ++pedidoRadio;
@@ -275,7 +276,7 @@
   }
   // Return to the clock after buffering or the device waking from sleep.
   setInterval(function () {
-    if (!tocando || carregando || !grade) return;
+    if (modoRadio !== "ao-vivo" || !tocando || carregando || !grade) return;
     var p = posicaoGrade();
     if (!p) return;
     if (!audio.src.endsWith('/' + p.faixa.arquivo)) tocarGrade();
@@ -299,6 +300,11 @@
     });
   }
   function clicarRadio() {
+    if (modoRadio === 'biblioteca') {
+      if (tocando || carregando) { pedidoRadio++; carregando = false; audio.pause(); marcar(false); radioStatus.textContent = 'Pausada'; }
+      else { audio.play().then(function () { marcar(true); radioStatus.textContent = 'Tocando'; }).catch(function () { marcar(false); radioStatus.textContent = 'Não consegui tocar. Tenta de novo.'; }); }
+      return;
+    }
     if (grade && grade.faixas && grade.faixas.length) {
       if (tocando || carregando) { pedidoRadio++; carregando = false; audio.pause(); marcar(false); radioStatus.textContent = "Pausada"; }
       else tocarGrade();
@@ -308,6 +314,23 @@
     if (tocando) { audio.pause(); marcar(false); return; }
     sintonizar();
   }
+  function tocarBiblioteca(i) {
+    if (!grade || !grade.faixas[i]) return;
+    var f = grade.faixas[i]; if (!/^assets\/radio\/\d+\.mp3$/.test(f.arquivo)) return;
+    var pedido = ++pedidoRadio; modoRadio = 'biblioteca'; faixaBiblioteca = i; carregando = true; audio.pause();
+    audio.onloadedmetadata = null; audio.src = f.arquivo; faixa.textContent = miniFaixa.textContent = f.titulo + ' · CRM';
+    document.getElementById('library-playing').textContent = 'Biblioteca · ' + f.titulo;
+    audio.onended = function () { tocarBiblioteca((i + 1) % grade.faixas.length); };
+    audio.play().then(function () { if (pedido !== pedidoRadio) return; carregando = false; marcar(true); radioStatus.textContent = 'Biblioteca'; }).catch(function () { if (pedido !== pedidoRadio) return; carregando = false; marcar(false); radioStatus.textContent = 'Não consegui tocar. Tenta novamente.'; });
+  }
+  var trackList = document.getElementById('radio-tracks');
+  if (trackList && grade && Array.isArray(grade.faixas)) grade.faixas.forEach(function (f, i) {
+    var row = el('div', {classe:'radio-track'}), desc = el('div'), title = el('strong', {texto:f.titulo}), album = el('small', {texto:f.album});
+    desc.append(title, album); var button = el('button', {type:'button',texto:'Ouvir','aria-label':'Ouvir '+f.titulo});
+    button.addEventListener('click',function () { tocarBiblioteca(i); }); row.append(desc,button); trackList.append(row);
+  });
+  document.getElementById('radio-live').addEventListener('click',function () { tocarGrade(); document.getElementById('library-playing').textContent = 'Programação ao vivo'; });
+  audio.addEventListener('error',function () { carregando = false; marcar(false); radioStatus.textContent = 'Faixa indisponível. Escolhe outra ou tenta novamente.'; });
   $("#radio-botao").addEventListener("click", clicarRadio);
   mini.addEventListener("click", clicarRadio);
   document.querySelectorAll('[data-acao="radio"]').forEach(function (b) {
