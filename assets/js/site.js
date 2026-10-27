@@ -327,7 +327,7 @@
   if (trackList && grade && Array.isArray(grade.faixas)) grade.faixas.forEach(function (f, i) {
     var row = el('div', {classe:'radio-track'}), desc = el('div'), title = el('strong', {texto:f.titulo}), album = el('small', {texto:f.album});
     desc.append(title, album); var button = el('button', {type:'button',texto:'Ouvir','aria-label':'Ouvir '+f.titulo});
-    button.addEventListener('click',function () { tocarBiblioteca(i); }); row.append(desc,button); trackList.append(row);
+    button.addEventListener('click',function () { tocarBiblioteca(i); }); var download = el('a', {href:f.arquivo,download:f.titulo+'.mp3',texto:'Baixar MP3','aria-label':'Baixar '+f.titulo}); row.append(desc,button,download); trackList.append(row);
   });
   document.getElementById('radio-live').addEventListener('click',function () { tocarGrade(); document.getElementById('library-playing').textContent = 'Programação ao vivo'; });
   audio.addEventListener('error',function () { carregando = false; marcar(false); radioStatus.textContent = 'Faixa indisponível. Escolhe outra ou tenta novamente.'; });
