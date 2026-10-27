@@ -11,7 +11,7 @@
   var CONFIG = {
     api: "https://crm-vps3.tailb1e0b3.ts.net",
     radio: { agoraUrl: "" },                                     // F2: GET -> {titulo, url, inicio, agora}
-    login: { ligado: false, clientId: "1439403291036487712" }   // F3: o app do Bot CRM 2.0
+    login: { ligado: true, clientId: "1439403291036487712" }   // Saúde pública conferida em 27/10; entrada real pelo dono.
   };
   window.CRM_CONFIG = CONFIG;
 
@@ -70,7 +70,7 @@
     var caixa = $("#planos");
     (D.produtos || []).forEach(function (p) {
       (p.planos || []).forEach(function (pl, indice) {
-        var titulo = (p.planos.length > 1) ? pl.nome : p.nome;
+        var titulo = p.id === "campanha" ? p.nome + " · " + pl.nome : ((p.planos.length > 1) ? pl.nome : p.nome);
         var t = TEXTOS_LOJA[titulo] || { resumo: p.resumo, cta: p.botao };
         var itens = p.id === "bot"
           ? (p.destaques || []).map(function (d) { return d.nome; })
@@ -79,7 +79,7 @@
         var ul = el("ul", { classe: p.id === "bot" ? "pilares" : "" }, itens.map(function (i) { return el("li", { texto: i }); }));
         var preco = el("div", { classe: "plano-preco", texto: pl.preco || "" }, [pl.por ? el("small", { texto: pl.por }) : null]);
         var botao = el("a", { classe: "botao", href: (p.id === "bot" ? L.bot_convite : L.site_crm) || "#contato", target: "_blank", rel: "noopener", texto: t.cta });
-        caixa.appendChild(el("article", { classe: "plano" + (titulo === "Copa Discord" ? " popular" : ""), "data-produto": p.id, "data-plano": pl.id || (p.id === "campanha" && /^3 dias$/i.test(pl.nome) ? 3 : indice + 1) }, [
+        caixa.appendChild(el("article", { classe: "plano" + (titulo === "Copa Discord" ? " popular" : ""), "data-produto": p.id, "data-plano": pl.n || pl.id || (p.id === "campanha" && /^3 dias$/i.test(pl.nome) ? 3 : indice + 1) }, [
           el("div", { classe: "plano-icone", "aria-hidden": "true", texto: pl.emoji || p.emoji || "" }),
           el("h3", { texto: titulo }),
           el("p", { classe: "plano-resumo", texto: t.resumo }),

@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "26/10/2026 11:44",
+ "gerado_em": "27/10/2026 13:38",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -9,6 +9,7 @@ window.CRM_DADOS = {
    "resumo": "Campeonato completo no seu Discord, até 16 times",
    "planos": [
     {
+     "n": 1,
      "nome": "Copa Discord",
      "emoji": "🎮",
      "preco": "R$ 49,90",
@@ -24,6 +25,7 @@ window.CRM_DADOS = {
      ]
     },
     {
+     "n": 2,
      "nome": "Copa + WhatsApp",
      "emoji": "📱",
      "preco": "R$ 89,90",
@@ -45,6 +47,7 @@ window.CRM_DADOS = {
    "resumo": "Seu servidor montado: cargos, canais e o Bot CRM 2.0",
    "planos": [
     {
+     "n": 1,
      "nome": "Configuração completa",
      "emoji": "🛠️",
      "preco": "R$ 19,90",
@@ -68,6 +71,7 @@ window.CRM_DADOS = {
    "resumo": "Grátis: Porteiro com IA, segurança, anti-spam, suporte 24 h e aparência",
    "planos": [
     {
+     "n": 1,
      "nome": "Adicionar o bot",
      "emoji": "🤖",
      "preco": "Grátis",
@@ -125,6 +129,7 @@ window.CRM_DADOS = {
    "resumo": "Arte e divulgação pra tua org no Instagram e no WhatsApp",
    "planos": [
     {
+     "n": 3,
      "nome": "3 dias",
      "emoji": "⚡",
      "preco": "R$ 49,00",
@@ -134,6 +139,19 @@ window.CRM_DADOS = {
       "2 posts por dia no Instagram (o da CRM e o seu)",
       "1 post por dia na comunidade de WhatsApp da CRM",
       "Dá pra trocar por CRM coins"
+     ]
+    },
+    {
+     "n": 1,
+     "nome": "Mensal",
+     "emoji": "📣",
+     "preco": "R$ 199,00",
+     "por": "no 1º mês · depois R$ 249,00 por mês",
+     "inclui": [
+      "Imagem da sua org com a sua paleta",
+      "2 posts por dia no Instagram (o da CRM e o seu)",
+      "Criação da conta do Instagram, se precisar",
+      "1 post por dia na comunidade de WhatsApp da CRM"
      ]
     }
    ],
@@ -149,7 +167,7 @@ window.CRM_DADOS = {
   "crm_whatsapp_canal": "https://whatsapp.com/channel/0029VbE1psb0rGiKFcD2vp0y",
   "crm_instagram": "https://www.instagram.com/crmadministradora/",
   "crm_tiktok": "https://www.tiktok.com/@tiktokclancrm",
-  "email": "crmhokclan@gmail.com",
+  "email": "contato@crmadministradora.com.br",
   "site_crm": "https://discord.gg/WbKPBVc5V4",
   "site_dreamcards": "https://discord.gg/THK5KjSrgq",
   "bot_convite": "https://discord.com/oauth2/authorize?client_id=1439403291036487712&permissions=8&integration_type=0&scope=bot+applications.commands",
@@ -578,7 +596,7 @@ window.CRM_DADOS = {
  },
  "dreamcards": {
   "temporada": 16,
-  "atualizado_epoch": 1793025990.3531086,
+  "atualizado_epoch": 1793119160.6143277,
   "premio": "Honor of Kings: o 1º do pódio pelo Geral da carta ganha R$ 50,00 (foto do pódio em 07/11/2026). O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
   "cartas": [
    {
@@ -667,6 +685,16 @@ window.CRM_DADOS = {
    "txid": "SITECAMPANHA3",
    "copia_e_cola": "00020126580014br.gov.bcb.pix01365a0410b9-350f-4671-a0d8-6123c8b27f35520400005303986540549.005802BR5903CRM6009SAO PAULO62170513SITECAMPANHA36304B4BE",
    "qr_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"318\" height=\"318\" class=\"segno\"><path transform=\"scale(6)\" class=\"qrline\" stroke=\"#000\" d=\"M2 2.5h7m3 0h2m1 0h2m1 0h1m2 0h1m1 0h1m5 0h1m1 0h2m1 0h1m2 0h2m3 0h1m1 0h7m-49 1h1m5 0h1m4 0h5m1 0h1m1 0h2m1 0h6m2 0h4m1 0h2m1 0h3m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m3 0h3m4 0h1m2 0h1m1 0h1m3 0h2m1 0h1m1 0h1m3 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m5 0h3m1 0h1m1 0h4m6 0h1m1 0h2m1 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m7 0h1m2 0h6m1 0h3m1 0h2m2 0h2m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m1 0h1m2 0h6m2 0h1m1 0h2m3 0h2m5 0h2m1 0h3m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-41 1h2m1 0h2m1 0h3m1 0h1m3 0h1m3 0h3m1 0h3m4 0h1m1 0h2m-41 1h1m1 0h5m3 0h2m1 0h1m1 0h1m1 0h3m2 0h5m2 0h1m3 0h1m1 0h2m1 0h1m1 0h1m1 0h5m-37 1h2m1 0h7m1 0h1m6 0h3m1 0h2m2 0h1m2 0h1m2 0h1m1 0h1m2 0h1m-47 1h2m1 0h1m1 0h2m3 0h2m1 0h1m3 0h1m2 0h1m2 0h3m7 0h1m1 0h3m2 0h1m6 0h1m-49 1h6m1 0h1m1 0h2m2 0h4m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m6 0h4m-46 1h1m3 0h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h2m4 0h1m1 0h1m1 0h1m4 0h1m1 0h1m1 0h2m3 0h3m3 0h1m1 0h1m-48 1h2m4 0h1m1 0h1m2 0h1m1 0h2m1 0h4m3 0h1m5 0h1m1 0h2m5 0h1m2 0h2m3 0h1m-47 1h3m2 0h1m5 0h2m2 0h2m2 0h1m3 0h6m1 0h2m1 0h1m1 0h4m1 0h1m2 0h1m3 0h1m-49 1h3m1 0h1m3 0h9m1 0h4m1 0h1m4 0h1m4 0h1m2 0h1m5 0h3m3 0h1m-46 1h1m1 0h2m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m2 0h1m1 0h2m2 0h2m2 0h4m2 0h1m1 0h1m2 0h1m2 0h1m-49 1h1m1 0h1m5 0h2m2 0h3m3 0h1m4 0h3m2 0h4m4 0h1m2 0h1m1 0h3m1 0h1m1 0h2m-46 1h1m1 0h5m1 0h1m1 0h2m2 0h4m2 0h2m2 0h1m2 0h1m2 0h1m1 0h5m3 0h1m1 0h1m1 0h2m-49 1h1m1 0h1m5 0h1m1 0h1m1 0h3m2 0h4m2 0h1m1 0h1m1 0h1m2 0h1m3 0h2m7 0h3m1 0h2m-49 1h2m1 0h5m1 0h1m1 0h1m1 0h1m1 0h1m2 0h5m1 0h1m4 0h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m3 0h1m1 0h1m-48 1h1m1 0h2m3 0h1m1 0h1m1 0h1m2 0h1m5 0h1m1 0h1m1 0h1m2 0h3m1 0h1m6 0h1m2 0h1m2 0h3m-45 1h6m2 0h1m3 0h2m1 0h1m2 0h7m5 0h3m1 0h2m1 0h5m3 0h1m-47 1h3m3 0h1m2 0h1m1 0h1m3 0h2m2 0h2m3 0h1m1 0h1m1 0h6m1 0h1m1 0h2m3 0h2m2 0h1m-48 1h1m1 0h2m1 0h1m1 0h1m6 0h8m1 0h1m1 0h2m1 0h1m3 0h1m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-46 1h2m3 0h2m3 0h1m2 0h2m3 0h2m3 0h3m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m-42 1h10m1 0h2m1 0h1m3 0h6m1 0h1m3 0h2m1 0h3m1 0h5m1 0h3m-49 1h1m2 0h1m1 0h1m1 0h2m3 0h2m1 0h1m2 0h2m2 0h1m1 0h1m2 0h4m1 0h1m4 0h1m3 0h1m3 0h1m2 0h1m-49 1h1m1 0h5m1 0h1m2 0h1m2 0h1m2 0h3m1 0h1m2 0h1m4 0h2m4 0h3m1 0h1m2 0h3m1 0h1m1 0h1m-46 1h3m3 0h1m4 0h5m2 0h4m2 0h1m2 0h1m1 0h2m2 0h1m2 0h1m1 0h2m3 0h2m-47 1h1m1 0h1m2 0h3m1 0h2m1 0h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h1m2 0h7m1 0h1m1 0h2m2 0h1m-49 1h5m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h6m1 0h1m1 0h1m2 0h1m1 0h2m4 0h1m1 0h1m3 0h1m-47 1h1m1 0h1m2 0h1m2 0h1m3 0h2m1 0h1m4 0h1m1 0h1m3 0h1m1 0h3m3 0h6m1 0h4m2 0h1m-47 1h1m2 0h1m1 0h1m1 0h2m1 0h2m3 0h1m1 0h1m1 0h1m2 0h5m1 0h1m4 0h3m1 0h2m4 0h1m2 0h1m-48 1h2m3 0h1m1 0h1m4 0h5m1 0h1m1 0h1m7 0h1m3 0h1m3 0h1m1 0h2m1 0h4m1 0h2m-48 1h5m1 0h1m2 0h1m2 0h1m3 0h1m3 0h1m1 0h4m1 0h1m1 0h3m8 0h1m3 0h1m2 0h1m-49 1h5m1 0h2m2 0h1m2 0h1m2 0h1m1 0h4m1 0h1m1 0h3m6 0h1m1 0h1m2 0h6m1 0h1m1 0h1m-48 1h4m3 0h3m1 0h1m2 0h1m1 0h2m2 0h2m1 0h2m1 0h1m2 0h1m4 0h2m2 0h2m5 0h2m-47 1h1m3 0h6m2 0h2m1 0h1m1 0h1m4 0h2m2 0h1m5 0h2m2 0h2m1 0h1m1 0h3m3 0h1m-48 1h3m3 0h1m2 0h2m2 0h1m1 0h1m4 0h6m1 0h1m2 0h2m1 0h1m10 0h1m2 0h1m-49 1h3m3 0h6m1 0h2m1 0h1m2 0h2m1 0h6m2 0h1m4 0h3m1 0h6m1 0h1m1 0h1m-41 1h4m2 0h3m4 0h2m3 0h5m1 0h2m1 0h2m2 0h2m3 0h2m1 0h1m-48 1h7m2 0h4m2 0h2m1 0h1m2 0h2m1 0h1m1 0h2m3 0h1m2 0h2m2 0h1m1 0h1m1 0h1m1 0h2m2 0h1m-49 1h1m5 0h1m1 0h8m5 0h2m3 0h1m1 0h1m2 0h5m1 0h1m2 0h1m3 0h2m1 0h2m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h3m8 0h6m2 0h3m1 0h1m2 0h1m2 0h6m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h2m1 0h5m1 0h2m3 0h2m1 0h4m1 0h2m3 0h5m1 0h3m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m2 0h2m1 0h2m2 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h4m6 0h1m-47 1h1m5 0h1m4 0h3m2 0h1m1 0h3m1 0h3m3 0h1m1 0h2m2 0h1m1 0h1m3 0h1m1 0h1m1 0h2m2 0h1m-49 1h7m1 0h1m2 0h2m2 0h1m1 0h2m5 0h4m1 0h1m1 0h1m3 0h4m2 0h1m4 0h3\"/></svg>\n"
+  },
+  {
+   "produto": "campanha",
+   "produto_nome": "Campanha de Divulgação",
+   "plano": "Mensal",
+   "preco": "R$ 199,00",
+   "por": "no 1º mês · depois R$ 249,00 por mês",
+   "txid": "SITECAMPANHA1",
+   "copia_e_cola": "00020126580014br.gov.bcb.pix01365a0410b9-350f-4671-a0d8-6123c8b27f355204000053039865406199.005802BR5903CRM6009SAO PAULO62170513SITECAMPANHA16304FA26",
+   "qr_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"318\" height=\"318\" class=\"segno\"><path transform=\"scale(6)\" class=\"qrline\" stroke=\"#000\" d=\"M2 2.5h7m1 0h1m1 0h1m1 0h2m1 0h3m1 0h1m1 0h3m1 0h2m3 0h1m1 0h1m1 0h4m2 0h1m1 0h7m-49 1h1m5 0h1m1 0h2m1 0h1m4 0h2m1 0h6m5 0h3m2 0h6m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h4m1 0h1m3 0h4m1 0h4m1 0h2m1 0h3m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m3 0h1m3 0h4m2 0h1m3 0h1m1 0h3m2 0h2m3 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m3 0h6m1 0h6m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m3 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m7 0h2m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-40 1h1m1 0h3m2 0h2m3 0h2m3 0h1m1 0h1m1 0h1m2 0h1m4 0h1m1 0h1m-41 1h1m2 0h6m7 0h1m2 0h2m1 0h5m1 0h2m1 0h1m1 0h6m2 0h1m2 0h1m1 0h3m-49 1h1m3 0h1m4 0h3m4 0h2m2 0h1m1 0h3m1 0h2m1 0h2m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h3m-47 1h2m1 0h3m2 0h2m1 0h1m1 0h1m4 0h1m1 0h1m1 0h3m3 0h1m2 0h1m1 0h4m1 0h1m3 0h2m2 0h2m-49 1h2m1 0h3m1 0h3m1 0h2m1 0h3m1 0h3m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m1 0h1m5 0h5m1 0h2m-48 1h2m1 0h1m1 0h4m1 0h2m1 0h1m6 0h1m2 0h3m2 0h2m2 0h3m1 0h3m3 0h3m2 0h2m-46 1h1m1 0h1m3 0h1m2 0h2m3 0h1m1 0h2m4 0h3m1 0h3m5 0h2m3 0h1m1 0h1m2 0h1m-47 1h3m2 0h1m1 0h2m2 0h2m3 0h2m2 0h1m1 0h2m1 0h2m1 0h2m1 0h1m3 0h1m1 0h4m1 0h2m1 0h1m1 0h1m-48 1h1m1 0h1m5 0h1m1 0h2m7 0h1m1 0h2m2 0h2m1 0h1m2 0h9m1 0h2m1 0h2m1 0h1m-49 1h1m1 0h2m2 0h1m3 0h2m1 0h1m2 0h1m1 0h1m1 0h1m1 0h4m1 0h1m1 0h1m1 0h2m3 0h3m1 0h3m1 0h1m2 0h2m-49 1h1m1 0h1m1 0h2m2 0h1m1 0h2m3 0h1m1 0h3m1 0h2m1 0h2m4 0h1m2 0h2m1 0h1m3 0h1m1 0h2m2 0h3m-49 1h2m1 0h2m1 0h1m2 0h4m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h8m3 0h3m2 0h3m1 0h1m-47 1h1m1 0h1m4 0h2m4 0h1m1 0h5m1 0h1m1 0h4m1 0h1m2 0h2m2 0h3m8 0h1m-49 1h2m1 0h1m1 0h8m5 0h1m1 0h2m2 0h2m1 0h3m1 0h1m1 0h1m2 0h2m4 0h2m4 0h1m-49 1h3m5 0h2m2 0h1m1 0h1m5 0h1m1 0h2m2 0h1m1 0h3m1 0h5m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m-48 1h11m3 0h2m1 0h2m1 0h8m1 0h1m2 0h4m1 0h1m2 0h5m2 0h2m-47 1h1m1 0h1m3 0h1m2 0h1m1 0h1m1 0h2m5 0h1m3 0h2m1 0h4m4 0h1m2 0h1m3 0h1m1 0h3m-46 1h2m1 0h1m1 0h3m1 0h1m4 0h2m2 0h2m1 0h1m1 0h3m2 0h6m3 0h1m1 0h1m1 0h2m1 0h2m-49 1h1m3 0h1m3 0h1m1 0h2m1 0h1m1 0h2m1 0h3m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h4m1 0h1m3 0h1m-44 1h1m2 0h5m1 0h3m2 0h3m1 0h1m2 0h8m1 0h1m1 0h1m2 0h1m1 0h1m1 0h5m2 0h2m-49 1h1m1 0h4m1 0h2m2 0h1m2 0h4m1 0h2m3 0h2m4 0h1m3 0h1m2 0h5m2 0h1m1 0h1m1 0h1m-49 1h1m2 0h8m2 0h2m2 0h2m1 0h2m1 0h2m1 0h1m2 0h1m2 0h2m2 0h1m2 0h5m2 0h3m-47 1h2m1 0h1m1 0h1m1 0h1m1 0h1m5 0h1m1 0h2m1 0h1m1 0h1m3 0h3m1 0h1m1 0h3m2 0h1m1 0h1m3 0h2m-45 1h3m1 0h1m6 0h3m1 0h1m1 0h1m2 0h2m1 0h4m3 0h1m3 0h1m2 0h1m1 0h2m3 0h3m-49 1h2m1 0h1m4 0h1m1 0h2m2 0h3m1 0h1m3 0h3m2 0h2m3 0h1m3 0h4m1 0h1m3 0h1m2 0h1m-49 1h1m3 0h3m2 0h2m2 0h1m2 0h2m1 0h1m3 0h1m1 0h1m1 0h2m1 0h1m4 0h2m2 0h1m2 0h1m1 0h5m-49 1h1m1 0h2m1 0h1m2 0h1m4 0h1m5 0h2m1 0h1m1 0h2m1 0h9m2 0h1m5 0h1m1 0h3m-48 1h2m1 0h1m1 0h3m3 0h2m1 0h1m3 0h1m1 0h1m2 0h1m1 0h2m1 0h3m1 0h1m1 0h3m1 0h5m1 0h1m2 0h1m-46 1h3m2 0h2m1 0h1m1 0h1m2 0h1m5 0h1m2 0h3m1 0h6m4 0h2m5 0h3m-49 1h1m2 0h1m1 0h2m1 0h1m2 0h2m1 0h5m2 0h2m2 0h5m1 0h2m2 0h5m2 0h1m4 0h2m-48 1h1m2 0h1m2 0h1m2 0h2m1 0h2m2 0h4m1 0h1m1 0h2m1 0h1m2 0h4m1 0h4m1 0h1m2 0h5m-47 1h1m3 0h2m1 0h2m2 0h1m2 0h2m1 0h2m2 0h3m2 0h1m3 0h3m4 0h1m3 0h1m1 0h1m1 0h1m1 0h1m-48 1h3m3 0h2m2 0h1m1 0h1m1 0h1m1 0h1m2 0h1m2 0h2m1 0h2m3 0h1m1 0h1m4 0h3m3 0h1m1 0h1m1 0h1m-49 1h3m3 0h2m2 0h1m3 0h2m2 0h2m2 0h6m1 0h2m1 0h1m3 0h9m1 0h3m-41 1h3m1 0h1m1 0h2m2 0h1m3 0h1m3 0h1m3 0h1m1 0h1m1 0h1m1 0h1m3 0h1m3 0h1m1 0h1m-47 1h7m1 0h1m1 0h1m1 0h1m1 0h1m4 0h4m1 0h1m1 0h4m2 0h1m4 0h1m2 0h1m1 0h1m1 0h5m-49 1h1m5 0h1m1 0h1m3 0h2m1 0h1m1 0h1m1 0h2m1 0h1m3 0h5m2 0h1m1 0h1m1 0h4m3 0h1m2 0h2m-49 1h1m1 0h3m1 0h1m1 0h1m2 0h2m3 0h4m1 0h6m1 0h3m3 0h1m1 0h1m2 0h6m3 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h2m2 0h2m2 0h1m1 0h2m1 0h1m1 0h2m3 0h2m2 0h3m1 0h2m1 0h3m1 0h1m1 0h2m-49 1h1m1 0h3m1 0h1m3 0h1m3 0h1m2 0h2m1 0h5m1 0h1m1 0h1m2 0h1m2 0h4m1 0h1m1 0h1m2 0h2m1 0h1m-48 1h1m5 0h1m2 0h2m1 0h2m1 0h1m5 0h2m1 0h2m1 0h1m1 0h2m3 0h1m1 0h1m2 0h4m1 0h5m-49 1h7m1 0h1m3 0h1m2 0h3m2 0h1m1 0h7m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h4m1 0h1\"/></svg>\n"
   }
  ],
  "em_preparo": [],
