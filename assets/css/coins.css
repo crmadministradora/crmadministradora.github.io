@@ -1,0 +1,48 @@
+/* Identidade e espaçamento do site aprovado. */
+.coins h2 { max-width: 780px; }
+.coins-acoes { display: flex; flex-wrap: wrap; gap: 16px; margin: 24px 0 16px; }
+.coins-privacidade { font-size: 13px; color: var(--cinza); max-width: 680px; }
+.coins-colunas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 32px; }
+.coins-lista { list-style: none; padding: 0; margin: 0; }
+.coins-lista li { display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--borda); overflow-wrap: anywhere; }
+.coins-lista strong, .plano-coins { color: var(--dourado-claro); }
+.coins-lista small { color: var(--cinza); }
+.coins-regras { padding: 16px 0; margin: 24px 0; border-block: 1px solid var(--borda); }
+.coins-regras summary { cursor: pointer; font-weight: 600; padding: 8px 0; }
+.coins-regras ul { padding-left: 24px; }
+.coins-regras li { margin: 8px 0; }
+.coins-ranking { margin-top: 32px; }
+.coins-abas { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.coins-abas button, .conta-sair { font: inherit; color: var(--texto); background: var(--superficie); border: 1px solid var(--borda); padding: 12px 16px; border-radius: 8px; cursor: pointer; }
+.coins-abas [aria-selected="true"] { color: var(--dourado-claro); border-color: var(--dourado); }
+.coins-ranking-itens { list-style: none; padding: 0; }
+.coins-ranking-itens li { display: grid; grid-template-columns: 24px 40px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--borda); }
+.coins-ranking-itens li span, .coins-ranking-itens li strong { overflow-wrap: anywhere; min-width: 0; }
+.coins-posicao { color: var(--dourado-claro); font-weight: 700; }
+.coins-avatar { width: 40px; height: 40px; object-fit: cover; border-radius: 50%; }
+#minha-conta { background: var(--superficie); color: var(--texto); border: 1px solid var(--borda); border-radius: var(--raio); padding: 32px; width: min(680px, calc(100% - 24px)); max-height: calc(100dvh - 32px); overflow-y: auto; overflow-wrap: anywhere; }
+#minha-conta::backdrop { background: rgba(0, 0, 0, .8); }
+.conta-cabecalho { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.conta-fechar { background: transparent; border: 0; color: var(--texto); font: inherit; font-size: 28px; width: 44px; height: 44px; cursor: pointer; }
+.conta-identidade { display: flex; align-items: center; gap: 16px; }
+.conta-saldo { padding: 24px 0; display: flex; flex-direction: column; gap: 8px; }
+.conta-saldo strong { color: var(--dourado-claro); font-size: clamp(24px, 5vw, 40px); line-height: 1.2; }
+.conta-convite { padding: 24px; border: 1px solid var(--dourado); border-radius: 12px; background: var(--noite); }
+.conta-convite h3 { margin: 0; }
+.conta-convite input { display: block; width: 100%; min-width: 0; color: var(--texto); background: var(--superficie-2); border: 1px solid var(--borda); border-radius: 8px; padding: 12px; font: inherit; margin: 16px 0; }
+.conta-progresso { margin: 24px 0; }
+.conta-progresso progress { width: 100%; height: 16px; accent-color: var(--dourado); }
+.conta-metricas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.conta-metrica { display: flex; flex-direction: column; padding: 16px; background: var(--noite); border-radius: 8px; }
+.conta-metrica strong { color: var(--dourado-claro); font-size: 24px; }
+.conta-metrica span, .conta-saldo span { color: var(--cinza); }
+.conta-aviso { padding: 16px; border-left: 3px solid var(--dourado); background: var(--noite); }
+.menu-login svg[hidden] { display: none; }
+@media (max-width: 640px) {
+  .coins-colunas { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  #minha-conta { padding: 20px; }
+  .conta-convite { padding: 16px; }
+  .coins-abas button { font-size: 14px; padding: 12px; }
+  .coins-ranking-itens li { gap: 8px; grid-template-columns: 20px 32px minmax(0, 1fr) minmax(40px, auto); }
+  .coins-ranking-itens .coins-avatar { width: 32px; height: 32px; }
+}

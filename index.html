@@ -19,6 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css?v=20261026-cartazes2">
 <link rel="stylesheet" href="assets/css/comunidade.css?v=20261026-cartazes2">
+<link rel="stylesheet" href="assets/css/coins.css?v=20261027-p21">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -26,9 +27,10 @@
 <!-- ====== MENU À ESQUERDA (no celular vira gaveta) ====== -->
 <aside class="lateral" id="lateral" aria-label="Menu">
   <a class="lateral-logo" href="#topo" aria-label="Início">
-    <img src="assets/img/crm-escudo.webp" alt="Escudo oficial da CRM" width="150" height="150">
+    <img src="assets/img/crm-logo-27-10.png" alt="Escudo oficial da CRM" width="150" height="150">
   </a>
   <nav class="menu">
+    <a class="menu-item" href="#crm-coins"><span aria-hidden="true">💰</span><span>CRM coins</span></a>
     <button class="menu-item menu-login" id="btn-login" type="button">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.6 19.6 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.8 19.8 0 0 0 6 3l1.3-2a12.7 12.7 0 0 1-2-1l.5-.4a14.1 14.1 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.7 19.7 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
       <span id="login-rotulo">Discord · em breve</span>
@@ -55,7 +57,7 @@
     <span></span><span></span><span></span>
   </button>
   <a class="topo-marca" href="#topo">
-    <img class="topo-escudo" src="assets/img/crm-escudo.webp" alt="" width="44" height="44">
+    <img class="topo-escudo" src="assets/img/crm-logo-27-10.png" alt="" width="44" height="44">
     <span class="topo-nome"><b>CRM</b> Administradora<small>E-sports &amp; Game Project</small></span>
   </a>
   <div class="radio-player" id="radio-crm">
@@ -101,6 +103,18 @@
   </a>
 
   <!-- ====== A LOJA ====== -->
+  <section class="secao coins" id="crm-coins" aria-labelledby="titulo-coins">
+    <span class="sobretitulo">TUA PARTICIPAÇÃO VALE MAIS</span>
+    <h2 id="titulo-coins">Traz tua galera.<br><em>Conquista tua próxima troca.</em></h2>
+    <p class="secao-sub">Atividade na CRM gera coins para comprar na Loja da CRM. Entra na resenha, convida teus amigos e acompanha teu progresso aqui.</p>
+    <div class="coins-acoes"><button type="button" class="botao" id="coins-entrar">Minha conta · Discord</button><a class="botao botao-roxo" data-link="site_crm" target="_blank" rel="noopener">Entrar no Discord da CRM ↗</a></div>
+    <p class="coins-privacidade">O login guarda só o teu id e o teu nome do Discord, pra mostrar os teus CRM coins. Sair apaga a sessão.</p>
+    <p id="coins-status" role="status">Consultando os CRM coins…</p>
+    <div class="coins-colunas"><section aria-labelledby="coins-ganhar-titulo"><h3 id="coins-ganhar-titulo">Como ganhar</h3><ul id="coins-ganhar" class="coins-lista"></ul></section><section aria-labelledby="coins-trocar-titulo"><h3 id="coins-trocar-titulo">Pelo que trocar</h3><ul id="coins-trocas" class="coins-lista"></ul></section></div>
+    <details class="coins-regras"><summary>Regras e limites do dia</summary><p id="coins-tetos"></p><ul id="coins-regras"></ul></details>
+    <section class="coins-ranking" aria-labelledby="coins-ranking-titulo"><h3 id="coins-ranking-titulo">Quem movimenta a CRM</h3><div class="coins-abas" role="tablist" aria-label="Rankings CRM coins"><button type="button" role="tab" id="aba-coins" aria-selected="true" aria-controls="coins-ranking-lista" data-ranking="coins">Coins</button><button type="button" role="tab" id="aba-convites" aria-selected="false" aria-controls="coins-ranking-lista" tabindex="-1" data-ranking="convites">Convites do mês</button><button type="button" role="tab" id="aba-participacao" aria-selected="false" aria-controls="coins-ranking-lista" tabindex="-1" data-ranking="participacao">Participação do mês</button></div><div id="coins-ranking-lista" role="tabpanel" aria-labelledby="aba-coins" tabindex="0"></div><p id="coins-atualizado" class="coins-privacidade"></p></section>
+  </section>
+
   <section class="secao" id="loja" aria-labelledby="titulo-loja">
     <h2 id="titulo-loja">Estrutura pra tua <em>comunidade crescer.</em></h2>
     <p class="secao-sub">Escolha o serviço pra tua próxima etapa. Pague por PIX e combine a entrega com a equipe no Discord.</p>
@@ -228,19 +242,21 @@
 </aside>
 
 <footer class="rodape">
-  <img src="assets/img/crm-escudo.webp" alt="" width="48" height="48" loading="lazy">
+  <img src="assets/img/crm-logo-27-10.png" alt="" width="48" height="48" loading="lazy">
   <p><b>CRM Administradora</b> · E-sports &amp; Game Project</p>
-  <p class="rodape-miudo">Login com Discord chega em breve. Atendimento pelo Discord e e-mail.</p>
+  <p class="rodape-miudo">Consulta tua conta e teus CRM coins pelo menu. Atendimento pelo Discord e e-mail.</p>
   <p class="rodape-miudo">© 2026 CRM Administradora. Honor of Kings e Mobile Legends são marcas dos seus donos; a CRM não é afiliada a eles.</p>
 </footer>
 
 <div class="aviso-flutuante" id="aviso-flutuante" role="status" hidden></div>
+<dialog id="minha-conta" aria-labelledby="conta-titulo"><div class="conta-cabecalho"><h2 id="conta-titulo">Minha conta</h2><button class="conta-fechar" type="button" aria-label="Fechar minha conta">×</button></div><p id="conta-status" role="status"></p><div id="conta-conteudo"></div><div class="coins-acoes"><button class="botao" type="button" id="conta-atualizar">Atualizar</button><button class="conta-sair" type="button" id="conta-sair" hidden>Sair da conta</button></div></dialog>
 
 <noscript><p class="sem-js">Ative o JavaScript para consultar planos, resultados e destaques. Nosso contato: <a href="mailto:crmhokclan@gmail.com">crmhokclan@gmail.com</a>.</p></noscript>
 <dialog id="pagamento" aria-labelledby="pagamento-titulo"><button class="fechar-dialogo" type="button" aria-label="Fechar pagamento">×</button><span class="sobretitulo">TEU PROJETO COMEÇA AQUI</span><h2 id="pagamento-titulo">Confere teu plano.</h2><p id="pagamento-plano"></p><strong id="pagamento-valor"></strong><p>Confere o destinatário e o valor no aplicativo do banco antes de pagar.</p><img id="pix-qr" alt="QR code PIX do plano escolhido" width="318" height="318"><label for="pix-codigo">PIX copia e cola</label><textarea id="pix-codigo" readonly rows="4"></textarea><button class="botao" id="copiar-pix" type="button">Copiar PIX</button><p id="pix-status" role="status"></p><h3>Depois de pagar</h3><p id="comprovante-passos">No Discord da CRM, no canal 🎩・la-nostra-casa, escolha Abrir Ticket no menu e mande o comprovante ali. Você também pode enviar por e-mail. A equipe confirma e te chama.</p><div class="pagamento-acoes"><a class="botao" data-link="site_crm" target="_blank" rel="noopener">Enviar pelo Discord</a><a id="comprovante-email">Enviar por e-mail</a></div><p class="aviso">A confirmação é manual. Este site não confirma nem acompanha pagamentos.</p></dialog>
 <div class="mini-radio" aria-label="Rádio CRM"><button id="mini-ouvir" type="button" aria-label="Ouvir a Rádio CRM">▶</button><div><b>Rádio CRM</b><small id="mini-faixa">Música pra acompanhar tua navegação</small></div><label for="radio-volume">Volume</label><input id="radio-volume" type="range" min="0" max="1" step="0.05" value="0.6"><a data-link="site_crm" target="_blank" rel="noopener" aria-label="Ouvir a Rádio CRM no Discord">Discord ↗</a><span id="radio-status" role="status"></span></div>
 <script src="dados/dados.js?v=20261026-cartazes2"></script>
-<script src="assets/js/site.js?v=20261026-cartazes2"></script>
+<script src="assets/js/site.js?v=20261027-p21"></script>
 <script src="assets/js/comunidade.js?v=20261026-cartazes2"></script>
+<script src="assets/js/coins.js?v=20261027-p21"></script>
 </body>
 </html>

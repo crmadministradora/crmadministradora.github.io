@@ -9,9 +9,11 @@
 
   // 🔌 OS GANCHOS -- o Claude liga quando a parte do servidor existir (PLANO-SITE-CRM.md, F2 e F3)
   var CONFIG = {
+    api: "https://crm-vps3.tailb1e0b3.ts.net",
     radio: { agoraUrl: "" },                                     // F2: GET -> {titulo, url, inicio, agora}
     login: { ligado: false, clientId: "1439403291036487712" }   // F3: o app do Bot CRM 2.0
   };
+  window.CRM_CONFIG = CONFIG;
 
   function $(s, el) { return (el || document).querySelector(s); }
   function el(tag, attrs, filhos) {
@@ -67,17 +69,17 @@
   (function () {
     var caixa = $("#planos");
     (D.produtos || []).forEach(function (p) {
-      (p.planos || []).forEach(function (pl) {
+      (p.planos || []).forEach(function (pl, indice) {
         var titulo = (p.planos.length > 1) ? pl.nome : p.nome;
         var t = TEXTOS_LOJA[titulo] || { resumo: p.resumo, cta: p.botao };
         var itens = p.id === "bot"
           ? (p.destaques || []).map(function (d) { return d.nome; })
-          : (pl.inclui || []).filter(function (texto) { return !/coins/i.test(texto); }).slice(0, 5);
+          : (pl.inclui || []).slice(0, 5);
         var gratis = /gr[aá]tis/i.test(pl.preco || "");
         var ul = el("ul", { classe: p.id === "bot" ? "pilares" : "" }, itens.map(function (i) { return el("li", { texto: i }); }));
         var preco = el("div", { classe: "plano-preco", texto: pl.preco || "" }, [pl.por ? el("small", { texto: pl.por }) : null]);
         var botao = el("a", { classe: "botao", href: (p.id === "bot" ? L.bot_convite : L.site_crm) || "#contato", target: "_blank", rel: "noopener", texto: t.cta });
-        caixa.appendChild(el("article", { classe: "plano" + (titulo === "Copa Discord" ? " popular" : "") }, [
+        caixa.appendChild(el("article", { classe: "plano" + (titulo === "Copa Discord" ? " popular" : ""), "data-produto": p.id, "data-plano": pl.id || (p.id === "campanha" && /^3 dias$/i.test(pl.nome) ? 3 : indice + 1) }, [
           el("div", { classe: "plano-icone", "aria-hidden": "true", texto: pl.emoji || p.emoji || "" }),
           el("h3", { texto: titulo }),
           el("p", { classe: "plano-resumo", texto: t.resumo }),
@@ -313,40 +315,4 @@
   });
   document.addEventListener("click", function (e) { if (!pop.hidden && !player.contains(e.target) && !e.target.closest('[data-acao="radio"]')) pop.hidden = true; });
 
-  /* ---------- o Login com Discord ---------- */
-  var btnLogin = $("#btn-login"), rotulo = $("#login-rotulo");
-  function mostrarUsuario(u) {
-    var velho = btnLogin.querySelector("img");
-    if (velho) velho.remove();
-    if (!u) { rotulo.textContent = CONFIG.login.ligado ? "Entrar com Discord" : "Discord · em breve"; btnLogin.querySelector("svg").style.display = ""; return; }
-    btnLogin.querySelector("svg").style.display = "none";
-    var av = u.avatar ? "https://cdn.discordapp.com/avatars/" + u.id + "/" + u.avatar + ".png?size=64" : "assets/img/favicon.png";
-    btnLogin.insertBefore(el("img", { src: av, alt: "", width: "26", height: "26" }), rotulo);
-    rotulo.textContent = "Olá, " + (u.nome || "jogador") + " · Sair";
-  }
-  function usuario() { try { return JSON.parse(ler("crm_usuario") || "null"); } catch (e) { return null; } }
-  btnLogin.addEventListener("click", function () {
-    if (usuario()) { guardar("crm_usuario", null); mostrarUsuario(null); aviso("Você saiu."); return; }
-    if (!CONFIG.login.ligado) { aviso("O login com Discord chega em breve."); return; }
-    var estado = Math.random().toString(36).slice(2) + Date.now().toString(36);
-    guardar("crm_estado", estado);
-    var volta = location.origin + location.pathname;
-    location.href = "https://discord.com/oauth2/authorize?client_id=" + CONFIG.login.clientId +
-      "&response_type=token&scope=identify&redirect_uri=" + encodeURIComponent(volta) + "&state=" + estado;
-  });
-  (function voltouDoDiscord() {
-    if (location.hash.indexOf("access_token=") < 0) { mostrarUsuario(usuario()); return; }
-    var q = new URLSearchParams(location.hash.slice(1));
-    history.replaceState(null, "", location.pathname + location.search);
-    if (!q.get("state") || q.get("state") !== ler("crm_estado")) { aviso("O login não confere. Tenta de novo."); return; }
-    fetch("https://discord.com/api/users/@me", { headers: { Authorization: "Bearer " + q.get("access_token") } })
-      .then(function (r) { return r.json(); })
-      .then(function (u) {
-        var eu = { id: u.id, nome: u.global_name || u.username, avatar: u.avatar };
-        guardar("crm_usuario", JSON.stringify(eu));
-        mostrarUsuario(eu);
-        aviso("Bem-vindo, " + eu.nome + "!");
-      })
-      .catch(function () { aviso("Não consegui ler teu Discord agora."); });
-  })();
 })();
