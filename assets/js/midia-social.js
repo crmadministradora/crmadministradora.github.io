@@ -5,13 +5,13 @@
   function node(tag,text,cls){var n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n;}
   function session(){try{return !!localStorage.getItem('crm_sessao');}catch(_){return false;}}
   function id(){return crypto.randomUUID();}
-  function failure(e){return e&&e.status===401?'Entra novamente com o Discord para participar.':e&&e.status===429?'Muitas tentativas. Aguarda um pouco e tenta novamente.':'Não foi possível salvar agora. Tenta novamente.';}
+  function failure(e){return e&&e.status===401?'Entra novamente com o Discord para participar.':e&&e.status===429?'Muitas tentativas. Aguarda um pouco e tenta novamente.':e&&[400,403,404].includes(e.status)?e.message:'Não foi possível salvar agora. Tenta novamente.';}
   function mount(parent,postId){
     var root=node('section',null,'midia-social'),actions=node('div',null,'midia-social-actions'),like=node('button','♡ Curtir'),comments=node('button','Comentar'),message=node('p',null,'midia-social-status');
     message.setAttribute('role','status');like.type=comments.type='button';like.setAttribute('aria-pressed','false');comments.setAttribute('aria-expanded','false');
     var panel=node('div',null,'midia-comments');panel.id='comments-'+postId;panel.hidden=true;comments.setAttribute('aria-controls',panel.id);
     var list=node('div',null,'midia-comments-list'),next=node('button','Mais comentários'),form=node('form'),label=node('label','Teu comentário'),input=node('textarea'),send=node('button','Publicar comentário'),login=node('button','Entrar com Discord para participar');
-    input.id='comment-'+postId;label.htmlFor=input.id;input.rows=3;input.maxLength=1000;input.required=true;send.type='submit';next.type=login.type='button';next.hidden=true;
+    input.id='comment-'+postId;label.htmlFor=input.id;input.rows=3;input.maxLength=500;input.required=true;send.type='submit';next.type=login.type='button';next.hidden=true;
     form.append(label,input,send);panel.append(list,next,login,form);actions.append(like,comments);root.append(actions,message,panel);parent.append(root);
     var state={liked:false,likes:null,comments:null,cursor:null},pending=false,loaded=false,generation=0,requestKey=null;
     function available(){like.disabled=pending||!adapter||!loaded;form.hidden=!adapter||!session();login.hidden=!adapter||session();send.disabled=pending;input.disabled=pending;next.disabled=pending;if(!adapter)message.textContent='Curtidas e comentários no site estão em preparação.';}
@@ -21,7 +21,7 @@
     like.addEventListener('click',async function(){if(!adapter||pending)return;if(!session()){document.getElementById('btn-login').click();return;}pending=true;available();var ticket=generation;try{var data=await adapter.like(postId,!state.liked);if(ticket!==generation)return;counts(data);message.textContent=state.liked?'Curtida salva.':'Curtida removida.';}catch(e){message.textContent=failure(e);}finally{pending=false;available();}});
     comments.addEventListener('click',function(){panel.hidden=!panel.hidden;comments.setAttribute('aria-expanded',String(!panel.hidden));available();if(!panel.hidden&&adapter&&!loaded)load(false);});
     login.addEventListener('click',function(){document.getElementById('btn-login').click();});next.addEventListener('click',function(){load(true);});input.addEventListener('input',function(){requestKey=null;});
-    form.addEventListener('submit',async function(e){e.preventDefault();var text=input.value.trim();if(!adapter||pending||!text)return;if(!session()){available();return;}pending=true;available();requestKey=requestKey||id();try{await adapter.comment(postId,text,requestKey);input.value='';requestKey=null;await load(false);message.textContent='Comentário enviado. Se houver moderação, ele aparece após aprovação.';}catch(err){message.textContent=failure(err);}finally{pending=false;available();}});
+    form.addEventListener('submit',async function(e){e.preventDefault();var text=input.value.trim();if(text.length>500){message.textContent='Usa até 500 caracteres.';return;}if(!adapter||pending||!text)return;if(!session()){available();return;}pending=true;available();requestKey=requestKey||id();try{await adapter.comment(postId,text,requestKey);input.value='';requestKey=null;await load(false);message.textContent='Comentário publicado.';}catch(err){message.textContent=failure(err);}finally{pending=false;available();}});
     var handle={root:root,refresh:function(){generation++;loaded=false;state={liked:false,likes:null,comments:null,cursor:null};like.textContent='♡ Curtir';like.setAttribute('aria-pressed','false');comments.textContent='Comentar';list.replaceChildren();available();if(adapter)load(false);}};mounts.add(handle);available();if(adapter)load(false);
   }
   function refresh(){mounts.forEach(function(m){if(!m.root.isConnected)mounts.delete(m);else m.refresh();});}
