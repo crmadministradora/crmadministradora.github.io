@@ -1,0 +1,8 @@
+(function(){
+'use strict';
+var feed=(window.CRM_DADOS||{}).midia||{},posts=Array.isArray(feed.posts)?feed.posts:[],list=document.getElementById('midia-posts'),more=document.getElementById('midia-mais'),shown=0;
+function el(tag,text){var n=document.createElement(tag);if(text)n.textContent=text;return n;}
+document.getElementById('midia-data').textContent=feed.atualizado_em?'Publicações recebidas em '+feed.atualizado_em+'.':'';
+function render(){posts.slice(shown,shown+4).forEach(function(p){var card=el('article');card.className='midia-post';card.append(el('h3',p.autor_publico||'CRM'));(p.anexos||[]).forEach(function(a){if(a.tipo!=='imagem'||!/^assets\/midia\/[\w-]+\.webp$/.test(a.url||''))return;var img=el('img');img.src=a.url;img.alt=a.alt||'Publicação da comunidade';img.loading='lazy';img.addEventListener('error',function(){img.replaceWith(el('p','Imagem indisponível. Veja a publicação no Discord.'));});card.append(img);});if(p.texto){var details=el('details'),summary=el('summary','Ler publicação'),body=el('p',p.texto);body.className='midia-texto';details.append(summary,body);card.append(details);}try{var u=new URL(p.url_discord);if(u.protocol==='https:'&&u.hostname==='discord.com'){var a=el('a',p.tem_video?'▶ Assistir no Discord':'Ver publicação completa ↗');a.href=u.href;a.target='_blank';a.rel='noopener';card.append(a);}}catch(_){}list.append(card);});shown=Math.min(shown+4,posts.length);more.hidden=shown>=posts.length;}
+more.addEventListener('click',render);if(posts.length)render();else list.append(el('p','O mural está em preparação. Acompanhe as publicações no Discord da CRM.'));
+})();

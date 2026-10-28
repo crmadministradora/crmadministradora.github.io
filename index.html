@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="assets/css/coins.css?v=20261028-convite-fairy">
 <link rel="stylesheet" href="assets/css/card-shop.css?v=p27">
 <link rel="stylesheet" href="assets/css/anuncie.css?v=p31">
+<link rel="stylesheet" href="assets/css/areas.css?v=areas2">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -32,6 +33,7 @@
     <img src="assets/img/crm-logo-27-10.png" alt="Escudo oficial da CRM" width="150" height="150">
   </a>
   <nav class="menu">
+    <a class="menu-item" href="#inicio"><span aria-hidden="true">⌂</span><span>Início · resumo</span></a>
     <button class="menu-item menu-login" id="btn-login" type="button">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.6 19.6 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.8 19.8 0 0 0 6 3l1.3-2a12.7 12.7 0 0 1-2-1l.5-.4a14.1 14.1 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.7 19.7 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
       <span id="login-rotulo">Discord · em breve</span>
@@ -84,6 +86,12 @@
 </header>
 
 <main id="conteudo">
+  <nav class="area-nav" id="area-nav" aria-label="Navegação da área" hidden></nav>
+  <section class="secao inicio-resumo" id="inicio-resumo" aria-labelledby="resumo-titulo">
+    <span class="sobretitulo">SUA COMUNIDADE, EM UM LUGAR</span><h2 id="resumo-titulo">Por onde <em>vamos hoje?</em></h2>
+    <div class="resumo-portas"><a href="#dream-cards"><img src="assets/img/dream-cards.webp" alt="" width="900" height="900"><div><span>DREAM CARDS</span><h3>Tua história em jogo.</h3><p>Pódio, cartas e loja de trajes.</p><b>Entrar na área ↗</b></div></a><a href="#copa"><img src="assets/img/copa-do-infinito.webp" alt="" width="900" height="900"><div><span>COPA DO INFINITO</span><h3>O caminho até o título.</h3><p>Times, confrontos e resultados.</p><b>Entrar na Copa ↗</b></div></a></div>
+  </section>
+  <section class="secao midia-rede" id="midia-rede" aria-labelledby="midia-titulo"><span class="sobretitulo">DA COMUNIDADE PARA A COMUNIDADE</span><h2 id="midia-titulo">Na rede <em>da CRM.</em></h2><p>Um espaço para acompanhar as publicações da nossa rede de Discords.</p><p id="midia-data" class="data-referencia"></p><div id="midia-posts" class="midia-posts"></div><button type="button" class="botao" id="midia-mais" hidden>Ver mais publicações</button></section>
   <!-- ====== O CARROSSEL ====== -->
   <section class="vitrine" aria-labelledby="titulo-vitrine">
     <div class="vitrine-fundo" aria-hidden="true"></div>
@@ -148,12 +156,12 @@
   </section>
 
   <section class="secao" id="podio" aria-labelledby="titulo-podio">
-    <span class="sobretitulo">DREAM CARDS / QUEM JOGA APARECE</span>
-    <h2 id="titulo-podio">Tem história por trás <em>de cada nick.</em></h2>
-    <p class="secao-sub">Cada partida conta um pedaço. Conhece os destaques da temporada.</p>
+    <span class="sobretitulo">DREAM CARDS / HONOR OF KINGS</span>
+    <h2 id="titulo-podio">O pódio de quem <em>faz acontecer.</em></h2>
+    <p class="secao-sub">Ranking Geral de Honor of Kings. Toque em uma carta para ver de perto.</p>
     <p class="data-referencia" id="podio-data"></p>
     <div class="podio" id="podio-lista"></div>
-    <p class="aviso">Consulte no Discord o pódio de Honor of Kings, o de Mobile Legends e as regras de cada temporada.</p>
+    <p class="aviso">O pódio de Mobile Legends chega quando o jogo tiver 50 jogadores com carta. Confira as regras no Discord.</p>
     <a class="botao botao-roxo" data-link="site_dreamcards" target="_blank" rel="noopener">Ver minha carta no Discord</a>
   </section>
 <section class="secao dc-shop" id="dc-loja" aria-labelledby="shop-title"><a class="shop-back" href="#dream-cards">← Dream Cards</a><span class="sobretitulo">DREAM CARDS / LOJA DE TRAJES</span><div class="shop-heading"><div><h2 id="shop-title">Tua carta. <em>Teu estilo.</em></h2><p>Escolhe teu jogo e encontra teu próximo traje.</p></div><div class="shop-games" aria-label="Escolher jogo"><button type="button" data-shop-game="hok" aria-pressed="true">Honor of Kings</button><button type="button" data-shop-game="mlbb" aria-pressed="false">Mobile Legends</button></div></div><p id="shop-status" role="status">Carregando a vitrine…</p><div id="shop-feature" class="shop-feature" hidden><div><span class="sobretitulo">CARD SHOP</span><h3>Uma nova identidade<br>para tua carta.</h3><p>Artes originais, prontas para tua próxima partida.</p><button class="botao botao-roxo" type="button" id="shop-explore">Explorar os trajes</button></div><div id="shop-fan" class="shop-fan"></div></div><div id="shop-catalog" hidden><div class="shop-tools"><button class="shop-button" id="shop-home" type="button">← Destaques</button><p id="shop-count"></p></div><div class="shop-grid" id="shop-grid"></div><div class="shop-pages"><button type="button" id="shop-prev">← Anteriores</button><span id="shop-page" aria-live="polite"></span><button type="button" id="shop-next">Próximos →</button></div></div><p class="aviso">Prévias genéricas com dados de exemplo. A compra e o Inventory ficam no Discord do jogo. Trajes de conquista são grátis.</p><p id="shop-upcoming" class="aviso" hidden>Fairy Collection já está no Card Shop do MLBB. Gear Collection será de conquista e ainda não está disponível.</p></section>
@@ -169,11 +177,12 @@
   </section>
 
   <section class="secao" id="copa-painel" aria-labelledby="titulo-chave">
-    <span class="sobretitulo">COPA DO INFINITO / DA ESTREIA À FINAL</span>
+    <span class="sobretitulo">COPA DO INFINITO / EDIÇÕES E RESULTADOS</span>
     <h2 id="titulo-chave">O caminho <em>até o título.</em></h2>
     <div class="estado-copa" id="estado-copa"></div>
     <div class="edicao-controles"><label for="edicao">Escolha a edição</label><select id="edicao"></select></div>
     <div id="edicao-resumo" aria-live="polite"></div>
+    <details class="copa-times"><summary>Times desta edição</summary><ul id="copa-times"></ul></details>
     <nav id="fases-nav" class="fases-nav" aria-label="Ir para a fase"></nav>
     <div class="chave" id="chave" tabindex="0" role="region" aria-label="Fases e resultados da Copa"></div>
     <p class="data-referencia" id="copa-data"></p>
@@ -211,6 +220,8 @@
       </div>
     </div>
   </section>
+
+  <section class="secao" id="hospedagem" aria-labelledby="titulo-hospedagem"><span class="sobretitulo">A CRM INDICA</span><h2 id="titulo-hospedagem">Uma casa online <em>pro teu projeto.</em></h2><img src="assets/img/faixa-sparked.png" alt="Sparked Host · Apoie a CRM · crmadministradora.com.br" style="width:100%;height:auto;border-radius:16px" loading="lazy"><p>Conheça as opções de hospedagem da Sparked Host e confira o plano adequado ao seu projeto.</p><a class="botao" href="https://billing.sparkedhost.com/aff.php?aff=3440" target="_blank" rel="sponsored noopener">Ver planos da Sparked Host ↗</a><p class="aviso">Link de parceiro: a CRM ganha uma comissão se você comprar, sem custo a mais pra você.</p></section>
 
   <section class="secao" id="comunidade" aria-labelledby="titulo-comunidade">
     <span class="sobretitulo">DENTRO E FORA DA PARTIDA</span>
@@ -271,7 +282,8 @@
   </section>
 </main>
 
-<aside class="lateral-dir" aria-label="Espaço de divulgação">
+<aside class="lateral-dir" aria-label="Copa e divulgação">
+  <a class="copa-direita" href="#copa"><img src="assets/img/copa-do-infinito.webp" alt="" width="900" height="900"><b>Copa do Infinito</b><span>Times e chave ↗</span></a>
   <a class="divulgacao" href="#anuncie" aria-label="Sua divulgação aqui: fale com a CRM sobre patrocínio">
     <img src="assets/img/divulgacao-direita.webp" alt="" width="350" height="700" loading="lazy">
   </a>
@@ -292,11 +304,14 @@
 <dialog id="pagamento" aria-labelledby="pagamento-titulo"><button class="fechar-dialogo" type="button" aria-label="Fechar pagamento">×</button><span class="sobretitulo">TEU PROJETO COMEÇA AQUI</span><h2 id="pagamento-titulo">Confere teu plano.</h2><p id="pagamento-plano"></p><strong id="pagamento-valor"></strong><p>Confere o destinatário e o valor no aplicativo do banco antes de pagar.</p><img id="pix-qr" alt="QR code PIX do plano escolhido" width="318" height="318"><label for="pix-codigo">PIX copia e cola</label><textarea id="pix-codigo" readonly rows="4"></textarea><button class="botao" id="copiar-pix" type="button">Copiar PIX</button><p id="pix-status" role="status"></p><h3>Depois de pagar</h3><p id="comprovante-passos">No Discord da CRM, no canal 🎩・la-nostra-casa, escolha Abrir Ticket no menu e mande o comprovante ali. Você também pode enviar por e-mail. A equipe confirma e te chama.</p><div class="pagamento-acoes"><a class="botao" data-link="site_crm" target="_blank" rel="noopener">Enviar pelo Discord</a><a id="comprovante-email">Enviar por e-mail</a></div><p class="aviso">A confirmação é manual. Este site não confirma nem acompanha pagamentos.</p></dialog>
 <div class="mini-radio" aria-label="Rádio CRM"><button id="mini-ouvir" type="button" aria-label="Ouvir a Rádio CRM">▶</button><div><b>Rádio CRM</b><small id="mini-faixa">Música pra acompanhar tua navegação</small></div><label for="radio-volume">Volume</label><input id="radio-volume" type="range" min="0" max="1" step="0.05" value="0.6"><a data-link="site_crm" target="_blank" rel="noopener" aria-label="Ouvir a Rádio CRM no Discord">Discord ↗</a><span id="radio-status" role="status"></span></div>
 <dialog id="shop-detail" aria-labelledby="shop-detail-title"><button type="button" class="shop-button shop-close" id="shop-close" aria-label="Fechar traje">Fechar ×</button><div class="shop-detail-layout"><img id="shop-detail-img" alt=""><div><span class="sobretitulo" id="shop-detail-game"></span><h2 id="shop-detail-title"></h2><p id="shop-detail-price" class="shop-price"></p><p id="shop-detail-promo"></p><p id="shop-detail-stock"></p><p>Escolhe o traje na ficha do Card Shop e compra com PIX ou CRM coins. No PIX, envia o comprovante pela DM; a CRM confirma e o traje entra no inventário.</p><div id="shop-buy"></div><p class="aviso">Já tem o traje? Veste pelo 🎒 Inventory no Discord. Prévia de exemplo; a tua carta mantém teu nome e teus dados.</p></div></div></dialog>
-<script src="dados/dados.js?v=20261028-convite-fairy"></script>
+<script src="dados/dados.js?v=20261028-midia"></script>
 <script src="assets/js/site.js?v=20261027-p27"></script>
-<script src="assets/js/comunidade.js?v=20261028-convite-fairy"></script>
+<script src="assets/js/comunidade.js?v=20261028-areas"></script>
 <script src="assets/js/coins.js?v=20261028-convite-fairy"></script>
 <script src="assets/js/card-shop.js?v=p27"></script>
 <script src="assets/js/anuncie.js?v=p31"></script>
+<dialog id="carta-ampliada" aria-labelledby="carta-ampliada-titulo"><button type="button" class="fechar-dialogo" aria-label="Fechar carta">×</button><h2 id="carta-ampliada-titulo"></h2><img id="carta-ampliada-img" alt=""></dialog>
+<script src="assets/js/midia.js?v=20261028"></script>
+<script src="assets/js/areas.js?v=areas2"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
     return new Date(epoch * 1000).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo',dateStyle:'short',timeStyle:'short'}) + ' (Brasília)';
   }
   var dc = D.dreamcards || {}, cards = Array.isArray(dc.cartas) ? dc.cartas : [];
-  document.getElementById('podio-data').textContent = 'Temporada ' + (dc.temporada || 'a confirmar') + (Number.isFinite(dc.atualizado_epoch) ? ' · Atualizado em ' + date(dc.atualizado_epoch) : '');
+  document.getElementById('podio-data').textContent = 'Honor of Kings · Temporada ' + (dc.temporada || 'a confirmar') + (Number.isFinite(dc.atualizado_epoch) ? ' · Atualizado em ' + date(dc.atualizado_epoch) : '');
   var podium = document.getElementById('podio-lista');
   var premio=Object.prototype.hasOwnProperty.call(dc,'premio_por_jogo') ? dc.premio : 'O prêmio da próxima temporada é anunciado no Discord do Dream Cards.';
   if(premio) podium.after(node('p',premio+' Confira as regras no Discord.','aviso'));
@@ -67,7 +67,7 @@
     editions.unshift({edicao:copa.proxima_edicao&&copa.proxima_edicao[liveGame],jogo:liveGame,chave:copa.ao_vivo});
   }
   var select=document.getElementById('edicao'), bracket=document.getElementById('chave');
-  editions.forEach(function(e,i){var o=node('option','Edição '+e.edicao+' · '+game(e.jogo));o.value=i;select.append(o);});
+  editions.forEach(function(e,i){var o=node('option',(e===copa.ao_vivo?'Em andamento · ':'Histórico · ')+'Edição '+e.edicao+' · '+game(e.jogo));o.value=i;select.append(o);});
   if(editions.length) select.value=String(copa.ao_vivo ? 0 : editions.length-1);
   var phaseNames={oitavas:'Oitavas de final',quartas:'Quartas de final',semi:'Semifinais',final:'Final'};
   function render(){
@@ -76,6 +76,7 @@
     var summary=document.getElementById('edicao-resumo');summary.replaceChildren();
     var edition=editions[Number(select.value)];
     if(!edition){bracket.append(node('p','As edições e os resultados chegam por aqui assim que estiverem disponíveis.'));return;}
+    var teamList=document.getElementById('copa-times');teamList.replaceChildren();(edition.times||[]).forEach(function(t){teamList.append(node('li',typeof t==='string'?t:t.nome||'Time a confirmar'));});if(!(edition.times||[]).length)teamList.append(node('li','Lista de times ainda não recebida.'));
     var results=node('div',null,'edicao-resumo');
     [['Campeão',edition.campeao],['Vice-campeão',edition.vice]].forEach(function(pair){var box=node('div');box.append(node('small',pair[0]),node('strong',pair[1]||'A definir'));results.append(box);});
     summary.append(results);
