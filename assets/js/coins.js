@@ -39,6 +39,7 @@
     login.querySelector('svg').toggleAttribute('hidden', !!(session && user));
     if (session && user) login.insertBefore(avatar(user), label);
     logout.hidden = !session;
+    window.dispatchEvent(new Event("crm:auth-change"));
   }
   function showProfile(data) {
     profile.hidden = !session; document.body.classList.toggle('com-perfil', !!session);
