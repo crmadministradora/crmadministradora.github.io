@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "27/10/2026 13:38",
+ "gerado_em": "28/10/2026 11:02",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -174,12 +174,12 @@ window.CRM_DADOS = {
   "comprovante_passo": "No Discord da CRM, no canal 🎩・la-nostra-casa, escolhe **Abrir Ticket** no menu e manda o comprovante ali."
  },
  "numeros": {
-  "medido_em": "26/10/2026 10:52",
+  "medido_em": "28/10/2026 10:59",
   "frases": {
-   "servidores": "15 servidores",
-   "pessoas": "1.100+ pessoas",
-   "membros": "1.400+ membros na rede",
-   "cartas": "100 cartas",
+   "servidores": "18 servidores",
+   "pessoas": "1.400+ pessoas",
+   "membros": "1.800+ membros na rede",
+   "cartas": "102 cartas",
    "partidas": "4.000+ partidas lidas",
    "prints": "5.000+ prints"
   },
@@ -596,7 +596,7 @@ window.CRM_DADOS = {
  },
  "dreamcards": {
   "temporada": 16,
-  "atualizado_epoch": 1793119160.6143277,
+  "atualizado_epoch": 1793196078.394239,
   "premio": "Honor of Kings: o 1º do pódio pelo Geral da carta ganha R$ 50,00 (foto do pódio em 07/11/2026). O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
   "cartas": [
    {
@@ -607,15 +607,15 @@ window.CRM_DADOS = {
    },
    {
     "posicao": 2,
-    "nick": "ToxicFernet",
+    "nick": "Alagusii",
     "imagem_referencia": "site-dados/cartas/02.webp",
     "imagem": "assets/cartas/02.webp"
    },
    {
     "posicao": 3,
-    "nick": "Alagusii",
-    "imagem_referencia": "site-dados/cartas/03.webp",
-    "imagem": "assets/cartas/03.webp"
+    "nick": "ToxicFernet",
+    "imagem_referencia": null,
+    "imagem": null
    },
    {
     "posicao": 4,
