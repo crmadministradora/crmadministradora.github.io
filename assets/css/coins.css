@@ -65,3 +65,10 @@
   .coins-ranking-itens li { gap: 8px; grid-template-columns: 20px 32px minmax(0, 1fr) minmax(40px, auto); }
   .coins-ranking-itens .coins-avatar { width: 32px; height: 32px; }
 }
+
+/* Convide e ganhe — P30 */
+.convide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;padding:32px;margin:32px 0;border:1px solid var(--dourado);border-radius:16px;background:var(--noite)}
+.convide h3{font-size:clamp(28px,4vw,44px);line-height:1.12;margin:16px 0;color:var(--dourado-claro)}
+.convide p{line-height:1.65}.convide .coins-acoes{align-items:flex-start;flex-direction:column}.convide-entrada{color:var(--texto);text-underline-offset:4px}
+.convide-passos ol{list-style:none;counter-reset:passo;padding:0;margin:0}.convide-passos li{counter-increment:passo;position:relative;padding:0 0 24px 40px}.convide-passos li::before{content:counter(passo);position:absolute;left:0;color:var(--dourado-claro);font-weight:700}.convide-passos strong,.convide-passos span{display:block}.convide-passos span{color:var(--cinza);margin-top:8px;line-height:1.6}.convide-nota{font-size:14px;color:var(--cinza);border-top:1px solid var(--borda);padding-top:16px}.convide a:focus-visible{outline:2px solid var(--dourado);outline-offset:4px}
+@media(max-width:800px){.convide{grid-template-columns:minmax(0,1fr);gap:24px;padding:24px}.convide .botao{max-width:100%;white-space:normal}}
