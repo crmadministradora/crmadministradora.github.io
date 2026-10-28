@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "28/10/2026 11:02",
+ "gerado_em": "28/10/2026 11:23",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -181,11 +181,13 @@ window.CRM_DADOS = {
    "membros": "1.800+ membros na rede",
    "cartas": "102 cartas",
    "partidas": "4.000+ partidas lidas",
-   "prints": "5.000+ prints"
+   "prints": "5.000+ prints",
+   "midia": "a mídia chega em 16 servidores"
   },
   "proibido": [
    "1.300+"
-  ]
+  ],
+  "midia_medido_em": "28/10/2026 11:23"
  },
  "kinguin": {
   "aviso": "Link de parceiro: a CRM ganha uma comissão se você comprar, sem custo a mais pra você.",
@@ -596,7 +598,7 @@ window.CRM_DADOS = {
  },
  "dreamcards": {
   "temporada": 16,
-  "atualizado_epoch": 1793196078.394239,
+  "atualizado_epoch": 1793197292.7689414,
   "premio": "Honor of Kings: o 1º do pódio pelo Geral da carta ganha R$ 50,00 (foto do pódio em 07/11/2026). O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
   "cartas": [
    {
