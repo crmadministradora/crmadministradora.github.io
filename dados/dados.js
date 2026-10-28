@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "28/10/2026 11:23",
+ "gerado_em": "28/10/2026 11:26",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -171,6 +171,8 @@ window.CRM_DADOS = {
   "site_crm": "https://discord.gg/WbKPBVc5V4",
   "site_dreamcards": "https://discord.gg/THK5KjSrgq",
   "bot_convite": "https://discord.com/oauth2/authorize?client_id=1439403291036487712&permissions=8&integration_type=0&scope=bot+applications.commands",
+  "crm_x": "https://x.com/crmgameproject",
+  "crm_bluesky": "https://bsky.app/profile/crmadministradora.bsky.social",
   "comprovante_passo": "No Discord da CRM, no canal 🎩・la-nostra-casa, escolhe **Abrir Ticket** no menu e manda o comprovante ali."
  },
  "numeros": {
