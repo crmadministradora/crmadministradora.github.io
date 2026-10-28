@@ -22,7 +22,8 @@
 <link rel="stylesheet" href="assets/css/coins.css?v=20261028-convite-fairy">
 <link rel="stylesheet" href="assets/css/card-shop.css?v=p27">
 <link rel="stylesheet" href="assets/css/anuncie.css?v=p31">
-<link rel="stylesheet" href="assets/css/areas.css?v=areas2">
+<link rel="stylesheet" href="assets/css/areas.css?v=areas3">
+<link rel="stylesheet" href="assets/css/midia.css?v=1">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -33,6 +34,7 @@
     <img src="assets/img/crm-logo-27-10.png" alt="Escudo oficial da CRM" width="150" height="150">
   </a>
   <nav class="menu">
+    <a class="menu-item" href="#midia-rede"><span aria-hidden="true">▷</span><span>Mídia da comunidade</span></a>
     <a class="menu-item" href="#inicio"><span aria-hidden="true">⌂</span><span>Início · resumo</span></a>
     <button class="menu-item menu-login" id="btn-login" type="button">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.6 19.6 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.8 19.8 0 0 0 6 3l1.3-2a12.7 12.7 0 0 1-2-1l.5-.4a14.1 14.1 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.7 19.7 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
@@ -91,7 +93,12 @@
     <span class="sobretitulo">SUA COMUNIDADE, EM UM LUGAR</span><h2 id="resumo-titulo">Por onde <em>vamos hoje?</em></h2>
     <div class="resumo-portas"><a href="#dream-cards"><img src="assets/img/dream-cards.webp" alt="" width="900" height="900"><div><span>DREAM CARDS</span><h3>Tua história em jogo.</h3><p>Pódio, cartas e loja de trajes.</p><b>Entrar na área ↗</b></div></a><a href="#copa"><img src="assets/img/copa-do-infinito.webp" alt="" width="900" height="900"><div><span>COPA DO INFINITO</span><h3>O caminho até o título.</h3><p>Times, confrontos e resultados.</p><b>Entrar na Copa ↗</b></div></a></div>
   </section>
-  <section class="secao midia-rede" id="midia-rede" aria-labelledby="midia-titulo"><span class="sobretitulo">DA COMUNIDADE PARA A COMUNIDADE</span><h2 id="midia-titulo">Na rede <em>da CRM.</em></h2><p>Um espaço para acompanhar as publicações da nossa rede de Discords.</p><p id="midia-data" class="data-referencia"></p><div id="midia-posts" class="midia-posts"></div><button type="button" class="botao" id="midia-mais" hidden>Ver mais publicações</button></section>
+  <section class="secao" id="midia-ultima" aria-labelledby="ultima-titulo"><div class="midia-section-head"><div><span class="sobretitulo">ACONTECE NA COMUNIDADE</span><h2 id="ultima-titulo">A última <em>da galera.</em></h2></div><a class="botao botao-pequeno" href="#midia-rede">Ver todo o mural ↗</a></div><div id="midia-destaque"></div></section>
+  <section class="secao midia-rede" id="midia-rede" aria-labelledby="midia-titulo">
+    <header class="midia-hero"><img src="assets/img/midia-comunidade.png" alt="Ilustração de uma comunidade reunida entre telas de vídeo e conversas" width="1254" height="1254"><div><span class="sobretitulo">O QUE MOVE A NOSSA GALERA</span><h2 id="midia-titulo">Mídia da <em>comunidade.</em></h2><p>Os avisos, os vídeos e as histórias que merecem circular. Acompanha o que chegou e entra na conversa.</p><a href="#midia-lista" class="botao">Explorar publicações ↓</a></div></header>
+    <div class="midia-toolbar" id="midia-lista"><div role="group" aria-label="Filtrar publicações"><button type="button" data-midia-filter="todos" aria-pressed="true">Tudo</button><button type="button" data-midia-filter="videos" aria-pressed="false">Vídeos</button><button type="button" data-midia-filter="imagens" aria-pressed="false">Fotos e artes</button></div><button type="button" id="midia-atualizar">Atualizar mural ↻</button></div>
+    <p id="midia-data" class="data-referencia"></p><p id="midia-status" role="status"></p><div id="midia-posts" class="midia-posts"></div><button type="button" class="botao" id="midia-mais" hidden>Ver mais publicações</button>
+  </section>
   <!-- ====== O CARROSSEL ====== -->
   <section class="vitrine" aria-labelledby="titulo-vitrine">
     <div class="vitrine-fundo" aria-hidden="true"></div>
@@ -305,13 +312,13 @@
 <div class="mini-radio" aria-label="Rádio CRM"><button id="mini-ouvir" type="button" aria-label="Ouvir a Rádio CRM">▶</button><div><b>Rádio CRM</b><small id="mini-faixa">Música pra acompanhar tua navegação</small></div><label for="radio-volume">Volume</label><input id="radio-volume" type="range" min="0" max="1" step="0.05" value="0.6"><a data-link="site_crm" target="_blank" rel="noopener" aria-label="Ouvir a Rádio CRM no Discord">Discord ↗</a><span id="radio-status" role="status"></span></div>
 <dialog id="shop-detail" aria-labelledby="shop-detail-title"><button type="button" class="shop-button shop-close" id="shop-close" aria-label="Fechar traje">Fechar ×</button><div class="shop-detail-layout"><img id="shop-detail-img" alt=""><div><span class="sobretitulo" id="shop-detail-game"></span><h2 id="shop-detail-title"></h2><p id="shop-detail-price" class="shop-price"></p><p id="shop-detail-promo"></p><p id="shop-detail-stock"></p><p>Escolhe o traje na ficha do Card Shop e compra com PIX ou CRM coins. No PIX, envia o comprovante pela DM; a CRM confirma e o traje entra no inventário.</p><div id="shop-buy"></div><p class="aviso">Já tem o traje? Veste pelo 🎒 Inventory no Discord. Prévia de exemplo; a tua carta mantém teu nome e teus dados.</p></div></div></dialog>
 <script src="dados/dados.js?v=20261028-midia"></script>
-<script src="assets/js/site.js?v=20261027-p27"></script>
+<script src="assets/js/site.js?v=20261028-midia"></script>
 <script src="assets/js/comunidade.js?v=20261028-areas"></script>
 <script src="assets/js/coins.js?v=20261028-convite-fairy"></script>
 <script src="assets/js/card-shop.js?v=p27"></script>
 <script src="assets/js/anuncie.js?v=p31"></script>
 <dialog id="carta-ampliada" aria-labelledby="carta-ampliada-titulo"><button type="button" class="fechar-dialogo" aria-label="Fechar carta">×</button><h2 id="carta-ampliada-titulo"></h2><img id="carta-ampliada-img" alt=""></dialog>
-<script src="assets/js/midia.js?v=20261028"></script>
-<script src="assets/js/areas.js?v=areas2"></script>
+<script src="assets/js/midia.js?v=20261028-feed2"></script>
+<script src="assets/js/areas.js?v=areas3"></script>
 </body>
 </html>

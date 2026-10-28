@@ -126,6 +126,7 @@
     return p && p.planos && p.planos[0] ? p.planos[0].preco : "";
   };
   var CARDS = [
+    { titulo: "Mídia da comunidade", linha: "Vídeos, avisos e histórias da nossa galera. Vem ver o que chegou.", img: "assets/img/midia-comunidade.png", arteInteira: true, fundo: "ouro", alvo: "#midia-rede", etiqueta: "Na comunidade" },
     { titulo: "Dream Cards", linha: "Manda o print da tua partida de HoK ou MLBB e vira carta, com os teus números de verdade.", img: "assets/img/dream-cards.webp", arteInteira: true, fundo: "roxo", alvo: "#dream-cards", etiqueta: "HoK · MLBB" },
     { titulo: "Bot CRM 2.0", linha: "Menos trabalho repetitivo. Mais tempo pra tua comunidade.", img: "assets/img/bot-crm.webp", contido: true, fundo: "ouro", alvo: "#loja", etiqueta: precoDe("bot") },
     { titulo: "Sistema de Copa", img: "assets/img/sistema-de-copa.webp", alvo: "#loja", semLegenda: true },
