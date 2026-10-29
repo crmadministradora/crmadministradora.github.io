@@ -6,7 +6,7 @@
   var dialog = document.getElementById('minha-conta'), content = document.getElementById('conta-conteudo');
   var status = document.getElementById('conta-status'), login = document.getElementById('btn-login');
   var label = document.getElementById('login-rotulo'), logout = document.getElementById('conta-sair');
-  var ready = false, ranks = null, activeRank = 'coins', revision = 0, currentUser = null, accountLoading = false;
+  var ready = false, ranks = null, activeRank = 'coins', revision = 0, currentUser = null, canViewVisor = false, accountLoading = false;
   var profile = document.getElementById('perfil-crm'), profileIdentity = document.getElementById('perfil-identidade');
   var profileBalance = document.getElementById('perfil-saldo'), profileState = document.getElementById('perfil-estado');
   var reconnect = document.getElementById('perfil-reconectar');
@@ -24,12 +24,13 @@
     try { var s = tab ? sessionStorage : localStorage; if (value == null) s.removeItem(key); else s.setItem(key, value); return true; } catch (_) { return false; }
   }
   var session = read('crm_sessao');
+  window.CRM_ACCOUNT_STATE={canViewVisor:function(){return !!session&&canViewVisor;}};
   // Descarta o perfil da implementação anterior, que não era uma sessão da API.
   save('crm_usuario', null, true);
   function reset() {
-    revision++; session = null; currentUser = null; save('crm_sessao', null); save('crm_usuario', null);
+    revision++; session = null; currentUser = null; canViewVisor = false; save('crm_sessao', null); save('crm_usuario', null);
     profile.hidden = true; document.body.classList.remove('com-perfil'); profileIdentity.replaceChildren(); profileBalance.textContent = ''; profileState.textContent = '';
-    content.replaceChildren(); logout.hidden = true; updateLogin();
+    content.replaceChildren(); logout.hidden = true; window.dispatchEvent(new CustomEvent('crm:account',{detail:{visor:false}})); updateLogin();
   }
   function updateLogin(user) {
     if (user) currentUser = user;
@@ -39,7 +40,7 @@
     login.querySelector('svg').toggleAttribute('hidden', !!(session && user));
     if (session && user) login.insertBefore(avatar(user), label);
     logout.hidden = !session;
-    window.dispatchEvent(new Event("crm:auth-change"));
+    window.dispatchEvent(new CustomEvent('crm:auth-change',{detail:{visor:!!session&&canViewVisor}}));
   }
   function showProfile(data) {
     profile.hidden = !session; document.body.classList.toggle('com-perfil', !!session);
@@ -55,6 +56,8 @@
     profileBalance.textContent = data.equipe ? 'Equipe CRM' : data.coins.saldo_txt + ' coins';
     profileState.textContent = data.equipe ? 'ADM · fora do ranking' : (data.coins.posicao == null ? 'Teu progresso na comunidade' : 'Posição ' + data.coins.posicao + ' no ranking');
     reconnect.hidden = true;
+    canViewVisor=data.visor===true;
+    window.dispatchEvent(new CustomEvent('crm:account',{detail:{visor:canViewVisor}}));
   }
   function https(value, allowed) {
     try { var u = new URL(value); return u.protocol === 'https:' && allowed.includes(u.hostname) ? u.href : null; } catch (_) { return null; }
@@ -129,6 +132,7 @@
     content.append(progress, node('h3', 'O que rendeu hoje'));
     var metrics = node('div', null, 'conta-metricas');
     metrics.append(metric(today.acoes, 'ações'), metric(today.call_min, 'min de call'), metric(today.radio_min, 'min de rádio'), metric(today.coins_txt, 'CRM coins hoje'));
+    if(Number.isInteger(today.site))content.append(node('p','🌐 Site hoje: '+today.site+'/100 interações'));
     content.append(metrics, node('h3', 'Teu extrato'));
     var list = node('ul', null, 'coins-lista');
     (coins.extrato || []).slice(0, 10).forEach(function (item) {
@@ -186,7 +190,7 @@
   window.addEventListener('storage', function (event) {
     if (event.key !== 'crm_sessao') return;
     if (!event.newValue) { reset(); return; }
-    revision++; session = event.newValue; currentUser = null; content.replaceChildren(); updateLogin(); showProfile(); loadAccount();
+    revision++; session = event.newValue; currentUser = null; canViewVisor = false; content.replaceChildren(); updateLogin(); showProfile(); loadAccount();
   });
   async function callback() {
     var params = new URLSearchParams(location.hash.slice(1));
@@ -231,7 +235,7 @@
     (data.regras || []).forEach(function (text) { rules.append(node('li', text)); });
     var limits = data.tetos || {};
     document.getElementById('coins-tetos').textContent = limits.acoes != null && limits.call_h != null && limits.radio_h != null ?
-      'Por dia: até ' + limits.acoes + ' ações, ' + limits.call_h + ' h de call e ' + limits.radio_h + ' h de rádio.' : '';
+      'Por dia: até ' + limits.acoes + ' ações, ' + limits.call_h + ' h de call e ' + limits.radio_h + ' h de rádio.'+(Number.isInteger(limits.site)?' Até '+limits.site+' interações no site.':'') : '';
   }
   function renderRanking() {
     var panel = document.getElementById('coins-ranking-lista'); panel.replaceChildren();
