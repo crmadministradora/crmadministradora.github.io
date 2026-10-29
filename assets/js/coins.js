@@ -37,8 +37,7 @@
     user = currentUser;
     label.textContent = session ? 'Minha conta' : (ready ? 'Entrar com Discord' : 'Discord · indisponível');
     var old = login.querySelector('img'); if (old) old.remove();
-    login.querySelector('svg').toggleAttribute('hidden', !!(session && user));
-    if (session && user) login.insertBefore(avatar(user), label);
+    login.querySelector('svg').removeAttribute('hidden');
     logout.hidden = !session;
     window.dispatchEvent(new CustomEvent('crm:auth-change',{detail:{visor:!!session&&canViewVisor}}));
   }

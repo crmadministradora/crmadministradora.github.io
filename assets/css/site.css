@@ -65,10 +65,10 @@ h1 em, h2 em { font-style: normal; color: var(--brilho); }
   color: var(--texto); text-decoration: none; font: 500 15px/1.2 Inter, sans-serif;
   background: transparent; border: 1px solid transparent; cursor: pointer; text-align: left;
 }
-.menu-item svg { width: 22px; height: 22px; fill: var(--dourado-claro); flex: none; }
+.menu-item svg.menu-icon { width: 22px; height: 22px; fill: none; stroke: currentColor; color: var(--dourado-claro); flex: none; }
 .menu-item:hover { background: rgba(255, 255, 255, .05); border-color: rgba(255, 255, 255, .06); }
 .menu-login { border-color: var(--laranja); background: rgba(226, 88, 46, .08); }
-.menu-login svg { fill: #8C9EFF; }
+
 .menu-login img { width: 26px; height: 26px; border-radius: 50%; }
 .divulgacao { display: block; border-radius: var(--raio); overflow: hidden; border: 1px solid var(--borda); text-decoration: none; }
 .divulgacao img { width: 100%; }
