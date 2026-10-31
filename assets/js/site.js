@@ -346,15 +346,32 @@
     audio.play().then(function () { if (pedido !== pedidoRadio) return; carregando = false; marcar(true); radioStatus.textContent = 'Biblioteca'; }).catch(function () { if (pedido !== pedidoRadio) return; carregando = false; marcar(false); radioStatus.textContent = 'Não consegui tocar. Tenta novamente.'; });
   }
   var trackList = document.getElementById('radio-tracks');
-  if (trackList && grade && Array.isArray(grade.faixas)) grade.faixas.forEach(function (f, i) {
-    var row = el('div', {classe:'radio-track'}), desc = el('div'), title = el('strong', {texto:f.titulo}), album = el('small', {texto:f.album});
+  /* 31/10 (Claude): a lista dividida por DISCO, com a capa e o lançamento (pedido do Brunno). */
+  function dataBr(iso) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || ''); return m ? m[3] + '/' + m[2] + '/' + m[1] : ''; }
+  var discos = grade && Array.isArray(grade.albuns) && grade.albuns.length ? grade.albuns : null;
+  if (trackList && discos) {
+    var porN = {}; grade.faixas.forEach(function (f, i) { porN[f.n] = i; });
+    discos.forEach(function (d) {
+      var bloco = el('section', {classe:'radio-disco', 'aria-label':'Disco ' + (d.disco || '') + ': ' + (d.nome || d.album)});
+      var topo = el('header', {classe:'radio-disco-topo'});
+      if (d.capa) topo.append(el('img', {src:d.capa, alt:'Capa do disco ' + (d.nome || d.album), width:'120', height:'120', loading:'lazy'}));
+      var txt = el('div');
+      txt.append(el('span', {classe:'sobretitulo', texto:'DISCO ' + (d.disco || '')}), el('h3', {texto:d.nome || d.album}),
+                 el('p', {texto:'Lançamento ' + dataBr(d.lancamento) + ' · ' + d.faixas.length + (d.faixas.length > 1 ? ' faixas' : ' faixa')}));
+      topo.append(txt); bloco.append(topo);
+      var lista = el('div', {classe:'radio-disco-faixas'}); bloco.append(lista); trackList.append(bloco);
+      d.faixas.forEach(function (n) { if (porN[n] != null) montarFaixa(grade.faixas[porN[n]], porN[n], lista); });
+    });
+  } else if (trackList && grade && Array.isArray(grade.faixas)) grade.faixas.forEach(function (f, i) { montarFaixa(f, i, trackList); });
+  function montarFaixa(f, i, trackList) {
+    var row = el('div', {classe:'radio-track'}), desc = el('div'), title = el('strong', {texto:f.titulo}), album = el('small', {texto:f.lancamento ? 'Lançada em ' + dataBr(f.lancamento) : f.album});
     desc.append(title, album); var button = el('button', {type:'button',texto:'Ouvir','aria-label':'Ouvir '+f.titulo});
     button.addEventListener('click',function () { tocarBiblioteca(i); }); var download = el('a', {href:f.arquivo,download:f.titulo+'.mp3',texto:'Baixar MP3','aria-label':'Baixar '+f.titulo}); var match=f.arquivo.match(/\/(\d+)\.mp3$/), trackId=match?'faixa-'+match[1]:null;
     if(trackId){row.dataset.faixa=trackId;button.dataset.activity='ouvir_'+trackId.replace('-','_');download.dataset.activity='baixar:'+trackId;}
     var stats=el('div',{classe:'radio-track-counts',hidden:''}),listeners=el('span'),downloads=el('span');
     listeners.dataset.radioOuvintes='';downloads.dataset.radioDownloads='';stats.append(listeners,downloads);
     row.append(desc,stats,button,download); trackList.append(row);
-  });
+  }
   document.getElementById('radio-live').addEventListener('click',function () { tocarGrade(); document.getElementById('library-playing').textContent = 'Programação ao vivo'; });
   audio.addEventListener('error',function () { carregando = false; marcar(false); radioStatus.textContent = 'Faixa indisponível. Escolhe outra ou tenta novamente.'; });
   $("#radio-botao").addEventListener("click", clicarRadio);

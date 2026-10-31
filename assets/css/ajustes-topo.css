@@ -1,0 +1,3 @@
+/* 31/10/2026 (Claude): no celular o nome "CRM Administradora" ficava embaixo do botão CHAT (375 px não cabe o nome,
+   o CHAT, o "online agora" e o play). Até 520 px o topo mostra só o escudo; o nome segue no menu e no rodapé. */
+@media (max-width:520px){.topo-nome{display:none}}

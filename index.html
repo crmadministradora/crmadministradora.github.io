@@ -26,6 +26,9 @@
 <link rel="stylesheet" href="assets/css/midia.css?v=2">
 <link rel="stylesheet" href="assets/css/radio-contadores.css?v=p36">
 <link rel="stylesheet" href="assets/css/p39.css?v=2">
+<link rel="stylesheet" href="assets/css/dreamcards-site.css?v=1">
+<link rel="stylesheet" href="assets/css/radio-discos.css?v=1">
+<link rel="stylesheet" href="assets/css/ajustes-topo.css?v=1">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -38,15 +41,15 @@
   <section id="perfil-crm" class="perfil-crm" aria-label="Teu Perfil CRM" hidden>
     <div class="perfil-identidade" id="perfil-identidade"></div>
     <div class="perfil-saldo"><small>CRM COINS</small><strong id="perfil-saldo">Consultando…</strong><span id="perfil-estado" role="status"></span></div>
-    <div class="perfil-acoes"><button type="button" class="botao botao-pequeno" id="perfil-abrir">Meu Perfil CRM ↗</button><a class="botao botao-pequeno" data-link="site_dreamcards" target="_blank" rel="noopener">Ver minha carta no Discord ↗</a><button type="button" class="botao botao-pequeno" id="perfil-visor" hidden>📊 Visor</button><button type="button" class="perfil-reconectar" id="perfil-reconectar" hidden>Tentar novamente</button></div>
+    <div class="perfil-acoes"><button type="button" class="botao botao-pequeno" id="perfil-abrir">Meu Perfil CRM ↗</button><a class="botao botao-pequeno" href="#dc-minha">Ver minha carta</a><button type="button" class="botao botao-pequeno" id="perfil-visor" hidden>📊 Visor</button><button type="button" class="perfil-reconectar" id="perfil-reconectar" hidden>Tentar novamente</button></div>
   </section>
   <nav class="menu">
-    <a class="menu-item" href="#midia-rede"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m10 8 5 4-5 4Z"/></svg><span>Feed da comunidade</span></a>
-    <a class="menu-item" href="#inicio"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg><span>Início · resumo</span></a>
     <button class="menu-item menu-login" id="btn-login" type="button">
       <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="9" r="3"/><path d="M6 18c1-3 3-4 6-4s5 1 6 4"/></svg>
       <span id="login-rotulo">Discord · em breve</span>
     </button>
+    <a class="menu-item" href="#midia-rede"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m10 8 5 4-5 4Z"/></svg><span>Feed da comunidade</span></a>
+    <a class="menu-item" href="#inicio"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg><span>Início · resumo</span></a>
     <a class="menu-item" href="#dream-cards"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="13" height="16" rx="2"/><path d="M8 2h10a3 3 0 0 1 3 3v12M8 10h5M8 14h5M8 18h3"/></svg><span>Dream Cards</span></a>
     <a class="menu-item" href="#loja"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l3 13h11l2-9H6M9 11h10"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>Loja</span></a>
     <a class="menu-item" href="#crm-coins"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="9" cy="6" rx="6" ry="3"/><path d="M3 6v5c0 2 3 3 6 3M3 11v5c0 2 3 3 6 3M15 6v3"/><ellipse cx="16" cy="12" rx="5" ry="3"/><path d="M11 12v6c0 2 2 3 5 3s5-1 5-3v-6"/></svg><span>CRM coins</span></a>
@@ -162,10 +165,32 @@
     <div class="destaque-texto">
       <h2 id="titulo-dc">Tua partida <em>vira carta.</em></h2>
       <p>Manda o print do fim da tua partida de Honor of Kings ou Mobile Legends. O bot lê os dados e atualiza tua carta com atributos, nível, pódio e álbum. Uma carta por jogador, a mesma em todo servidor.</p>
-      <div class="dream-acessos"><a class="botao" data-link="site_dreamcards" target="_blank" rel="noopener">Minha carta · /meucard ↗</a><a class="botao botao-roxo" data-link="site_dreamcards" target="_blank" rel="noopener">Meu álbum HoK · /albumhok ↗</a><p>Abra o Discord do Dream Cards e use o comando para consultar seus dados.</p></div>
+      <div class="dream-acessos"><a class="botao" href="#dc-minha">Minha carta · /meucard</a><a class="botao botao-roxo" href="#dc-album">Álbum · /albumhok</a><p>A mesma carta do Discord, aqui no site. Entra com o Discord pra ver.</p></div>
       <p class="destaque-novo">🆕 O <b>/meucard</b> mostra quanto falta pra cada atributo subir.</p>
       <a class="botao botao-roxo" href="#dc-loja">Explorar loja de trajes</a> <a class="botao" data-link="site_dreamcards" target="_blank" rel="noopener">Entrar no Dream Cards ↗</a>
     </div>
+  </section>
+
+  <section class="secao dc-minha" id="dc-minha" aria-labelledby="titulo-dc-minha">
+    <span class="sobretitulo">DREAM CARDS / MINHA CARTA</span>
+    <h2 id="titulo-dc-minha">Tua carta, <em>do jeito que está agora.</em></h2>
+    <p class="secao-sub">A mesma do <b>/meucard</b>: muda a cada print que você manda no Discord do Dream Cards.</p>
+    <div class="dc-jogos" role="group" aria-label="Escolher jogo"><button type="button" data-dc-jogo="hok" aria-pressed="true">Honor of Kings</button><button type="button" data-dc-jogo="mlbb" aria-pressed="false">Mobile Legends</button></div>
+    <div id="dc-minha-corpo" class="dc-minha-corpo" aria-live="polite"></div>
+  </section>
+
+  <section class="secao dc-album" id="dc-album" aria-labelledby="titulo-dc-album">
+    <span class="sobretitulo">DREAM CARDS / ÁLBUM</span>
+    <h2 id="titulo-dc-album">O álbum <em>da comunidade.</em></h2>
+    <p class="secao-sub">Todas as cartas do <b>/albumhok</b>. Toque numa carta pra ver de perto.</p>
+    <div class="dc-album-filtros">
+      <div class="dc-jogos" role="group" aria-label="Escolher jogo"><button type="button" data-dc-jogo="hok" aria-pressed="true">Honor of Kings</button><button type="button" data-dc-jogo="mlbb" aria-pressed="false">Mobile Legends</button></div>
+      <label class="dc-campo"><span>Ordem</span><select id="dc-album-ordem"><option value="album">Álbum</option><option value="geral">Ranking Geral</option><option value="versatilidade">Versatilidade</option><option value="inteligencia">Inteligência</option><option value="macro">Macro</option><option value="micro">Micro</option></select></label>
+      <label class="dc-campo"><span>Buscar nick</span><input id="dc-album-busca" type="search" maxlength="40" autocomplete="off" placeholder="nick no jogo"></label>
+    </div>
+    <p id="dc-album-status" class="data-referencia" role="status"></p>
+    <div id="dc-album-grade" class="dc-album-grade"></div>
+    <nav class="dc-paginas" id="dc-album-paginas" aria-label="Páginas do álbum"></nav>
   </section>
 
   <section class="secao" id="podio" aria-labelledby="titulo-podio">
@@ -175,7 +200,7 @@
     <p class="data-referencia" id="podio-data"></p>
     <div class="podio" id="podio-lista"></div>
     <p class="aviso">O pódio de Mobile Legends chega quando o jogo tiver 50 jogadores com carta. Confira as regras no Discord.</p>
-    <a class="botao botao-roxo" data-link="site_dreamcards" target="_blank" rel="noopener">Ver minha carta no Discord</a>
+    <a class="botao botao-roxo" href="#dc-minha">Ver minha carta</a> <a class="botao" href="#dc-album">Abrir o álbum</a>
   </section>
 <section class="secao dc-shop" id="dc-loja" aria-labelledby="shop-title"><a class="shop-back" href="#dream-cards">← Dream Cards</a><span class="sobretitulo">DREAM CARDS / LOJA DE TRAJES</span><div class="shop-heading"><div><h2 id="shop-title">Tua carta. <em>Teu estilo.</em></h2><p>Escolhe teu jogo e encontra teu próximo traje.</p></div><div class="shop-games" aria-label="Escolher jogo"><button type="button" data-shop-game="hok" aria-pressed="true">Honor of Kings</button><button type="button" data-shop-game="mlbb" aria-pressed="false">Mobile Legends</button></div></div><p id="shop-status" role="status">Carregando a vitrine…</p><div id="shop-feature" class="shop-feature" hidden><div><span class="sobretitulo">CARD SHOP</span><h3>Uma nova identidade<br>para tua carta.</h3><p>Artes originais, prontas para tua próxima partida.</p><button class="botao botao-roxo" type="button" id="shop-explore">Explorar os trajes</button></div><div id="shop-fan" class="shop-fan"></div></div><div id="shop-catalog" hidden><div class="shop-tools"><button class="shop-button" id="shop-home" type="button">← Destaques</button><p id="shop-count"></p></div><div class="shop-grid" id="shop-grid"></div><div class="shop-pages"><button type="button" id="shop-prev">← Anteriores</button><span id="shop-page" aria-live="polite"></span><button type="button" id="shop-next">Próximos →</button></div></div><p class="aviso">Prévias genéricas com dados de exemplo. A compra e o Inventory ficam no Discord do jogo. Trajes de conquista são grátis.</p><p id="shop-upcoming" class="aviso" hidden>Fairy Collection já está no Card Shop do MLBB. Gear Collection será de conquista e ainda não está disponível.</p></section>
   <!-- ====== COPA DO INFINITO ====== -->
@@ -320,8 +345,8 @@
 <div class="mini-radio" aria-label="Rádio CRM"><button id="mini-ouvir" type="button" aria-label="Ouvir a Rádio CRM">▶</button><div><b>Rádio CRM</b><small id="mini-faixa">Música pra acompanhar tua navegação</small></div><label for="radio-volume">Volume</label><input id="radio-volume" type="range" min="0" max="1" step="0.05" value="0.6"><a data-link="site_crm" target="_blank" rel="noopener" aria-label="Ouvir a Rádio CRM no Discord">Discord ↗</a><span id="radio-status" role="status"></span></div>
 <dialog id="shop-detail" aria-labelledby="shop-detail-title"><button type="button" class="shop-button shop-close" id="shop-close" aria-label="Fechar traje">Fechar ×</button><div class="shop-detail-layout"><img id="shop-detail-img" alt=""><div><span class="sobretitulo" id="shop-detail-game"></span><h2 id="shop-detail-title"></h2><p id="shop-detail-price" class="shop-price"></p><p id="shop-detail-promo"></p><p id="shop-detail-stock"></p><p>Escolhe o traje na ficha do Card Shop e compra com PIX ou CRM coins. No PIX, envia o comprovante pela DM; a CRM confirma e o traje entra no inventário.</p><div id="shop-buy"></div><p class="aviso">Já tem o traje? Veste pelo 🎒 Inventory no Discord. Prévia de exemplo; a tua carta mantém teu nome e teus dados.</p></div></div></dialog>
 <dialog id="visor-crm" aria-labelledby="visor-titulo"><header class="visor-header"><h2 id="visor-titulo">Visor do site</h2><button type="button" id="visor-fechar" aria-label="Fechar Visor">×</button></header><div class="visor-tools"><label for="visor-dia">Período</label><select id="visor-dia"><option value="hoje">Hoje</option><option value="ontem">Ontem</option></select><button type="button" id="visor-atualizar">Atualizar</button></div><p id="visor-status" role="status"></p><div id="visor-conteudo"></div></dialog>
-<script src="dados/dados.js?v=p34"></script>
-<script src="assets/js/site.js?v=p39-2"></script>
+<script src="dados/dados.js?v=20261031"></script>
+<script src="assets/js/site.js?v=discos1"></script>
 <script src="assets/js/comunidade.js?v=20261028-areas"></script>
 <script src="assets/js/coins.js?v=menu-icons-1"></script>
 <script src="assets/js/card-shop.js?v=p39-1"></script>
@@ -329,10 +354,11 @@
 <dialog id="carta-ampliada" aria-labelledby="carta-ampliada-titulo"><button type="button" class="fechar-dialogo" aria-label="Fechar carta">×</button><h2 id="carta-ampliada-titulo"></h2><img id="carta-ampliada-img" alt=""></dialog>
 <script src="assets/js/midia-social.js?v=p33"></script>
 
-<script src="assets/js/areas.js?v=p39-2"></script>
+<script src="assets/js/areas.js?v=dc1"></script>
 <script src="assets/js/atividade.js?v=p36"></script>
 <script src="assets/js/radio-contadores.js?v=p36"></script>
-<script src="assets/js/midia-api.js?v=p36"></script>
+<script src="assets/js/midia-api.js?v=dc1"></script>
+<script src="assets/js/dreamcards-site.js?v=1"></script>
 <script src="assets/js/visor.js?v=p36"></script>
 <script src="assets/js/midia.js?v=p34"></script>
 <script src="assets/js/p39.js?v=1"></script>

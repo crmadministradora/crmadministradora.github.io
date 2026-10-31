@@ -1,0 +1,8 @@
+/* 31/10/2026 (Claude): a biblioteca da Rádio dividida por disco, com capa e lançamento. */
+.radio-disco{margin-top:26px}
+.radio-disco-topo{display:flex;align-items:center;gap:18px;margin-bottom:12px}
+.radio-disco-topo img{width:120px;height:120px;border-radius:14px;object-fit:cover;box-shadow:0 10px 28px #0008;flex:none}
+.radio-disco-topo .sobretitulo{display:block;margin:0}
+.radio-disco-topo h3{margin:4px 0;font-size:24px}
+.radio-disco-topo p{margin:0;color:var(--cinza);font-size:14px}
+@media (max-width:720px){.radio-disco-topo img{width:84px;height:84px}.radio-disco-topo h3{font-size:19px}}

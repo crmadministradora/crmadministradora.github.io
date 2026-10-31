@@ -1,0 +1,38 @@
+/* 31/10/2026 (Claude): a aba do Dream Cards -- Minha carta e Álbum (o resto do visual é do GPT). */
+.dc-minha,.dc-album{border:1px solid #b68ade28;border-radius:22px;background:#130e1b;padding:32px;scroll-margin-top:160px}
+.dc-minha h2,.dc-album h2{text-align:left}.dc-minha .secao-sub,.dc-album .secao-sub{text-align:left;margin:6px 0 18px}
+.dc-jogos{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.dc-jogos button{font:inherit;border:1px solid #ffffff24;border-radius:9px;background:#241b30;color:#eee;padding:10px 16px;cursor:pointer}
+.dc-jogos button[aria-pressed=true]{background:#6b34a0;border-color:#bd8ef0}
+.dc-jogos button:focus-visible,.dc-album-carta:focus-visible,.dc-minha-img:focus-visible{outline:3px solid #eccb83;outline-offset:4px}
+.dc-vazio{border:1px dashed #bd8ef055;border-radius:16px;padding:26px;text-align:center;color:#d7cce4;display:grid;gap:14px;justify-items:center}
+.dc-vazio p{margin:0;max-width:520px}.dc-vazio-titulo{font-weight:700;color:var(--texto)}
+.dc-minha-carta{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:28px;align-items:start}
+.dc-minha-img{padding:0;border:0;background:none;cursor:zoom-in;border-radius:18px;overflow:hidden}
+.dc-minha-img img{display:block;width:100%;height:auto}
+.dc-minha-info h3{margin:0 0 12px;font-size:26px;overflow-wrap:anywhere}
+.dc-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.dc-chip{border:1px solid #ffffff22;border-radius:999px;padding:6px 12px;font-size:13px;color:#e9e1f2;background:#1f1729}
+.dc-chip-geral{background:#6b34a0;border-color:#bd8ef0;font-weight:700}.dc-chip-ok{border-color:#5fd39a88;color:#9ff0c6}
+.dc-barra{display:grid;grid-template-columns:110px 1fr 36px;align-items:center;gap:10px;margin:8px 0;font-size:14px}
+.dc-barra b{text-align:right}.dc-barra-trilho{height:10px;border-radius:99px;background:#2a2033;overflow:hidden}
+.dc-barra-cheia{height:100%;border-radius:99px;background:linear-gradient(90deg,#c04cf0,#f0a01e)}
+.dc-acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.dc-album-filtros{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:flex-end}
+.dc-album-filtros .dc-jogos{margin-bottom:0}
+.dc-campo{display:grid;gap:6px;font-size:13px;color:#bcb1c9}
+.dc-campo select,.dc-campo input{font:inherit;color:#eee;background:#241b30;border:1px solid #ffffff24;border-radius:9px;padding:9px 12px;min-width:170px}
+.dc-album-grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.dc-album-carta{font:inherit;color:inherit;text-align:left;padding:0;border:1px solid #ffffff14;border-radius:14px;background:#1a1323;cursor:zoom-in;overflow:hidden;display:grid}
+.dc-album-carta:disabled{cursor:default}
+.dc-album-carta img{display:block;width:100%;height:auto;aspect-ratio:640/900;object-fit:cover}
+.dc-album-carta .carta-pendente{aspect-ratio:640/900;display:grid;place-items:center;color:#a99cb8;font-size:13px}
+.dc-album-meta{display:grid;gap:2px;padding:10px 12px}
+.dc-album-meta strong{font-size:14px;overflow-wrap:anywhere}.dc-album-meta small{color:#bcb1c9;font-size:12px}
+.dc-paginas{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px;color:#bcb1c9}
+@media (max-width:720px){
+  .dc-minha,.dc-album{padding:20px}
+  .dc-minha-carta{grid-template-columns:1fr}.dc-minha-img{max-width:320px;margin:0 auto}
+  .dc-album-grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .dc-campo,.dc-campo select,.dc-campo input{width:100%;min-width:0}.dc-album-filtros{display:grid}
+}
