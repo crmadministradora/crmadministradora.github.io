@@ -1,0 +1,40 @@
+{
+  "name": "PONTO DE ENCONTRO",
+  "category": "Comunidade / Cultura gamer",
+  "headline": "Tem lugar pra você na nossa call.",
+  "description": "Amizades, jogos e histórias. O lugar onde a comunidade se encontra todos os dias.",
+  "initials": "PE",
+  "contact": null,
+  "api": null,
+  "posts": [
+    {
+      "category": "BOAS-VINDAS",
+      "title": "O novo ponto de encontro da org.",
+      "text": "Aqui entram as publicações oficiais, as novidades e os próximos encontros. Conteúdo de demonstração."
+    },
+    {
+      "category": "BASTIDORES",
+      "title": "A comunidade também faz parte.",
+      "text": "Um espaço para apresentar quem joga, organiza e cria com a gente. Conteúdo de demonstração."
+    },
+    {
+      "category": "AGENDA",
+      "title": "O próximo capítulo vem aí.",
+      "text": "As datas reais aparecem quando a organização publicar sua programação. Conteúdo de demonstração."
+    }
+  ],
+  "members": [
+    {
+      "name": "Seu elenco",
+      "role": "Apresente os jogadores da organização"
+    },
+    {
+      "name": "Sua equipe",
+      "role": "Quem cuida de cada projeto"
+    },
+    {
+      "name": "Sua comunidade",
+      "role": "As pessoas que fazem tudo acontecer"
+    }
+  ]
+}

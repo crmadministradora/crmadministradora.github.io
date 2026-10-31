@@ -56,7 +56,7 @@
     };
     tick(); setInterval(tick,30000);
   } else if (registration.aberta) state.append(node('p','Veja o prazo e as condições no Discord da Copa.'));
-  else state.append(node('p','Enquanto a próxima edição não começa, relembra o caminho de quem levou o título.'));
+  else state.append(node('p','A data e a abertura das inscrições serão confirmadas pela equipe. Acompanhe por aqui e no Discord.'));
   if(copa.proxima_edicao) state.append(node('p',Object.keys(copa.proxima_edicao).map(function(key){return game(key)+' · próxima edição '+copa.proxima_edicao[key];}).join(' / ')));
 
   var editions = (copa.edicoes || []).slice();

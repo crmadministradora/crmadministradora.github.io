@@ -132,9 +132,9 @@
     { titulo: "Sistema de Copa", img: "assets/img/sistema-de-copa.webp", alvo: "#loja", semLegenda: true },
     { titulo: "Configuração de Discord", img: "assets/img/configuracao-discord.webp", alvo: "#loja", semLegenda: true },
     { titulo: "Rádio CRM", linha: "Música pra jogar, trocar ideia e curtir com a galera.", img: "assets/img/radio-crm.webp", contido: true, fundo: "ouro", alvo: "#radio", etiqueta: "Na call" },
-    { titulo: "Kinguin", linha: "Keys, gift cards, recargas e software. Link de parceiro: a CRM ganha uma comissão, sem custo a mais pra você.", kinguin: true, alvo: "#kinguin", etiqueta: "Parceiro" },
+    { titulo: "Ofertas dos apoiadores", linha: "Produtos, benefícios e links da rede de apoiadores da CRM.", img: "assets/img/divulgacao-direita.webp", alvo: "#ofertas", etiqueta: "Apoiadores" },
     { titulo: "Sua marca aqui", linha: "Sua marca pode fazer parte dessa comunidade. Fale com a CRM sobre patrocínio.", img: "assets/img/divulgacao-direita.webp", alvo: "#contato", etiqueta: "Patrocínio" },
-    { titulo: "Copa do Infinito", linha: "Tua equipe, o próximo desafio. A Copa do Infinito é um projeto CRM.", img: "assets/img/copa-do-infinito.webp", arteInteira: true, fundo: "ouro", alvo: "#copa", etiqueta: "16 times" }
+    { titulo: "Copa do Infinito", linha: "Tua equipe, o próximo desafio. A Copa do Infinito é um projeto CRM.", img: "assets/img/copa-do-infinito.webp", arteInteira: true, fundo: "ouro", alvo: "#copa", etiqueta: "Copa CRM" }
   ];
   var trilho = $("#carrossel-trilho"), pontos = $("#pontos"), atual = 0, timer = null;
   var cartoes = CARDS.map(function (c, i) {
@@ -148,6 +148,7 @@
     if (!c.semLegenda) filhos.push(el("div", { classe: "cartao-legenda" }, [el("b", { texto: c.titulo }), el("span", { texto: c.linha })]));
     var classe = "cartao" + (c.arteInteira ? " cartao-arte-inteira" : "") + (c.fundo === "roxo" ? " cartao-fundo-roxo" : "") + (c.contido ? " contido" : "") + (c.fundo === "ouro" ? " cartao-fundo-ouro" : "") + (c.kinguin ? " cartao-kinguin" : "");
     var a = el("a", { classe: classe, href: c.alvo, "aria-label": c.titulo + (c.linha ? ": " + c.linha : "") }, filhos);
+    a.dataset.topic = ["midia","dream","bot","sistema-copa","discord","radio","ofertas","patrocinio","copa"][i];
     if (c.arteInteira) a.style.setProperty("--arte-card", "url(\"" + new URL(c.img, document.baseURI).href + "\")");
     a.addEventListener("click", function (e) {
       if (i !== atual) { e.preventDefault(); ir(i); }
@@ -167,6 +168,12 @@
       c.tabIndex = d === 0 ? 0 : -1;
       c.setAttribute("aria-hidden", d === 0 ? "false" : "true");
     });
+    var info=CARDS[atual],details={"Sistema de Copa":"Inscrição, chave e resultados para organizar o campeonato da tua comunidade.","Configuração de Discord":"Estrutura e organização para o Discord da tua equipe."};
+    document.getElementById('vitrine-detalhe-titulo').textContent=info.titulo;
+    document.getElementById('vitrine-detalhe-texto').textContent=info.linha||details[info.titulo]||'';
+    document.getElementById('vitrine-detalhe-etiqueta').textContent=info.etiqueta||'EM DESTAQUE';
+    document.getElementById('vitrine-detalhe-link').href=info.alvo;
+    document.dispatchEvent(new CustomEvent('crm:carousel-change',{detail:{topic:cartoes[atual].dataset.topic}}));
     Array.prototype.forEach.call(pontos.children, function (p, i) { p.setAttribute("aria-pressed", i === atual ? "true" : "false"); });
   }
   function ir(i) { atual = (i + cartoes.length) % cartoes.length; desenhar(); reiniciar(); }
@@ -189,14 +196,28 @@
     if (e.key === "ArrowLeft") ir(atual - 1);
     if (e.key === "ArrowRight") ir(atual + 1);
   });
-  var x0 = null;
-  trilho.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; clearInterval(timer); }, { passive: true });
-  trilho.addEventListener("touchend", function (e) {
-    if (x0 === null) return;
-    var dx = e.changedTouches[0].clientX - x0;
-    if (Math.abs(dx) > 40) ir(atual + (dx < 0 ? 1 : -1)); else reiniciar();
-    x0 = null;
+  var drag=null, suppressClick=false;
+  trilho.addEventListener('dragstart',function(e){e.preventDefault();});
+  trilho.addEventListener('pointerdown',function(e){
+    if(!e.isPrimary || e.button!==0)return;
+    suppressClick=false;drag={id:e.pointerId,x:e.clientX,y:e.clientY,dx:0,active:false};clearInterval(timer);
   });
+  trilho.addEventListener('pointermove',function(e){
+    if(!drag||e.pointerId!==drag.id)return;
+    var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+    if(!drag.active&&Math.abs(dy)>12&&Math.abs(dy)>Math.abs(dx)){drag=null;reiniciar();return;}
+    if(!drag.active&&Math.abs(dx)>8&&Math.abs(dx)>Math.abs(dy)){drag.active=true;trilho.setPointerCapture(e.pointerId);}
+    if(drag.active){drag.dx=dx;trilho.style.translate=Math.max(-90,Math.min(90,dx*.35))+'px 0';trilho.classList.add('arrastando');}
+  });
+  function endDrag(e){
+    if(!drag||e.pointerId!==drag.id)return;
+    var d=drag;drag=null;trilho.style.translate='';trilho.classList.remove('arrastando');
+    suppressClick=d.active;
+    if(trilho.hasPointerCapture(e.pointerId))trilho.releasePointerCapture(e.pointerId);
+    if(e.type==='pointerup'&&d.active&&Math.abs(d.dx)>40)ir(atual+(d.dx<0?1:-1));else reiniciar();
+  }
+  trilho.addEventListener('pointerup',endDrag);trilho.addEventListener('pointercancel',endDrag);
+  trilho.addEventListener('click',function(e){if(suppressClick){e.preventDefault();e.stopImmediatePropagation();suppressClick=false;}},true);
   desenhar();
   reiniciar();
 

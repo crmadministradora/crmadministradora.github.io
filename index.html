@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="assets/css/areas.css?v=areas3">
 <link rel="stylesheet" href="assets/css/midia.css?v=2">
 <link rel="stylesheet" href="assets/css/radio-contadores.css?v=p36">
+<link rel="stylesheet" href="assets/css/p39.css?v=2">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -34,6 +35,11 @@
   <a class="lateral-logo" href="#topo" aria-label="Início">
     <img src="assets/img/crm-logo-27-10.png" alt="Escudo oficial da CRM" width="150" height="150">
   </a>
+  <section id="perfil-crm" class="perfil-crm" aria-label="Teu Perfil CRM" hidden>
+    <div class="perfil-identidade" id="perfil-identidade"></div>
+    <div class="perfil-saldo"><small>CRM COINS</small><strong id="perfil-saldo">Consultando…</strong><span id="perfil-estado" role="status"></span></div>
+    <div class="perfil-acoes"><button type="button" class="botao botao-pequeno" id="perfil-abrir">Meu Perfil CRM ↗</button><a class="botao botao-pequeno" data-link="site_dreamcards" target="_blank" rel="noopener">Ver minha carta no Discord ↗</a><button type="button" class="botao botao-pequeno" id="perfil-visor" hidden>📊 Visor</button><button type="button" class="perfil-reconectar" id="perfil-reconectar" hidden>Tentar novamente</button></div>
+  </section>
   <nav class="menu">
     <a class="menu-item" href="#midia-rede"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m10 8 5 4-5 4Z"/></svg><span>Feed da comunidade</span></a>
     <a class="menu-item" href="#inicio"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg><span>Início · resumo</span></a>
@@ -45,7 +51,7 @@
     <a class="menu-item" href="#loja"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l3 13h11l2-9H6M9 11h10"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>Loja</span></a>
     <a class="menu-item" href="#crm-coins"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="9" cy="6" rx="6" ry="3"/><path d="M3 6v5c0 2 3 3 6 3M3 11v5c0 2 3 3 6 3M15 6v3"/><ellipse cx="16" cy="12" rx="5" ry="3"/><path d="M11 12v6c0 2 2 3 5 3s5-1 5-3v-6"/></svg><span>CRM coins</span></a>
     <a class="menu-item" href="#copa"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v6a5 5 0 0 1-10 0V3ZM7 5H3v3a4 4 0 0 0 4 4M17 5h4v3a4 4 0 0 1-4 4M12 14v7M8 21h8"/></svg><span>Copa do Infinito</span></a>
-    <a class="menu-item" href="#kinguin"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6 4 4 5-7 5 7 4-4-2 12H5L3 6ZM5 21h14"/></svg><span>Kinguin</span></a>
+    <a class="menu-item" href="#ofertas"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6 4 4 5-7 5 7 4-4-2 12H5L3 6ZM5 21h14"/></svg><span>Ofertas dos apoiadores</span></a>
     <a class="menu-item" href="#radio"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="12" width="5" height="9" rx="2"/><rect x="16" y="12" width="5" height="9" rx="2"/></svg><span>Rádio CRM</span></a>
     <a class="menu-item" href="#comunidade"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6M18 15a5 5 0 0 1 3 4v2"/></svg><span>Comunidade</span></a>
     <a class="menu-item" href="#anuncie"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10 12-6v16L4 14v-4ZM16 9h3a3 3 0 0 1 0 6h-3M6 15l2 6h3l-2-5M21 5l1-1M21 19l1 1"/></svg><span>Anuncie na CRM</span></a>
@@ -68,6 +74,7 @@
     <img class="topo-escudo" src="assets/img/crm-logo-27-10.png" alt="" width="44" height="44">
     <span class="topo-nome"><b>CRM</b> Administradora<small>E-sports &amp; Game Project</small></span>
   </a>
+  <button type="button" id="abrir-chat" class="topo-chat" aria-haspopup="dialog">CHAT</button>
   <span id="site-agora" class="site-agora" hidden></span>
   <div class="radio-player" id="radio-crm">
     <button class="radio-botao" id="radio-botao" type="button" aria-label="Ouvir ou pausar a Rádio CRM" aria-describedby="radio-dica">
@@ -82,11 +89,7 @@
     </div>
     <audio id="radio-audio" preload="none"></audio>
   </div>
-  <section id="perfil-crm" class="perfil-crm" aria-label="Teu Perfil CRM" hidden>
-    <div class="perfil-identidade" id="perfil-identidade"></div>
-    <div class="perfil-saldo"><small>CRM COINS</small><strong id="perfil-saldo">Consultando…</strong><span id="perfil-estado" role="status"></span></div>
-    <div class="perfil-acoes"><button type="button" class="botao botao-pequeno" id="perfil-abrir">Meu Perfil CRM ↗</button><a class="botao botao-pequeno" data-link="site_dreamcards" target="_blank" rel="noopener">Ver minha carta no Discord ↗</a><button type="button" class="botao botao-pequeno" id="perfil-visor" hidden>📊 Visor</button><button type="button" class="perfil-reconectar" id="perfil-reconectar" hidden>Tentar novamente</button></div>
-  </section>
+
 </header>
 
 <main id="conteudo">
@@ -114,10 +117,9 @@
     </div>
     <div class="pontos" id="pontos" role="group" aria-label="Escolher card"></div>
     <button class="controle-movimento" id="pausar-carrossel" type="button" aria-pressed="false">Pausar carrossel</button>
-    <div class="atalhos" aria-label="Escolha por onde começar">
-      <a href="#copa-painel"><span>01 / COMPETIR</span><b>Acompanhar a Copa ↗</b></a>
-      <a href="#podio"><span>02 / EVOLUIR</span><b>Ver o Dream Cards ↗</b></a>
-      <a href="#loja"><span>03 / CRIAR</span><b>Montar minha comunidade ↗</b></a>
+    <div class="vitrine-informacoes">
+      <div class="vitrine-numeros" id="vitrine-numeros"></div>
+      <section class="vitrine-detalhe" aria-labelledby="vitrine-detalhe-titulo"><div><span class="sobretitulo" id="vitrine-detalhe-etiqueta">EM DESTAQUE</span><h2 id="vitrine-detalhe-titulo"></h2><p id="vitrine-detalhe-texto"></p></div><a class="botao" id="vitrine-detalhe-link">Conhecer ↗</a></section>
     </div>
     <ul class="numeros" id="numeros" aria-label="A CRM em números" aria-describedby="medido-em"></ul>
     <p class="data-referencia" id="medido-em"></p>
@@ -160,6 +162,7 @@
     <div class="destaque-texto">
       <h2 id="titulo-dc">Tua partida <em>vira carta.</em></h2>
       <p>Manda o print do fim da tua partida de Honor of Kings ou Mobile Legends. O bot lê os dados e atualiza tua carta com atributos, nível, pódio e álbum. Uma carta por jogador, a mesma em todo servidor.</p>
+      <div class="dream-acessos"><a class="botao" data-link="site_dreamcards" target="_blank" rel="noopener">Minha carta · /meucard ↗</a><a class="botao botao-roxo" data-link="site_dreamcards" target="_blank" rel="noopener">Meu álbum HoK · /albumhok ↗</a><p>Abra o Discord do Dream Cards e use o comando para consultar seus dados.</p></div>
       <p class="destaque-novo">🆕 O <b>/meucard</b> mostra quanto falta pra cada atributo subir.</p>
       <a class="botao botao-roxo" href="#dc-loja">Explorar loja de trajes</a> <a class="botao" data-link="site_dreamcards" target="_blank" rel="noopener">Entrar no Dream Cards ↗</a>
     </div>
@@ -180,7 +183,7 @@
     <img class="destaque-arte" src="assets/img/copa-do-infinito.webp" alt="Arte oficial da Copa do Infinito" width="900" height="900" loading="lazy">
     <div class="destaque-texto">
       <h2 id="titulo-copa">Tua equipe, <em>o próximo desafio.</em></h2>
-      <p>O campeonato da CRM de Honor of Kings e Mobile Legends, com 16 times por edição. A Copa do Infinito é um projeto CRM.</p>
+      <p>O campeonato da CRM de Honor of Kings e Mobile Legends. A Copa do Infinito é um projeto CRM.</p>
       <p class="data-referencia" data-data-servicos></p>
       <a class="botao" data-link="copa_discord" target="_blank" rel="noopener">Conhecer a Copa</a>
     </div>
@@ -190,12 +193,13 @@
     <span class="sobretitulo">COPA DO INFINITO / EDIÇÕES E RESULTADOS</span>
     <h2 id="titulo-chave">O caminho <em>até o título.</em></h2>
     <div class="estado-copa" id="estado-copa"></div>
-    <div class="edicao-controles"><label for="edicao">Escolha a edição</label><select id="edicao"></select></div>
+    <p id="copa-proxima-data">Data da próxima edição: aguardando confirmação.</p><a class="botao" id="copa-inscrever" data-link="copa_discord" target="_blank" rel="noopener">Acompanhar inscrições no Discord ↗</a>
+    <details id="copa-historico"><summary>Ver histórico, times e resultados</summary><div class="edicao-controles"><label for="edicao">Escolha a edição</label><select id="edicao"></select></div>
     <div id="edicao-resumo" aria-live="polite"></div>
     <details class="copa-times"><summary>Times desta edição</summary><ul id="copa-times"></ul></details>
     <nav id="fases-nav" class="fases-nav" aria-label="Ir para a fase"></nav>
     <div class="chave" id="chave" tabindex="0" role="region" aria-label="Fases e resultados da Copa"></div>
-    <p class="data-referencia" id="copa-data"></p>
+    </details><p class="data-referencia" id="copa-data"></p>
     <a class="botao" data-link="copa_discord" target="_blank" rel="noopener">Entrar no Discord da Copa</a>
     <div class="novidade"><span class="selo">Chegando</span><h3>A partida termina. A história fica na carta.</h3><p>Dream Cards da Copa: uma nova forma de guardar o que teu time viveu na arena. Acompanhe o lançamento no Discord.</p></div>
   </section>
@@ -216,6 +220,7 @@
   </a>
 
   <!-- ====== KINGUIN ====== -->
+  <section class="secao" id="ofertas" aria-labelledby="ofertas-titulo"><span class="sobretitulo">REDE CRM</span><h2 id="ofertas-titulo">Ofertas dos <em>apoiadores.</em></h2><p>Produtos e benefícios dos apoiadores. Confira as condições de cada oferta.</p><div id="ofertas-lista"></div></section>
   <section class="secao" id="kinguin" aria-labelledby="titulo-kinguin">
     <div class="kinguin">
       <div class="kinguin-placa"><img src="assets/img/kinguin-logo.webp" alt="Kinguin" width="900" height="301" loading="lazy"></div>
@@ -231,7 +236,7 @@
     </div>
   </section>
 
-  <section class="secao" id="hospedagem" aria-labelledby="titulo-hospedagem"><span class="sobretitulo">A CRM INDICA</span><h2 id="titulo-hospedagem">Uma casa online <em>pro teu projeto.</em></h2><img src="assets/img/faixa-sparked.png" alt="Sparked Host · Apoie a CRM · crmadministradora.com.br" style="width:100%;height:auto;border-radius:16px" loading="lazy"><p>Conheça as opções de hospedagem da Sparked Host e confira o plano adequado ao seu projeto.</p><a class="botao" href="https://billing.sparkedhost.com/aff.php?aff=3440" target="_blank" rel="sponsored noopener">Ver planos da Sparked Host ↗</a><p class="aviso">Link de parceiro: a CRM ganha uma comissão se você comprar, sem custo a mais pra você.</p></section>
+  <section class="secao" id="hospedagem" aria-labelledby="titulo-hospedagem"><span class="sobretitulo">A CRM INDICA</span><h2 id="titulo-hospedagem">Uma casa online <em>pro teu projeto.</em></h2><div class="apoiador-logo-janela"><img src="assets/img/sparked-logo-oficial.png" alt="Sparked Host" class="apoiador-logo" loading="lazy"></div><p>Conheça as opções de hospedagem da Sparked Host e confira o plano adequado ao seu projeto.</p><a class="botao" href="https://billing.sparkedhost.com/aff.php?aff=3440" target="_blank" rel="sponsored noopener">Ver planos da Sparked Host ↗</a><p class="aviso">Link de parceiro: a CRM ganha uma comissão se você comprar, sem custo a mais pra você.</p></section>
 
   <section class="secao" id="comunidade" aria-labelledby="titulo-comunidade">
     <span class="sobretitulo">DENTRO E FORA DA PARTIDA</span>
@@ -316,19 +321,22 @@
 <dialog id="shop-detail" aria-labelledby="shop-detail-title"><button type="button" class="shop-button shop-close" id="shop-close" aria-label="Fechar traje">Fechar ×</button><div class="shop-detail-layout"><img id="shop-detail-img" alt=""><div><span class="sobretitulo" id="shop-detail-game"></span><h2 id="shop-detail-title"></h2><p id="shop-detail-price" class="shop-price"></p><p id="shop-detail-promo"></p><p id="shop-detail-stock"></p><p>Escolhe o traje na ficha do Card Shop e compra com PIX ou CRM coins. No PIX, envia o comprovante pela DM; a CRM confirma e o traje entra no inventário.</p><div id="shop-buy"></div><p class="aviso">Já tem o traje? Veste pelo 🎒 Inventory no Discord. Prévia de exemplo; a tua carta mantém teu nome e teus dados.</p></div></div></dialog>
 <dialog id="visor-crm" aria-labelledby="visor-titulo"><header class="visor-header"><h2 id="visor-titulo">Visor do site</h2><button type="button" id="visor-fechar" aria-label="Fechar Visor">×</button></header><div class="visor-tools"><label for="visor-dia">Período</label><select id="visor-dia"><option value="hoje">Hoje</option><option value="ontem">Ontem</option></select><button type="button" id="visor-atualizar">Atualizar</button></div><p id="visor-status" role="status"></p><div id="visor-conteudo"></div></dialog>
 <script src="dados/dados.js?v=p34"></script>
-<script src="assets/js/site.js?v=20261028-contadores"></script>
+<script src="assets/js/site.js?v=p39-2"></script>
 <script src="assets/js/comunidade.js?v=20261028-areas"></script>
 <script src="assets/js/coins.js?v=menu-icons-1"></script>
-<script src="assets/js/card-shop.js?v=p27"></script>
-<script src="assets/js/anuncie.js?v=p31"></script>
+<script src="assets/js/card-shop.js?v=p39-1"></script>
+<script src="assets/js/anuncie.js?v=p39-1"></script>
 <dialog id="carta-ampliada" aria-labelledby="carta-ampliada-titulo"><button type="button" class="fechar-dialogo" aria-label="Fechar carta">×</button><h2 id="carta-ampliada-titulo"></h2><img id="carta-ampliada-img" alt=""></dialog>
 <script src="assets/js/midia-social.js?v=p33"></script>
 
-<script src="assets/js/areas.js?v=areas3"></script>
+<script src="assets/js/areas.js?v=p39-2"></script>
 <script src="assets/js/atividade.js?v=p36"></script>
 <script src="assets/js/radio-contadores.js?v=p36"></script>
 <script src="assets/js/midia-api.js?v=p36"></script>
 <script src="assets/js/visor.js?v=p36"></script>
 <script src="assets/js/midia.js?v=p34"></script>
+<script src="assets/js/p39.js?v=1"></script>
+<script src="assets/js/comunidade-interacoes.js?v=p39-2"></script>
+<script src="assets/js/numeros-vivos.js?v=p39-2"></script>
 </body>
 </html>
