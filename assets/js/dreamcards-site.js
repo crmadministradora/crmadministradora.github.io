@@ -38,6 +38,19 @@
     var large = document.getElementById('carta-ampliada-img'); large.src = src; large.alt = 'Carta de ' + nick;
     d.showModal();
   }
+  /* 31/10 ~15:50 -- a 1ª ida da imagem às vezes morre no túnel da API (no PC dele a carta ficou quebrada e só veio no
+     clique: o pedido nem chegou na API). A imagem tenta de novo sozinha 2 vezes; se não vier, diz "toque pra carregar". */
+  function imagem(src, alt, w, h, preguicosa) {
+    var im = el('img'), tentativas = 0;
+    im.alt = alt; im.width = w; im.height = h; if (preguicosa) im.loading = 'lazy';
+    im.addEventListener('error', function () {
+      if (tentativas < 2) { tentativas++; setTimeout(function () { im.src = src + '&r=' + tentativas + Date.now(); }, 700 * tentativas); return; }
+      var aviso = el('div', 'carta-pendente', 'Toque pra carregar a carta');
+      im.replaceWith(aviso);
+    });
+    im.src = src;
+    return im;
+  }
   function marcarJogo() {
     document.querySelectorAll('[data-dc-jogo]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.dcJogo === estado.jogo)); });
   }
@@ -56,7 +69,7 @@
     }
     var c = j.carta, wrap = el('div', 'dc-minha-carta');
     var fig = el('button', 'dc-minha-img'); fig.type = 'button'; fig.setAttribute('aria-label', 'Ampliar a carta de ' + c.nick);
-    if (c.imagem) { var im = el('img'); im.src = img(c.imagem); im.alt = 'Carta de ' + c.nick; im.width = 640; im.height = 900; fig.append(im); fig.addEventListener('click', function () { ampliar(c.nick, img(c.imagem)); }); }
+    if (c.imagem) { fig.append(imagem(img(c.imagem), 'Carta de ' + c.nick, 640, 900, false)); fig.addEventListener('click', function () { ampliar(c.nick, img(c.imagem)); }); }
     else { fig.append(el('div', 'carta-pendente', 'Carta em atualização')); fig.disabled = true; }
     var info = el('div', 'dc-minha-info');
     info.append(el('h3', '', c.nick));
@@ -108,7 +121,7 @@
       status.textContent = r.total ? r.total + ' carta' + (r.total > 1 ? 's' : '') + ' · ' + JOGOS[r.jogo] + (r.edicao ? ' · temporada ' + r.edicao : '') + ' · atualizado ' + quando(r.atualizado) : (estado.q ? 'Nenhum nick com "' + estado.q + '".' : 'O álbum ainda está vazio.');
       r.cartas.forEach(function (c) {
         var b = el('button', 'dc-album-carta'); b.type = 'button';
-        if (c.previa) { var im = el('img'); im.src = img(c.previa); im.alt = ''; im.loading = 'lazy'; im.width = 320; im.height = 450; b.append(im); }
+        if (c.previa) b.append(imagem(img(c.previa), '', 320, 450, true));
         else b.append(el('div', 'carta-pendente', 'Carta em atualização'));
         var meta = el('span', 'dc-album-meta');
         meta.append(el('strong', '', c.nick), el('small', '', 'Geral ' + (c.geral != null ? c.geral : '—') + (c.posicao ? ' · #' + c.posicao : '') + ' · ' + c.partidas + ' partidas'));
