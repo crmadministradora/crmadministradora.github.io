@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="assets/css/dreamcards-site.css?v=1">
 <link rel="stylesheet" href="assets/css/radio-discos.css?v=1">
 <link rel="stylesheet" href="assets/css/ajustes-topo.css?v=1">
+<link rel="stylesheet" href="assets/css/chat-site.css?v=1">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -157,6 +158,18 @@
     <p class="data-referencia" data-data-servicos></p>
     <div class="planos" id="planos"></div>
     <div class="faixa-servico"><img src="assets/img/campanha-divulgacao.png" alt="Campanha de Divulgação CRM" width="1254" height="1254" loading="lazy"><div><span class="selo">CRM Marketing</span><h3>Tua org tem história. Bora fazer ela aparecer.</h3><p>Arte com a cara do teu time e uma campanha de três dias no Instagram e na comunidade de WhatsApp da CRM.</p><a class="botao" data-link="site_crm" target="_blank" rel="noopener">Conhecer a Campanha no Discord</a><p class="aviso">Campanha de três dias disponível na loja acima. O pacote de três meses ainda não está à venda.</p></div></div>
+  </section>
+
+  <!-- ====== CHAT (31/10, Claude) ====== -->
+  <section class="secao chat-crm" id="chat" aria-labelledby="titulo-chat">
+    <header class="chat-topo"><div><span class="sobretitulo">CHAT DA COMUNIDADE</span><h2 id="titulo-chat"># geral</h2></div><p>As mensagens ficam 2 dias. Quem chega vê as últimas 12 horas.</p></header>
+    <div class="chat-lista" id="chat-lista" role="log" aria-live="polite" aria-label="Mensagens do chat"></div>
+    <form class="chat-envio" id="chat-envio" autocomplete="off">
+      <label class="chat-anexo" title="Mandar foto"><input type="file" id="chat-foto" accept="image/jpeg,image/png,image/webp,image/gif" hidden><span aria-hidden="true">＋</span><span class="sr-only">Mandar foto</span></label>
+      <div class="chat-campo"><div id="chat-previa" class="chat-previa" hidden></div><textarea id="chat-texto" rows="1" maxlength="500" placeholder="Conversar em # geral"></textarea></div>
+      <button class="botao botao-pequeno" type="submit" id="chat-mandar">Enviar</button>
+    </form>
+    <p class="chat-aviso" id="chat-aviso" role="status"></p>
   </section>
 
   <!-- ====== DREAM CARDS ====== -->
@@ -354,15 +367,16 @@
 <dialog id="carta-ampliada" aria-labelledby="carta-ampliada-titulo"><button type="button" class="fechar-dialogo" aria-label="Fechar carta">×</button><h2 id="carta-ampliada-titulo"></h2><img id="carta-ampliada-img" alt=""></dialog>
 <script src="assets/js/midia-social.js?v=p33"></script>
 
-<script src="assets/js/areas.js?v=dc1"></script>
+<script src="assets/js/areas.js?v=chat1"></script>
 <script src="assets/js/atividade.js?v=p36"></script>
 <script src="assets/js/radio-contadores.js?v=p36"></script>
-<script src="assets/js/midia-api.js?v=dc1"></script>
+<script src="assets/js/midia-api.js?v=chat1"></script>
 <script src="assets/js/dreamcards-site.js?v=2"></script>
 <script src="assets/js/visor.js?v=p36"></script>
 <script src="assets/js/midia.js?v=p34"></script>
 <script src="assets/js/p39.js?v=1"></script>
 <script src="assets/js/comunidade-interacoes.js?v=p39-2"></script>
+<script src="assets/js/chat-site.js?v=1"></script>
 <script src="assets/js/numeros-vivos.js?v=p39-2"></script>
 </body>
 </html>

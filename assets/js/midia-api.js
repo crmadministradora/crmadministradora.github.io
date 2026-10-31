@@ -15,7 +15,7 @@
   function path(id){return '/api/midia/'+encodeURIComponent(id);}
   function counts(data){return {likes:data.curtidas,liked:data.eu_curti,comments_count:data.total};}
   function mediaUrl(value){return typeof value==='string'&&/^\/api\/midia\/arquivo\/[\w.-]+$/.test(value)?base+value:value;}
-  window.CRM_SITE_API={base:base,get:function(path,auth){return request(path,undefined,auth);}};
+  window.CRM_SITE_API={base:base,get:function(path,auth){return request(path,undefined,auth);},post:function(path,body){return request(path,body||{},true);}};
   if(window.CRM_RADIO_COUNTS)window.CRM_RADIO_COUNTS.connect({load:function(){return request('/api/musicas');}});
   var agoraBusy=false;
   async function agora(){
