@@ -1,0 +1,26 @@
+/* 01/11 (Claude): a setinha de comentar o site -- só a equipe vê (feedback-adm.js) */
+body.fb-modo, body.fb-modo * { cursor: crosshair !important; }
+body.fb-modo .fb-ui, body.fb-modo .fb-ui * { cursor: auto !important; }
+body.fb-modo .fb-ui button, body.fb-modo .fb-ui button * { cursor: pointer !important; }
+.fb-realce { position: fixed; z-index: 90; pointer-events: none; outline: 2px dashed #ffb347; outline-offset: 2px; background: rgba(255, 179, 71, .08); border-radius: 4px; }
+.fb-barra { position: fixed; z-index: 95; top: 10px; left: 50%; translate: -50% 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; max-width: calc(100vw - 24px); padding: 8px 12px; border-radius: 12px; background: #2a1606; border: 1px solid #ffb347; color: #ffe3bd; font-size: 13px; box-shadow: 0 10px 30px #000a; }
+.fb-barra button, .fb-lista header button, .fb-item button, .fb-cancelar { padding: 6px 10px; border-radius: 8px; border: 1px solid #ffffff30; background: #17121f; color: #fff; font: inherit; font-size: 12px; }
+.fb-caixa { position: fixed; z-index: 96; display: grid; gap: 8px; padding: 12px; border-radius: 12px; background: var(--superficie, #17121f); border: 1px solid #ffb347; box-shadow: 0 16px 40px #000c; }
+.fb-caixa textarea { width: 100%; box-sizing: border-box; padding: 8px; border-radius: 8px; border: 1px solid #ffffff30; background: #0e0b14; color: #fff; font: inherit; font-size: 14px; resize: vertical; }
+.fb-sobre { margin: 0; font-size: 12px; color: var(--cinza, #aaa); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fb-status { margin: 0; font-size: 12px; color: #ffb347; }
+.fb-status:empty { display: none; }
+.fb-botoes { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
+.fb-lista { position: fixed; z-index: 95; top: 64px; right: 12px; width: min(380px, calc(100vw - 24px)); max-height: calc(100vh - 140px); display: flex; flex-direction: column; border-radius: 12px; background: var(--superficie, #17121f); border: 1px solid #ffb347; box-shadow: 0 16px 40px #000c; }
+.fb-lista header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px 12px; border-bottom: 1px solid #ffffff20; font-size: 13px; }
+.fb-lista header strong { flex: 1 1 auto; }
+.fb-itens { overflow: auto; padding: 8px 12px 12px; display: grid; gap: 8px; }
+.fb-item { padding: 10px; border-radius: 10px; background: #0e0b14; border: 1px solid #ffffff18; font-size: 13px; }
+.fb-item p { margin: 6px 0; white-space: pre-wrap; }
+.fb-item small { color: var(--cinza, #aaa); display: block; }
+.fb-feito { opacity: .55; }
+.fb-destaque { border-color: #ffb347; }
+.fb-vazio { color: var(--cinza, #aaa); font-size: 13px; }
+.fb-pinos { position: absolute; top: 0; left: 0; width: 0; height: 0; z-index: 89; }
+.fb-pino { position: absolute; translate: -50% -50%; width: 26px; height: 26px; border-radius: 50%; border: 2px solid #fff; background: #ff7a1a; color: #fff; font: 700 12px/1 Inter, sans-serif; box-shadow: 0 4px 12px #000a; }
+.fb-piscar { outline: 3px solid #ffb347 !important; outline-offset: 3px; transition: outline-color .3s; }
