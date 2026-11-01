@@ -2,7 +2,7 @@
 (function(){
  'use strict';
  var source=null,states=new Map(),mounts=[],activeTopic=null,replyTo=null,revision=0,posting=false,requestKey=null,epoch=0;
- var labels={dream:'Dream Cards',copa:'Copa do Infinito',midia:'Mídia da comunidade',bot:'Bot CRM',discord:'Configuração de Discord','sistema-copa':'Sistema de Copa',radio:'Rádio CRM',ofertas:'Ofertas dos apoiadores',patrocinio:'Sua marca aqui',chat:'Chat da comunidade'};
+ var labels={dream:'Dream Cards',copa:'Copa do Infinito',midia:'Mídia da comunidade',bot:'Bot CRM',discord:'Configuração de Discord','sistema-copa':'Sistema de Copa',campanha:'Campanha de Divulgação',radio:'Rádio CRM',ofertas:'Ofertas dos apoiadores',patrocinio:'Sua marca aqui',chat:'Chat da comunidade'};
  function el(tag,text,cls){var e=document.createElement(tag);if(text)e.textContent=text;if(cls)e.className=cls;return e;}
  function state(topic){if(!states.has(topic))states.set(topic,{likes:null,comments:null,next:0,pending:false});return states.get(topic);}
  function icon(kind){var s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 24 24');s.setAttribute('aria-hidden','true');var p=document.createElementNS(s.namespaceURI,'path');p.setAttribute('d',kind==='heart'?'M20 5a5 5 0 0 0-8 1 5 5 0 0 0-8-1c-3 3-1 6 1 8l7 7 7-7c2-2 4-5 1-8Z':'M21 11a9 9 0 0 1-9 9H4l-2 2V11a9 9 0 1 1 19 0Z');s.append(p);return s;}

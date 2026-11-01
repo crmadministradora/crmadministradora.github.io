@@ -131,6 +131,7 @@
     { titulo: "Bot CRM 2.0", linha: "Menos trabalho repetitivo. Mais tempo pra tua comunidade.", img: "assets/img/bot-crm.webp", contido: true, fundo: "ouro", alvo: "#loja", etiqueta: precoDe("bot") },
     { titulo: "Sistema de Copa", img: "assets/img/sistema-de-copa.webp", alvo: "#loja", semLegenda: true },
     { titulo: "Configuração de Discord", img: "assets/img/configuracao-discord.webp", alvo: "#loja", semLegenda: true },
+    { titulo: "Campanha de Divulgação", img: "assets/img/campanha-divulgacao.png", alvo: "#loja", semLegenda: true },
     { titulo: "Rádio CRM", linha: "Música pra jogar, trocar ideia e curtir com a galera.", img: "assets/img/radio-crm.webp", contido: true, fundo: "ouro", alvo: "#radio", etiqueta: "Na call" },
     { titulo: "Ofertas dos apoiadores", linha: "Produtos, benefícios e links da rede de apoiadores da CRM.", img: "assets/img/divulgacao-direita.webp", alvo: "#ofertas", etiqueta: "Apoiadores" },
     { titulo: "Sua marca aqui", linha: "Sua marca pode fazer parte dessa comunidade. Fale com a CRM sobre patrocínio.", img: "assets/img/divulgacao-direita.webp", alvo: "#contato", etiqueta: "Patrocínio" },
@@ -148,7 +149,7 @@
     if (!c.semLegenda) filhos.push(el("div", { classe: "cartao-legenda" }, [el("b", { texto: c.titulo }), el("span", { texto: c.linha })]));
     var classe = "cartao" + (c.arteInteira ? " cartao-arte-inteira" : "") + (c.fundo === "roxo" ? " cartao-fundo-roxo" : "") + (c.contido ? " contido" : "") + (c.fundo === "ouro" ? " cartao-fundo-ouro" : "") + (c.kinguin ? " cartao-kinguin" : "");
     var a = el("a", { classe: classe, href: c.alvo, "aria-label": c.titulo + (c.linha ? ": " + c.linha : "") }, filhos);
-    a.dataset.topic = ["midia","dream","bot","sistema-copa","discord","radio","ofertas","patrocinio","copa"][i];
+    a.dataset.topic = ["midia","dream","bot","sistema-copa","discord","campanha","radio","ofertas","patrocinio","copa"][i];
     if (c.arteInteira) a.style.setProperty("--arte-card", "url(\"" + new URL(c.img, document.baseURI).href + "\")");
     a.addEventListener("click", function (e) {
       if (i !== atual) { e.preventDefault(); ir(i); }
@@ -168,11 +169,7 @@
       c.tabIndex = d === 0 ? 0 : -1;
       c.setAttribute("aria-hidden", d === 0 ? "false" : "true");
     });
-    var info=CARDS[atual],details={"Sistema de Copa":"Inscrição, chave e resultados para organizar o campeonato da tua comunidade.","Configuração de Discord":"Estrutura e organização para o Discord da tua equipe."};
-    document.getElementById('vitrine-detalhe-titulo').textContent=info.titulo;
-    document.getElementById('vitrine-detalhe-texto').textContent=info.linha||details[info.titulo]||'';
-    document.getElementById('vitrine-detalhe-etiqueta').textContent=info.etiqueta||'EM DESTAQUE';
-    document.getElementById('vitrine-detalhe-link').href=info.alvo;
+    // 01/11 (S5): a faixa "Na call · Rádio CRM · Conhecer" embaixo do carrossel saiu -- o card já diz tudo
     document.dispatchEvent(new CustomEvent('crm:carousel-change',{detail:{topic:cartoes[atual].dataset.topic}}));
     Array.prototype.forEach.call(pontos.children, function (p, i) { p.setAttribute("aria-pressed", i === atual ? "true" : "false"); });
   }
