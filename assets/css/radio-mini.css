@@ -1,0 +1,221 @@
+/* P50 — 01/11/2026, Grok. Player pequeno da Radio, estilo mplayer.
+   So este arquivo novo. Nao mexe no site.css nem no comunidade.css.
+   A barra .mini-radio ja existe no index; aqui ela deixa de ser a faixa larga. */
+
+body .mini-radio {
+  position: fixed;
+  left: auto;
+  right: calc(var(--direita) + 16px);
+  bottom: 16px;
+  z-index: 34;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 40px;
+  grid-template-areas:
+    "gif texto play"
+    "vol vol vol";
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 4px;
+  width: 248px;
+  max-width: calc(100vw - var(--direita) - var(--lateral) - 32px);
+  height: auto;
+  margin: 0;
+  padding: 8px;
+  background: rgba(14, 11, 20, .96);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  box-shadow: 0 10px 28px #000a;
+  transition: width .2s ease;
+}
+
+body .mini-radio::before {
+  content: "";
+  grid-area: gif;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: url("../img/radio-player.gif") center / cover no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+}
+
+body .mini-radio > div {
+  grid-area: texto;
+  min-width: 0;
+  flex: none;
+}
+
+body .mini-radio b {
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+
+body .mini-radio small {
+  font-size: 11px;
+}
+
+body .mini-radio #mini-ouvir {
+  grid-area: play;
+  align-self: center;
+  justify-self: end;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--laranja);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+body .mini-radio #mini-ouvir:focus-visible {
+  outline: 2px solid var(--dourado-claro);
+  outline-offset: 2px;
+}
+
+/* O texto "Volume" fica so pro leitor de tela. O slider continua no DOM, com o mesmo id. */
+body .mini-radio label {
+  position: absolute;
+  grid-area: texto;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+body .mini-radio #radio-volume {
+  grid-area: vol;
+  width: 100%;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--laranja);
+}
+
+body .mini-radio a {
+  display: none;
+  font-size: 11px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+body .mini-radio #radio-status {
+  position: absolute;
+  grid-area: texto;
+  left: 8px;
+  right: auto;
+  top: auto;
+  bottom: calc(100% + 4px);
+  max-width: calc(100% - 16px);
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: var(--superficie);
+  color: var(--cinza);
+  font-size: 11px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body .mini-radio #radio-status:empty {
+  display: none;
+}
+
+/* Tocando: estica a largura, a capa cresce e aparece o atalho do Discord. */
+body .mini-radio.mini-tocando {
+  width: 332px;
+  grid-template-columns: 58px minmax(0, 1fr) 40px;
+  grid-template-areas:
+    "gif texto play"
+    "vol vol link";
+}
+
+body .mini-radio.mini-tocando::before {
+  width: 56px;
+  height: 56px;
+}
+
+body .mini-radio.mini-tocando a {
+  display: inline;
+  grid-area: link;
+  justify-self: end;
+}
+
+/* O menu aberto (gaveta, z-index 40) e o veu ficam por cima. Some de vez
+   pra nao sobrar um pedaco do player ao lado da gaveta no celular. */
+body .mini-radio.mini-sob-menu,
+body:has(#lateral.aberta) .mini-radio {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (min-width: 961px) {
+  body .mini-radio.mini-sob-menu,
+  body:has(#lateral.aberta) .mini-radio {
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  body .mini-radio {
+    right: 8px;
+    bottom: 8px;
+    left: auto;
+    width: min(216px, calc(100vw - 16px));
+    max-width: calc(100vw - 16px);
+    padding: 6px;
+  }
+
+  body .mini-radio.mini-tocando {
+    width: min(292px, calc(100vw - 16px));
+  }
+}
+
+/* No chat o compositor (campo + Enviar) ocupa a largura toda embaixo.
+   Um player no canto de baixo cobre o Enviar. No chat ele sobe pro
+   canto de cima, debaixo do topo, e o menu (gaveta) continua livre. */
+body[data-area="chat"] .mini-radio {
+  top: 72px;
+  bottom: auto;
+}
+
+@media (max-width: 600px) {
+  body[data-area="chat"] .mini-radio,
+  body[data-area="chat"] .mini-radio.mini-tocando {
+    top: 116px;
+    right: 8px;
+    left: auto;
+    width: min(188px, calc(100vw - 120px));
+    grid-template-areas:
+      "gif texto play"
+      "vol vol vol";
+  }
+
+  body[data-area="chat"] .mini-radio.mini-tocando a {
+    display: none;
+  }
+}
+
+/* A faixa antiga pedia ~96 px de respiro. Nas outras areas o player
+   fica no canto de baixo. 120 px deixa o fim da pagina passar por ele. */
+html body {
+  padding-bottom: 120px;
+}
+
+body[data-area="chat"] section.chat-crm {
+  margin-bottom: 128px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body .mini-radio {
+    transition: none;
+  }
+}
