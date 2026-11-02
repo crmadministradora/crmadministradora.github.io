@@ -24,7 +24,9 @@
   var barra = el('div', 'fb-ui fb-barra'); barra.hidden = true;
   var bLista = el('button', null, '📋 Lista'), bSair = el('button', null, '✕ Sair');
   bLista.type = bSair.type = 'button';
-  barra.append(el('span', null, '➤ Modo comentário: toca em qualquer item da página'), bLista, bSair);
+  var noCelular = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
+  barra.append(el('span', null, noCelular ? '➤ Modo comentário: segura o dedo (ou 2 toques) num item'
+                                          : '➤ Modo comentário: clica em qualquer item da página'), bLista, bSair);
   var realce = el('div', 'fb-realce'); realce.hidden = true;
   var caixa = el('form', 'fb-ui fb-caixa'); caixa.hidden = true;
   var cSobre = el('p', 'fb-sobre'), cTexto = el('textarea'), cSalvar = el('button', 'botao botao-pequeno', 'Salvar'),
@@ -142,17 +144,67 @@
   cCancelar.addEventListener('click', function () { caixa.hidden = true; alvoAtual = null; });
 
   // o modo: o realce segue o mouse; o clique (na captura) vira comentário em vez de abrir o link/botão
+  // 📱 02/11 (Claude): NO CELULAR o toque normal NAVEGA (antes todo toque virava comentário e travava o site -- ele: "no
+  //    celular, ligada, ela trava a rolagem"); comentar é SEGURAR O DEDO (~0,5 s) ou DAR 2 TOQUES no item.
+  var toque = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
+  var segura = null, engoleClique = 0, ultimoToque = null;
+  function comentarAqui(alvo, x, y) { realce.hidden = true; abrirCaixa(alvo, x, y); }
   document.addEventListener('mousemove', function (e) {
-    if (!ligado || nossa(e.target) || !caixa.hidden) { realce.hidden = true; return; }
+    if (toque || !ligado || nossa(e.target) || !caixa.hidden) { realce.hidden = true; return; }
     var r = e.target.getBoundingClientRect();
     realce.style.cssText = 'left:' + r.left + 'px;top:' + r.top + 'px;width:' + r.width + 'px;height:' + r.height + 'px';
     realce.hidden = false;
   }, true);
   document.addEventListener('click', function (e) {
     if (!ligado || nossa(e.target)) return;
+    if (toque && Date.now() > engoleClique) return;            // celular: o toque simples navega normal
     e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
-    realce.hidden = true; abrirCaixa(e.target, e.clientX, e.clientY);
+    if (!toque) comentarAqui(e.target, e.clientX, e.clientY);
   }, true);
+  document.addEventListener('touchstart', function (e) {
+    if (!ligado || !toque || nossa(e.target) || e.touches.length !== 1) return;
+    var t = e.touches[0], alvo = e.target;
+    segura = { x: t.clientX, y: t.clientY, timer: setTimeout(function () {
+      segura = null; engoleClique = Date.now() + 800; comentarAqui(alvo, t.clientX, t.clientY);
+    }, 550) };
+  }, { capture: true, passive: true });
+  document.addEventListener('touchmove', function (e) {
+    if (!segura) return;
+    var t = e.touches[0];
+    if (Math.abs(t.clientX - segura.x) > 10 || Math.abs(t.clientY - segura.y) > 10) { clearTimeout(segura.timer); segura = null; }
+  }, { capture: true, passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (segura) { clearTimeout(segura.timer); segura = null; }
+    if (!ligado || !toque || nossa(e.target) || !caixa.hidden) return;
+    var t = e.changedTouches[0], agora = Date.now(), u = ultimoToque;
+    ultimoToque = { x: t.clientX, y: t.clientY, em: agora };
+    if (u && agora - u.em < 320 && Math.abs(t.clientX - u.x) < 30 && Math.abs(t.clientY - u.y) < 30) {   // 2 toques
+      e.preventDefault(); ultimoToque = null; engoleClique = agora + 800; comentarAqui(e.target, t.clientX, t.clientY);
+    }
+  }, { capture: true, passive: false });
+  document.addEventListener('contextmenu', function (e) { if (ligado && toque && !nossa(e.target)) e.preventDefault(); }, true);
+
+  // 🎤 02/11 (Claude): a VOZ -- fala e o texto sai em português (o reconhecimento do próprio navegador, pt-BR).
+  var Reco = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (Reco) {
+    var cVoz = el('button', 'fb-voz', '🎤 Falar'), ouvindo = null;
+    cVoz.type = 'button'; cVoz.setAttribute('aria-label', 'Falar o comentário');
+    cBotoes.prepend(cVoz);
+    cVoz.addEventListener('click', function () {
+      if (ouvindo) { ouvindo.stop(); return; }
+      var r = new Reco(), base = cTexto.value ? cTexto.value.replace(/\s*$/, ' ') : '';
+      r.lang = 'pt-BR'; r.interimResults = true; r.continuous = false;
+      r.onresult = function (ev) {
+        var txt = '';
+        for (var i = 0; i < ev.results.length; i++) txt += ev.results[i][0].transcript;
+        cTexto.value = (base + txt).slice(0, 1000);
+      };
+      r.onerror = function (ev) { cStatus.textContent = ev.error === 'not-allowed' ? 'Libera o microfone pro site.' : 'Não ouvi. Tenta de novo.'; };
+      r.onend = function () { ouvindo = null; cVoz.textContent = '🎤 Falar'; };
+      ouvindo = r; cVoz.textContent = '⏹ Parar'; cStatus.textContent = 'Ouvindo… fala o comentário.';
+      try { r.start(); } catch (_) { ouvindo = null; cVoz.textContent = '🎤 Falar'; }
+    });
+  }
 
   function ligar() { ligado = true; document.body.classList.add('fb-modo'); barra.hidden = false; botao.textContent = '➤ Comentando…'; carregar(); }
   function desligar() { ligado = false; document.body.classList.remove('fb-modo'); barra.hidden = caixa.hidden = lista.hidden = realce.hidden = true; pinos.replaceChildren(); botao.textContent = '➤ Comentar o site'; }

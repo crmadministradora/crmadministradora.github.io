@@ -24,3 +24,8 @@ body.fb-modo .fb-ui button, body.fb-modo .fb-ui button * { cursor: pointer !impo
 .fb-pinos { position: absolute; top: 0; left: 0; width: 0; height: 0; z-index: 89; }
 .fb-pino { position: absolute; translate: -50% -50%; width: 26px; height: 26px; border-radius: 50%; border: 2px solid #fff; background: #ff7a1a; color: #fff; font: 700 12px/1 Inter, sans-serif; box-shadow: 0 4px 12px #000a; }
 .fb-piscar { outline: 3px solid #ffb347 !important; outline-offset: 3px; transition: outline-color .3s; }
+/* 📱 02/11 (Claude): no celular, segurar o dedo comenta -- sem selecionar texto nem abrir o menu do navegador */
+@media (pointer: coarse) {
+  body.fb-modo :not(.fb-ui):not(.fb-ui *) { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+}
+.fb-voz { padding: 6px 10px; border-radius: 8px; border: 1px solid #ffb34780; background: #2a1606; color: #ffe3bd; font: inherit; font-size: 12px; margin-right: auto; }
