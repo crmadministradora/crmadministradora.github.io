@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "31/10/2026 15:34",
+ "gerado_em": "02/11/2026 16:38",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -157,6 +157,39 @@ window.CRM_DADOS = {
    ],
    "destaques": [],
    "botao": "Comprar no Discord"
+  },
+  {
+   "id": "site",
+   "nome": "Site da sua Org",
+   "emoji": "🌐",
+   "resumo": "O site da tua org no ar, com a aparência e as informações dela",
+   "planos": [
+    {
+     "n": 1,
+     "nome": "Site online",
+     "emoji": "🌐",
+     "preco": "R$ 29,90",
+     "por": "valor único",
+     "inclui": [
+      "Site no ar com a aparência da sua org",
+      "As informações da sua organização"
+     ]
+    },
+    {
+     "n": 2,
+     "nome": "Site + domínio .com.br",
+     "emoji": "🏷️",
+     "preco": "R$ 99,00",
+     "por": "valor único",
+     "inclui": [
+      "Tudo do Site online",
+      "Domínio .com.br próprio",
+      "Administração do site por 1 ano"
+     ]
+    }
+   ],
+   "destaques": [],
+   "botao": "Comprar no Discord"
   }
  ],
  "links": {
@@ -176,12 +209,12 @@ window.CRM_DADOS = {
   "comprovante_passo": "No Discord da CRM, no canal 🎩・la-nostra-casa, escolhe **Abrir Ticket** no menu e manda o comprovante ali."
  },
  "numeros": {
-  "medido_em": "28/10/2026 19:12",
+  "medido_em": "01/11/2026 09:51",
   "frases": {
    "servidores": "18 servidores",
    "pessoas": "1.400+ pessoas",
    "membros": "1.800+ membros na rede",
-   "cartas": "103 cartas",
+   "cartas": "104 cartas",
    "partidas": "4.000+ partidas lidas",
    "prints": "5.000+ prints",
    "midia": "a mídia chega em 16 servidores"
@@ -192,7 +225,7 @@ window.CRM_DADOS = {
   "midia_medido_em": "28/10/2026 11:23"
  },
  "kinguin": {
-  "aviso": "Link de parceiro: a CRM ganha uma comissão se você comprar, sem custo a mais pra você.",
+  "aviso": "Comprou pelo link da CRM? Ganha 50 CRM coins a cada R$ 25 e 1 Joia Dream a cada R$ 100: é só tocar em 🧾 Já comprei no post da Kinguin, no Discord da CRM.",
   "afiliado": "7ze6i58sjwzdk",
   "loja": "https://www.kinguin.net/?r=7ze6i58sjwzdk",
   "produtos": [
@@ -600,8 +633,8 @@ window.CRM_DADOS = {
  },
  "dreamcards": {
   "temporada": 16,
-  "atualizado_epoch": 1793471488.4042683,
-  "premio": "O prêmio da próxima temporada do pódio é anunciado no Discord do Dream Cards. O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
+  "atualizado_epoch": 1793647927.239969,
+  "premio": "Honor of Kings: o 1º do pódio pelo Geral da carta ganha R$ 50,00 (foto do pódio em 07/11/2026). O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
   "cartas": [
    {
     "posicao": 1,
@@ -623,25 +656,31 @@ window.CRM_DADOS = {
    },
    {
     "posicao": 4,
-    "nick": "FXV.SAGRADO至",
+    "nick": "FXV.SAGRADO 圣",
     "imagem_referencia": "site-dados/cartas/04.webp",
     "imagem": "assets/cartas/04.webp"
    },
    {
     "posicao": 5,
-    "nick": "TTVGustavoXQDL",
+    "nick": "ᯤRAIDEIRAᯤ",
     "imagem_referencia": "site-dados/cartas/05.webp",
     "imagem": "assets/cartas/05.webp"
    },
    {
     "posicao": 6,
-    "nick": "ᯤRAIDEIRAᯤ",
+    "nick": "TTVGustavoXQDL",
     "imagem_referencia": "site-dados/cartas/06.webp",
     "imagem": "assets/cartas/06.webp"
    }
   ],
   "imagens_no_site": true,
-  "premio_por_jogo": {}
+  "premio_por_jogo": {
+   "hok": {
+    "posicao": "1",
+    "valor": "R$ 50,00",
+    "ate": "07/11/2026 23:59"
+   }
+  }
  },
  "loja_pix": [
   {
@@ -693,6 +732,26 @@ window.CRM_DADOS = {
    "txid": "SITECAMPANHA1",
    "copia_e_cola": "00020126580014br.gov.bcb.pix01365a0410b9-350f-4671-a0d8-6123c8b27f355204000053039865406199.005802BR5903CRM6009SAO PAULO62170513SITECAMPANHA16304FA26",
    "qr_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"318\" height=\"318\" class=\"segno\"><path transform=\"scale(6)\" class=\"qrline\" stroke=\"#000\" d=\"M2 2.5h7m1 0h1m1 0h1m1 0h2m1 0h3m1 0h1m1 0h3m1 0h2m3 0h1m1 0h1m1 0h4m2 0h1m1 0h7m-49 1h1m5 0h1m1 0h2m1 0h1m4 0h2m1 0h6m5 0h3m2 0h6m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h4m1 0h1m3 0h4m1 0h4m1 0h2m1 0h3m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m3 0h1m3 0h4m2 0h1m3 0h1m1 0h3m2 0h2m3 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m3 0h6m1 0h6m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m3 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m7 0h2m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-40 1h1m1 0h3m2 0h2m3 0h2m3 0h1m1 0h1m1 0h1m2 0h1m4 0h1m1 0h1m-41 1h1m2 0h6m7 0h1m2 0h2m1 0h5m1 0h2m1 0h1m1 0h6m2 0h1m2 0h1m1 0h3m-49 1h1m3 0h1m4 0h3m4 0h2m2 0h1m1 0h3m1 0h2m1 0h2m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h3m-47 1h2m1 0h3m2 0h2m1 0h1m1 0h1m4 0h1m1 0h1m1 0h3m3 0h1m2 0h1m1 0h4m1 0h1m3 0h2m2 0h2m-49 1h2m1 0h3m1 0h3m1 0h2m1 0h3m1 0h3m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m1 0h1m5 0h5m1 0h2m-48 1h2m1 0h1m1 0h4m1 0h2m1 0h1m6 0h1m2 0h3m2 0h2m2 0h3m1 0h3m3 0h3m2 0h2m-46 1h1m1 0h1m3 0h1m2 0h2m3 0h1m1 0h2m4 0h3m1 0h3m5 0h2m3 0h1m1 0h1m2 0h1m-47 1h3m2 0h1m1 0h2m2 0h2m3 0h2m2 0h1m1 0h2m1 0h2m1 0h2m1 0h1m3 0h1m1 0h4m1 0h2m1 0h1m1 0h1m-48 1h1m1 0h1m5 0h1m1 0h2m7 0h1m1 0h2m2 0h2m1 0h1m2 0h9m1 0h2m1 0h2m1 0h1m-49 1h1m1 0h2m2 0h1m3 0h2m1 0h1m2 0h1m1 0h1m1 0h1m1 0h4m1 0h1m1 0h1m1 0h2m3 0h3m1 0h3m1 0h1m2 0h2m-49 1h1m1 0h1m1 0h2m2 0h1m1 0h2m3 0h1m1 0h3m1 0h2m1 0h2m4 0h1m2 0h2m1 0h1m3 0h1m1 0h2m2 0h3m-49 1h2m1 0h2m1 0h1m2 0h4m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h8m3 0h3m2 0h3m1 0h1m-47 1h1m1 0h1m4 0h2m4 0h1m1 0h5m1 0h1m1 0h4m1 0h1m2 0h2m2 0h3m8 0h1m-49 1h2m1 0h1m1 0h8m5 0h1m1 0h2m2 0h2m1 0h3m1 0h1m1 0h1m2 0h2m4 0h2m4 0h1m-49 1h3m5 0h2m2 0h1m1 0h1m5 0h1m1 0h2m2 0h1m1 0h3m1 0h5m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m-48 1h11m3 0h2m1 0h2m1 0h8m1 0h1m2 0h4m1 0h1m2 0h5m2 0h2m-47 1h1m1 0h1m3 0h1m2 0h1m1 0h1m1 0h2m5 0h1m3 0h2m1 0h4m4 0h1m2 0h1m3 0h1m1 0h3m-46 1h2m1 0h1m1 0h3m1 0h1m4 0h2m2 0h2m1 0h1m1 0h3m2 0h6m3 0h1m1 0h1m1 0h2m1 0h2m-49 1h1m3 0h1m3 0h1m1 0h2m1 0h1m1 0h2m1 0h3m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h4m1 0h1m3 0h1m-44 1h1m2 0h5m1 0h3m2 0h3m1 0h1m2 0h8m1 0h1m1 0h1m2 0h1m1 0h1m1 0h5m2 0h2m-49 1h1m1 0h4m1 0h2m2 0h1m2 0h4m1 0h2m3 0h2m4 0h1m3 0h1m2 0h5m2 0h1m1 0h1m1 0h1m-49 1h1m2 0h8m2 0h2m2 0h2m1 0h2m1 0h2m1 0h1m2 0h1m2 0h2m2 0h1m2 0h5m2 0h3m-47 1h2m1 0h1m1 0h1m1 0h1m1 0h1m5 0h1m1 0h2m1 0h1m1 0h1m3 0h3m1 0h1m1 0h3m2 0h1m1 0h1m3 0h2m-45 1h3m1 0h1m6 0h3m1 0h1m1 0h1m2 0h2m1 0h4m3 0h1m3 0h1m2 0h1m1 0h2m3 0h3m-49 1h2m1 0h1m4 0h1m1 0h2m2 0h3m1 0h1m3 0h3m2 0h2m3 0h1m3 0h4m1 0h1m3 0h1m2 0h1m-49 1h1m3 0h3m2 0h2m2 0h1m2 0h2m1 0h1m3 0h1m1 0h1m1 0h2m1 0h1m4 0h2m2 0h1m2 0h1m1 0h5m-49 1h1m1 0h2m1 0h1m2 0h1m4 0h1m5 0h2m1 0h1m1 0h2m1 0h9m2 0h1m5 0h1m1 0h3m-48 1h2m1 0h1m1 0h3m3 0h2m1 0h1m3 0h1m1 0h1m2 0h1m1 0h2m1 0h3m1 0h1m1 0h3m1 0h5m1 0h1m2 0h1m-46 1h3m2 0h2m1 0h1m1 0h1m2 0h1m5 0h1m2 0h3m1 0h6m4 0h2m5 0h3m-49 1h1m2 0h1m1 0h2m1 0h1m2 0h2m1 0h5m2 0h2m2 0h5m1 0h2m2 0h5m2 0h1m4 0h2m-48 1h1m2 0h1m2 0h1m2 0h2m1 0h2m2 0h4m1 0h1m1 0h2m1 0h1m2 0h4m1 0h4m1 0h1m2 0h5m-47 1h1m3 0h2m1 0h2m2 0h1m2 0h2m1 0h2m2 0h3m2 0h1m3 0h3m4 0h1m3 0h1m1 0h1m1 0h1m1 0h1m-48 1h3m3 0h2m2 0h1m1 0h1m1 0h1m1 0h1m2 0h1m2 0h2m1 0h2m3 0h1m1 0h1m4 0h3m3 0h1m1 0h1m1 0h1m-49 1h3m3 0h2m2 0h1m3 0h2m2 0h2m2 0h6m1 0h2m1 0h1m3 0h9m1 0h3m-41 1h3m1 0h1m1 0h2m2 0h1m3 0h1m3 0h1m3 0h1m1 0h1m1 0h1m1 0h1m3 0h1m3 0h1m1 0h1m-47 1h7m1 0h1m1 0h1m1 0h1m1 0h1m4 0h4m1 0h1m1 0h4m2 0h1m4 0h1m2 0h1m1 0h1m1 0h5m-49 1h1m5 0h1m1 0h1m3 0h2m1 0h1m1 0h1m1 0h2m1 0h1m3 0h5m2 0h1m1 0h1m1 0h4m3 0h1m2 0h2m-49 1h1m1 0h3m1 0h1m1 0h1m2 0h2m3 0h4m1 0h6m1 0h3m3 0h1m1 0h1m2 0h6m3 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h2m2 0h2m2 0h1m1 0h2m1 0h1m1 0h2m3 0h2m2 0h3m1 0h2m1 0h3m1 0h1m1 0h2m-49 1h1m1 0h3m1 0h1m3 0h1m3 0h1m2 0h2m1 0h5m1 0h1m1 0h1m2 0h1m2 0h4m1 0h1m1 0h1m2 0h2m1 0h1m-48 1h1m5 0h1m2 0h2m1 0h2m1 0h1m5 0h2m1 0h2m1 0h1m1 0h2m3 0h1m1 0h1m2 0h4m1 0h5m-49 1h7m1 0h1m3 0h1m2 0h3m2 0h1m1 0h7m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h4m1 0h1\"/></svg>\n"
+  },
+  {
+   "produto": "site",
+   "produto_nome": "Site da sua Org",
+   "plano": "Site online",
+   "preco": "R$ 29,90",
+   "por": "valor único",
+   "txid": "SITESITE1",
+   "copia_e_cola": "00020126580014br.gov.bcb.pix01365a0410b9-350f-4671-a0d8-6123c8b27f35520400005303986540529.905802BR5903CRM6009SAO PAULO62130509SITESITE16304939B",
+   "qr_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"318\" height=\"318\" class=\"segno\"><path transform=\"scale(6)\" class=\"qrline\" stroke=\"#000\" d=\"M2 2.5h7m4 0h1m4 0h1m1 0h1m1 0h2m3 0h1m4 0h1m1 0h1m2 0h2m3 0h1m1 0h7m-49 1h1m5 0h1m4 0h5m1 0h1m4 0h3m2 0h3m1 0h1m3 0h2m1 0h3m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h5m1 0h1m6 0h1m1 0h2m1 0h1m3 0h2m1 0h1m1 0h1m3 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m1 0h1m1 0h2m1 0h1m6 0h1m1 0h2m1 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m1 0h1m5 0h1m2 0h6m1 0h3m1 0h2m1 0h3m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m1 0h2m1 0h2m1 0h1m4 0h1m1 0h2m3 0h2m5 0h2m2 0h2m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-41 1h1m1 0h4m1 0h1m2 0h1m3 0h1m3 0h3m1 0h3m4 0h1m1 0h2m-41 1h1m1 0h5m2 0h5m2 0h1m1 0h2m2 0h5m2 0h1m3 0h1m1 0h2m1 0h1m1 0h1m1 0h5m-44 1h2m3 0h2m5 0h5m1 0h1m1 0h2m3 0h3m1 0h2m2 0h1m2 0h1m2 0h1m1 0h1m2 0h1m-47 1h3m1 0h3m2 0h1m1 0h4m1 0h2m2 0h1m2 0h3m7 0h1m1 0h3m2 0h1m6 0h1m-49 1h2m1 0h1m3 0h2m1 0h2m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m6 0h4m-46 1h1m1 0h2m1 0h2m3 0h1m3 0h1m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m4 0h1m1 0h1m1 0h2m3 0h3m3 0h1m1 0h1m-48 1h1m2 0h2m1 0h1m1 0h1m2 0h4m2 0h3m1 0h1m1 0h1m5 0h1m1 0h2m5 0h1m2 0h2m3 0h1m-48 1h3m1 0h3m3 0h1m1 0h2m2 0h2m2 0h3m1 0h6m1 0h2m1 0h1m1 0h4m1 0h1m2 0h1m3 0h1m-47 1h3m3 0h1m2 0h2m2 0h3m1 0h2m1 0h2m4 0h1m1 0h4m2 0h1m5 0h3m3 0h1m-49 1h1m2 0h1m1 0h2m1 0h2m6 0h3m1 0h2m2 0h1m1 0h2m1 0h1m4 0h3m3 0h1m1 0h1m2 0h1m2 0h1m-46 1h1m4 0h1m2 0h1m5 0h1m5 0h3m2 0h1m1 0h2m4 0h1m2 0h1m1 0h3m1 0h1m1 0h2m-48 1h2m2 0h5m1 0h1m1 0h2m1 0h5m2 0h2m2 0h1m1 0h1m3 0h1m1 0h5m3 0h1m1 0h1m1 0h2m-45 1h2m4 0h2m1 0h3m1 0h4m2 0h1m3 0h1m2 0h1m3 0h2m7 0h3m1 0h2m-46 1h4m1 0h2m1 0h1m1 0h1m2 0h1m1 0h5m1 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m3 0h1m1 0h1m-49 1h2m1 0h2m3 0h1m1 0h2m3 0h2m4 0h1m1 0h1m4 0h3m1 0h1m6 0h1m2 0h1m2 0h3m-48 1h1m2 0h6m3 0h1m2 0h2m4 0h7m5 0h3m1 0h2m1 0h5m3 0h1m-47 1h3m3 0h2m1 0h5m1 0h1m3 0h2m3 0h1m1 0h1m1 0h6m1 0h1m1 0h2m3 0h2m2 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h6m1 0h4m1 0h1m1 0h2m1 0h1m3 0h1m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m-46 1h2m3 0h2m1 0h1m1 0h2m1 0h2m3 0h2m3 0h3m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m-42 1h6m4 0h5m3 0h6m1 0h1m3 0h2m1 0h3m1 0h5m1 0h3m-49 1h1m1 0h1m1 0h1m4 0h2m1 0h1m1 0h3m1 0h2m2 0h1m1 0h1m2 0h4m1 0h1m4 0h1m3 0h1m3 0h1m2 0h1m-49 1h1m1 0h1m1 0h1m1 0h3m2 0h1m1 0h2m3 0h2m1 0h1m2 0h1m4 0h2m4 0h3m1 0h1m2 0h3m1 0h1m1 0h1m-45 1h2m4 0h1m3 0h3m4 0h3m3 0h1m2 0h1m1 0h2m2 0h1m2 0h1m1 0h2m3 0h2m-48 1h2m3 0h3m3 0h1m3 0h3m1 0h1m1 0h2m4 0h1m1 0h1m1 0h1m2 0h7m1 0h1m1 0h2m2 0h1m-48 1h1m1 0h2m2 0h3m1 0h1m2 0h1m1 0h1m1 0h1m2 0h3m1 0h2m1 0h1m1 0h7m1 0h1m2 0h1m1 0h1m3 0h1m-45 1h2m1 0h5m2 0h4m1 0h1m2 0h1m1 0h1m3 0h1m2 0h1m4 0h3m1 0h2m1 0h4m1 0h1m-46 1h1m1 0h1m3 0h3m1 0h2m2 0h1m1 0h2m1 0h2m1 0h3m3 0h2m3 0h3m1 0h2m4 0h1m2 0h1m-49 1h4m1 0h4m4 0h3m1 0h1m1 0h1m1 0h1m5 0h3m1 0h1m5 0h1m1 0h2m1 0h4m1 0h2m-48 1h2m2 0h1m1 0h1m2 0h2m1 0h1m2 0h2m3 0h6m1 0h1m1 0h3m8 0h1m3 0h1m2 0h1m-49 1h5m1 0h2m2 0h2m1 0h1m2 0h1m1 0h4m1 0h1m1 0h3m6 0h1m1 0h1m2 0h6m1 0h1m1 0h1m-49 1h1m1 0h3m3 0h4m4 0h3m2 0h2m1 0h2m1 0h1m2 0h1m4 0h2m2 0h2m5 0h2m-47 1h1m3 0h5m2 0h3m8 0h2m2 0h1m5 0h2m2 0h2m1 0h1m1 0h3m3 0h1m-48 1h3m3 0h1m1 0h1m1 0h1m2 0h2m2 0h1m2 0h6m1 0h1m2 0h2m1 0h1m10 0h1m2 0h1m-49 1h3m3 0h1m1 0h2m1 0h1m3 0h2m2 0h2m1 0h6m2 0h1m4 0h3m1 0h6m1 0h1m1 0h1m-41 1h1m4 0h3m1 0h1m3 0h2m3 0h5m1 0h2m1 0h2m2 0h2m3 0h2m1 0h1m-48 1h7m2 0h1m1 0h1m3 0h4m2 0h2m1 0h1m1 0h2m3 0h1m2 0h2m2 0h1m1 0h1m1 0h1m1 0h2m2 0h1m-49 1h1m5 0h1m1 0h3m1 0h1m1 0h5m2 0h2m3 0h1m1 0h1m2 0h5m4 0h1m3 0h2m1 0h2m-49 1h1m1 0h3m1 0h1m1 0h5m1 0h1m6 0h6m2 0h3m1 0h1m2 0h1m1 0h7m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h4m1 0h1m2 0h5m1 0h2m3 0h2m1 0h4m1 0h2m3 0h5m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h4m6 0h1m1 0h2m2 0h1m3 0h2m1 0h2m1 0h1m1 0h4m6 0h1m-47 1h1m5 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h3m1 0h3m3 0h3m5 0h1m3 0h1m1 0h1m1 0h2m2 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m6 0h1m2 0h1m2 0h2m1 0h1m1 0h5m1 0h1m4 0h3\"/></svg>\n"
+  },
+  {
+   "produto": "site",
+   "produto_nome": "Site da sua Org",
+   "plano": "Site + domínio .com.br",
+   "preco": "R$ 99,00",
+   "por": "valor único",
+   "txid": "SITESITE2",
+   "copia_e_cola": "00020126580014br.gov.bcb.pix01365a0410b9-350f-4671-a0d8-6123c8b27f35520400005303986540599.005802BR5903CRM6009SAO PAULO62130509SITESITE263041C0B",
+   "qr_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"318\" height=\"318\" class=\"segno\"><path transform=\"scale(6)\" class=\"qrline\" stroke=\"#000\" d=\"M2 2.5h7m1 0h1m1 0h1m2 0h2m2 0h3m1 0h3m2 0h6m2 0h1m1 0h2m2 0h1m1 0h7m-49 1h1m5 0h1m1 0h2m1 0h2m4 0h1m1 0h8m2 0h1m2 0h2m1 0h6m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h4m1 0h1m2 0h1m1 0h6m1 0h1m1 0h1m2 0h3m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m3 0h1m1 0h1m1 0h1m1 0h2m1 0h2m3 0h1m1 0h3m2 0h2m3 0h1m2 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h7m1 0h1m1 0h1m2 0h1m1 0h3m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m5 0h2m1 0h3m1 0h1m2 0h1m3 0h1m1 0h2m5 0h4m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-36 1h1m1 0h2m2 0h4m3 0h1m1 0h1m1 0h1m2 0h1m4 0h1m1 0h1m-41 1h1m2 0h8m2 0h4m1 0h1m3 0h5m1 0h2m1 0h1m1 0h6m2 0h1m2 0h1m1 0h3m-47 1h1m1 0h1m2 0h6m1 0h1m2 0h4m1 0h3m1 0h2m1 0h2m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h3m-47 1h1m1 0h1m1 0h2m1 0h1m2 0h3m1 0h1m1 0h1m2 0h2m1 0h3m3 0h1m2 0h1m1 0h4m6 0h1m2 0h2m-49 1h2m2 0h2m1 0h1m2 0h1m3 0h2m6 0h1m2 0h1m1 0h1m1 0h2m1 0h1m1 0h1m4 0h6m1 0h2m-48 1h5m1 0h1m1 0h4m1 0h1m5 0h2m2 0h3m2 0h2m2 0h3m1 0h3m3 0h3m2 0h2m-47 1h4m1 0h2m3 0h3m2 0h2m2 0h2m1 0h4m2 0h2m5 0h2m3 0h1m1 0h2m1 0h1m-48 1h1m2 0h1m1 0h3m4 0h1m4 0h1m1 0h3m2 0h1m1 0h2m1 0h1m2 0h1m3 0h1m1 0h4m1 0h2m1 0h1m1 0h1m-49 1h2m7 0h4m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h2m2 0h1m1 0h1m1 0h3m1 0h2m1 0h2m1 0h1m-48 1h3m2 0h1m2 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m1 0h2m2 0h1m4 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h2m1 0h2m-49 1h1m3 0h2m2 0h3m4 0h2m4 0h2m1 0h2m1 0h1m1 0h2m1 0h5m3 0h1m1 0h2m2 0h1m1 0h1m-47 1h3m1 0h1m2 0h2m7 0h1m3 0h1m1 0h5m2 0h4m1 0h1m2 0h3m2 0h3m1 0h1m-45 1h1m2 0h5m5 0h2m2 0h1m1 0h1m1 0h2m3 0h6m1 0h3m7 0h2m-46 1h1m2 0h5m1 0h1m2 0h2m1 0h1m1 0h2m2 0h3m1 0h2m3 0h1m2 0h2m4 0h2m4 0h1m-48 1h2m1 0h2m3 0h1m1 0h1m2 0h1m1 0h1m3 0h1m1 0h2m2 0h2m1 0h2m2 0h2m3 0h1m1 0h1m1 0h1m1 0h1m2 0h1m-48 1h1m1 0h7m3 0h1m2 0h4m1 0h8m1 0h1m2 0h3m2 0h1m2 0h5m2 0h2m-47 1h1m1 0h1m3 0h3m5 0h1m1 0h1m3 0h1m3 0h2m1 0h4m4 0h1m2 0h1m3 0h1m1 0h3m-49 1h2m1 0h2m1 0h1m1 0h1m2 0h4m1 0h3m2 0h2m1 0h1m1 0h3m2 0h6m3 0h1m1 0h1m1 0h2m1 0h2m-48 1h2m1 0h1m3 0h2m4 0h3m2 0h2m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m2 0h4m1 0h1m3 0h1m-44 1h1m2 0h7m1 0h1m1 0h2m1 0h3m2 0h8m1 0h1m1 0h1m2 0h1m1 0h1m1 0h5m2 0h2m-49 1h1m2 0h2m3 0h1m1 0h1m2 0h1m1 0h3m1 0h3m2 0h1m1 0h1m2 0h2m2 0h2m2 0h5m2 0h1m1 0h1m1 0h1m-49 1h1m2 0h2m1 0h1m1 0h2m4 0h1m2 0h5m1 0h2m1 0h1m3 0h1m1 0h1m3 0h4m1 0h3m2 0h3m-46 1h2m2 0h1m1 0h1m1 0h1m1 0h2m13 0h3m1 0h1m1 0h3m3 0h1m1 0h1m2 0h1m-46 1h1m1 0h1m1 0h3m3 0h1m2 0h3m4 0h2m1 0h1m1 0h4m3 0h1m3 0h1m2 0h1m1 0h3m1 0h4m-48 1h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m1 0h2m1 0h3m1 0h2m6 0h1m3 0h4m1 0h1m1 0h1m2 0h2m1 0h1m-48 1h1m2 0h1m2 0h4m4 0h2m2 0h2m1 0h3m1 0h1m2 0h1m1 0h2m2 0h3m2 0h1m2 0h1m1 0h4m-48 1h4m3 0h2m3 0h4m2 0h3m3 0h2m1 0h2m1 0h9m5 0h1m1 0h1m1 0h1m-46 1h1m2 0h1m4 0h1m1 0h1m1 0h1m3 0h3m1 0h1m2 0h2m3 0h2m2 0h1m1 0h7m1 0h1m2 0h1m-49 1h3m1 0h1m2 0h1m1 0h1m3 0h1m1 0h1m8 0h4m1 0h7m3 0h2m5 0h3m-46 1h1m1 0h2m1 0h1m5 0h1m1 0h3m2 0h2m4 0h3m1 0h2m2 0h5m2 0h1m4 0h2m-49 1h2m2 0h1m2 0h1m2 0h1m1 0h3m2 0h4m1 0h1m1 0h1m1 0h1m3 0h4m1 0h4m1 0h1m2 0h5m-47 1h1m3 0h2m1 0h1m1 0h1m1 0h1m1 0h2m1 0h3m2 0h4m1 0h2m2 0h1m1 0h1m4 0h1m3 0h1m1 0h1m1 0h1m1 0h1m-48 1h3m3 0h4m3 0h1m2 0h1m2 0h1m2 0h3m1 0h1m3 0h1m1 0h1m4 0h3m3 0h1m1 0h1m1 0h1m-49 1h3m3 0h1m2 0h1m3 0h1m1 0h5m2 0h6m1 0h2m1 0h1m3 0h9m1 0h3m-41 1h4m1 0h2m7 0h1m3 0h1m3 0h1m1 0h1m1 0h1m1 0h1m3 0h1m3 0h1m1 0h1m-47 1h7m1 0h4m1 0h2m1 0h1m1 0h5m1 0h1m1 0h4m2 0h1m4 0h1m2 0h1m1 0h1m1 0h5m-49 1h1m5 0h1m1 0h1m4 0h3m1 0h4m1 0h1m3 0h3m5 0h2m1 0h1m1 0h2m3 0h1m2 0h2m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h3m2 0h2m1 0h1m1 0h6m1 0h3m2 0h2m1 0h1m2 0h6m3 0h1m-49 1h1m1 0h3m1 0h1m1 0h4m2 0h2m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m3 0h2m2 0h3m1 0h2m1 0h3m1 0h1m2 0h1m-49 1h1m1 0h3m1 0h1m2 0h2m3 0h1m2 0h2m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m2 0h4m1 0h1m1 0h1m2 0h1m1 0h2m-48 1h1m5 0h1m3 0h1m1 0h1m1 0h2m1 0h5m2 0h1m2 0h1m2 0h1m2 0h4m2 0h1m1 0h2m1 0h1m1 0h3m-49 1h7m1 0h1m2 0h3m2 0h1m2 0h2m1 0h9m1 0h3m1 0h1m2 0h2m2 0h2m3 0h1\"/></svg>\n"
   }
  ],
  "em_preparo": [],
@@ -1003,9 +1062,53 @@ window.CRM_DADOS = {
   ]
  },
  "midia": {
-  "atualizado_em": "2026-10-31T15:35:02-03:00",
+  "atualizado_em": "2026-11-02T16:39:03-03:00",
   "fonte": "o 📲・mídia do Discord da CRM",
   "posts": [
+   {
+    "id": "1566765976572264502",
+    "texto": "https://vt.tiktok.com/ZSgEDfmCm/",
+    "autor_publico": "CRM",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-02T07:48:37-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1566765976572264502",
+    "anexos": [],
+    "tem_video": false
+   },
+   {
+    "id": "1566308311400448070",
+    "texto": "✨ ELE BRILHOU!! Alagusii\n\nAlcançou Lvl 100! - Tier um Traje.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-01T01:30:02-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1566308311400448070",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1566308311400448070_0.webp",
+      "referencia": "site-dados/midia/1566308311400448070_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1566216010498056324",
+    "texto": "✨ ELE BRILHOU!! 乡ÉoZK\n\nAlcançou Lvl 100! - Tier um Traje.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-10-31T19:23:15-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1566216010498056324",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1566216010498056324_0.webp",
+      "referencia": "site-dados/midia/1566216010498056324_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
    {
     "id": "1565771801194397838",
     "texto": "Seja você também o Top 1. Crie estatísticas reais dentro do jogo. Crie seu curriculum profissional mostre seus feitos. Garanta premiações de até $100,00",
@@ -1114,50 +1217,6 @@ window.CRM_DADOS = {
       "url": "assets/midia/1564986974417322005_0.webp",
       "referencia": "site-dados/midia/1564986974417322005_0.webp",
       "alt": "Imagem do post da Playkai Hub"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1564718102657376276",
-    "texto": "💙 💙 PENSANDO EM VOCÊ 💙 💙\n\nEstá procurando emprego? A CRM te ajuda!\nVai pra TP - Teleperformance\n\nA Teleperformance (TP) é uma empresa global que oferece oportunidades de desenvolvimento profissional em diversas áreas!\n\n📍 Temos operações em diferentes regiões do Brasil, incluindo São Paulo (Vila Prudente, Água Branca e Lapa) e Rio Grande do Norte.\n\n💼 Quer fazer parte do nosso time?\n\n📲 Faça seu cadastro pelo link e confira as vagas disponíveis:\n🔗 https://portaldevagas.teleperformance.com.br/3391f?30\n\n📢 Compartilhe com quem está em busca de uma oportunidade!\n\n💙 #VemSerTP #VagasDeEmprego #CRM #coisanossa",
-    "autor_publico": "CRM",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-10-27T16:11:06-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1564718102657376276",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1564718102657376276_0.webp",
-      "referencia": "site-dados/midia/1564718102657376276_0.webp",
-      "alt": "Imagem do post da CRM"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1564717961250471960",
-    "texto": "Site, rádio dream cards todos disponíveis e acessíveis para toda a comunidade. Ganhe moedas crm e adquira nossos serviços.",
-    "autor_publico": "CRM",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-10-27T16:10:33-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1564717961250471960",
-    "anexos": [],
-    "tem_video": false
-   },
-   {
-    "id": "1564717817125933206",
-    "texto": "",
-    "autor_publico": "CRM",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-10-27T16:09:58-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1564717817125933206",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1564717817125933206_0.webp",
-      "referencia": "site-dados/midia/1564717817125933206_0.webp",
-      "alt": "Imagem do post da CRM"
      }
     ],
     "tem_video": false
