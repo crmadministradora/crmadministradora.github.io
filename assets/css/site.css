@@ -292,6 +292,7 @@ section[id], .caixa[id] { scroll-margin-top: 96px; }
 .cartao-arte-inteira{isolation:isolate;display:block}
 .cartao-arte-inteira::before{content:"";position:absolute;inset:-20px;background-image:var(--arte-card);background-size:cover;background-position:center;filter:blur(18px) brightness(.55);z-index:-1}
 .cartao-arte-inteira img{position:absolute;inset:0 0 auto;width:100%;height:calc(100% - 65px);padding:0;object-fit:contain;object-position:center top;mask-image:linear-gradient(#000 68%,transparent 100%)}
+.cartao-arte-inteira.sem-fade img{inset:0;height:100%;object-position:center;mask-image:none}
 .cartao-arte-inteira .cartao-legenda{position:absolute;inset:auto 0 0;padding:54px 20px 20px;background:linear-gradient(transparent,rgba(8,6,12,.86) 38%,rgba(8,6,12,.98));text-align:left}
 .cartao-arte-inteira .cartao-legenda b{font-size:21px}
 .cartao-arte-inteira .cartao-legenda span{font-size:13px;line-height:1.5;color:#ded5e7}

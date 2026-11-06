@@ -129,12 +129,12 @@
     { titulo: "Mídia da comunidade", linha: "Vídeos, avisos e histórias da nossa galera. Vem ver o que chegou.", img: "assets/img/midia-comunidade.png", arteInteira: true, fundo: "ouro", alvo: "#midia-rede", etiqueta: "Na comunidade" },
     { titulo: "Dream Cards", linha: "Manda o print da tua partida de HoK ou MLBB e vira carta, com os teus números de verdade.", img: "assets/img/dream-cards.webp", arteInteira: true, fundo: "roxo", alvo: "#dream-cards", etiqueta: "HoK · MLBB" },
     { titulo: "Bot CRM 2.0", linha: "Menos trabalho repetitivo. Mais tempo pra tua comunidade.", img: "assets/img/bot-crm.webp", contido: true, fundo: "ouro", alvo: "#loja", etiqueta: precoDe("bot") },
-    { titulo: "Sistema de Copa", img: "assets/img/sistema-de-copa.webp", alvo: "#loja", semLegenda: true },
+    { titulo: "Sistema de Copa", img: "assets/img/sistema-de-copa.webp", arteInteira: true, semFade: true, alvo: "#loja", semLegenda: true },
     { titulo: "Configuração de Discord", img: "assets/img/configuracao-discord.webp", alvo: "#loja", semLegenda: true },
     { titulo: "Campanha de Divulgação", img: "assets/img/campanha-divulgacao.png", alvo: "#loja", semLegenda: true },
     { titulo: "Rádio CRM", linha: "Música pra jogar, trocar ideia e curtir com a galera.", img: "assets/img/radio-crm.webp", contido: true, fundo: "ouro", alvo: "#radio", etiqueta: "Na call" },
     { titulo: "Ofertas dos apoiadores", linha: "Produtos, benefícios e links da rede de apoiadores da CRM.", img: "assets/img/divulgacao-direita.webp", alvo: "#ofertas", etiqueta: "Apoiadores" },
-    { titulo: "Sua marca aqui", linha: "Sua marca pode fazer parte dessa comunidade. Fale com a CRM sobre patrocínio.", img: "assets/img/divulgacao-direita.webp", alvo: "#contato", etiqueta: "Patrocínio" },
+    { titulo: "Sua marca aqui", linha: "Sua marca pode fazer parte dessa comunidade. Fale com a CRM sobre patrocínio.", img: "assets/img/divulgacao-direita.webp", alvo: "#apoie", etiqueta: "Patrocínio" },
     { titulo: "Copa do Infinito", linha: "Tua equipe, o próximo desafio. A Copa do Infinito é um projeto CRM.", img: "assets/img/copa-do-infinito.webp", arteInteira: true, fundo: "ouro", alvo: "#copa", etiqueta: "Copa CRM" }
   ];
   var trilho = $("#carrossel-trilho"), pontos = $("#pontos"), atual = 0, timer = null;
@@ -147,13 +147,12 @@
     }
     if (c.etiqueta) filhos.push(el("span", { classe: "cartao-etiqueta", texto: c.etiqueta }));
     if (!c.semLegenda) filhos.push(el("div", { classe: "cartao-legenda" }, [el("b", { texto: c.titulo }), el("span", { texto: c.linha })]));
-    var classe = "cartao" + (c.arteInteira ? " cartao-arte-inteira" : "") + (c.fundo === "roxo" ? " cartao-fundo-roxo" : "") + (c.contido ? " contido" : "") + (c.fundo === "ouro" ? " cartao-fundo-ouro" : "") + (c.kinguin ? " cartao-kinguin" : "");
+    var classe = "cartao" + (c.arteInteira ? " cartao-arte-inteira" : "") + (c.semFade ? " sem-fade" : "") + (c.fundo === "roxo" ? " cartao-fundo-roxo" : "") + (c.contido ? " contido" : "") + (c.fundo === "ouro" ? " cartao-fundo-ouro" : "") + (c.kinguin ? " cartao-kinguin" : "");
     var a = el("a", { classe: classe, href: c.alvo, "aria-label": c.titulo + (c.linha ? ": " + c.linha : "") }, filhos);
     a.dataset.topic = ["midia","dream","bot","sistema-copa","discord","campanha","radio","ofertas","patrocinio","copa"][i];
     if (c.arteInteira) a.style.setProperty("--arte-card", "url(\"" + new URL(c.img, document.baseURI).href + "\")");
-    a.addEventListener("click", function (e) {
-      if (i !== atual) { e.preventDefault(); ir(i); }
-    });
+    // 06/11/2026: o clique num cartão de lado só girava o carrossel e cancelava o link: a Rádio e a Copa "ficavam paradas" (ele). Clicou, vai.
+    a.addEventListener("click", function () { if (i !== atual) ir(i); });
     trilho.appendChild(a);
     var p = el("button", { type: "button", "aria-label": c.titulo });
     p.addEventListener("click", function () { ir(i); });
