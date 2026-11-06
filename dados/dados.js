@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "06/11/2026 16:14",
+ "gerado_em": "06/11/2026 17:07",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -126,7 +126,7 @@ window.CRM_DADOS = {
    "id": "campanha",
    "nome": "Campanha de Divulgação",
    "emoji": "📣",
-   "resumo": "Arte e divulgação pra tua org no Instagram e no WhatsApp",
+   "resumo": "Arte e divulgação pra tua org no Instagram, no WhatsApp e no Discord",
    "planos": [
     {
      "n": 3,
@@ -138,6 +138,7 @@ window.CRM_DADOS = {
       "As artes com a cara da sua org",
       "2 posts por dia no Instagram (o da CRM e o seu)",
       "1 post por dia na comunidade de WhatsApp da CRM",
+      "1 post por dia na rede de mídia do Discord da CRM",
       "Dá pra trocar por CRM coins"
      ]
     },
@@ -151,7 +152,8 @@ window.CRM_DADOS = {
       "Imagem da sua org com a sua paleta",
       "2 posts por dia no Instagram (o da CRM e o seu)",
       "Criação da conta do Instagram, se precisar",
-      "1 post por dia na comunidade de WhatsApp da CRM"
+      "1 post por dia na comunidade de WhatsApp da CRM",
+      "1 post por dia na rede de mídia do Discord da CRM"
      ]
     }
    ],
@@ -280,7 +282,7 @@ window.CRM_DADOS = {
   "comprovante_passo": "No Discord da CRM, no canal 🎩・la-nostra-casa, escolhe **Abrir Ticket** no menu e manda o comprovante ali."
  },
  "numeros": {
-  "medido_em": "06/11/2026 15:23",
+  "medido_em": "06/11/2026 16:21",
   "frases": {
    "servidores": "18 servidores",
    "pessoas": "1.400+ pessoas",
@@ -704,7 +706,7 @@ window.CRM_DADOS = {
  },
  "dreamcards": {
   "temporada": 16,
-  "atualizado_epoch": 1793991991.4061108,
+  "atualizado_epoch": 1793995661.9023738,
   "premio": "Honor of Kings: o 1º do pódio pelo Geral da carta ganha R$ 50,00 (foto do pódio em 07/11/2026). O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
   "cartas": [
    {
@@ -1166,7 +1168,7 @@ window.CRM_DADOS = {
   ]
  },
  "midia": {
-  "atualizado_em": "2026-11-06T16:14:38-03:00",
+  "atualizado_em": "2026-11-06T17:07:34-03:00",
   "fonte": "o 📲・mídia do Discord da CRM",
   "posts": [
    {

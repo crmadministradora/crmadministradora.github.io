@@ -13,4 +13,17 @@
     clearTimeout(timer); timer = setTimeout(function () { aviso.hidden = true; }, 8000);
   }
   document.querySelectorAll('.lateral-logo, .topo-marca').forEach(function (a) { a.addEventListener('click', chamarLogin); });
+
+  /* 06/11/2026 (Claude): a faixa da Copa diz o estado de verdade, do dado da Copa. Sem nada aberto, fica só o convite. */
+  var copa = (window.CRM_DADOS || {}).copa || {}, ins = copa.inscricoes || {};
+  var estado = document.getElementById('copa-atalho-estado'), lado = document.getElementById('copa-atalho-lado');
+  if (estado && lado) {
+    if (copa.ao_vivo) {
+      estado.textContent = 'Ao vivo agora'; estado.className = 'ao-vivo'; lado.textContent = 'Ver os confrontos ↗';
+    } else if (ins.aberta) {
+      var jogo = { mlbb: 'MLBB', hok: 'HoK' }[ins.jogo] || '', edicao = (copa.proxima_edicao || {})[ins.jogo];
+      estado.textContent = 'Inscrições abertas' + (jogo ? ' · ' + jogo : '') + (edicao ? ' · ' + edicao + 'ª edição' : '');
+      lado.textContent = 'Ver as inscrições ↗';
+    }
+  }
 })();

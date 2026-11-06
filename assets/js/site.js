@@ -63,7 +63,7 @@
     "Copa Discord": { resumo: "Até 16 times: inscrição automática, sorteio, chaves e resultados.", cta: "Comprar no Discord" },
     "Copa + WhatsApp": { resumo: "Tudo da Copa Discord, mais a comunidade de WhatsApp do campeonato.", cta: "Comprar no Discord" },
     "Configuração de Discord": { resumo: "Cargos, canais, permissões e o Bot CRM 2.0 instalado.", cta: "Comprar no Discord" },
-    "Campanha de Divulgação": { resumo: "Arte da tua org, dois posts por dia no Instagram, às 12h e às 20h, e divulgação diária na comunidade de WhatsApp da CRM.", cta: "Comprar no Discord" },
+    "Campanha de Divulgação": { resumo: "Arte da tua org, com direção de Michael Amorim: dois posts por dia no Instagram, às 12h e às 20h, e um post por dia no WhatsApp e na rede de mídia do Discord da CRM.", cta: "Comprar no Discord" },
     "Bot CRM 2.0": { resumo: "O bot da CRM no teu servidor, feito e mantido pela CRM.", cta: "Adicionar o bot" }
   };
   (function () {
