@@ -132,6 +132,7 @@
     { titulo: "Sistema de Copa", img: "assets/img/sistema-de-copa.webp", arteInteira: true, semFade: true, alvo: "#loja", semLegenda: true },
     { titulo: "Configuração de Discord", img: "assets/img/configuracao-discord.webp", alvo: "#loja", semLegenda: true },
     { titulo: "Campanha de Divulgação", img: "assets/img/campanha-divulgacao.png", alvo: "#loja", semLegenda: true },
+    { titulo: "Site da sua Org", img: "assets/img/site-da-org.webp", arteInteira: true, semFade: true, alvo: "#loja", semLegenda: true },
     { titulo: "Rádio CRM", linha: "Música pra jogar, trocar ideia e curtir com a galera.", img: "assets/img/radio-crm.webp", contido: true, fundo: "ouro", alvo: "#radio", etiqueta: "Na call" },
     { titulo: "Ofertas dos apoiadores", linha: "Produtos, benefícios e links da rede de apoiadores da CRM.", img: "assets/img/divulgacao-direita.webp", alvo: "#ofertas", etiqueta: "Apoiadores" },
     { titulo: "Sua marca aqui", linha: "Sua marca pode fazer parte dessa comunidade. Fale com a CRM sobre patrocínio.", img: "assets/img/divulgacao-direita.webp", alvo: "#apoie", etiqueta: "Patrocínio" },
