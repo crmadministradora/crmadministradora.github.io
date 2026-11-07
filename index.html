@@ -33,6 +33,7 @@
 <link rel="stylesheet" href="assets/css/radio-mini.css?v=p50">
 <link rel="stylesheet" href="assets/css/feedback-adm.css?v=1">
 <link rel="stylesheet" href="assets/css/faixa-copa.css?v=1">
+<link rel="stylesheet" href="assets/css/copa-inscricao.css?v=2">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -105,7 +106,7 @@
     <span class="sobretitulo">SUA COMUNIDADE, EM UM LUGAR</span><h2 id="resumo-titulo">Por onde <em>vamos hoje?</em></h2>
     <div class="resumo-portas"><a href="#dream-cards"><img src="assets/img/dream-cards.webp" alt="" width="900" height="900"><div><span>DREAM CARDS</span><h3>Tua história em jogo.</h3><p>Pódio, cartas e loja de trajes.</p><b>Entrar na área ↗</b></div></a><a href="#copa"><img src="assets/img/copa-do-infinito.webp" alt="" width="900" height="900"><div><span>COPA DO INFINITO</span><h3>O caminho até o título.</h3><p>Times, confrontos e resultados.</p><b>Entrar na Copa ↗</b></div></a></div>
   </section>
-  <a class="feed-atalho copa-atalho" id="copa-atalho" href="#copa"><i class="copa-atalho-nome"><img src="assets/img/copa-escudo.webp" alt="" width="44" height="44">Copa do Infinito<b id="copa-atalho-estado"></b></i> <span id="copa-atalho-lado">Times, confrontos e resultados ↗</span></a>
+  <a class="feed-atalho copa-atalho" id="copa-atalho" href="#copa-inscricao"><i class="copa-atalho-nome"><img src="assets/img/copa-escudo.webp" alt="" width="44" height="44">Copa do Infinito<b id="copa-atalho-estado"></b></i> <span id="copa-atalho-lado">Times, confrontos e resultados ↗</span></a>
   <a class="feed-atalho" href="#midia-rede">▷ Feed da comunidade <span>Vídeos, avisos e conversas ↗</span></a>
   <section class="secao" id="midia-ultima" aria-labelledby="ultima-titulo"><div class="midia-section-head"><div><span class="sobretitulo">ACONTECE NA COMUNIDADE</span><h2 id="ultima-titulo">A última <em>da galera.</em></h2></div><a class="botao botao-pequeno" href="#midia-rede">Ver todo o mural ↗</a></div><div id="midia-destaque"></div></section>
   <section class="secao midia-rede" id="midia-rede" aria-labelledby="midia-titulo">
@@ -226,10 +227,18 @@
       <h2 id="titulo-copa">Tua equipe, <em>o próximo desafio.</em></h2>
       <p>O campeonato da CRM de Honor of Kings e Mobile Legends. A Copa do Infinito é um projeto CRM.</p>
       <p class="data-referencia" data-data-servicos></p>
-      <a class="botao" data-link="copa_discord" target="_blank" rel="noopener">Conhecer a Copa</a>
+      <a class="botao" href="#copa-inscricao">Inscrever meu time</a>
     </div>
   </section>
 
+  <section class="secao copa-insc" id="copa-inscricao" aria-labelledby="titulo-copa-insc">
+    <span class="sobretitulo">COPA DO INFINITO / INSCRIÇÕES</span>
+    <h2 id="titulo-copa-insc">Inscreve <em>teu time.</em></h2>
+    <dl class="copa-fatos" id="copa-fatos"></dl>
+    <div class="copa-acao" id="copa-acao" aria-live="polite"><p class="copa-nota">Carregando as inscrições...</p></div>
+    <h3 id="copa-inscritos-titulo">Times inscritos</h3>
+    <ul class="copa-inscritos" id="copa-inscritos"></ul>
+  </section>
   <section class="secao" id="copa-painel" aria-labelledby="titulo-chave">
     <span class="sobretitulo">COPA DO INFINITO / EDIÇÕES E RESULTADOS</span>
     <h2 id="titulo-chave">O caminho <em>até o título.</em></h2>
@@ -365,23 +374,24 @@
 <script src="assets/js/site.js?v=20261107"></script>
 <script src="assets/js/radio-mini.js?v=p50"></script>
 <script src="assets/js/comunidade.js?v=20261028-areas"></script>
-<script src="assets/js/coins.js?v=menu-icons-1"></script>
+<script src="assets/js/coins.js?v=20261107"></script>
 <script src="assets/js/card-shop.js?v=20261107"></script>
 <script src="assets/js/anuncie.js?v=p39-1"></script>
 <dialog id="carta-ampliada" aria-labelledby="carta-ampliada-titulo"><button type="button" class="fechar-dialogo" aria-label="Fechar carta">×</button><h2 id="carta-ampliada-titulo"></h2><img id="carta-ampliada-img" alt=""></dialog>
 <script src="assets/js/midia-social.js?v=s4"></script>
 
-<script src="assets/js/areas.js?v=chat1"></script>
+<script src="assets/js/areas.js?v=20261107"></script>
 <script src="assets/js/atividade.js?v=p36"></script>
 <script src="assets/js/radio-contadores.js?v=p36"></script>
 <script src="assets/js/midia-api.js?v=chat1"></script>
 <script src="assets/js/dreamcards-site.js?v=2"></script>
 <script src="assets/js/visor.js?v=unicos1"></script>
 <script src="assets/js/midia.js?v=p34"></script>
-<script src="assets/js/p39.js?v=1"></script>
+<script src="assets/js/p39.js?v=20261107"></script>
 <script src="assets/js/comunidade-interacoes.js?v=coracao1"></script>
 <script src="assets/js/topicos-api.js?v=1"></script>
 <script src="assets/js/chat-site.js?v=1"></script>
+<script src="assets/js/copa-inscricao.js?v=2"></script>
 <script src="assets/js/inicio.js?v=20261106"></script>
 <script src="assets/js/feedback-adm.js?v=1"></script>
 <script src="assets/js/numeros-vivos.js?v=p39-2"></script>

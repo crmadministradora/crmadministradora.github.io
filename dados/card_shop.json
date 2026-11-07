@@ -1,9 +1,9 @@
 {
- "atualizado": "2026-11-06 16:13",
- "fonte": "o catalogo VIVO do Dream Cards (VPS 2), gerado por ferramentas/midiacrm/card_shop_do_site.py em 2026-11-06 16:13. Muda preco ou carta = gera de novo; o site nao inventa preco.",
+ "atualizado": "2026-11-07 15:40",
+ "fonte": "o catalogo VIVO do Dream Cards (VPS 2), gerado por ferramentas/midiacrm/card_shop_do_site.py em 2026-11-07 15:40. Muda preco ou carta = gera de novo; o site nao inventa preco.",
  "regras": {
   "pagamento": "DUAS FORMAS ALTERNATIVAS: PIX em reais OU CRM coins. Cada carta tem os dois precos cadastrados.",
-  "conversao": "Depois da promocao, o preco em coins de cada carta e o dobro do preco em reais, arredondado pra cima.",
+  "conversao": "O preco em coins de cada carta e o dobro do preco em reais, com os centavos, sem arredondar (1 coin = R$ 0,50).",
   "promocao": "R$ 10,00 ou 10 CRM coins nas cartas do Card Shop ate o fim em promocao_fim. Depois vale o preco de cada carta (depois_*), e o site troca sozinho.",
   "colecao": "colecao so' AGRUPA trajes (navegacao). Nao se vende colecao inteira.",
   "compra_fase_1": "o site MOSTRA; a compra acontece no Discord, no Card Shop do jogo (links em onde_comprar). Quem nao esta' no servidor entra pelo convite do links.json.",
@@ -51,12 +51,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1000,
     "preco_reais_texto": "R$ 10,00",
-    "preco_coins": 20,
+    "preco_coins": 20.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1000,
     "depois_reais_texto": "R$ 10,00",
-    "depois_coins": 20
+    "depois_coins": 20.0
    },
    {
     "id": "raiz_de_jade",
@@ -69,12 +69,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1250,
     "preco_reais_texto": "R$ 12,50",
-    "preco_coins": 25,
+    "preco_coins": 25.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1250,
     "depois_reais_texto": "R$ 12,50",
-    "depois_coins": 25
+    "depois_coins": 25.0
    },
    {
     "id": "forja_ambar",
@@ -87,12 +87,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1250,
     "preco_reais_texto": "R$ 12,50",
-    "preco_coins": 25,
+    "preco_coins": 25.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1250,
     "depois_reais_texto": "R$ 12,50",
-    "depois_coins": 25
+    "depois_coins": 25.0
    },
    {
     "id": "aurora_solar",
@@ -105,12 +105,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1255,
     "preco_reais_texto": "R$ 12,55",
-    "preco_coins": 26,
+    "preco_coins": 25.1,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1255,
     "depois_reais_texto": "R$ 12,55",
-    "depois_coins": 26
+    "depois_coins": 25.1
    },
    {
     "id": "obelisco_indigo",
@@ -123,12 +123,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1300,
     "preco_reais_texto": "R$ 13,00",
-    "preco_coins": 26,
+    "preco_coins": 26.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1300,
     "depois_reais_texto": "R$ 13,00",
-    "depois_coins": 26
+    "depois_coins": 26.0
    },
    {
     "id": "arquivo_astral",
@@ -137,16 +137,16 @@
     "raridade": 2,
     "raridade_nome": "Nível 2",
     "teto": 10,
-    "restam": 9,
+    "restam": 10,
     "disponivel": true,
     "preco_reais_centavos": 1400,
     "preco_reais_texto": "R$ 14,00",
-    "preco_coins": 28,
+    "preco_coins": 28.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1400,
     "depois_reais_texto": "R$ 14,00",
-    "depois_coins": 28
+    "depois_coins": 28.0
    },
    {
     "id": "mare_de_cobre",
@@ -159,12 +159,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1450,
     "preco_reais_texto": "R$ 14,50",
-    "preco_coins": 29,
+    "preco_coins": 29.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1450,
     "depois_reais_texto": "R$ 14,50",
-    "depois_coins": 29
+    "depois_coins": 29.0
    },
    {
     "id": "eclipse_ceruleo",
@@ -177,12 +177,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1450,
     "preco_reais_texto": "R$ 14,50",
-    "preco_coins": 29,
+    "preco_coins": 29.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1450,
     "depois_reais_texto": "R$ 14,50",
-    "depois_coins": 29
+    "depois_coins": 29.0
    },
    {
     "id": "nevoa_violeta",
@@ -195,12 +195,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1500,
     "preco_reais_texto": "R$ 15,00",
-    "preco_coins": 30,
+    "preco_coins": 30.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1500,
     "depois_reais_texto": "R$ 15,00",
-    "depois_coins": 30
+    "depois_coins": 30.0
    },
    {
     "id": "elementales_04",
@@ -213,12 +213,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1000,
     "preco_reais_texto": "R$ 10,00",
-    "preco_coins": 20,
+    "preco_coins": 20.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1000,
     "depois_reais_texto": "R$ 10,00",
-    "depois_coins": 20
+    "depois_coins": 20.0
    },
    {
     "id": "elementales_05",
@@ -231,12 +231,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1000,
     "preco_reais_texto": "R$ 10,00",
-    "preco_coins": 20,
+    "preco_coins": 20.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1000,
     "depois_reais_texto": "R$ 10,00",
-    "depois_coins": 20
+    "depois_coins": 20.0
    },
    {
     "id": "elementales_07",
@@ -249,12 +249,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1000,
     "preco_reais_texto": "R$ 10,00",
-    "preco_coins": 20,
+    "preco_coins": 20.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1000,
     "depois_reais_texto": "R$ 10,00",
-    "depois_coins": 20
+    "depois_coins": 20.0
    },
    {
     "id": "elementales_01",
@@ -267,12 +267,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1010,
     "preco_reais_texto": "R$ 10,10",
-    "preco_coins": 21,
+    "preco_coins": 20.2,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1010,
     "depois_reais_texto": "R$ 10,10",
-    "depois_coins": 21
+    "depois_coins": 20.2
    },
    {
     "id": "elementales_10",
@@ -285,12 +285,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1100,
     "preco_reais_texto": "R$ 11,00",
-    "preco_coins": 22,
+    "preco_coins": 22.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1100,
     "depois_reais_texto": "R$ 11,00",
-    "depois_coins": 22
+    "depois_coins": 22.0
    },
    {
     "id": "elementales_08",
@@ -303,12 +303,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "elementales_06",
@@ -321,12 +321,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1390,
     "preco_reais_texto": "R$ 13,90",
-    "preco_coins": 28,
+    "preco_coins": 27.8,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1390,
     "depois_reais_texto": "R$ 13,90",
-    "depois_coins": 28
+    "depois_coins": 27.8
    },
    {
     "id": "elementales_02",
@@ -339,12 +339,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1400,
     "preco_reais_texto": "R$ 14,00",
-    "preco_coins": 28,
+    "preco_coins": 28.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1400,
     "depois_reais_texto": "R$ 14,00",
-    "depois_coins": 28
+    "depois_coins": 28.0
    },
    {
     "id": "elementales_09",
@@ -357,12 +357,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1500,
     "preco_reais_texto": "R$ 15,00",
-    "preco_coins": 30,
+    "preco_coins": 30.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1500,
     "depois_reais_texto": "R$ 15,00",
-    "depois_coins": 30
+    "depois_coins": 30.0
    },
    {
     "id": "elementales_03",
@@ -371,16 +371,16 @@
     "raridade": 4,
     "raridade_nome": "Nível 4",
     "teto": 3,
-    "restam": 2,
+    "restam": 3,
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    },
    {
     "id": "narrativas_ninja",
@@ -389,16 +389,16 @@
     "raridade": 4,
     "raridade_nome": "Nível 4",
     "teto": 10,
-    "restam": 9,
+    "restam": 10,
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    },
    {
     "id": "narrativas_mafia",
@@ -411,12 +411,12 @@
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    },
    {
     "id": "narrativas_ceu_azul",
@@ -429,12 +429,12 @@
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    },
    {
     "id": "narrativas_samuray",
@@ -447,12 +447,12 @@
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    },
    {
     "id": "narrativas_universo",
@@ -465,12 +465,12 @@
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    },
    {
     "id": "narrativas_dream_rara",
@@ -483,12 +483,12 @@
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    }
   ],
   "mlbb": [
@@ -503,12 +503,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1000,
     "preco_reais_texto": "R$ 10,00",
-    "preco_coins": 20,
+    "preco_coins": 20.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1000,
     "depois_reais_texto": "R$ 10,00",
-    "depois_coins": 20
+    "depois_coins": 20.0
    },
    {
     "id": "basalto_rubro",
@@ -521,12 +521,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1100,
     "preco_reais_texto": "R$ 11,00",
-    "preco_coins": 22,
+    "preco_coins": 22.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1100,
     "depois_reais_texto": "R$ 11,00",
-    "depois_coins": 22
+    "depois_coins": 22.0
    },
    {
     "id": "atelie_de_bronze",
@@ -539,12 +539,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1100,
     "preco_reais_texto": "R$ 11,00",
-    "preco_coins": 22,
+    "preco_coins": 22.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1100,
     "depois_reais_texto": "R$ 11,00",
-    "depois_coins": 22
+    "depois_coins": 22.0
    },
    {
     "id": "seda_noturna",
@@ -557,12 +557,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1100,
     "preco_reais_texto": "R$ 11,00",
-    "preco_coins": 22,
+    "preco_coins": 22.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1100,
     "depois_reais_texto": "R$ 11,00",
-    "depois_coins": 22
+    "depois_coins": 22.0
    },
    {
     "id": "noite_de_veludo",
@@ -575,12 +575,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1300,
     "preco_reais_texto": "R$ 13,00",
-    "preco_coins": 26,
+    "preco_coins": 26.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1300,
     "depois_reais_texto": "R$ 13,00",
-    "depois_coins": 26
+    "depois_coins": 26.0
    },
    {
     "id": "jardim_neon",
@@ -593,12 +593,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1300,
     "preco_reais_texto": "R$ 13,00",
-    "preco_coins": 26,
+    "preco_coins": 26.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1300,
     "depois_reais_texto": "R$ 13,00",
-    "depois_coins": 26
+    "depois_coins": 26.0
    },
    {
     "id": "horizonte_prisma",
@@ -607,16 +607,16 @@
     "raridade": 2,
     "raridade_nome": "Nível 2",
     "teto": 5,
-    "restam": 4,
+    "restam": 5,
     "disponivel": true,
     "preco_reais_centavos": 1500,
     "preco_reais_texto": "R$ 15,00",
-    "preco_coins": 30,
+    "preco_coins": 30.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1500,
     "depois_reais_texto": "R$ 15,00",
-    "depois_coins": 30
+    "depois_coins": 30.0
    },
    {
     "id": "coroa_boreal",
@@ -629,12 +629,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1700,
     "preco_reais_texto": "R$ 17,00",
-    "preco_coins": 34,
+    "preco_coins": 34.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1700,
     "depois_reais_texto": "R$ 17,00",
-    "depois_coins": 34
+    "depois_coins": 34.0
    },
    {
     "id": "fairy_01",
@@ -647,12 +647,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1499,
     "preco_reais_texto": "R$ 14,99",
-    "preco_coins": 30,
+    "preco_coins": 29.98,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1499,
     "depois_reais_texto": "R$ 14,99",
-    "depois_coins": 30
+    "depois_coins": 29.98
    },
    {
     "id": "fairy_02",
@@ -665,12 +665,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1499,
     "preco_reais_texto": "R$ 14,99",
-    "preco_coins": 30,
+    "preco_coins": 29.98,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1499,
     "depois_reais_texto": "R$ 14,99",
-    "depois_coins": 30
+    "depois_coins": 29.98
    },
    {
     "id": "fairy_03",
@@ -683,12 +683,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1499,
     "preco_reais_texto": "R$ 14,99",
-    "preco_coins": 30,
+    "preco_coins": 29.98,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1499,
     "depois_reais_texto": "R$ 14,99",
-    "depois_coins": 30
+    "depois_coins": 29.98
    },
    {
     "id": "fairy_04",
@@ -701,12 +701,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1499,
     "preco_reais_texto": "R$ 14,99",
-    "preco_coins": 30,
+    "preco_coins": 29.98,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1499,
     "depois_reais_texto": "R$ 14,99",
-    "depois_coins": 30
+    "depois_coins": 29.98
    },
    {
     "id": "fairy_05",
@@ -715,16 +715,16 @@
     "raridade": 1,
     "raridade_nome": "Nível 1",
     "teto": 10,
-    "restam": 9,
+    "restam": 10,
     "disponivel": true,
     "preco_reais_centavos": 1499,
     "preco_reais_texto": "R$ 14,99",
-    "preco_coins": 30,
+    "preco_coins": 29.98,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1499,
     "depois_reais_texto": "R$ 14,99",
-    "depois_coins": 30
+    "depois_coins": 29.98
    },
    {
     "id": "narrativas_robo_1",
@@ -737,12 +737,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1500,
     "preco_reais_texto": "R$ 15,00",
-    "preco_coins": 30,
+    "preco_coins": 30.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1500,
     "depois_reais_texto": "R$ 15,00",
-    "depois_coins": 30
+    "depois_coins": 30.0
    },
    {
     "id": "narrativas_navio_fantasma",
@@ -755,12 +755,12 @@
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    },
    {
     "id": "narrativas_teatro",
@@ -773,12 +773,12 @@
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    },
    {
     "id": "narrativas_nipon",
@@ -791,12 +791,12 @@
     "disponivel": true,
     "preco_reais_centavos": 2500,
     "preco_reais_texto": "R$ 25,00",
-    "preco_coins": 50,
+    "preco_coins": 50.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2500,
     "depois_reais_texto": "R$ 25,00",
-    "depois_coins": 50
+    "depois_coins": 50.0
    },
    {
     "id": "sky_01",
@@ -809,12 +809,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "sky_02",
@@ -827,12 +827,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "sky_03",
@@ -845,12 +845,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "sky_04",
@@ -863,12 +863,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "sky_06",
@@ -881,12 +881,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "sky_07",
@@ -899,12 +899,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "sky_08",
@@ -917,12 +917,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "sky_09",
@@ -935,12 +935,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "sky_10",
@@ -953,12 +953,12 @@
     "disponivel": true,
     "preco_reais_centavos": 1200,
     "preco_reais_texto": "R$ 12,00",
-    "preco_coins": 24,
+    "preco_coins": 24.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 1200,
     "depois_reais_texto": "R$ 12,00",
-    "depois_coins": 24
+    "depois_coins": 24.0
    },
    {
     "id": "sky_05",
@@ -971,48 +971,12 @@
     "disponivel": true,
     "preco_reais_centavos": 2100,
     "preco_reais_texto": "R$ 21,00",
-    "preco_coins": 42,
+    "preco_coins": 42.0,
     "promocao": false,
     "promocao_ate": "",
     "depois_reais_centavos": 2100,
     "depois_reais_texto": "R$ 21,00",
-    "depois_coins": 42
-   },
-   {
-    "id": "narrativas_robo_2",
-    "jogo": "mlbb",
-    "nome": "Systen Secure",
-    "raridade": 3,
-    "raridade_nome": "Nível 3",
-    "teto": null,
-    "restam": null,
-    "disponivel": true,
-    "preco_reais_centavos": 1000,
-    "preco_reais_texto": "R$ 10,00",
-    "preco_coins": 10,
-    "promocao": false,
-    "promocao_ate": "",
-    "depois_reais_centavos": 1000,
-    "depois_reais_texto": "R$ 10,00",
-    "depois_coins": 10
-   },
-   {
-    "id": "narrativas_robo_3",
-    "jogo": "mlbb",
-    "nome": "Systen Domain",
-    "raridade": 4,
-    "raridade_nome": "Nível 4",
-    "teto": null,
-    "restam": null,
-    "disponivel": true,
-    "preco_reais_centavos": 1000,
-    "preco_reais_texto": "R$ 10,00",
-    "preco_coins": 10,
-    "promocao": false,
-    "promocao_ate": "",
-    "depois_reais_centavos": 1000,
-    "depois_reais_texto": "R$ 10,00",
-    "depois_coins": 10
+    "depois_coins": 42.0
    }
   ]
  },

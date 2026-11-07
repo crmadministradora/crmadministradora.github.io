@@ -27,7 +27,7 @@
  window.CRM_OFFERS={connect:function(source){if(!source||typeof source.load!=='function')throw Error('Fonte de ofertas ausente');offersSource=source;refreshOffers();},refresh:refreshOffers};
  setInterval(function(){if(!document.hidden)refreshOffers();},60000);
  var reg=(d.copa||{}).inscricoes||{};
- if(reg.aberta)document.getElementById('copa-inscrever').textContent='Inscrever meu time no Discord ↗';
+ if(reg.aberta)document.getElementById('copa-inscrever').textContent='Acompanhar no Discord da Copa ↗';
  if((d.copa||{}).ao_vivo){document.getElementById('copa-historico').open=true;document.querySelector('#copa-historico>summary').textContent='Edição em andamento e resultados';}
  // The monthly product already has a real payment export, although missing in produtos.
  var monthly=(d.loja_pix||[]).find(function(p){return p.produto==='campanha'&&/mensal/i.test(p.plano);});

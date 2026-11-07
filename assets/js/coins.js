@@ -208,7 +208,7 @@
       var persisted = save('crm_sessao', session); updateLogin(result.usuario); showProfile();
       if (back && back.startsWith('/') && !back.startsWith('//')) {
         var target = new URL(back, location.origin);
-        if (target.origin === location.origin) { history.replaceState(null, '', target.pathname + target.search + target.hash); if (target.hash) document.getElementById(target.hash.slice(1))?.scrollIntoView(); }
+        if (target.origin === location.origin) { history.replaceState(null, '', target.pathname + target.search + target.hash); window.dispatchEvent(new HashChangeEvent('hashchange')); if (target.hash) document.getElementById(target.hash.slice(1))?.scrollIntoView(); }
       }
       await openAccount();
       if (!persisted) status.textContent = 'Você entrou nesta aba, mas o navegador não permitiu salvar a sessão. Ao fechar, será preciso entrar de novo.';
