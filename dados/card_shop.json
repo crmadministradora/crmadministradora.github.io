@@ -1,6 +1,6 @@
 {
- "atualizado": "2026-11-08 15:18",
- "fonte": "o catalogo VIVO do Dream Cards (VPS 2), gerado por ferramentas/midiacrm/card_shop_do_site.py em 2026-11-08 15:18. Muda preco ou carta = gera de novo; o site nao inventa preco.",
+ "atualizado": "2026-11-08 15:38",
+ "fonte": "o catalogo VIVO do Dream Cards (VPS 2), gerado por ferramentas/midiacrm/card_shop_do_site.py em 2026-11-08 15:38. Muda preco ou carta = gera de novo; o site nao inventa preco.",
  "regras": {
   "pagamento": "DUAS FORMAS ALTERNATIVAS: PIX em reais OU CRM coins. Cada carta tem os dois precos cadastrados.",
   "conversao": "O preco em coins de cada carta e o dobro do preco em reais, com os centavos, sem arredondar (1 coin = R$ 0,50).",
@@ -861,6 +861,26 @@
     "depois_reais_centavos": 1499,
     "depois_reais_texto": "R$ 14,99",
     "depois_coins": 29.98
+   },
+   {
+    "id": "india_place_1",
+    "jogo": "mlbb",
+    "nome": "India Place 1",
+    "raridade": 2,
+    "colecao": "India Place",
+    "colecao_rotulo": "Edição",
+    "raridade_nome": "Nível 2",
+    "teto": 50,
+    "restam": 50,
+    "disponivel": true,
+    "preco_reais_centavos": 900,
+    "preco_reais_texto": "R$ 9,00",
+    "preco_coins": 18.0,
+    "promocao": false,
+    "promocao_ate": "",
+    "depois_reais_centavos": 900,
+    "depois_reais_texto": "R$ 9,00",
+    "depois_coins": 18.0
    },
    {
     "id": "narrativas_robo_1",
