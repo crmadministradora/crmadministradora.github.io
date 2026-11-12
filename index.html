@@ -23,10 +23,11 @@
 <link rel="stylesheet" href="assets/css/card-shop.css?v=p27">
 <link rel="stylesheet" href="assets/css/anuncie.css?v=p31">
 <link rel="stylesheet" href="assets/css/areas.css?v=areas4">
+<link rel="stylesheet" href="assets/css/patrocinadores.css?v=p137-20261112">
 <link rel="stylesheet" href="assets/css/midia.css?v=2">
 <link rel="stylesheet" href="assets/css/radio-contadores.css?v=p36">
 <link rel="stylesheet" href="assets/css/p39.css?v=coracao1">
-<link rel="stylesheet" href="assets/css/dreamcards-site.css?v=1">
+<link rel="stylesheet" href="assets/css/dreamcards-site.css?v=p136-20261112">
 <link rel="stylesheet" href="assets/css/radio-discos.css?v=1">
 <link rel="stylesheet" href="assets/css/ajustes-topo.css?v=1">
 <link rel="stylesheet" href="assets/css/chat-site.css?v=2">
@@ -202,7 +203,7 @@
     <p class="secao-sub">Todas as cartas do <b>/albumhok</b>. Toque numa carta pra ver de perto.</p>
     <div class="dc-album-filtros">
       <div class="dc-jogos" role="group" aria-label="Escolher jogo"><button type="button" data-dc-jogo="hok" aria-pressed="true">Honor of Kings</button><button type="button" data-dc-jogo="mlbb" aria-pressed="false">Mobile Legends</button></div>
-      <label class="dc-campo"><span>Ordem</span><select id="dc-album-ordem"><option value="album">Álbum</option><option value="geral">Ranking Geral</option><option value="versatilidade">Versatilidade</option><option value="inteligencia">Inteligência</option><option value="macro">Macro</option><option value="micro">Micro</option></select></label>
+      <label class="dc-campo"><span>Tipos</span><select id="dc-album-ordem"><option value="album">Álbum</option><option value="geral">Ranking Geral</option><option value="versatilidade">Versatilidade</option><option value="inteligencia">Inteligência</option><option value="macro">Macro</option><option value="micro">Micro</option><option value="imortais">Imortais</option></select></label>
       <label class="dc-campo"><span>Buscar nick</span><input id="dc-album-busca" type="search" maxlength="40" autocomplete="off" placeholder="nick no jogo"></label>
     </div>
     <p id="dc-album-status" class="data-referencia" role="status"></p>
@@ -347,8 +348,16 @@
   </section>
 </main>
 
-<aside class="lateral-dir" aria-label="Copa e divulgação">
+<aside class="lateral-dir" aria-label="Copa, patrocinadores e divulgação">
   <a class="copa-direita" href="#copa"><img src="assets/img/copa-do-infinito.webp" alt="" width="900" height="900"><b>Copa do Infinito</b><span>Times e chave ↗</span></a>
+  <a class="copa-direita patrocinador-card patrocinador-zenyt" href="https://zenytcloud.com/?ref=crmadministradora" target="_blank" rel="noopener sponsored">
+    <img src="assets/img/zenyt-logo.png" alt="" width="1195" height="198" loading="lazy">
+    <small class="patrocinador-rotulo">Patrocinador</small><b>ZenytCloud</b><span>Servidores e VPS ↗</span><small class="patrocinador-aviso">#ad · Publicidade</small>
+  </a>
+  <a class="copa-direita patrocinador-card patrocinador-mega" href="https://megadedicados.com.br/" target="_blank" rel="noopener sponsored">
+    <img src="assets/img/megadedicados-logo.png" alt="" width="878" height="193" loading="lazy">
+    <small class="patrocinador-rotulo">Patrocinador</small><b>Mega Dedicados</b><span>VPS e servidores dedicados ↗</span><small class="patrocinador-aviso">#ad · Publicidade</small>
+  </a>
   <a class="divulgacao" href="#anuncie" aria-label="Sua divulgação aqui: fale com a CRM sobre patrocínio">
     <img src="assets/img/divulgacao-direita.webp" alt="" width="350" height="700" loading="lazy">
   </a>
@@ -377,6 +386,10 @@
 <script src="assets/js/coins.js?v=20261107"></script>
 <script src="assets/js/card-shop.js?v=20261108"></script>
 <script src="assets/js/anuncie.js?v=p39-1"></script>
+<dialog id="dc-detalhes" class="dc-detalhes" aria-labelledby="dc-detalhes-titulo">
+  <header class="dc-detalhes-cabecalho"><div><span class="dc-detalhes-sobretitulo">Detalhes do jogador</span><h2 id="dc-detalhes-titulo"></h2></div><button id="dc-detalhes-fechar" type="button" aria-label="Fechar detalhes">×</button></header>
+  <div id="dc-detalhes-corpo" aria-live="polite" aria-atomic="false"></div>
+</dialog>
 <dialog id="carta-ampliada" aria-labelledby="carta-ampliada-titulo"><button type="button" class="fechar-dialogo" aria-label="Fechar carta">×</button><h2 id="carta-ampliada-titulo"></h2><img id="carta-ampliada-img" alt=""></dialog>
 <script src="assets/js/midia-social.js?v=s4"></script>
 
@@ -384,7 +397,7 @@
 <script src="assets/js/atividade.js?v=p36"></script>
 <script src="assets/js/radio-contadores.js?v=p36"></script>
 <script src="assets/js/midia-api.js?v=chat1"></script>
-<script src="assets/js/dreamcards-site.js?v=2"></script>
+<script src="assets/js/dreamcards-site.js?v=p136-20261112"></script>
 <script src="assets/js/visor.js?v=unicos1"></script>
 <script src="assets/js/midia.js?v=p34"></script>
 <script src="assets/js/p39.js?v=20261107"></script>

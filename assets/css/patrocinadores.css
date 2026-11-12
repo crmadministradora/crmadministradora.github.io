@@ -1,0 +1,19 @@
+/* P137: marcas oficiais e identificação publicitária em todas as telas. */
+.lateral-dir{overflow-y:auto}
+.patrocinador-card{--patrocinador:#a855f7;gap:7px;border-color:color-mix(in srgb,var(--patrocinador) 44%,transparent);background:linear-gradient(145deg,#21132f,var(--superficie));transition:border-color .2s,background .2s}
+.patrocinador-card img{height:88px;max-height:88px;width:100%;object-fit:contain;padding:10px 0}
+.patrocinador-card .patrocinador-rotulo{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#d9b9fa}
+.patrocinador-card span{color:#e1c8fb;font-size:12px}
+.patrocinador-card .patrocinador-aviso{font-size:10px;color:#bcb1c9}
+.patrocinador-mega{--patrocinador:#00b4e6;background:linear-gradient(145deg,#02253d,var(--superficie))}
+.patrocinador-mega .patrocinador-rotulo,.patrocinador-mega span{color:#8ce7ff}
+.patrocinador-card:hover{border-color:var(--patrocinador)}
+.patrocinador-card:focus-visible{outline:3px solid var(--dourado-claro);outline-offset:4px}
+/* A coluna antiga desaparecia a 1280px. Só os dois novos patrocinadores continuam abaixo do conteúdo. */
+@media(max-width:1280px){
+ .lateral-dir{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:auto;margin:0 0 0 var(--lateral);padding:0 28px 24px;overflow:visible}
+ .lateral-dir>:not(.patrocinador-card){display:none}
+ .lateral-dir .patrocinador-card{margin:0;min-width:0}
+}
+@media(max-width:960px){.lateral-dir{padding:0 16px 24px}}
+@media(max-width:560px){.lateral-dir{grid-template-columns:1fr}.patrocinador-card img{height:80px;max-height:80px}}
