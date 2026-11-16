@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "06/11/2026 17:07",
+ "gerado_em": "16/11/2026 12:11",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -282,14 +282,14 @@ window.CRM_DADOS = {
   "comprovante_passo": "No Discord da CRM, no canal 🎩・la-nostra-casa, escolhe **Abrir Ticket** no menu e manda o comprovante ali."
  },
  "numeros": {
-  "medido_em": "06/11/2026 16:21",
+  "medido_em": "15/11/2026 21:37",
   "frases": {
    "servidores": "18 servidores",
-   "pessoas": "1.400+ pessoas",
-   "membros": "1.800+ membros na rede",
-   "cartas": "116 cartas",
-   "partidas": "4.000+ partidas lidas",
-   "prints": "6.000+ prints",
+   "pessoas": "1.500+ pessoas",
+   "membros": "1.900+ membros na rede",
+   "cartas": "130 cartas",
+   "partidas": "5.000+ partidas lidas",
+   "prints": "7.000+ prints",
    "midia": "a mídia chega em 16 servidores"
   },
   "proibido": [
@@ -706,54 +706,48 @@ window.CRM_DADOS = {
  },
  "dreamcards": {
   "temporada": 16,
-  "atualizado_epoch": 1793995661.9023738,
-  "premio": "Honor of Kings: o 1º do pódio pelo Geral da carta ganha R$ 50,00 (foto do pódio em 07/11/2026). O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
+  "atualizado_epoch": 1794841609.6699789,
+  "premio": "O prêmio da próxima temporada do pódio é anunciado no Discord do Dream Cards. O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
   "cartas": [
    {
     "posicao": 1,
-    "nick": "ASF•是瑶瑶呀/.",
+    "nick": "ASF·是瑶瑶呀/.",
     "imagem_referencia": "site-dados/cartas/01.webp",
     "imagem": "assets/cartas/01.webp"
    },
    {
     "posicao": 2,
-    "nick": "Alagusii",
+    "nick": "FXV.SAGRADO亗",
     "imagem_referencia": "site-dados/cartas/02.webp",
     "imagem": "assets/cartas/02.webp"
    },
    {
     "posicao": 3,
-    "nick": "ToxicFernet",
+    "nick": "Alagusii",
     "imagem_referencia": "site-dados/cartas/03.webp",
     "imagem": "assets/cartas/03.webp"
    },
    {
     "posicao": 4,
-    "nick": "FXV.SAGRADO 圣",
+    "nick": "ToxiсFernet",
     "imagem_referencia": "site-dados/cartas/04.webp",
     "imagem": "assets/cartas/04.webp"
    },
    {
     "posicao": 5,
-    "nick": "꧁RAIDEIRA꧂",
+    "nick": "⨀CRM.¥uTa",
     "imagem_referencia": "site-dados/cartas/05.webp",
     "imagem": "assets/cartas/05.webp"
    },
    {
     "posicao": 6,
-    "nick": "TTVGutoXQDL",
+    "nick": "꧁RAIDEIRA꧂",
     "imagem_referencia": "site-dados/cartas/06.webp",
     "imagem": "assets/cartas/06.webp"
    }
   ],
   "imagens_no_site": true,
-  "premio_por_jogo": {
-   "hok": {
-    "posicao": "1",
-    "valor": "R$ 50,00",
-    "ate": "07/11/2026 23:59"
-   }
-  }
+  "premio_por_jogo": {}
  },
  "loja_pix": [
   {
@@ -890,9 +884,9 @@ window.CRM_DADOS = {
  "em_preparo": [],
  "radio": {
   "nome": "Rádio CRM",
-  "gerado_em": "06/11/2026 16:14",
+  "gerado_em": "16/11/2026 12:10",
   "epoch_inicio": 1792983600,
-  "total_s": 4220.1,
+  "total_s": 5150.68,
   "como_tocar": "posição = (agora_em_segundos - epoch_inicio) mod total_s; anda pela lista somando duracao_s até achar a faixa e o segundo dentro dela. O navegador só toca depois do 1º clique (regra dos navegadores): o botão 'Ouvir' liga e pula pro segundo certo.",
   "copiar": "os arquivos de site-dados\\radio\\ vão pra assets/radio/ do site (o nome é o número da faixa)",
   "discord": "a mesma playlist toca na Rádio CRM do Discord (/radiocrm numa call); as duas não andam juntas",
@@ -927,7 +921,8 @@ window.CRM_DADOS = {
     "capa": "assets/radio-capas/disco-2.webp",
     "faixas": [
      18,
-     17
+     17,
+     25
     ]
    },
    {
@@ -939,7 +934,8 @@ window.CRM_DADOS = {
     "faixas": [
      21,
      22,
-     19
+     19,
+     26
     ]
    },
    {
@@ -950,8 +946,20 @@ window.CRM_DADOS = {
     "capa": "assets/radio-capas/disco-4.webp",
     "faixas": [
      23,
-     24,
-     20
+     20,
+     24
+    ]
+   },
+   {
+    "album": "Disco 5 - Summer 2026",
+    "disco": 5,
+    "nome": "Summer 2026",
+    "lancamento": "2026-11-15",
+    "capa": "assets/radio-capas/disco-5.webp",
+    "faixas": [
+     27,
+     28,
+     29
     ]
    }
   ],
@@ -1100,6 +1108,17 @@ window.CRM_DADOS = {
     "duracao_s": 179.59
    },
    {
+    "n": 25,
+    "titulo": "Aqui Já é Leve",
+    "artista": "CRM",
+    "album": "Disco 2 - CRM tá em SP!",
+    "disco": 2,
+    "album_nome": "CRM tá em SP!",
+    "lancamento": "2026-11-15",
+    "arquivo": "assets/radio/25.mp3",
+    "duracao_s": 178.01
+   },
+   {
     "n": 21,
     "titulo": "Loucos e sonhadores",
     "artista": "CRM",
@@ -1133,6 +1152,17 @@ window.CRM_DADOS = {
     "duracao_s": 399.79
    },
    {
+    "n": 26,
+    "titulo": "Cinco Irmãos1",
+    "artista": "CRM",
+    "album": "Disco 3 - Loucos e Sonhadores",
+    "disco": 3,
+    "album_nome": "Loucos e Sonhadores",
+    "lancamento": "2026-11-15",
+    "arquivo": "assets/radio/26.mp3",
+    "duracao_s": 175.25
+   },
+   {
     "n": 23,
     "titulo": "Eu era pequeno",
     "artista": "CRM",
@@ -1142,6 +1172,17 @@ window.CRM_DADOS = {
     "lancamento": "2026-11-02",
     "arquivo": "assets/radio/23.mp3",
     "duracao_s": 244.44
+   },
+   {
+    "n": 20,
+    "titulo": "Sonho Impossivel",
+    "artista": "CRM",
+    "album": "Disco 4 - Dream Cards",
+    "disco": 4,
+    "album_nome": "Dream Cards",
+    "lancamento": "2026-10-26",
+    "arquivo": "assets/radio/20.mp3",
+    "duracao_s": 187.82
    },
    {
     "n": 24,
@@ -1155,173 +1196,202 @@ window.CRM_DADOS = {
     "duracao_s": 183.72
    },
    {
-    "n": 20,
-    "titulo": "Sonho Impossivel",
+    "n": 27,
+    "titulo": "Domingo é dia de festa",
     "artista": "CRM",
-    "album": "Disco 4 - Dream Cards",
-    "disco": 4,
-    "album_nome": "Dream Cards",
-    "lancamento": "2026-10-26",
-    "arquivo": "assets/radio/20.mp3",
-    "duracao_s": 187.82
+    "album": "Disco 5 - Summer 2026",
+    "disco": 5,
+    "album_nome": "Summer 2026",
+    "lancamento": "2026-11-15",
+    "arquivo": "assets/radio/27.mp3",
+    "duracao_s": 158.04
+   },
+   {
+    "n": 28,
+    "titulo": "Fica Comigo",
+    "artista": "CRM",
+    "album": "Disco 5 - Summer 2026",
+    "disco": 5,
+    "album_nome": "Summer 2026",
+    "lancamento": "2026-11-15",
+    "arquivo": "assets/radio/28.mp3",
+    "duracao_s": 208.03
+   },
+   {
+    "n": 29,
+    "titulo": "Deixa Se Envolver",
+    "artista": "CRM",
+    "album": "Disco 5 - Summer 2026",
+    "disco": 5,
+    "album_nome": "Summer 2026",
+    "lancamento": "2026-11-15",
+    "arquivo": "assets/radio/29.mp3",
+    "duracao_s": 211.25
    }
   ]
  },
  "midia": {
-  "atualizado_em": "2026-11-06T17:07:34-03:00",
+  "atualizado_em": "2026-11-16T12:11:19-03:00",
   "fonte": "o 📲・mídia do Discord da CRM",
   "posts": [
    {
-    "id": "1568205546153312350",
-    "texto": "✨ ELE BRILHOU!! FXV.SAGRADO 圣\n\nAtingiu 80%+ de confiança de carta! E liberou o traje Sabotage 2.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
+    "id": "1571863589000843366",
+    "texto": "🎉 DROP! dropou a carta Cerco da Avenida mandando print (5% de chance)",
     "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-06T07:08:58-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1568205546153312350",
+    "publicado_em": "2026-11-16T09:24:43-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571863589000843366",
     "anexos": [
      {
       "tipo": "imagem",
-      "url": "assets/midia/1568205546153312350_0.webp",
-      "referencia": "site-dados/midia/1568205546153312350_0.webp",
+      "url": "assets/midia/1571863589000843366_0.webp",
+      "referencia": "site-dados/midia/1571863589000843366_0.webp",
       "alt": "Imagem do post da Dream Cards"
      }
     ],
     "tem_video": false
    },
    {
-    "id": "1567463114251829289",
-    "texto": "✨ ELE BRILHOU!! Bubble\n\nBrilhou em Fama — recebeu 10+ curtidas! E liberou o traje Sabotage 1.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
+    "id": "1571855254008496290",
+    "texto": "✨ ELE BRILHOU!! ASF_nando\n\nAlcançou Lvl 100! - Tier um Traje.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
     "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-04T05:58:48-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1567463114251829289",
+    "publicado_em": "2026-11-16T08:51:36-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571855254008496290",
     "anexos": [
      {
       "tipo": "imagem",
-      "url": "assets/midia/1567463114251829289_0.webp",
-      "referencia": "site-dados/midia/1567463114251829289_0.webp",
+      "url": "assets/midia/1571855254008496290_0.webp",
+      "referencia": "site-dados/midia/1571855254008496290_0.webp",
       "alt": "Imagem do post da Dream Cards"
      }
     ],
     "tem_video": false
    },
    {
-    "id": "1567277108391182387",
-    "texto": "✨ ELE BRILHOU!! Bubble\n\nAlcançou Lvl 100! - Tier um Traje.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
+    "id": "1571738024377716759",
+    "texto": "✨ ELE BRILHOU!! 希望世界\n\nAlcançou Lvl 100! - Tier um Traje.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
     "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-03T17:39:41-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1567277108391182387",
+    "publicado_em": "2026-11-16T01:05:46-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571738024377716759",
     "anexos": [
      {
       "tipo": "imagem",
-      "url": "assets/midia/1567277108391182387_0.webp",
-      "referencia": "site-dados/midia/1567277108391182387_0.webp",
+      "url": "assets/midia/1571738024377716759_0.webp",
+      "referencia": "site-dados/midia/1571738024377716759_0.webp",
       "alt": "Imagem do post da Dream Cards"
      }
     ],
     "tem_video": false
    },
    {
-    "id": "1567251903065096262",
-    "texto": "✨ ELE BRILHOU!! FXV.SAGRADO 圣\n\nAlcançou Lvl 100! - Tier um Traje.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
+    "id": "1571737879833477283",
+    "texto": "🎉 DROP! dropou a carta Corredor C mandando print (5% de chance)",
     "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-03T15:59:31-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1567251903065096262",
+    "publicado_em": "2026-11-16T01:05:12-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571737879833477283",
     "anexos": [
      {
       "tipo": "imagem",
-      "url": "assets/midia/1567251903065096262_0.webp",
-      "referencia": "site-dados/midia/1567251903065096262_0.webp",
+      "url": "assets/midia/1571737879833477283_0.webp",
+      "referencia": "site-dados/midia/1571737879833477283_0.webp",
       "alt": "Imagem do post da Dream Cards"
      }
     ],
     "tem_video": false
    },
    {
-    "id": "1566936131772223589",
-    "texto": "🏆 DESTAQUE DA SEMANA — HoK\nSemana de 26/10 a 01/11 · 385 prints lidos.\nOs primeiros de cada categoria ganham o cargo 「🏆 Destaque da Semana HoK」 até a próxima segunda e o fundo Universo do /meucard.\n🔥 Mais partidas: 🥇 — 56 partidas (44 vitórias)\n🥈 — 55 partidas (43 vitórias)\n🥉 — 51 partidas (37 vitórias)\n🎯 Melhor KDA (mín. 5 partidas): 🥇 Mono Hou Yi — 12.5 (51/6/24 em 5)\n🥈 — 12.2 (37/11/97 em 8)\n🥉 🌳CRM.Luiz — 10.6 (35/8/50 em 5)\n📈 Maior subida da carta: 🥇 — +7 (Geral 48 → 55)\n🥈 — +5 (Geral 61 → 66)\n🥉 — +5 (Geral 53 → 58)",
-    "autor_publico": "CRM",
+    "id": "1571705479246389328",
+    "texto": "🎉 DROP! dropou a carta Loja sem Saída mandando print (5% de chance)",
+    "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-02T19:04:46-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1566936131772223589",
+    "publicado_em": "2026-11-15T22:56:27-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571705479246389328",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1571705479246389328_0.webp",
+      "referencia": "site-dados/midia/1571705479246389328_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1571683706979225622",
+    "texto": "🎉 DROP! dropou a carta Sinal Perdido mandando print (10% de chance)",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-15T21:29:56-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571683706979225622",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1571683706979225622_0.webp",
+      "referencia": "site-dados/midia/1571683706979225622_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1571676194791882839",
+    "texto": "🌟 HORA DOURADA COMEÇOU! Até as 22:00, o drop vale 2x: todo print que conta partida tem o dobro de chance de dropar a Etiril. Manda print! 🎁",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-15T21:00:05-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571676194791882839",
     "anexos": [],
     "tem_video": false
    },
    {
-    "id": "1566928165983752202",
-    "texto": "🏆 COPA DO INFINITO 🏆\n\n📢 INSCRIÇÕES ABERTAS!\n🚨 VAGAS LIMITADAS!\n\n⏳ Contagem regressiva: faltam 80 dias!\n📅 18/01/2027\n\nGaranta sua vaga e venha fazer parte dessa disputa! 🔥\n\n🎮 Inscrições Discord\nhttps://discord.gg/zUmhGebUv\n\n🎮 Inscrições Whatsap\nhttps://chat.whatsapp.com/Gmj0KwG4KGx44hizHXwcGu\n\n📲 Fale diretamente com os responsáveis:\n\nAlvarogamsXP — Álvaro Jr\n📞 (11) 98510-3259\nhttps://wa.me/5511985103259\n\n♾️ A Copa do Infinito é um projeto CRM!",
-    "autor_publico": "CRM",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-02T18:33:06-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1566928165983752202",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1566928165983752202_0.webp",
-      "referencia": "site-dados/midia/1566928165983752202_0.webp",
-      "alt": "Imagem do post da CRM"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1566927788529811586",
-    "texto": "",
-    "autor_publico": "CRM",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-02T18:31:36-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1566927788529811586",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1566927788529811586_0.webp",
-      "referencia": "site-dados/midia/1566927788529811586_0.webp",
-      "alt": "Imagem do post da CRM"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1566901620493648005",
-    "texto": "🃏 DREAM CARDS\nHonor of Kings e Mobile Legends Bang-Bang\n\n💎 Sistema de joias, cards exclusivos e premiações de até R$ 100 por mês!\n\n🎮 Jogue Dream Cards no Discord:\nhttps://discord.gg/dKNmWNec7\n\n🌐 Site oficial da CRM:\nhttps://crmadministradora.com.br",
-    "autor_publico": "CRM",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-02T16:47:37-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1566901620493648005",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1566901620493648005_0.webp",
-      "referencia": "site-dados/midia/1566901620493648005_0.webp",
-      "alt": "Imagem do post da CRM"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1566765976572264502",
-    "texto": "https://vt.tiktok.com/ZSgEDfmCm/",
-    "autor_publico": "CRM",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-02T07:48:37-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1566765976572264502",
-    "anexos": [],
-    "tem_video": false
-   },
-   {
-    "id": "1566308311400448070",
-    "texto": "✨ ELE BRILHOU!! Alagusii\n\nAlcançou Lvl 100! - Tier um Traje.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
+    "id": "1571652123853066414",
+    "texto": "🎉 DROP! dropou a carta Plantão Interrompido mandando print (5% de chance)",
     "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-01T01:30:02-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1566308311400448070",
+    "publicado_em": "2026-11-15T19:24:26-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571652123853066414",
     "anexos": [
      {
       "tipo": "imagem",
-      "url": "assets/midia/1566308311400448070_0.webp",
-      "referencia": "site-dados/midia/1566308311400448070_0.webp",
+      "url": "assets/midia/1571652123853066414_0.webp",
+      "referencia": "site-dados/midia/1571652123853066414_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1571650189222092921",
+    "texto": "🎉 DROP! dropou a carta Cerco da Avenida mandando print (5% de chance)",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-15T19:16:44-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571650189222092921",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1571650189222092921_0.webp",
+      "referencia": "site-dados/midia/1571650189222092921_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1571650011442315315",
+    "texto": "🎉 DROP! dropou a carta Plantão Interrompido mandando print (5% de chance)",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-15T19:16:02-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1571650011442315315",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1571650011442315315_0.webp",
+      "referencia": "site-dados/midia/1571650011442315315_0.webp",
       "alt": "Imagem do post da Dream Cards"
      }
     ],
