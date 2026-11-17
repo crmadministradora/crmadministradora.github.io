@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="assets/css/feedback-adm.css?v=1">
 <link rel="stylesheet" href="assets/css/faixa-copa.css?v=1">
 <link rel="stylesheet" href="assets/css/copa-inscricao.css?v=2">
+<link rel="stylesheet" href="assets/css/servidores.css?v=p146">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -59,6 +60,7 @@
     <a class="menu-item" href="#dream-cards"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="13" height="16" rx="2"/><path d="M8 2h10a3 3 0 0 1 3 3v12M8 10h5M8 14h5M8 18h3"/></svg><span>Dream Cards</span></a>
     <a class="menu-item" href="#loja"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l3 13h11l2-9H6M9 11h10"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>Loja</span></a>
     <a class="menu-item" href="#crm-coins"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="9" cy="6" rx="6" ry="3"/><path d="M3 6v5c0 2 3 3 6 3M3 11v5c0 2 3 3 6 3M15 6v3"/><ellipse cx="16" cy="12" rx="5" ry="3"/><path d="M11 12v6c0 2 2 3 5 3s5-1 5-3v-6"/></svg><span>CRM coins</span></a>
+    <a class="menu-item" href="#servidores"><span class="menu-icon" aria-hidden="true">🌐</span><span>Servidores</span></a>
     <a class="menu-item" href="#copa"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v6a5 5 0 0 1-10 0V3ZM7 5H3v3a4 4 0 0 0 4 4M17 5h4v3a4 4 0 0 1-4 4M12 14v7M8 21h8"/></svg><span>Copa do Infinito</span></a>
     <a class="menu-item" href="#ofertas"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6 4 4 5-7 5 7 4-4-2 12H5L3 6ZM5 21h14"/></svg><span>Ofertas dos apoiadores</span></a>
     <a class="menu-item" href="#radio"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="12" width="5" height="9" rx="2"/><rect x="16" y="12" width="5" height="9" rx="2"/></svg><span>Rádio CRM</span></a>
@@ -222,6 +224,13 @@
   </section>
 <section class="secao dc-shop" id="dc-loja" aria-labelledby="shop-title"><a class="shop-back" href="#dream-cards">← Dream Cards</a><span class="sobretitulo">DREAM CARDS / LOJA DE TRAJES</span><div class="shop-heading"><div><h2 id="shop-title">Tua carta. <em>Teu estilo.</em></h2><p>Escolhe teu jogo e encontra teu próximo traje.</p></div><div class="shop-games" aria-label="Escolher jogo"><button type="button" data-shop-game="hok" aria-pressed="true">Honor of Kings</button><button type="button" data-shop-game="mlbb" aria-pressed="false">Mobile Legends</button></div></div><p id="shop-status" role="status">Carregando a vitrine…</p><div id="shop-feature" class="shop-feature" hidden><div><span class="sobretitulo">CARD SHOP</span><h3>Uma nova identidade<br>para tua carta.</h3><p>Artes originais, prontas para tua próxima partida.</p><button class="botao botao-roxo" type="button" id="shop-explore">Explorar os trajes</button></div><div id="shop-fan" class="shop-fan"></div></div><div id="shop-catalog" hidden><div class="shop-tools"><button class="shop-button" id="shop-home" type="button">← Destaques</button><p id="shop-count"></p></div><div class="shop-grid" id="shop-grid"></div><div class="shop-pages"><button type="button" id="shop-prev">← Anteriores</button><span id="shop-page" aria-live="polite"></span><button type="button" id="shop-next">Próximos →</button></div></div><p class="aviso">Prévias genéricas com dados de exemplo. A compra e o Inventory ficam no Discord do jogo. Trajes de conquista são grátis.</p><p id="shop-upcoming" class="aviso" hidden>Fairy Collection já está no Card Shop do MLBB. Gear Collection será de conquista e ainda não está disponível.</p></section>
   <!-- ====== COPA DO INFINITO ====== -->
+  <section class="secao" id="servidores" aria-labelledby="rede-titulo">
+    <span class="sobretitulo">COMUNIDADE CRM / SERVIDORES</span>
+    <div class="rede-cabecalho"><h2 id="rede-titulo">As casas da nossa rede.</h2><button type="button" class="botao botao-pequeno" id="rede-atualizar">Atualizar placar</button></div>
+    <p class="secao-sub">Vote, curta e dê bump no seu servidor. Sua participação ajuda a casa a subir no placar e aparecer por mais tempo no carrossel do Discord.</p>
+    <details class="rede-regras"><summary>Como funciona o placar</summary><p>Um voto a cada 12 horas por servidor. Um bump a cada 2 horas. A curtida fica até você tirar.</p><p>Pontos = membros ÷ 10 + 3 por voto nos últimos 30 dias + 2 por bump nos últimos 7 dias + 1 por curtida.</p><p>Quanto mais pontos, maior a posição e o tempo no carrossel de parceiros do Discord: de 15 minutos a 2 horas. Todas as casas aparecem. Os votos do site e do Discord contam no mesmo placar.</p></details>
+    <p id="rede-estado" role="status" aria-live="polite">Consultando o placar…</p><ol id="rede-lista" class="rede-lista" aria-label="Placar dos servidores"></ol>
+  </section>
   <section class="secao destaque" id="copa" aria-labelledby="titulo-copa">
     <img class="destaque-arte" src="assets/img/copa-do-infinito.webp" alt="Arte oficial da Copa do Infinito" width="900" height="900" loading="lazy">
     <div class="destaque-texto">
@@ -393,7 +402,7 @@
 <dialog id="carta-ampliada" aria-labelledby="carta-ampliada-titulo"><button type="button" class="fechar-dialogo" aria-label="Fechar carta">×</button><h2 id="carta-ampliada-titulo"></h2><img id="carta-ampliada-img" alt=""></dialog>
 <script src="assets/js/midia-social.js?v=s4"></script>
 
-<script src="assets/js/areas.js?v=20261107"></script>
+<script src="assets/js/areas.js?v=p146"></script>
 <script src="assets/js/atividade.js?v=p36"></script>
 <script src="assets/js/radio-contadores.js?v=p36"></script>
 <script src="assets/js/midia-api.js?v=chat1"></script>
@@ -408,5 +417,6 @@
 <script src="assets/js/inicio.js?v=20261106"></script>
 <script src="assets/js/feedback-adm.js?v=1"></script>
 <script src="assets/js/numeros-vivos.js?v=p39-2"></script>
+<script src="assets/js/servidores.js?v=p146"></script>
 </body>
 </html>
