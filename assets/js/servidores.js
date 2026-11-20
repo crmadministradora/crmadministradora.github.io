@@ -25,9 +25,9 @@
       cab.append(el('h3', null, c.nome)); item.append(cab);
       var dados = el('dl', 'rede-numeros');
       [['Membros', c.membros], ['Votos · 30 dias', c.votos], ['Curtidas', c.likes], ['Bumps · 7 dias', c.bumps], ['Pontos', c.pontos]].forEach(function (par) { var d = el('div'); d.append(el('dt', null, par[0]), el('dd', null, numero(par[1]))); dados.append(d); });
-      item.append(dados, el('p', 'rede-tempo', '⏱ ' + numero(c.minutos_no_carrossel) + ' min no carrossel'));
+      item.append(dados, el('p', 'rede-tempo', numero(c.minutos_no_carrossel) + ' min no carrossel'));
       var acoes = el('div', 'rede-acoes');
-      [['voto', '🗳 Votar'], ['like', '👍 Curtir'], ['bump', '⏫ Bump']].forEach(function (par) {
+      [['voto', 'Votar'], ['like', 'Curtir'], ['bump', 'Bump']].forEach(function (par) {
         var b = el('button', 'botao botao-pequeno'); b.type = 'button'; b.dataset.casa = String(c.id); b.dataset.tipo = par[0]; b.dataset.rotulo = par[1];
         b.dataset.ate = c._prazos[par[0]] || 0; b.setAttribute('aria-label', par[1] + ' · ' + c.nome);
         b.addEventListener('click', function () { agir(c, par[0]); }); acoes.append(b);
