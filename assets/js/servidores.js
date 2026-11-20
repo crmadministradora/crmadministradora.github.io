@@ -27,7 +27,7 @@
       [['Membros', c.membros], ['Votos · 30 dias', c.votos], ['Curtidas', c.likes], ['Bumps · 7 dias', c.bumps], ['Pontos', c.pontos]].forEach(function (par) { var d = el('div'); d.append(el('dt', null, par[0]), el('dd', null, numero(par[1]))); dados.append(d); });
       item.append(dados, el('p', 'rede-tempo', '⏱ ' + numero(c.minutos_no_carrossel) + ' min no carrossel'));
       var acoes = el('div', 'rede-acoes');
-      [['voto', '🗳 Votar'], ['like', c.eu && c.eu.curti ? '💔 Tirar like' : '👍 Curtir'], ['bump', '⏫ Bump']].forEach(function (par) {
+      [['voto', '🗳 Votar'], ['like', '👍 Curtir'], ['bump', '⏫ Bump']].forEach(function (par) {
         var b = el('button', 'botao botao-pequeno'); b.type = 'button'; b.dataset.casa = String(c.id); b.dataset.tipo = par[0]; b.dataset.rotulo = par[1];
         b.dataset.ate = c._prazos[par[0]] || 0; b.setAttribute('aria-label', par[1] + ' · ' + c.nome);
         b.addEventListener('click', function () { agir(c, par[0]); }); acoes.append(b);
@@ -45,7 +45,7 @@
       var data = await window.CRM_SITE_API.get('/api/rede/placar', true);
       if (rodada !== revisao || token !== sessao()) return;
       if (!Array.isArray(data.casas)) throw Error('Resposta inválida');
-      casas = data.casas.map(function (c) { return Object.assign({}, c, {_prazos: {voto: Date.now() + Math.max(0, Number((c.eu || {}).voto_em_s) || 0) * 1000, bump: Date.now() + Math.max(0, Number((c.eu || {}).bump_em_s) || 0) * 1000}}); });
+      casas = data.casas.map(function (c) { return Object.assign({}, c, {_prazos: {voto: Date.now() + Math.max(0, Number((c.eu || {}).voto_em_s) || 0) * 1000, like: Date.now() + Math.max(0, Number((c.eu || {}).like_em_s) || 0) * 1000, bump: Date.now() + Math.max(0, Number((c.eu || {}).bump_em_s) || 0) * 1000}}); });
       desenhar(); estado.textContent = casas.length ? 'Placar compartilhado com o Discord.' : 'Nenhum servidor disponível no placar agora.';
     } catch (e) {
       if (rodada !== revisao) return;
@@ -63,7 +63,8 @@
       if (data.ok) { await carregar(); if (token === sessao()) estado.textContent = data.texto || 'Pronto! Placar atualizado.'; }
       else {
         estado.textContent = data.texto || data.espera || 'Não foi possível concluir agora.';
-        if (tipo !== 'like' && Number(data.espera_s) > 0) { casa._prazos[tipo] = Date.now() + Number(data.espera_s) * 1000; desenhar(); }
+        var espera = Number(data.espera_s || (tipo === 'like' && data.like_em_s));
+        if (espera > 0) { casa._prazos[tipo] = Date.now() + espera * 1000; desenhar(); }
       }
     } catch (e) {
       if (token !== sessao()) return;
