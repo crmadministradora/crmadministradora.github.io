@@ -39,10 +39,8 @@
    var a=document.createElement('a');a.className='botao';a.textContent='Contratar no Discord ↗';a.href=links.site_crm;
    article.append(title,price,note,a);document.getElementById('planos').append(article);
  }
- var section=document.createElement('section');section.className='sites-planos';section.setAttribute('aria-label','Sites para organizações');
- [['Site online','R$ 29,90','Valor único. Aparência personalizada com as informações da tua organização.'],['Site + domínio .com.br','R$ 99,00','Valor único. Site online, domínio .com.br e administração por 1 ano.']].forEach(function(item){var box=document.createElement('article'),h=document.createElement('h3'),price=document.createElement('strong'),p=document.createElement('p'),a=document.createElement('a');h.textContent=item[0];price.textContent=item[1];p.textContent=item[2];a.textContent='Combinar meu site com a CRM ↗';a.className='botao';a.href=links.site_crm;box.append(h,price,p,a);section.append(box);});
  var models=document.createElement('p');models.textContent='Conheça os modelos: ';
  [['Arena','arena'],['Comunidade','comunidade'],['Estúdio','estudio']].forEach(function(pair){var a=document.createElement('a');a.href='modelos/'+pair[1]+'/';a.textContent=pair[0]+' ↗';a.target='_blank';a.rel='noopener';a.style.marginRight='20px';models.append(a);});
- document.getElementById('loja').append(section,models);
+ document.getElementById('loja').append(models);
 })();
 
