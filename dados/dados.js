@@ -1,5 +1,5 @@
 window.CRM_DADOS = {
- "gerado_em": "21/11/2026 04:15",
+ "gerado_em": "27/11/2026 11:27",
  "fonte": "Claude (do código do projeto)",
  "produtos": [
   {
@@ -282,14 +282,14 @@ window.CRM_DADOS = {
   "comprovante_passo": "No Discord da CRM, no canal 🎩・la-nostra-casa, escolhe **Abrir Ticket** no menu e manda o comprovante ali."
  },
  "numeros": {
-  "medido_em": "20/11/2026 11:18",
+  "medido_em": "27/11/2026 10:48",
   "frases": {
    "servidores": "18 servidores",
    "pessoas": "1.500+ pessoas",
-   "membros": "1.900+ membros na rede",
-   "cartas": "131 cartas",
-   "partidas": "5.000+ partidas lidas",
-   "prints": "8.000+ prints",
+   "membros": "2.000+ membros na rede",
+   "cartas": "141 cartas",
+   "partidas": "6.000+ partidas lidas",
+   "prints": "9.000+ prints",
    "midia": "a mídia chega em 16 servidores"
   },
   "proibido": [
@@ -706,24 +706,24 @@ window.CRM_DADOS = {
  },
  "dreamcards": {
   "temporada": 16,
-  "atualizado_epoch": 1795245027.7020826,
+  "atualizado_epoch": 1795789379.2724805,
   "premio": "O prêmio da próxima temporada do pódio é anunciado no Discord do Dream Cards. O Mobile Legends ganha prêmio quando chegar a 50 jogadores com carta.",
   "cartas": [
    {
     "posicao": 1,
-    "nick": "ASF·是瑶瑶呀/.",
+    "nick": "FXV.SAGRADO亗",
     "imagem_referencia": "site-dados/cartas/01.webp",
     "imagem": "assets/cartas/01.webp"
    },
    {
     "posicao": 2,
-    "nick": "FXV.SAGRADO亗",
+    "nick": "ASF•AuraFarmer",
     "imagem_referencia": "site-dados/cartas/02.webp",
     "imagem": "assets/cartas/02.webp"
    },
    {
     "posicao": 3,
-    "nick": "Alagusii",
+    "nick": "🇨🇱lkaozzz.",
     "imagem_referencia": "site-dados/cartas/03.webp",
     "imagem": "assets/cartas/03.webp"
    },
@@ -735,13 +735,13 @@ window.CRM_DADOS = {
    },
    {
     "posicao": 5,
-    "nick": "⨀CRM.¥uTa",
+    "nick": "Alagusii",
     "imagem_referencia": "site-dados/cartas/05.webp",
     "imagem": "assets/cartas/05.webp"
    },
    {
     "posicao": 6,
-    "nick": "Faals",
+    "nick": "ASF_nando",
     "imagem_referencia": "site-dados/cartas/06.webp",
     "imagem": "assets/cartas/06.webp"
    }
@@ -884,7 +884,7 @@ window.CRM_DADOS = {
  "em_preparo": [],
  "radio": {
   "nome": "Rádio CRM",
-  "gerado_em": "21/11/2026 04:15",
+  "gerado_em": "27/11/2026 11:27",
   "epoch_inicio": 1792983600,
   "total_s": 5324.2,
   "como_tocar": "posição = (agora_em_segundos - epoch_inicio) mod total_s; anda pela lista somando duracao_s até achar a faixa e o segundo dentro dela. O navegador só toca depois do 1º clique (regra dos navegadores): o botão 'Ouvir' liga e pula pro segundo certo.",
@@ -1252,167 +1252,167 @@ window.CRM_DADOS = {
   ]
  },
  "midia": {
-  "atualizado_em": "2026-11-21T04:19:28-03:00",
+  "atualizado_em": "2026-11-27T11:28:04-03:00",
   "fonte": "o 📲・mídia do Discord da CRM",
   "posts": [
    {
-    "id": "1573488134002315297",
-    "texto": "🌟 HORA DOURADA COMEÇOU! Até as 22:00, todo o drop vale 2x: a chance das cartas (a Etiril e as raras), os CRM coins de cada print e a chance da Joia Dream. Manda print! 🎁",
+    "id": "1575855645704593439",
+    "texto": "💀🧟 DROP DAS MORTES! morreu tanto que virou zumbi e dropou a carta Lápide do Retorno da Zumbilândia!",
     "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T21:00:05-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573488134002315297",
+    "publicado_em": "2026-11-27T09:47:43-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575855645704593439",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1575855645704593439_0.webp",
+      "referencia": "site-dados/midia/1575855645704593439_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1575785507785285782",
+    "texto": "💀🧟 DROP DAS MORTES! morreu tanto que virou zumbi e dropou a carta Correio da Cripta da Zumbilândia!",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-27T05:09:01-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575785507785285782",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1575785507785285782_0.webp",
+      "referencia": "site-dados/midia/1575785507785285782_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1575741453198692352",
+    "texto": "💀🧟 DROP DAS MORTES! morreu tanto que virou zumbi e dropou a carta Horta Assombrada da Zumbilândia!",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-27T02:13:58-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575741453198692352",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1575741453198692352_0.webp",
+      "referencia": "site-dados/midia/1575741453198692352_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1575704456216051743",
+    "texto": "🎉 DROP! dropou a carta Loja sem Saída mandando print (5% de chance)",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-26T23:46:57-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575704456216051743",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1575704456216051743_0.webp",
+      "referencia": "site-dados/midia/1575704456216051743_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1575696554831122544",
+    "texto": "🎉 DROP! dropou a carta Sinal Perdido mandando print (5% de chance)",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-26T23:15:33-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575696554831122544",
+    "anexos": [
+     {
+      "tipo": "imagem",
+      "url": "assets/midia/1575696554831122544_0.webp",
+      "referencia": "site-dados/midia/1575696554831122544_0.webp",
+      "alt": "Imagem do post da Dream Cards"
+     }
+    ],
+    "tem_video": false
+   },
+   {
+    "id": "1575662461544308750",
+    "texto": "🌟 HORA DOURADA COMEÇOU! Até as 22:00, todo o drop vale 2x: a chance das cartas (as do drop comum e as raras), os CRM coins de cada print e a chance da Joia Dream. Manda print! 🎁",
+    "autor_publico": "Dream Cards",
+    "origem_publica": "Discord da CRM · 📲 mídia",
+    "publicado_em": "2026-11-26T21:00:05-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575662461544308750",
     "anexos": [],
     "tem_video": false
    },
    {
-    "id": "1573458464725012626",
-    "texto": "🃏 A carta da ZenytCloud no Dream Cards\nO patrocinador da CRM também está no Dream Cards: a carta da ZenytCloud tem 1% de chance de cair quando você curte um jogador.\n\n-# #ad · Publicidade: patrocínio da ZenytCloud à CRM.\n🔗 https://zenytcloud.com/?ref=crmadministradora\n💬 https://discord.gg/GauJGFCyf2",
+    "id": "1575633310544035994",
+    "texto": "🌐 Hospedagem pro teu projeto\nSite, bot ou servidor de jogo: a Mega Dedicados tem hospedagem pra cada tamanho de projeto. Confira no site.\n\n-# #ad · Publicidade: patrocínio da Mega Dedicados à CRM.\n🔗 https://megadedicados.com.br/",
     "autor_publico": "CRM",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T19:02:11-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573458464725012626",
+    "publicado_em": "2026-11-26T19:04:15-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575633310544035994",
     "anexos": [
      {
       "tipo": "imagem",
-      "url": "assets/midia/1573458464725012626_0.webp",
-      "referencia": "site-dados/midia/1573458464725012626_0.webp",
-      "alt": "🃏 A carta da ZenytCloud no Dream Cards"
+      "url": "assets/midia/1575633310544035994_0.webp",
+      "referencia": "site-dados/midia/1575633310544035994_0.webp",
+      "alt": "🌐 Hospedagem pro teu projeto"
      }
     ],
     "tem_video": false
    },
    {
-    "id": "1573422660338065529",
-    "texto": "🎉 DROP! dropou a carta Casa do Gerador mandando print (5% de chance)",
+    "id": "1575600207549308959",
+    "texto": "💀🧟 DROP DAS MORTES! morreu tanto que virou zumbi e dropou a carta Acorda, Campeão da Zumbilândia!",
     "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T16:39:55-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573422660338065529",
+    "publicado_em": "2026-11-26T16:52:42-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575600207549308959",
     "anexos": [
      {
       "tipo": "imagem",
-      "url": "assets/midia/1573422660338065529_0.webp",
-      "referencia": "site-dados/midia/1573422660338065529_0.webp",
+      "url": "assets/midia/1575600207549308959_0.webp",
+      "referencia": "site-dados/midia/1575600207549308959_0.webp",
       "alt": "Imagem do post da Dream Cards"
      }
     ],
     "tem_video": false
    },
    {
-    "id": "1573363957178048672",
-    "texto": "✨ ELE BRILHOU!! ASF_nando\n\nAtingiu 80%+ de confiança de carta! E liberou o traje Sabotage 2.\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
+    "id": "1575543008848388268",
+    "texto": "🌙✨ DROP RARÍSSIMO DA NIGHT EDITION! dropou a carta Night Panther mandando print (só 0,3% de chance) e está BRILHANDO!",
     "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T12:46:39-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573363957178048672",
+    "publicado_em": "2026-11-26T13:05:25-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575543008848388268",
     "anexos": [
      {
       "tipo": "imagem",
-      "url": "assets/midia/1573363957178048672_0.webp",
-      "referencia": "site-dados/midia/1573363957178048672_0.webp",
+      "url": "assets/midia/1575543008848388268_0.webp",
+      "referencia": "site-dados/midia/1575543008848388268_0.webp",
       "alt": "Imagem do post da Dream Cards"
      }
     ],
     "tem_video": false
    },
    {
-    "id": "1573362972699533472",
-    "texto": "✨ ELE BRILHOU!! 🇨🇱.Ikaos\n\n🛡️ Ganhou o selo CHOK BR na carta!\n🎁 Levou as 2 cartas da Ghost (Thunder Hawk Ghost e CRM Ghost) + 50 CRM coins.\n🔗 Comprovação: [1](<https://www.youtube.com/live/7U7qPNTzoHA?si=hO4RrwbFDP0eNr5v>)\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
-    "autor_publico": "Dream Cards",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T12:42:44-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573362972699533472",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1573362972699533472_0.webp",
-      "referencia": "site-dados/midia/1573362972699533472_0.webp",
-      "alt": "Imagem do post da Dream Cards"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1573362947802013808",
-    "texto": "✨ ELE BRILHOU!! SÀT BEYONIS\n\n🛡️ Ganhou o selo CHOK BR na carta!\n🎁 Levou as 2 cartas da Ghost (Thunder Hawk Ghost e CRM Ghost) + 50 CRM coins.\n🔗 Comprovação: [1](<https://www.instagram.com/p/DdMKniSFsyd/?img_index=4&rpxt=b3RpY2ZleXZpZWgx>) · [2](<https://www.youtube.com/live/h8pneDjOJLc?is=h1IcS3SBcLWJfv0g>)\n\nQuer participar também?\nhttps://discord.gg/6KMTFeZjFx\n\nDream Cards é mais um projeto CRM! ❤️",
-    "autor_publico": "Dream Cards",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T12:42:38-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573362947802013808",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1573362947802013808_0.webp",
-      "referencia": "site-dados/midia/1573362947802013808_0.webp",
-      "alt": "Imagem do post da Dream Cards"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1573349906297397389",
-    "texto": "💎 DROP RARO! dropou a carta Circuito Oculto mandando print (só 1% de chance)!",
-    "autor_publico": "Dream Cards",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T11:50:49-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573349906297397389",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1573349906297397389_0.webp",
-      "referencia": "site-dados/midia/1573349906297397389_0.webp",
-      "alt": "Imagem do post da Dream Cards"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1573317105116516432",
-    "texto": "🎉 DROP! dropou a carta Pavilhão de Isolamento mandando print (5% de chance)",
-    "autor_publico": "Dream Cards",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T09:40:28-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573317105116516432",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1573317105116516432_0.webp",
-      "referencia": "site-dados/midia/1573317105116516432_0.webp",
-      "alt": "Imagem do post da Dream Cards"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1573243328244228186",
-    "texto": "🎉 DROP! dropou a carta Rua em Brasas mandando print (5% de chance)",
-    "autor_publico": "Dream Cards",
-    "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T04:47:18-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573243328244228186",
-    "anexos": [
-     {
-      "tipo": "imagem",
-      "url": "assets/midia/1573243328244228186_0.webp",
-      "referencia": "site-dados/midia/1573243328244228186_0.webp",
-      "alt": "Imagem do post da Dream Cards"
-     }
-    ],
-    "tem_video": false
-   },
-   {
-    "id": "1573209651187818546",
+    "id": "1575506382491357294",
     "texto": "🎉 DROP! dropou a carta Loja sem Saída mandando print (5% de chance)",
     "autor_publico": "Dream Cards",
     "origem_publica": "Discord da CRM · 📲 mídia",
-    "publicado_em": "2026-11-20T02:33:29-03:00",
-    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1573209651187818546",
+    "publicado_em": "2026-11-26T10:39:53-03:00",
+    "url_discord": "https://discord.com/channels/1424066515564495095/1449866124517965834/1575506382491357294",
     "anexos": [
      {
       "tipo": "imagem",
-      "url": "assets/midia/1573209651187818546_0.webp",
-      "referencia": "site-dados/midia/1573209651187818546_0.webp",
+      "url": "assets/midia/1575506382491357294_0.webp",
+      "referencia": "site-dados/midia/1575506382491357294_0.webp",
       "alt": "Imagem do post da Dream Cards"
      }
     ],
